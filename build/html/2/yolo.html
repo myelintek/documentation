@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Train darknet YOLO_V3 with VOC dataset &mdash; Sample todat documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Version 2" href="v2.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sample
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../1/v1.html">Version 1</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="v2.html">Version 2</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Train darknet YOLO_V3 with VOC dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#outline">Outline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prepare-dataset">Prepare Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-project">Create Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bild-darknet">Bild darknet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#train-the-model">Train The Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sample</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="v2.html">Version 2</a> &raquo;</li>
+        
+      <li>Train darknet YOLO_V3 with VOC dataset</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/2/yolo.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="train-darknet-yolo-v3-with-voc-dataset">
+<span id="yolo-v3"></span><h1>Train darknet YOLO_V3 with VOC dataset<a class="headerlink" href="#train-darknet-yolo-v3-with-voc-dataset" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="outline">
+<span id="id1"></span><h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<p>This document is going to explain how to use darknet docker image to train YOLO_V3 on VOC. Before diving into it, please also refer to the official web site of YOLO: Real-Time Object Detection because most of the contents are similar</p>
+</div>
+<div class="section" id="prepare-dataset">
+<span id="dataset"></span><h2>Prepare Dataset<a class="headerlink" href="#prepare-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Please refer to <a class="reference external" href="https://pjreddie.com/darknet/yolo/">Download pascal VOC dataset</a></p>
+</div>
+<div class="section" id="create-project">
+<span id="create-proj"></span><h2>Create Project<a class="headerlink" href="#create-project" title="Permalink to this headline">¶</a></h2>
+<p>Create project for darknet and choose pascal-voc dataset</p>
+<img alt="../_images/new_proj.jpg" src="../_images/new_proj.jpg" />
+</div>
+<div class="section" id="bild-darknet">
+<span id="build-darknet"></span><h2>Bild darknet<a class="headerlink" href="#bild-darknet" title="Permalink to this headline">¶</a></h2>
+<p>Launch jupyter for darknet building</p>
+<img alt="../_images/launch_jupyter.jpg" src="../_images/launch_jupyter.jpg" />
+<p>On jupyter notebook terminal, create a darknet folder and git clone darknet source code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pjreddie</span><span class="o">/</span><span class="n">darknet</span>
+</pre></div>
+</div>
+<p>Change Makefile to use GPU and CUDNN:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GPU</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">CUDNN</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Build darknet code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="o">-</span><span class="n">j</span>
+</pre></div>
+</div>
+<p>Download config files for yolov3:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">raw</span><span class="o">.</span><span class="n">githubusercontent</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pjreddie</span><span class="o">/</span><span class="n">darknet</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">cfg</span><span class="o">/</span><span class="n">yolov3</span><span class="o">-</span><span class="n">voc</span><span class="o">.</span><span class="n">cfg</span>
+</pre></div>
+</div>
+<p>Download pre-trained weights file and <strong>put to /dataset folder</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pjreddie</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">media</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">darknet53</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="mi">74</span>
+<span class="n">mv</span> <span class="n">darknet53</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="mi">74</span> <span class="o">/</span><span class="n">dataset</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Your yolov3 folder will look like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ls -l</span>
+<span class="n">total</span> <span class="mi">3580</span>
+<span class="n">drwxr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span> <span class="mi">13</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">4096</span> <span class="n">Jun</span> <span class="mi">20</span> <span class="mi">03</span><span class="p">:</span><span class="mi">26</span> <span class="n">darknet</span>
+<span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="o">--</span><span class="n">r</span><span class="o">--</span>  <span class="mi">1</span> <span class="n">root</span> <span class="n">root</span> <span class="mi">8334</span> <span class="n">Jun</span> <span class="mi">20</span> <span class="mi">03</span><span class="p">:</span><span class="mi">26</span> <span class="n">yolov3</span><span class="o">-</span><span class="n">voc</span><span class="o">.</span><span class="n">cfg</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Trail run the training:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">darknet</span> <span class="n">detector</span> <span class="n">train</span> <span class="o">/</span><span class="n">dataset</span><span class="o">/</span><span class="n">voc</span><span class="o">.</span><span class="n">data</span> <span class="n">yolov3</span><span class="o">-</span><span class="n">voc</span><span class="o">.</span><span class="n">cfg</span> \
+  <span class="o">/</span><span class="n">dataset</span><span class="o">/</span><span class="n">darknet53</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="mi">74</span> <span class="o">-</span><span class="n">gpu</span> <span class="s1">&#39;0&#39;</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If the training failed with segmentation fault, try to disable CUDNN in Makefile</p>
+</div>
+</div>
+<div class="section" id="train-the-model">
+<span id="train-model"></span><h2>Train The Model<a class="headerlink" href="#train-the-model" title="Permalink to this headline">¶</a></h2>
+<p>Start a training job with following parameters</p>
+<ul class="simple">
+<li>job name: job1</li>
+<li>Package Path: darknet</li>
+<li>GPU:1</li>
+<li>User Arguments: ./darknet detector train /dataset/voc.data yolov3-voc.cfg /dataset/darknet53.conv.74 -gpu ‘0’</li>
+</ul>
+<img alt="../_images/job_submit.jpg" src="../_images/job_submit.jpg" />
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The project dataset <strong>pascal-voc</strong> will be mounted to path <strong>/dataset</strong> in trining environment</p>
+</div>
+<p>You can check and download the submitted training job on the project page in web portal.</p>
+<img alt="../_images/job_check.jpg" src="../_images/job_check.jpg" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="v2.html" class="btn btn-neutral float-left" title="Version 2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Ana
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
