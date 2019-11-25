@@ -22,6 +22,16 @@ Empty dataset will be created.
 
 .. image:: ../_static/new_dataset2.png
 
+Create dataset from remote source
+=================================
+
+Currently system supports creation of dataset from NFS.
+
+Click "New dataset". Input dataset name and check "External storage" box. From drop down menu select dataset type as NFS.
+Input ip and mount point. Press "Create".
+
+.. image:: ../_static/nfs_dataset.png
+
 
 Manipulate dataset
 ==================
@@ -90,3 +100,10 @@ Visualization with bounding boxes will appear on the left when one image is sele
 If visualization needs to be removed go inside folder with images and press cross on the visualization tag.
 
 .. image:: ../_static/visualize_dataset4.png
+
+Delete dataset
+==============
+
+Open the list of datasets then press trash icon in front of dataset name. Confirm.
+
+.. image:: ../_static/delete_dataset.png

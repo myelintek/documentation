@@ -45,6 +45,20 @@ Click on project's name to view its content.
 
 .. image:: ../_static/view_project2.png
 
+Add member
+==========
+
+On the projects page click "Settings".
+
+.. image:: ../_static/member_project.png
+
+Click "Add member".
+
+.. image:: ../_static/member_project2.png
+
+Type members name. Sellect role. Press add.
+
+.. image:: ../_static/member_project3.png
 
 Delete project
 ==============

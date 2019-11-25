@@ -13,8 +13,8 @@ Welcome to MLSteam's documentation!
    content/project
    content/lab
    content/dataset
-
-
+   content/job
+   content/admin
 
 Indices and tables
 ==================
