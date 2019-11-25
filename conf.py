@@ -1,5 +1,3 @@
-import sphinx_rtd_theme
-
 # -*- coding: utf-8 -*-
 #
 # Configuration file for the Sphinx documentation builder.
@@ -18,17 +16,18 @@ import sphinx_rtd_theme
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = u'Sample'
-copyright = u'2019, Ana'
-author = u'Ana'
+project = u'MLSteam'
+copyright = u'2019, Myelintek'
+author = u'Myelintek'
 
 # The short X.Y version
 version = u''
 # The full version, including alpha/beta/rc tags
-release = u'todat'
+release = u''
 
 
 # -- General configuration ---------------------------------------------------
@@ -42,10 +41,11 @@ release = u'todat'
 # ones.
 extensions = [
 "sphinx_rtd_theme",
+'sphinx.ext.todo',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['/home/anastasiia/sampledoc/templates']
+templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -66,7 +66,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = [u'/home/anastasiia/sampledoc/build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
@@ -88,7 +88,7 @@ html_theme = 'sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['/home/anastasiia/sampledoc/static']
+html_static_path = ['_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -104,7 +104,7 @@ html_static_path = ['/home/anastasiia/sampledoc/static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Sampledoc'
+htmlhelp_basename = 'MLSteamdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -131,8 +131,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Sample.tex', u'Sample Documentation',
-     u'Ana', 'manual'),
+    (master_doc, 'MLSteam.tex', u'MLSteam Documentation',
+     u'Myelintek', 'manual'),
 ]
 
 
@@ -141,7 +141,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'sample', u'Sample Documentation',
+    (master_doc, 'mlsteam', u'MLSteam Documentation',
      [author], 1)
 ]
 
@@ -152,8 +152,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Sample', u'Sample Documentation',
-     author, 'Sample', 'One line description of project.',
+    (master_doc, 'MLSteam', u'MLSteam Documentation',
+     author, 'MLSteam', 'One line description of project.',
      'Miscellaneous'),
 ]
 
@@ -174,3 +174,6 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
+
+
+todo_include_todos = True
