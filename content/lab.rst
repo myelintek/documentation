@@ -65,8 +65,8 @@ Upload new files to dataset, if needed.
 
 .. image:: ../_static/attach_dataset5.png
 
-Start lab
-=========
+Run lab
+=======
 
 First attach dataset to the lab.
 
@@ -90,6 +90,14 @@ Stop lab
 Press on "Running" button, then select "Stop".
 
 .. image:: ../_static/stop_lab.png
+
+Start lab
+=========
+
+Press "Stop" button, then select "Start".
+
+.. image:: ../_static/run_lab.png
+
 
 Delete lab
 ==========

@@ -7,7 +7,7 @@ Job
 Create job
 ==========
 
-Jobs are created by running code in labs.
+Jobs are created by running code in labs or running templates.
 
 Browse jobs
 ===========
