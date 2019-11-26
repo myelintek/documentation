@@ -17,7 +17,7 @@ Click on "Job" button.
 
 .. image:: ../_static/browse_jobs.png
 
-List of lobs belonging to project will show up.
+List of jobs belonging to project will show up.
 Click on job's id to see details.
 
 .. image:: ../_static/browse_jobs2.png

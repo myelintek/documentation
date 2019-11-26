@@ -56,7 +56,7 @@ Click "Add member".
 
 .. image:: ../_static/member_project2.png
 
-Type members name. Sellect role. Press add.
+Type members name. Sellect role. Press "Add".
 
 .. image:: ../_static/member_project3.png
 

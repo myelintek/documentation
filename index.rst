@@ -10,9 +10,9 @@ Welcome to MLSteam's documentation!
    :maxdepth: 2
 
    content/getting_started
+   content/dataset
    content/project
    content/lab
-   content/dataset
    content/job
    content/admin
 

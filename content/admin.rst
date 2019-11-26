@@ -117,15 +117,15 @@ Modify needed fields.
 Members
 +++++++
 
-To edit project members click "Member" button next to the project name.
+To edit project members click "Members" button next to the project name.
 
 .. image:: ../_static/members_project.png
 
-To add user to the project press "Add member", then type their name, select permissions and press "Done".
+To add user to the project press "Add member", then type their name, select permissions and press "Save", then press "Done".
 
 .. image:: ../_static/members_project2.png
 
-To delete user from project press "Delete" next to the username.
+To delete user from project press "Delete" next to the username, then press "Done".
 
 .. image:: ../_static/members_project3.png
 

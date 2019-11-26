@@ -9,7 +9,7 @@ Lab
 Create lab
 ==========
 
-Select project thet lab will be created in.
+Select project that lab will be created in.
 Press "Lab" button.
 
 .. image:: ../_static/create_lab.png
@@ -26,7 +26,8 @@ Press "Submit".
 
 .. image:: ../_static/create_lab4.png
 
-
+.. _browse_lab:
+ 
 Browse labs
 ===========
 
@@ -38,20 +39,15 @@ Press on lab id to browse it.
 
 .. image:: ../_static/browse_labs.png
 
+.. _attach_dataset_lab:
 
 Attach dataset to the lab
 =========================
 
-Type dataset name (how to create dataset?) at the "Attach dataset" box.
+Type dataset name at the "Attach dataset" box.
 Press "Attach dataset" button.
 
 .. image:: ../_static/attach_dataset_lab.png
-
-.. todo:: 
-
-    Restart lab to see the dataset attached
-
-Browse dataset by going to directory specified as "dest" parameter, `/mlsteam/input/superuser/test` in our case.
 
 .. image:: ../_static/attach_dataset2.png
 
@@ -64,6 +60,8 @@ Add new directory to dataset, if needed.
 Upload new files to dataset, if needed.
 
 .. image:: ../_static/attach_dataset5.png
+
+.. _run_lab:
 
 Run lab
 =======
@@ -84,12 +82,16 @@ Browse job to see output. In our case, output is the content of folder `/mlsteam
 
 .. image:: ../_static/start_lab2.png
 
+.. _stop_lab:
+
 Stop lab
 ========
 
 Press on "Running" button, then select "Stop".
 
 .. image:: ../_static/stop_lab.png
+
+.. _start_lab:
 
 Start lab
 =========
@@ -98,6 +100,7 @@ Press "Stop" button, then select "Start".
 
 .. image:: ../_static/run_lab.png
 
+.. _delete_lab:
 
 Delete lab
 ==========
