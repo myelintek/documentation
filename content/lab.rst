@@ -19,7 +19,7 @@ Press "New Lab".
 .. image:: ../_static/create_lab2.png
 
 Sellect docker image to create lab in. The default image is "myelintek/python-gpu".
-Sellect the number of gpus to assign to lab.
+Sellect the number of gpus to assign to lab. Add a comment, if needed.
 Press "Submit".
 
 .. image:: ../_static/create_lab3.png
@@ -35,9 +35,45 @@ Browse labs of the specific project. Go to project page. Press "Lab" button.
 
 .. image:: ../_static/create_lab.png
 
-Press on lab id to browse it.
+Press on lab id or "Browse" button at the Actions collumn.
 
 .. image:: ../_static/browse_labs.png
+
+
+Stop lab
+========
+
+Press on "Running" button, then select "Stop"
+
+.. image:: ../_static/stop_lab.png
+
+or press "Stop" at the Actions column.
+
+.. image:: ../_static/stop_lab2.png
+
+.. _start_lab:
+
+Start lab
+=========
+
+Press "Stop" button, then select "Start" 
+
+.. image:: ../_static/start_lab.png
+
+or press "Start" at the Actions column.
+
+.. image:: ../_static/start_lab2.png
+
+Restart lab
+===========
+
+Press "Running" button, then select "Restart"
+
+.. image:: ../_static/restart_lab.png
+
+or press "Restart" at the Actions column.
+
+.. image:: ../_static/restart_lab2.png
 
 .. _attach_dataset_lab:
 
@@ -45,11 +81,15 @@ Attach dataset to the lab
 =========================
 
 Type dataset name at the "Attach dataset" box.
-Press "Attach dataset" button.
+Press "Attach dataset" button. Restart lab for changes to take effect.
 
-.. image:: ../_static/attach_dataset_lab.png
+.. image:: ../_static/attach_dataset.png
+
+Attached dataset info will appear on the right.
 
 .. image:: ../_static/attach_dataset2.png
+
+Dataset files can be browsed in the window on the left under `/input` directory.
 
 .. image:: ../_static/attach_dataset3.png
 
@@ -74,31 +114,14 @@ Write necessary code and adjust config file `mlsteam.yml`.
 
 Press "Commit and run".
 
-.. image:: ../_static/start_lab.png
+.. image:: ../_static/run_lab.png
 
 This will create a job from the code that lab contains.
 
 Browse job to see output. In our case, output is the content of folder `/mlsteam/input`.
 
-.. image:: ../_static/start_lab2.png
+.. image:: ../_static/run_lab2.png
 
-.. _stop_lab:
-
-Stop lab
-========
-
-Press on "Running" button, then select "Stop".
-
-.. image:: ../_static/stop_lab.png
-
-.. _start_lab:
-
-Start lab
-=========
-
-Press "Stop" button, then select "Start".
-
-.. image:: ../_static/run_lab.png
 
 .. _delete_lab:
 

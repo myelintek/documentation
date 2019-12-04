@@ -16,6 +16,15 @@ Click "Commit and run". This will start training job from the template code and 
 
 .. image:: ../_static/run_template.png
 
-Click on the job id to view training progres.
+Click on the job id or screan icon to view training progres.
 
 .. image:: ../_static/view_job1.png
+
+Job page displays 
+
+* Loss value graph
+* Log output
+* Configuration file (mlsteam.yml)
+* Used docker image name, gpus, status, status button (top panel)
+
+.. image:: ../_static/view_job2.png

@@ -41,9 +41,16 @@ Browse dataset
 
 Click Dataset button.
 
-Click "..." button next to dataset name.
+Click on dataset name.
 
 .. image:: ../_static/browse_dataset.png
+
+Clone dataset
++++++++++++++
+
+Press "Clone" button to create a copy of dataset.
+
+.. image:: ../_static/clone_dataset.png
 
 Upload files to dataset
 +++++++++++++++++++++++

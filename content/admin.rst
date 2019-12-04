@@ -6,10 +6,10 @@ Administration
 
 To enter administration settings click "System" on the drop down menu in the top-right corner.
 
-Default accaunt
-===============
+Default login
+=============
 
-The defauld administration credentials are superuser/superuser. 
+The defauld administration credentials are admin/admin. 
 
 Runs
 ====
