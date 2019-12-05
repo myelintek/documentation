@@ -81,7 +81,11 @@ Attach dataset to the lab
 =========================
 
 Type dataset name at the "Attach dataset" box.
-Press "Attach dataset" button. Restart lab for changes to take effect.
+Press "Attach dataset" button. 
+
+.. note::
+
+    Restart lab for changes to take effect.
 
 .. image:: ../_static/attach_dataset.png
 

@@ -9,43 +9,35 @@ To enter administration settings click "System" on the drop down menu in the top
 Default login
 =============
 
-The defauld administration credentials are admin/admin. 
+The defauld administration credentials are **admin/admin**. 
 
-Runs
+Task
 ====
 
 Is a list of currently running instances of labs and jobs.
 
-.. image:: ../_static/list_run.png
+.. image:: ../_static/list_task.png
 
-Edit
+Stop
 ++++
 
-Select needed run and click "Edit" to modify the parameters of run.
+Select instance that needs to be stopped and press "Stop".
 
-.. image:: ../_static/edit_run.png
-
-.. image:: ../_static/edit_run2.png
+.. image:: ../_static/stop_task.png
 
 Delete
 ++++++
 
 Select needed run and click "Delete" to remove the run.
 
-.. image:: ../_static/delete_run.png
+.. image:: ../_static/delete_task.png
 
-System
-======
+Resource
+========
 
-Shows current status of system:
+Shows current GPU utilization
 
-* System load
-
-* GPU utilization
-
-* Mount points
-
-.. image:: ../_static/view_system.png
+.. image:: ../_static/view_resource.png
 
 User
 ====
@@ -65,7 +57,7 @@ Fill name, password.
 
 Sellect roles from drop down list.
 
-Gpu quota is how many gpus can this user occupy, "-1" means no restriction.
+Gpu limit is how many gpus can this user occupy, "-1" means no restriction.
 
 .. image:: ../_static/create_user2.png
 
@@ -135,9 +127,6 @@ Delete
 Sellect needed project and press "Delete" button. Confirm.
 
 .. image:: ../_static/delete_project_system.png
-
-Registry
-========
 
 Auditlog
 ========

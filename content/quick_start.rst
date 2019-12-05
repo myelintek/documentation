@@ -22,7 +22,7 @@ Click on the job id or screan icon to view training progres.
 
 Job page displays 
 
-* Loss value graph
+* Loss value graph (now only for demo)
 * Log output
 * Configuration file (mlsteam.yml)
 * Used docker image name, gpus, status, status button (top panel)
