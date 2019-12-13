@@ -1,8 +1,8 @@
 .. _quick_start:
 
-***********
-Quick start
-***********
+**************************
+Quick start (Use Template)
+**************************
 
 This part will show how to train image classification model from template.
 

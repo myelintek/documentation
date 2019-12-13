@@ -61,6 +61,15 @@ Then drag and drop files from local pc. Or click "Upload" button.
 
 .. image:: ../_static/upload_dataset.png
 
+Extract files from archive
+++++++++++++++++++++++++++
+
+Supported format *tar, tgz, tar.gz, zip.*
+
+Select archive file and press "Extract".
+
+.. image:: ../_static/extract_dataset.png
+
 New folder
 ++++++++++
 
