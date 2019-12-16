@@ -129,7 +129,9 @@ Directory that contains tfrecords.
 train_dir
 +++++++++
 
-Directory to write checkpoints.
+Directory to write checkpoints. Create empty directory in attached dataset (in this example empty directory name is `checkpoints`) and specify it as  train_dir.
+
+Ex: `--train_dir=/mlsteam/input/test1/checkpoints`
 
 Example
 +++++++
