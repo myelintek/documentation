@@ -14,6 +14,7 @@ Welcome to MLSteam's documentation!
    content/project
    content/lab
    content/job
+   content/template
    content/admin
 
 Indices and tables
