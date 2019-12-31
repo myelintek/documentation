@@ -2,39 +2,41 @@
 Classification Template
 ***********************
 
-Use own dataset with template
-=============================
+Use your own dataset with template
+==================================
 
-First create project from template and enter attached lab (covered in Quick start).
+First create project from classification template and enter attached lab (covered in Quick start).
 
 Default Mnist dataset is read only.
 
-Create empry dataset and attach it to the lab. In this example it will be called "test1".
+Create an empty dataset and attach it to the lab. In this example it will be called "test1".
 
 Enter terminal
 ++++++++++++++
 
-Scrol down to "Other" block in lab window, click on "Terminal" button:
+Scroll down to "Other" block in lab window, click on "Terminal" button:
 
 .. image:: ../_static/enter_terminal.png
 
-Download dataset by script
+Download dataset by script (optional)
 ++++++++++++++++++++++++++
-
+If you have your own dataset, skip to next step.
 Provided script can download and convert to the right folder format standard datasets such as **mnist, iris, cifar10, cifar100**.
-This example will show how to download cifar10.
+This example shows how to download and store cifar10 into our "test1" dataset.
+Replace "test1" for your own dataset name.
 
 Enter terminal. Type in consol
 
 .. code-block:: console
 
-    python2 download_data cifar10 /mlsteam/input/test1
+    python2 download_data cifar10 /mlsteam/input/<test1>
 
 
 Folder format
 +++++++++++++
 
-If different dataset is needed, convert it to the next folder format yourself
+Create *train* and *test* folders each with subdirectories of classes. Put 
+If different dataset is needed, convert it to the next folder format yourself.
 
 .. code-block:: console
 
@@ -62,8 +64,8 @@ To generate labels.txt and file list of dataset, run
 
 .. code-block:: console
 
-  python2 parse_folder.py -t /mlsteam/input/test1/train_list.txt /mlsteam/input/test1/train /mlsteam/input/test1/labels.txt
-  python2 parse_folder.py -v /mlsteam/input/test1/validation_list.txt /mlsteam/input/test1/test /mlsteam/input/test1/labels.txt
+  python2 parse_folder.py -t /mlsteam/input/<test1>/train_list.txt /mlsteam/input/<test1>/train /mlsteam/input/<test1>/labels.txt
+  python2 parse_folder.py -v /mlsteam/input/<test1>/validation_list.txt /mlsteam/input/<test1>/test /mlsteam/input/<test1>/labels.txt
 
 Generate tfrecord
 +++++++++++++++++
@@ -72,8 +74,8 @@ To generate tfrecord from dataset, run
 
 .. code-block:: console
 
-  python2 create_db.py --labels_file ../input/test1/labels.txt --prefix=train ../input/test1/train_list.txt ../input/test1/
-  python2 create_db.py --labels_file ../input/test1/labels.txt --prefix=validation ../input/test1/validation_list.txt ../input/test1/
+  python2 create_db.py --labels_file ../input/<test1>/labels.txt --prefix=train ../input/<test1>/train_list.txt ../input/<test1>/
+  python2 create_db.py --labels_file ../input/<test1>/labels.txt --prefix=validation ../input/<test1>/validation_list.txt ../input/<test1>/
 
 Modify configuration file
 +++++++++++++++++++++++++
@@ -82,7 +84,7 @@ Open mlsteam.yml and modify input directory in "command" field.
 
 .. image:: ../_static/own_dataset_config.png
 
-Configuration file
+Configuration file (optional)
 ==================
 
 To run trainer with parameters, following parameters are supported:
