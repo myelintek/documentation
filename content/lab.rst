@@ -105,6 +105,34 @@ Upload new files to dataset, if needed.
 
 .. image:: ../_static/attach_dataset5.png
 
+.. _pass parameters:
+
+Pass parameters
+===============
+
+Users can update parameters (hypter-parameters) of a model by defining parameters on web page. Parameters supports YAML format definition and also supports multiple values per key value. System will automatically create multiple jobs for all combinations and run created jobs in parallel on different GPUs.
+
+In your model source code. Please import mlsteam function
+
+.. code-block:: console
+
+  from mlsteam import stparams
+
+Replace code as below to enable parameter update from web page. in this example, we define 'train_bs' keyword.
+
+.. code-block:: console
+
+  -      default=128,
+  +      default=stparams.get_value('train_bs', 128),
+
+Now you can define keyword value in *Params* input block of a lab. for example, we can change 'train_bs' to 64.
+
+.. code-block:: console
+
+  params:
+    train_bs: 64
+    
+
 .. _run_lab:
 
 Run lab
