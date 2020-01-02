@@ -57,3 +57,11 @@ Every [y-axis] will output a metrics, and prefixed by [group]. For example, 'Tra
 The metrics and output should be:
 
 .. image:: ../_static/metrics_job.png
+
+
+Model summary
+===========
+
+Job will parse model summary from output log. It will show on summary tab. For now, it can support "Keras", "Pytorch", "tensorflow2.0" platform.
+
+.. image:: ../_static/model_summary.png
