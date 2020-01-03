@@ -80,3 +80,37 @@ Edit the callback logger function:
 
 And change the content of print()
 
+Define Train Step and Batch
++++++++++++++++++++++++++++
+
+The batch_one_gpu is a number that specify how many images training on one GPU in a step. So if the envirment has 8 GPUs, each step will train 8 x batch_one_gpu images on 8 GPUs.
+
+.. code-block:: console
+
+  batch_one_gpu=2
+  steps_per_epoch=400
+  total_epochs=1
+
+The steps_per_epoch defines how many step in a epoch.
+
+It will produce the checkpoint file after a epoch finished. And you can specify total_epochs to determine the total epoch.
+
+(Note) In this program, epoch's size is defined by user in steps_per_epoch. It has no relative with dataset size.
+
+Checkpoint
+++++++++++
+
+You can specify path to save checkpoint file:
+
+.. code-block:: console
+
+  checkpoint_path='./unet_membrane.hdf5'
+
+And specify a checkpoint file to restore model weights in the begining.
+
+.. code-block:: console
+
+  restore_path='./unet_membrane.hdf5'
+
+ 
+
