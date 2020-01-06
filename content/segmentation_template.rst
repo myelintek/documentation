@@ -2,7 +2,6 @@
 Segmentation Template
 ***********************
 
-
 UNet Keras template 
 ===================
 
@@ -10,11 +9,17 @@ https://github.com/myelintek/unet
 
 The code is refer to https://github.com/zhixuhao/unet, and we fixed some issues.
 
-
 Dataset
 +++++++
 
-This program was designed for the http://brainiac2.mit.edu/isbi_challenge/.
+This program was designed for the http://brainiac2.mit.edu/isbi_challenge/ .
+
+Usage
++++++
+
+Setup the data paths, and call:
+
+python3 main.py
 
 Train Input
 +++++++++++
@@ -31,7 +36,6 @@ The train_path should has two child folders named 'image' and 'label', but if yo
 
     myGene = trainGenerator(batch_one_gpu,train_path,'image','label',data_gen_args,save_to_dir = aug_path)
 
-
 Test Input and Predict Output
 +++++++++++++++++++++++++++++
 
@@ -41,8 +45,6 @@ After training, the model will predict those images in test folder, and save the
 
     test_path='/mlsteam/input/test'
     predict_path='./data/predict'
-
-
 
 Train Input Augmentation
 ++++++++++++++++++++++++
@@ -111,6 +113,88 @@ And specify a checkpoint file to restore model weights in the begining.
 .. code-block:: console
 
   restore_path='./unet_membrane.hdf5'
-
  
+UNet Pytorch Template
+=====================
 
+https://github.com/myelintek/Pytorch-UNet
+
+The code is refer to https://github.com/milesial/Pytorch-UNet, and we add multiple GPU, remove tqdm(progress bar).
+
+Dataset
++++++++
+
+This program was designed for the https://www.kaggle.com/c/carvana-image-masking-challenge/data .
+
+Usage
++++++
+
+python3 train.py -b [batch_size]
+
+(Note) If you have N GPU, the batch size might be the multiple of N.
+
+Train Input
++++++++++++
+
+In main.py, you can edit the input path:
+
+.. code-block:: console
+
+    dir_img='/mlsteam/input/train/'
+    dir_mask='/mlsteam/input/train_masks/'
+
+Test Input and Predict Output
++++++++++++++++++++++++++++++
+
+TBD
+
+Train Input Augmentation
+++++++++++++++++++++++++
+
+In this program, only implement 'scale' to augment fig.
+The height and width will multiply scale for resize.
+
+.. code-block:: console
+
+  python3 train.py --scale 0.5
+
+Customize Output
+++++++++++++++++
+
+TBD
+
+Define Train Step and Batch
++++++++++++++++++++++++++++
+
+In this Program, one epoch is training the train dataset one round, and we can specify how many epoch to train in the program parameter:
+
+.. code-block:: console
+
+  python3 train.py --epochs 5
+
+The Program divide the whole dataset into two part, train and validation. You can specify the percent of whole dataset for validation part. Ex. 10% for validation: 
+
+.. code-block:: console
+
+  python3 train.py --validation 10
+
+And you can define the frequency to execute validation:
+
+.. code-block:: console
+
+  python3 train.py --validation_epoch 0.5
+
+Checkpoint
+++++++++++
+
+You can specify path to save checkpoint file:
+
+.. code-block:: console
+
+  dir_checkpoint = './checkpoints/'
+
+You can specify a checkpoint file to restore model weights at the program parameter:
+
+.. code-block:: console
+
+  python3 train.py --load ./checkpoints/CP_epoch1.pth
