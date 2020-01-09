@@ -36,7 +36,7 @@ The train_path should has two child folders named 'image' and 'label', but if yo
 
     myGene = trainGenerator(batch_one_gpu,train_path,'image','label',data_gen_args,save_to_dir = aug_path)
 
-Test Input and Predict Output
+Predict
 +++++++++++++++++++++++++++++
 
 After training, the model will predict those images in test folder, and save the results in predict folder.
@@ -143,10 +143,16 @@ In main.py, you can edit the input path:
     dir_img='/mlsteam/input/train/'
     dir_mask='/mlsteam/input/train_masks/'
 
-Test Input and Predict Output
+Predict
 +++++++++++++++++++++++++++++
 
-TBD
+To predict image, the model checkpoint is needed. So you should train first.
+
+use -i or --input to specify the predict image folder, and use -o or --output for output folder. If you want to overwrite the output, set --overwrite.
+
+.. code-block:: console
+
+    python3 predict.py -m ./checkpoints/CP_epoch1.pth -i /mlsteam/input/test -o predict_output --overwrite
 
 Train Input Augmentation
 ++++++++++++++++++++++++
@@ -161,7 +167,11 @@ The height and width will multiply scale for resize.
 Customize Output
 ++++++++++++++++
 
-TBD
+You can change train.py for line 108, 121, 126:
+
+.. code-block:: console
+
+  print("{:.2f} Training: epoch {:6.4f}, loss {} ".format(time.time()-t_start, (global_step*batch_size/n_train), loss.item()))
 
 Define Train Step and Batch
 +++++++++++++++++++++++++++
