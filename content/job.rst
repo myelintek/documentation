@@ -39,7 +39,7 @@ First stop job, if it is running. Click on tresh icon next to job id.
 Metrics of job
 ==========
 
-First You should define your programe output to fit below format:
+First You should define your program output to fit below format:
   [Group] [x-axis]=[x-value] [y1-axis]=[y1-value] [y2-axis]=[y2-value]...[yn-axis]=[y2-value]
 
 "Occur Only Onece"
@@ -54,6 +54,16 @@ First You should define your programe output to fit below format:
 
 Every [y-axis] will output a metrics, and prefixed by [group]. For example, 'Train_loss'.
 
-The metrics and output should be:
+There are 2 output examples:
+
+1. Train step=10 loss=0.818 acc=0.95
+
+   => Produce two metrics: Train_loss(x:step, y:loss), Train_acc(x:step, y:acc)
+
+2. Validation epoch=1.66 loss=0.818 acc_top5=0.95 acc_top1=0.8
+
+   => Produce three metrics: Validation_loss(x:epoch, y:loss), Validation_acc_top5(x:epoch, y:acc_top5), Validation_acc_top1(x:epoch, y:acc_top1)
+
+A example of metrics and output:
 
 .. image:: ../_static/metrics_job.png
