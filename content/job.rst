@@ -37,7 +37,7 @@ First stop job, if it is running. Click on tresh icon next to job id.
 .. image:: ../_static/delete_job.png
 
 Metrics of job
-==========
+==============
 
 First You should define your program output to fit below format:
   [Group] [x-axis]=[x-value] [y1-axis]=[y1-value] [y2-axis]=[y2-value]...[yn-axis]=[y2-value]
