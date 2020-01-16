@@ -243,7 +243,7 @@ Back to the Lab page, open the file 'try_detection.ipynb' in jupyterlab. Click r
 
 
 Segmentation (by request)
-============
+=========================
 
 
 UNet Keras template 
@@ -281,7 +281,7 @@ The train_path should has two child folders named 'image' and 'label', but if yo
     myGene = trainGenerator(batch_one_gpu,train_path,'image','label',data_gen_args,save_to_dir = aug_path)
 
 Predict
-+++++++++++++++++++++++++++++
++++++++
 
 After training, the model will predict those images in test folder, and save the results in predict folder.
 
@@ -388,7 +388,7 @@ In main.py, you can edit the input path:
     dir_mask='/mlsteam/input/train_masks/'
 
 Predict
-+++++++++++++++++++++++++++++
++++++++
 
 To predict image, the model checkpoint is needed. So you should train first.
 
