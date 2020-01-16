@@ -67,3 +67,10 @@ There are 2 output examples:
 A example of metrics and output:
 
 .. image:: ../_static/metrics_job.png
+
+Model summary
+=============
+
+Job will parse model summary from output log. It will show on summary tab. For now, it can support "Keras", "Pytorch", "tensorflow2.0" platform.
+
+.. image:: ../_static/model_summary.png
