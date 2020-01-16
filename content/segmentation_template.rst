@@ -1,9 +1,14 @@
+
 ***********************
-Segmentation Template
+Template
 ***********************
 
+Segmentation
+============
+
+
 UNet Keras template 
-===================
+-------------------
 
 https://github.com/myelintek/unet
 
@@ -115,7 +120,7 @@ And specify a checkpoint file to restore model weights in the begining.
   restore_path='./unet_membrane.hdf5'
  
 UNet Pytorch Template
-=====================
+---------------------
 
 https://github.com/myelintek/Pytorch-UNet
 
