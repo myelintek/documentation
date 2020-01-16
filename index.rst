@@ -16,6 +16,7 @@ Welcome to MLSteam's documentation!
    content/job
    content/template
    content/segmentation_template
+   content/remote_access
    content/admin
 
 Indices and tables
