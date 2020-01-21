@@ -131,7 +131,37 @@ Now you can define keyword value in *Params* input block of a lab. for example, 
 
   params:
     train_bs: 64
+
+.. _lab_tensorboard:
+
+Use Tensorboard
+===============
+Users can open tensorboard for current lab. First, use classification template to open a lab. then, type following command in console to generate checkpoint files.
+
+.. code-block:: console
+
+  python2 trainer.py --num_gpus=1 --batch_size=32 --network=lenet.py --data_dir=../input/mnist --train_dir=backup
+
+checkpoint files will located in backup folder. Now, click tensorboard -> start button on top-right corner of lab page.
     
+.. image:: ../_static/start_lab_tensorboard.jpg
+
+Click tensorboard button again, the dropdown list will show OPEN button. Click open button to open tensorboard in a new tab.
+
+.. image:: ../_static/open_lab_tensorboard.jpg
+
+The tensorboard will read current lab folder and display content accordingly.
+
+.. note::
+
+  If the new tab page shows 502, please reload page again.
+
+To close tensorboard, click tensorboard -> close button to terminate tensorboard process.
+
+.. note::
+
+  tensorboard will been terminated when the associated lab is deleted.
+
 
 .. _run_lab:
 
