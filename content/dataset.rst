@@ -25,7 +25,7 @@ Empty dataset will be created.
 Create dataset from remote source
 =================================
 
-Currently system supports creation of dataset from NFS.
+Currently system supports creation of dataset from NFS. Admin needs first setup host with password-less privilege for mount.
 
 Click "New dataset". Input dataset name and check "External storage" box. From drop down menu select dataset type as NFS.
 Input ip and mount point. Press "Create".

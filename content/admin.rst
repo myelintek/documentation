@@ -135,6 +135,40 @@ Log of system events in chronological order. Use "Search" box on top to look for
 
 .. image:: ../_static/log_system.png
 
+Host
+====
+
+Shows list of hosts in the system.
+
+Create
+++++++
+
+First on the target host create a sudo user account.
+
+Give it the password-less privilege for mount related commands. For this create fallowing file `/etc/sudoers.d/<account>` with content
+
+.. code-block:: console
+
+  <account> ALL=(ALL) NOPASSWD: /usr/bin/mount,/usr/bin/umount,/bin/sh
+
+Then generate the pair of ssh-keys (sellect all defaults). For this on host machine console type:
+
+.. code-block:: console
+
+  ssh-keygen -t rsa -b 4096 -C "<your_string>"
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_rsa
+  cat ~/.ssh/id_rsa.pub > authorized_keys
+
+On MLSteam webportal Host page press "Create". 
+
+.. image:: ../_static/new_host0.png
+
+Then fill the form with ip address, account name and for "SSH KEY" field copy the content of `~/.ssh/id_rsa`.
+
+.. image:: ../_static/new_host1.png
+  
+
 License
 =======
 
