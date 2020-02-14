@@ -45,6 +45,27 @@ Default Mnist dataset is read only.
 
 Create an empty dataset and attach it to the lab. In this example it will be called "test1".
 
+For this go to Dataset page and press "New Dataset". Then enter dataset name and press create.
+
+.. image:: ../_static/template_empty_dataset1.png
+
+.. image:: ../_static/template_empty_dataset2.png
+
+Go back to lab. For this press "Project" -> "classification" -> "Lab" -> <lab_id>.
+
+.. image:: ../_static/template_empty_dataset3.png
+
+.. image:: ../_static/template_empty_dataset4.png
+
+.. image:: ../_static/template_empty_dataset5.png
+
+To attach dataset to lab enter it's name and press "Attach dataset".
+
+.. image:: ../_static/template_empty_dataset6.png
+
+For changes to take effect restart the lab.
+
+.. image:: ../_static/template_empty_dataset7.png
 
 Download dataset (use cifar10 as example)
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -71,8 +92,8 @@ Enter terminal. Type in console
 Folder format
 ^^^^^^^^^^^^^
 
-Create *train* and *test* folders each with subdirectories of classes. Put 
-If different dataset is needed, convert it to the next folder format yourself.
+If non-standard dataset is needed, convert it to the next folder format yourself.
+Create *train* and *test* folders each with subdirectories of classes. 
 
 .. code-block:: console
 
