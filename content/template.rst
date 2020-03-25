@@ -20,11 +20,11 @@ Then click "Use Template" on the classification card. This will create an image 
 
 In the lab page, click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/run_template.png
+.. image:: ../_static/commit_run.png
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: ../_static/view_job1.png
+.. image:: ../_static/view_job.png
 
 Job page displays 
 
@@ -55,17 +55,11 @@ Go back to lab. For this press "Project" -> "classification" -> "Lab" -> <lab_id
 
 .. image:: ../_static/template_empty_dataset3.png
 
-.. image:: ../_static/template_empty_dataset4.png
-
-.. image:: ../_static/template_empty_dataset5.png
+.. image:: ../_static/list_lab.png
 
 To attach dataset to lab enter it's name and press "Attach dataset".
 
-.. image:: ../_static/template_empty_dataset6.png
-
-For changes to take effect restart the lab.
-
-.. image:: ../_static/template_empty_dataset7.png
+.. image:: ../_static/attach_dataset.png
 
 Download dataset (use cifar10 as example)
 +++++++++++++++++++++++++++++++++++++++++++++++++++

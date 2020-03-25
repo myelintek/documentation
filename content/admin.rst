@@ -9,42 +9,29 @@ To enter administration settings click "System" on the drop down menu in the top
 Default login
 =============
 
-The defauld administration credentials are **admin/admin**. 
+The defauld administration credentials are **admin/admin**.
 
-Task
-====
+.. image:: ../_static/admin_dropdown.png
 
-Is a list of currently running instances of labs and jobs.
+Profile
+=======
 
-.. image:: ../_static/list_task.png
+It shows current user profile and change password operation.
 
-Stop
-++++
+.. image:: ../_static/profile.png
 
-Select instance that needs to be stopped and press "Stop".
+.. image:: ../_static/change_password.png
 
-.. image:: ../_static/stop_task.png
 
-Delete
-++++++
-
-Select needed run and click "Delete" to remove the run.
-
-.. image:: ../_static/delete_task.png
-
-Resource
-========
-
-Shows current GPU utilization
-
-.. image:: ../_static/view_resource.png
+Account
+=======
 
 User
-====
+----
 
-Is user managment tab
+In user managment tab
 
-Allows add, edit or delete user.
+Allows create, edit or delete user.
 
 Create
 ++++++
@@ -58,6 +45,8 @@ Fill name, password.
 Sellect roles from drop down list.
 
 Gpu limit is how many gpus can this user occupy, "-1" means no restriction.
+
+Manage group if user needs.
 
 .. image:: ../_static/create_user2.png
 
@@ -79,10 +68,66 @@ Select user that needs to be deleted, press "Delete" button. Confirm.
 
 .. image:: ../_static/delete_user.png
 
-Projects
-========
+Group
+-----
+
+Is group managment tab
+
+Allows add and delete group.
+
+Create
+++++++
+
+Press "Create" button.
+
+.. image:: ../_static/create_group.png
+
+Fill group name and confirm.
+
+.. image:: ../_static/create_group2.png
+
+Delete
+++++++
+
+Select group that needs to be deleted, press "Delete" button. Confirm.
+
+.. image:: ../_static/delete_group.png
+
+
+Dashboard
+=========
+
+Task
+----
+
+Is a list of currently running instances of labs and jobs.
+
+.. image:: ../_static/list_task.png
+
+Stop
+++++
+
+Select instance that needs to be stopped and press "Stop".
+
+Only running status can stop.
+
+.. image:: ../_static/stop_task.png
+
+Delete
+++++++
+
+Select needed run and click "Delete" to remove the run.
+
+Only not running status can delete.
+
+.. image:: ../_static/delete_task.png
+
+Project
+-------
 
 Project management tab. Shows list of projects.
+
+.. image:: ../_static/list_project_system.png
 
 Create
 ++++++
@@ -95,16 +140,6 @@ Input project name and annotation, press "Create".
 
 .. image:: ../_static/create_project_system2.png
 
-Edit
-++++
-
-Select a project to modify, press "Edit".
-
-.. image:: ../_static/edit_project_system.png
-
-Modify needed fields.
-
-.. image:: ../_static/edit_project_sytem2.png 
 
 Members
 +++++++
@@ -129,16 +164,29 @@ Sellect needed project and press "Delete" button. Confirm.
 .. image:: ../_static/delete_project_system.png
 
 Auditlog
-========
+--------
 
 Log of system events in chronological order. Use "Search" box on top to look for specific events.
 
 .. image:: ../_static/log_system.png
 
+Device
+======
+
+Shows All hosts' hardwave informations.
+
+.. image:: ../_static/view_device.png
+
+
+Setting
+=======
+
 Host
-====
+----
 
 Shows list of hosts in the system.
+
+.. image:: ../_static/list_host.png
 
 Create
 ++++++
@@ -162,20 +210,51 @@ Then generate the pair of ssh-keys (sellect all defaults). For this on host mach
 
 On MLSteam webportal Host page press "Create". 
 
-.. image:: ../_static/new_host0.png
+.. image:: ../_static/new_host.png
 
 Then fill the form with ip address, account name and for "SSH KEY" field copy the content of `~/.ssh/id_rsa`.
 
 .. image:: ../_static/new_host1.png
-  
+
+Delete
+++++++
+
+Sellect needed host and press "Delete" button. Confirm.
+
+.. image:: ../_static/delete_host.png
+
+Certificate
+-----------
+
+Shows list of certificates in the system.
+
+.. image:: ../_static/list_certificate.png
+
+Create
+++++++
+
+Press create button.
+
+.. image:: ../_static/create_certificate.png
+
+Input certificate name and doamin name, press "Test anc Create". (Optional, email) 
+
+.. image:: ../_static/create_certificate2.png
+
+Delete
+++++++
+
+Sellect needed host and press "Delete" button. Confirm.
+
+.. image:: ../_static/delete_certificate.png
+
+Repository
+++++++++++
 
 License
-=======
++++++++
 
 Shows current license file.
-
-Edit
-++++
 
 If license needs to be updated press "Edit" to input new license file.
 

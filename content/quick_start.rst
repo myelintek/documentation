@@ -6,19 +6,23 @@ Quick start (Use Template)
 
 This part will show how to train image classification model from template.
 
-On the top bar click "Template".
+Create a project first.
 
-Then click "Use Template" on the classification card. This will create an image classification project named "classification" with Mnist dataset already attached to it.
+.. image:: ../_static/create_project.png
+
+Then click "Use Template" on the classification card in template tab.
+
+Fill comment and number of gpus. Confirm
 
 .. image:: ../_static/create_template.png
 
 Click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/run_template.png
+.. image:: ../_static/commit_run.png
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: ../_static/view_job1.png
+.. image:: ../_static/view_job.png
 
 Job page displays 
 

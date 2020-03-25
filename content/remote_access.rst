@@ -66,7 +66,7 @@ Tested setup: Window 10, 2019.3.3 (Professional Edition)
 
 Open needed lab in the browser and generate ssh key.
 
-.. image:: ../_static/pycharm_remote1.png
+.. image:: ../_static/generate_ssh.png
 
 Download <lab_id>_sshkey file (downloading will start automatically, if it does not press "Download" button).
 
