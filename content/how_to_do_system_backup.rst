@@ -69,3 +69,4 @@ After you are done configuring Cron, press escape, and then type ":wq"(without t
 and press enter. This will save your changes in vi.
 
 .. note:: If your server timezone is UTC and your timezone is UTC+8, please change 22 to 14 for running cron jobs in desired time.
+
