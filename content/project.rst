@@ -9,11 +9,11 @@ Project
 Create project
 ==============
 
-Press "Project" button. 
+Press "Project" or "new project" button. 
 
 .. image:: ../_static/create_project.png
 
-At the pop-up window press "New".
+At the pop-up window press "New project".
 
 .. image:: ../_static/create_project2.png
 
@@ -50,15 +50,19 @@ Add member
 
 On the projects page click "Settings".
 
-.. image:: ../_static/member_project.png
-
 Click "Add member".
 
-.. image:: ../_static/member_project2.png
+.. image:: ../_static/member_project.png
 
 Type members name. Sellect role. Press "Add".
 
-.. image:: ../_static/member_project3.png
+.. image:: ../_static/member_project2.png
+
+Modify user name and click "save" button.
+
+"Delete" button will remove member from project.
+
+.. image:: ../_static/edit_delete_member.png
 
 Delete project
 ==============
