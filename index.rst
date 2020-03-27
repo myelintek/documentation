@@ -18,6 +18,7 @@ Welcome to MLSteam's documentation!
    content/remote_access
    content/admin
    content/guide
+   content/release_notes
 
 Indices and tables
 ==================
