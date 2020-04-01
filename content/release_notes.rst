@@ -1,7 +1,41 @@
 *************
 Realese notes
 *************
-V3.3.0
+
+v3.3.2
+======
+
+Features
+++++++++
+
+    * Launch lab can choose no GPU environment
+    * Better ssh config layout at Lab
+
+BugFixes
+++++++++
+
+    * fix right menu at lab collapse issue
+    * fix host status incorrect issue when host changed IP
+    * fix duplicated docker images in projects
+
+
+v3.3.1
+======
+
+Features
+++++++++
+
+    * add auditlog api
+    * lab dataset changed to dropdown list
+
+Bugfixes
+++++++++
+
+    * fix certificate expire date
+    * fix nfs delete files issue when using NFSv4
+
+
+v3.3.0
 ======
 
 Features
@@ -33,7 +67,7 @@ Bugfixes
     * Fix jupyterlab header hidden issue
     * minor bug fixes
 
-V3.3.2
+v3.2.2
 ======
 
 Features
@@ -51,7 +85,7 @@ Bugfixes
     * Fix jobs disappear issue
     * Fix can't find hostid for licensing issue
 
-V3.2.1
+v3.2.1
 ======
 
 Features
@@ -68,7 +102,7 @@ Bugfixes
     * Fix run job from default lab becoming error state
     * Minor bugfixs
 
-V3.2.0
+v3.2.0
 ======
 
 Features
@@ -78,7 +112,7 @@ Features
     * Refactor top-right menu
     * Admin role and developer role become exclusive. Admin role users can do same things as developer role.
 
-V3.1.1
+v3.1.1
 ======
 
 Features
@@ -94,7 +128,7 @@ Bugfixes
     * Fix jupyterlab starts in blank screen issue
     * Fix allocated GPU unreleased issue
 
-V3.1.0
+v3.1.0
 ======
 
 Features
@@ -114,7 +148,7 @@ Bugfixes
     * Fix upload large amount of files hang issue
     * Minor bugs fix
 
-V3.0.0
+v3.0.0
 ======
 
     * Python3 version, refactor code.
