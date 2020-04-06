@@ -9,69 +9,67 @@ Lab
 Create lab
 ==========
 
-Select project then click lab tab.
+Select project then click "Lab" tab.
 
-.. image:: ../_static/list_lab.png
+.. image:: ../_static/lab/list_lab.png
 
-Press "New Lab".
+Click "New Lab".
 
-.. image:: ../_static/create_lab.png
+.. image:: ../_static/lab/create_lab.png
 
 Select docker image to create lab in. The default image is "myelintek/python-gpu".
-Select the number of gpus to assign to lab. Add a comment, if needed.
-Press "Submit".
+Select the number of gpus to assign to lab. Add comments, if needed.
+Click "Submit" to create new lab and redirect lab page.
 
-.. image:: ../_static/create_lab2.png
-
-.. image:: ../_static/create_lab3.png
+.. image:: ../_static/lab/create_lab_modal.png
 
 .. _browse_lab:
  
 Browse labs
 ===========
 
-Browse labs of the specific project. Go to project page. Press "Lab" tab.
+Browse labs of the specific project. Go to project page. Click "Lab" tab.
 
-.. image:: ../_static/list_lab.png
+.. image:: ../_static/lab/list_lab.png
 
-Press on lab id or "Browse" button at the Actions collumn.
+Click on lab id or "Browse" button at the Actions collumn.
 
-.. image:: ../_static/view_lab.png
+.. image:: ../_static/lab/view_lab.png
 
 Start lab
 =========
 
-Press "Done" dropdown, then select "Start" 
+Click "Done" dropdown, then select "Start" 
 
-.. image:: ../_static/start_lab.png
+.. image:: ../_static/lab/start_lab_in.png
 
-or press "Start" at the Actions column.
+or click "Start" at the Actions column.
 
-.. image:: ../_static/start_lab2.png
+.. image:: ../_static/lab/start_lab_out.png
 
 Stop lab
 ========
 
-Press on "Running" button, then select "Stop"
+Click on "Running" button, then select "Stop"
 
-.. image:: ../_static/stop_lab.png
+.. image:: ../_static/lab/stop_lab_in.png
 
-or press "Stop" at the Actions column.
+or click "Stop" at the Actions column.
 
-.. image:: ../_static/stop_lab2.png
+.. image:: ../_static/lab/stop_lab_out.png
 
 .. _start_lab:
 
 Restart lab
 ===========
 
-Press "Running" button, then select "Restart"
+Click "Running" button, then select "Restart"
 
-.. image:: ../_static/restart_lab.png
+.. image:: ../_static/lab/restart_lab_in.png
 
-or press "Restart" at the Actions column.
+or click "Restart" at the Actions column.
 
-.. image:: ../_static/restart_lab2.png
+.. image:: ../_static/lab/restart_lab_out.png
 
 .. _attach_dataset_lab:
 
@@ -79,34 +77,33 @@ Attach dataset to the lab
 =========================
 
 Type dataset name at the "Attach dataset" box.
-Press "Attach dataset" button. 
+Click "Attach dataset" button. 
 
 .. note::
 
-    Restart lab for changes to take effect.
+    Need restart lab container to re-mount data directory.
+    Make sure all the files saved already.
 
-.. image:: ../_static/attach_dataset.png
+.. image:: ../_static/lab/attach_dataset.png
 
-Need restart lab container to re-mount data directory.
-Make sure all the files saved already.
 
-.. image:: ../_static/attach_dataset2.png
+.. image:: ../_static/lab/attach_dataset_alert.png
 
 Attached dataset info will appear on the right.
 
-.. image:: ../_static/attach_dataset3.png
+.. image:: ../_static/lab/attach_dataset_done.png
 
 Dataset files can be browsed in the window on the left under `/input` directory.
 
-.. image:: ../_static/attach_dataset4.png
+.. image:: ../_static/lab/attach_dataset_file.png
 
 Add new directory to dataset, if needed.
 
-.. image:: ../_static/attach_dataset5.png
+.. image:: ../_static/lab/attach_dataset_folder.png
 
 Upload new files to dataset, if needed.
 
-.. image:: ../_static/attach_dataset6.png
+.. image:: ../_static/lab/attach_dataset_upload.png
 
 .. _pass parameters:
 
@@ -130,15 +127,15 @@ Replace code as below to enable parameter update from web page. in this example,
 
 All parameters will show on the right.
 
-.. image:: ../_static/list_params.png
+.. image:: ../_static/lab/list_params.png
 
 Use comma separator to pass multiple values, or select multiple values from a list to create multiple jobs.
 
-.. image:: ../_static/custom_params.png
+.. image:: ../_static/lab/custom_params.png
 
-Press "Reset" button to reset to default parameters.
+Click "Reset" button to reset to default parameters.
 
-.. image:: ../_static/reset_params.png
+.. image:: ../_static/lab/reset_params.png
 
 Now you can define default keyword value in mlsteam.yml of a lab.
 
@@ -146,7 +143,7 @@ If you want to make a dropdown and selector, use "-" to perform it is list.
 
 If you want to make a text editor, use type "String" or type "Int".
 
-.. image:: ../_static/default_params.png
+.. image:: ../_static/lab/default_params.png
 
 Don't use like following example.
 
@@ -169,11 +166,11 @@ Users can open tensorboard for current lab. First, use classification template t
 
 checkpoint files will located in backup folder. Now, click tensorboard -> start button on top-right corner of lab page.
     
-.. image:: ../_static/start_lab_tensorboard.png
+.. image:: ../_static/lab/start_lab_tensorboard.png
 
 Click tensorboard button again, the dropdown list will show OPEN button. Click open button to open tensorboard in a new tab.
 
-.. image:: ../_static/open_lab_tensorboard.png
+.. image:: ../_static/lab/open_lab_tensorboard.png
 
 The tensorboard will read current lab folder and display content accordingly.
 
@@ -197,29 +194,29 @@ First attach dataset to the lab.
 
 Write necessary code and adjust config file `mlsteam.yml`.
 
-.. image:: ../_static/start_lab_config.png
+.. image:: ../_static/lab/lab_config.png
 
-Press "Commit and run".
+Click "Commit and run".
 
-.. image:: ../_static/commit_run.png
+.. image:: ../_static/lab/commit_run.png
 
 Check parameters if any wrong.
 
-.. image:: ../_static/check_params.png
+.. image:: ../_static/lab/check_params.png
 
 This will create a job from the code that lab contains.
 
 Browse job to see output. In our case, output is the content of folder `/mlsteam/input`.
 
-.. image:: ../_static/run_output.png
+.. image:: ../_static/lab/run_output.png
 
 
 .. _delete_lab:
 
 Delete lab
 ==========
-On the project page press "Lab" button.
+On the project page click "Lab" button.
 Stop needed lab.
 On the list of labs page click on the trash icon on the side of the lab name.
 
-.. image:: ../_static/delete_lab.png
+.. image:: ../_static/lab/delete_lab.png

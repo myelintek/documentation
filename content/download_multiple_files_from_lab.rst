@@ -14,12 +14,12 @@ First open a jupyterlab and past following command to zip all files:
 
    !zip -r myFiles.zip *
 
-.. image:: ../_static/zip_jupyterlab.jpg
+.. image:: ../_static/lab/zip_jupyterlab.jpg
 
 
 2. Download zipped file from jupyterlab
 ---------------------------------------
 Press refresh button and right click the zip file to download.
 
-.. image:: ../_static/zip_download.jpg
+.. image:: ../_static/lab/zip_download.jpg
 
