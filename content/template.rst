@@ -12,19 +12,21 @@ This part will show how to train image classification model from template.
 Quick start
 -----------
 
-On the top bar click "Template".
+On the top bar click "Project" to create your own project.
 
-Then click "Use Template" on the classification card. This will create an image classification project named "classification" with Mnist dataset already attached to it.
+.. image:: ../_static/project/create_project.png
 
-.. image:: ../_static/create_template.png
+Change to template tab. Then click "Use Template" on the classification card. This will create a new lab with Mnist dataset already attached to it.
+
+.. image:: ../_static/template/create_template.png
 
 In the lab page, click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/commit_run.png
+.. image:: ../_static/lab/commit_run.png
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: ../_static/view_job.png
+.. image:: ../_static/job/list_job.png
 
 Job page displays 
 
@@ -33,33 +35,33 @@ Job page displays
 * Configuration file (mlsteam.yml)
 * Used docker image name, gpus, status, status button (top panel)
 
-.. image:: ../_static/view_job2.png
+.. image:: ../_static/template/view_job2.png
 
 
 Use your own dataset
 --------------------
 
-First create project from classification template and enter attached lab (covered in Quick start).
+First create lab from classification template and enter attached lab (covered in Quick start).
 
 Default Mnist dataset is read only.
 
 Create an empty dataset and attach it to the lab. In this example it will be called "test1".
 
-For this go to Dataset page and press "New Dataset". Then enter dataset name and press create.
+For this go to Dataset page and click "New Dataset". Then enter dataset name and click create.
 
-.. image:: ../_static/template_empty_dataset1.png
+.. image:: ../_static/template/template_empty_dataset1.png
 
-.. image:: ../_static/template_empty_dataset2.png
+.. image:: ../_static/template/template_empty_dataset2.png
 
-Go back to lab. For this press "Project" -> "classification" -> "Lab" -> <lab_id>.
+Go back to lab. For this click "Project" -> "classification" -> "Lab" -> <lab_id>.
 
-.. image:: ../_static/template_empty_dataset3.png
+.. image:: ../_static/template/template_empty_dataset3.png
 
-.. image:: ../_static/list_lab.png
+.. image:: ../_static/lab/list_lab.png
 
-To attach dataset to lab enter it's name and press "Attach dataset".
+To attach dataset to lab enter it's name and click "Attach dataset".
 
-.. image:: ../_static/attach_dataset.png
+.. image:: ../_static/lab/attach_dataset.png
 
 Download dataset (use cifar10 as example)
 +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -71,7 +73,7 @@ This example shows how to download and store cifar10 into our "test1" dataset.
 
 First, scroll down to "Other" block in lab window, click on "Terminal" button:
 
-.. image:: ../_static/enter_terminal.png
+.. image:: ../_static/template/enter_terminal.png
 
 Enter terminal. Type in console
 
@@ -135,7 +137,7 @@ Modify configuration file
 
 Open mlsteam.yml and modify input directory in "command" field.
 
-.. image:: ../_static/own_dataset_config.png
+.. image:: ../_static/template/own_dataset_config.png
 
 Parameters (optional)
 +++++++++++++++++++++
@@ -227,15 +229,15 @@ On the top bar click "Template".
 
 Then click "Use Template" on the object detection card. This will create an object detection project named "objectdetection" with Pascal dataset already attached to it.
 
-.. image:: ../_static/use_template2.jpg
+.. image:: ../_static/template/use_template2.jpg
 
 In the lab page, click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/run_template2.jpg
+.. image:: ../_static/template/run_template2.jpg
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: ../_static/view_job1.png
+.. image:: ../_static/template/view_job1.png
 
 Job page displays 
 
@@ -244,7 +246,7 @@ Job page displays
 * Configuration file (mlsteam.yml)
 * Used docker image name, gpus, status, status button (top panel)
 
-.. image:: ../_static/view_job3.jpg
+.. image:: ../_static/template/view_job3.jpg
 
 
 Inference example
@@ -252,7 +254,7 @@ Inference example
 
 Back to the Lab page, open the file 'try_detection.ipynb' in jupyterlab. Click run multiple times to examine a pretrained yolov3-tiny.weights file.
 
-.. image:: ../_static/run_lab.jpg
+.. image:: ../_static/lab/run_lab.jpg
 
 
 

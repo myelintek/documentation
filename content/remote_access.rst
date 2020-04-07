@@ -8,7 +8,7 @@ This chapter will explain how to connect IDE on user's PC to the lab running on 
 .. toctree::
    :titlesonly:
 
-   ide_vscode_windows
-   ide_pycharm_windows
+   ide_vscode
+   ide_pycharm
 
 

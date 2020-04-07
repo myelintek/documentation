@@ -13,28 +13,26 @@ Browse jobs
 ===========
 
 Go into project page.
-Click on "Job" button.
-
-.. image:: ../_static/browse_jobs.png
+Click on "Job" tab.
 
 List of jobs belonging to project will show up.
 Click on job's id or screen icon next to it to see details.
 
-.. image:: ../_static/browse_jobs2.png
+.. image:: ../_static/job/list_job.png
 
 Stop job
 ========
 
 Click on stop icon next to running job id.
 
-.. image:: ../_static/stop_job.png
+.. image:: ../_static/job/stop_job.png
 
 Delete job
 ==========
 
 First stop job, if it is running. Click on tresh icon next to job id.
 
-.. image:: ../_static/delete_job.png
+.. image:: ../_static/job/delete_job.png
 
 Metrics of job
 ==============
@@ -66,11 +64,11 @@ There are 2 output examples:
 
 A example of metrics and output:
 
-.. image:: ../_static/metrics_job.png
+.. image:: ../_static/job/metrics_job.png
 
 Model summary
 =============
 
 Job will parse model summary from output log. It will show on summary tab. For now, it can support "Keras", "Pytorch", "tensorflow2.0" platform.
 
-.. image:: ../_static/model_summary.png
+.. image:: ../_static/job/model_summary.png
