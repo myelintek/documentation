@@ -5,6 +5,18 @@ PyCharm
 
 Tested setup: Window 10, 2019.3.3 (Professional Edition)
 
+Install PyCharm
+---------------
+
+Download VSCode that according to your operating system from following link
+
+https://www.jetbrains.com/pycharm/download/
+
+.. image:: ../_static/remote_ide/pycharm/install.png
+
+SSH key
+-------
+
 Open needed lab in the browser and generate ssh key.
 
 .. image:: ../_static/remote_ide/sshkey.jpg
@@ -15,13 +27,19 @@ Download <lab_id>_sshkey file (downloading will start automatically, if it does 
 
 .. note:: In the Linux operating system, you need to change the sshkey file to 600 mode.
 
+PyCharm Project
+---------------
+
 Open the PyCharm application and create new project.
 
 .. image:: ../_static/remote_ide/pycharm/pycharm_open.png
 
-Find the existing interpreter and click the rightmost button in "Pure Python".
+Find the existing interpreter and click the rightmost button in "Pure Python" tab.
 
 .. image:: ../_static/remote_ide/pycharm/pure_python.png
+
+Connect
+-------
 
 Type your host, port and user information. (You can find it in lab page)
 
@@ -47,11 +65,14 @@ Make sure your existing interpreter is correct, then click the "Create" button. 
 
 .. image:: ../_static/remote_ide/pycharm/create.png
 
+Synchronize
+-----------
+
 If you want to change the location of the remote project after the project is created. You can find the configuration in the toolbar. (Tools-> Deployment-> Configuration)
 
 .. image:: ../_static/remote_ide/pycharm/configuration.png
 
-Select the configuration you want to edit. Select the Mapping tab. Click the folder button to the right of Deployment Path.
+Select the configuration you want to edit. Select the Mapping tab. Click the folder button at the right of Deployment Path.
 
 .. image:: ../_static/remote_ide/pycharm/deployment.png
 
@@ -70,6 +91,9 @@ Click this button and download all folders and data files from the mapped folder
 You can also click the "Sync with Deployed to ..." button to synchronize the mapped folder and working directory on your local host.
 
 .. image:: ../_static/remote_ide/pycharm/download_log.png
+
+Interpreter
+-----------
 
 Next, set up a python interpreter for your project.
 Click Settings (Ctrl + Alt + S) in the File tab.
