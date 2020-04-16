@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = u'MLSteam'
-copyright = u'2019, Myelintek'
+copyright = u'2020, Myelintek'
 author = u'Myelintek'
 
 # The short X.Y version
@@ -40,8 +40,15 @@ release = u''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-"sphinx_rtd_theme",
-'sphinx.ext.todo',
+    "sphinx_rtd_theme",
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
+    'sphinx.ext.todo',
+    'sphinx.ext.githubpages',
+    'sphinx.ext.napoleon',
+    'cloud_sptheme.ext.table_styling',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,7 +76,7 @@ language = None
 exclude_patterns = [u'_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'sphinx'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -84,6 +91,14 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 # html_theme_options = {}
+html_theme_options = {
+    'display_version': True,
+    'prev_next_buttons_location': 'both',
+    'sticky_navigation': False,
+    'navigation_depth': 2,
+    'includehidden': True,
+    'titles_only': False,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
