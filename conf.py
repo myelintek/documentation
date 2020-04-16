@@ -48,7 +48,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
-    'cloud_sptheme.ext.table_styling',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
