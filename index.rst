@@ -15,6 +15,7 @@ Welcome to MLSteam's documentation!
    content/lab
    content/job
    content/template
+   content/image
    content/remote_access
    content/admin
    content/guide

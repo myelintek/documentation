@@ -33,3 +33,8 @@ Template
 ********
 
 Is an example of project of specific type with a dataset connected to it. Serves as an example or template for users.
+
+Image
+*****
+
+Docker image management with portus.
