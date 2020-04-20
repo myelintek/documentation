@@ -8,4 +8,5 @@ Getting Started
    :maxdepth: 2
 
    terminology
-   quick_start 
+   quick_start
+   keras_dog_breed
