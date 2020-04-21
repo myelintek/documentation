@@ -26,9 +26,13 @@ If GPU number is 0, it will only for cpu.
 Upload Dataset
 ++++++++++++++
 
-We use 'Dog Breed Identification' dataset from kaggle, the archive file download here. :download:`Dog Breed Identification<https://www.kaggle.com/c/dog-breed-identification/data>` 
+We use 'Dog Breed Identification' dataset from kaggle as a example, 
+the archive file of dataset can be download here.
 
-Go to Dataset Panel, click 'NEW DATASET' button.
+`Dog Breed Identification <https://www.kaggle.com/c/dog-breed-identification/data>`_ 
+
+For create a new bucket to put dataset, we go to the Dataset Panel, 
+and click 'NEW DATASET' button.
 
 .. image:: ../_static/dataset/new_dataset.png
 
@@ -36,7 +40,9 @@ Input the dataset name, it's 'Dog Breed Identification' here.
 
 .. image:: ../_static/tutorial/new_dogbreed_dataset.png
 
-Click into 'Dogs vs Cats', we can see the dataset space window, click the 'Upload' button in order to upload the archive file that we just download.
+Click into 'Dog Breed Identification', we can see the dataset bucket window.
+
+Click the 'Upload' button in order to upload the archive file that we just download.
 
 .. image:: ../_static/tutorial/upload_dogbreed_button.png
 
@@ -44,11 +50,11 @@ Choose the archive file.
 
 .. image:: ../_static/tutorial/upload_dogbreed_open_window.png
 
-It's uploading now.
+It's uploading.
 
 .. image:: ../_static/tutorial/upload_dogbreed_bar.png
 
-After finish upload, choose the archive file and click the Extract button, wait a few seconds.
+After uploading done, choose the archive file and then click the Extract button. It takes a few seconds for extracting.
 
 .. image:: ../_static/tutorial/extract_dogbreed_archive.png
 
@@ -60,18 +66,19 @@ Now we can scan the content.
 Attach Dog Breed Dataset in LAB
 +++++++++++++++++++++++++++++++
 
-Attach the Dog Breed dataset folder.
+Now we can attach the Dog Breed dataset to a LAB.
 
-Click the dataset icon at left of the page, and select Dog Breed dataset. 
-The LAB need to restart for dataset load.
+Go back to our LAB, click the dataset icon at left of web page, and select Dog Breed dataset. 
 
 .. image:: ../_static/tutorial/attach_dogbreed_dataset.png
+
+When we change the attached dataset of a LAB, the LAB will restart for dataset reload.
 
 .. image:: ../_static/lab/attach_dataset_alert.png
 
 
-Write a Notebook file
-=====================
+Write a Notebook file for training
+==================================
 
 
 Start a notebook
@@ -81,23 +88,27 @@ Click the '+' button if you can't find the launcher tab.
 
 .. image:: ../_static/lab/open_launcher.png
 
-Choose the Python3 Notebook
+Choose the Python3 Notebook.
 
 .. image:: ../_static/lab/open_notebook_python3.png
 
-We might rename your notebook file to you want.
+We might rename the notebook file to we want.
 
 .. image:: ../_static/lab/rename_file.png
 
-We can input your code in the cell, then click run button to excute code in the cell. 
+In the notebook window, we can input our code in the cell, 
+and then click the run button.
+
+The interpreter will excute code in the cell section and print the output below the cell. 
 
 .. image:: ../_static/lab/notebook_execute_cell_code.png
 
-Make dataframe pair (image and label)
-++++++++++++++++++++++++++++++++++++++
+Make Train and Validation dataframe (image id, label)
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-The dataset contains a lot of images with different breeds of dogs.
-The directory structure might like this:
+The Dog breed dataset contains a lot of images with different breeds of dogs.
+
+The folder structure should be like this:
 
 .. code-block:: plant
 
@@ -108,13 +119,16 @@ The directory structure might like this:
            |- sample_submission.csv
             
 
-We care about the labels.csv, it contains mappings between dog images and label of breeds.
 
-The dataset contain 120 breeds, but we choose the top 10 of those breeds to do classification.
+It contains 120 breeds, 
+but we only choose the most popular 10 of those breeds to do classification.
 
-Now we start get the images name, and produce train_df and valid_df from labels.csv, each one is a dataframe consists of (id, breed).
+The labels.csv records mappings between dog images and labels of breeds.
 
-Define pathes: 
+Now we start to read labels.csv, and to produce the train_df and valid_df, 
+each contains a dataframe consists of many (id, breed) pairs.
+
+In the first, we have to define pathes of data: 
 
 .. code-block:: python
 
@@ -126,11 +140,16 @@ Define pathes:
 
     label_file = os.path.join(base_folder, 'labels.csv')
 
-Read train folder image labels, and filter top 10 breeds and shuffle, finally split it to two parts: train and valid.
+Read name and label of images from label_file, 
+get the most top 10 breeds of count number, 
+and then filter those breeds and shuffle the arrange, 
+finally split it to two parts: train and valid.
 
-The id of rows is missing the file extension, so we add '.jpg' in the end.
+The image name in 'id' column is missing the file extension, 
+so we should append '.jpg' following those 'id'.
 
-To modify the NUM_CLASSES to change breed number choosen, and the ratio number for train/valid ratio.
+We can modify 'NUM_CLASSES' to change the breed number to be filtered, 
+and 'ratio' for train/validation data ratio.
 
 .. code-block:: python
 
@@ -169,7 +188,7 @@ To modify the NUM_CLASSES to change breed number choosen, and the ratio number f
         valid_df.at[i, 'id'] = row['id'] + '.jpg'
         
 
-We can show the train and valid dataframe:
+Show the train and validation dataframe:
 
 .. code-block:: python
 
@@ -180,7 +199,11 @@ We can show the train and valid dataframe:
 Use ImageDataGenerator for model input
 ++++++++++++++++++++++++++++++++++++++
 
-We can create image generator and add augmentation here:
+Create a image generator for training and add augmentation here, 
+the parameters contains: the angle range of rotation, 
+the shift range of horizontal and vertical direction, 
+randomly flip images, and the switch of normalization for sample-wise
+(you can understand it as batch-wise)
 
 .. code-block:: python
 
@@ -196,8 +219,9 @@ We can create image generator and add augmentation here:
     )
 
 
-Then pass datafrme into generator's function: flow_from_dataframe, 
-the function can read image from the x_col automaticlly.  
+Then pass datafrme into a generator's function, named flow_from_dataframe, 
+this function get images name specified by 'x_col' and read image 
+file as array type automaticlly.
 
 .. code-block:: python
 
@@ -211,10 +235,10 @@ the function can read image from the x_col automaticlly.
                             batch_size=4,
                             shuffle=True)
 
-And do the same thing for valid data, 
+And we do the same thing for validation data, 
 it's worth to mention that we shouldn't 
 add any augmentation on valid data, 
-except rescale images.
+except the rescale parameter.
 
 .. code-block:: python
 
@@ -232,9 +256,11 @@ except rescale images.
 Model Training
 ++++++++++++++
 
-Create pre-trained Xception model and building new laypers on top for Transfer Learning.
 
-`Xception Model Paper <https://arxiv.org/abs/1610.02357>`_ 
+
+We use the pre-trained Xception model and building new laypers on top for Transfer Learning.
+
+The `Xception Model Paper <https://arxiv.org/abs/1610.02357>`_ 
 
 .. code-block:: python
 
@@ -274,9 +300,10 @@ Create pre-trained Xception model and building new laypers on top for Transfer L
                 metrics=["accuracy"])
     model.summary()
 
-Start Training 3 epochs with validation.
 
+Start Training and validation for 3 epochs.
 
+Training shows the progress bar of every epoch, the loss and accuracy will be printed behind each bar. 
 
 .. code-block:: python
 
@@ -289,11 +316,11 @@ Start Training 3 epochs with validation.
                         verbose=1,
                         callbacks=[tbCallBack])
 
-Here also create a TensorBoard log dir in ./tb folder, you can use it to track your training by launch a tensorboard server:
+Here also create a TensorBoard and define the log folder in './tb', you can use it to track the activity by launch a tensorboard server:
 
 .. image:: ../_static/tutorial/launch_tensorboard_server.png
 
-We can save the model parameters as a HDF5 format file.
+To store the training result, we can save the model parameters as a HDF5 format file.
 
 .. code-block:: python
 
