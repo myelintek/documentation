@@ -92,7 +92,7 @@ Choose the Python3 Notebook.
 
 .. image:: ../_static/lab/open_notebook_python3.png
 
-We might rename the notebook file to we want.
+We might rename the notebook file to 'dog_breed.ipynb'.
 
 .. image:: ../_static/lab/rename_file.png
 
@@ -157,7 +157,7 @@ and 'ratio' for train/validation data ratio.
     import random
 
     train_label = pd.read_csv(label_file)
-    NUM_CLASSES = 10
+    NUM_CLASSES = 20
 
     random.seed(NUM_CLASSES)
 
@@ -178,8 +178,8 @@ and 'ratio' for train/validation data ratio.
         tmp_list = list(range(len(tmp)))
         random.shuffle(tmp_list)
 
-        train_df = train_df.append(tmp.iloc[tmp_list[train_num:]], ignore_index=True)
-        valid_df = valid_df.append(tmp.iloc[tmp_list[:train_num]], ignore_index=True)
+        train_df = train_df.append(tmp.iloc[tmp_list[:train_num]], ignore_index=True)
+        valid_df = valid_df.append(tmp.iloc[tmp_list[train_num:]], ignore_index=True)
 
     for i, row in train_df.iterrows():
         train_df.at[i, 'id'] = row['id'] + '.jpg'
@@ -232,7 +232,7 @@ file as array type automaticlly.
                             y_col="breed",
                             class_mode="categorical",
                             target_size=(299, 299),
-                            batch_size=4,
+                            batch_size=32,
                             shuffle=True)
 
 And we do the same thing for validation data, 
@@ -249,14 +249,12 @@ except the rescale parameter.
                             y_col="breed",
                             class_mode="categorical",
                             target_size=(299, 299),
-                            batch_size=4,
+                            batch_size=16,
                             shuffle=True)
 
 
 Model Training
 ++++++++++++++
-
-
 
 We use the pre-trained Xception model and building new laypers on top for Transfer Learning.
 
@@ -307,14 +305,25 @@ Training shows the progress bar of every epoch, the loss and accuracy will be pr
 
 .. code-block:: python
 
-    from keras.callbacks import TensorBoard
-    tbCallBack = TensorBoard(log_dir='./tb', histogram_freq=0, write_graph=True, write_images=True)
+    from keras.callbacks import TensorBoard, ModelCheckpoint, Callback
 
-    model.fit_generator(train_generator,
-                        epochs=3,
+    class TrainLogger(Callback):
+        def on_epoch_begin(self, epoch, logs={}):
+            self.epoch = epoch
+        def on_train_batch_end(self, batch, logs={}):
+            print("Train epoch={:.6f} loss={:.6f} acc={:.6f}".format(self.epoch+batch/self.params.get('steps'), logs.get('loss'), logs.get('accuracy')))
+        def on_epoch_end(self, epoch, logs={}):
+            print("Validation epoch={:.6f} loss={:.6f} acc={:.6f}".format(epoch+1.0, logs.get('val_loss'), logs.get('val_accuracy')))
+            
+    tb_callBack = TensorBoard(log_dir='./tb', histogram_freq=0, write_graph=True, write_images=True)
+    model_checkpoint = ModelCheckpoint(filepath='./checkpoints', monitor='loss', verbose=0, save_best_only=True)
+
+    model.fit_generator(train_generator, 
+                        epochs=10,
+                        steps_per_epoch=train_generator.n // train_generator.batch_size,
                         validation_data=valid_generator,
-                        verbose=1,
-                        callbacks=[tbCallBack])
+                        verbose=0, 
+                        callbacks=[tb_callBack, model_checkpoint, TrainLogger()])
 
 Here also create a TensorBoard and define the log folder in './tb', you can use it to track the activity by launch a tensorboard server:
 
@@ -326,3 +335,15 @@ To store the training result, we can save the model parameters as a HDF5 format 
 
     model.save('my_model.h5')
 
+Submit a training JOB
++++++++++++++++++++++
+
+We can submit this notebook file to a JOB in another container.
+
+Open mlsteam.yml in lab folder, edit 'ipython3 /mlsteam/lab/dog_breed.ipynb' behind 'command:'.
+
+.. image:: ../_static/lab/commit_run.png
+
+Click the 'COMMIT AND RUN' button, and click 'COMMIT' in the confirm modal, 
+the browser will pop another tab page on LAB home, 
+and a new JOB is running now.
