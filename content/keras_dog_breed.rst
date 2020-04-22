@@ -513,7 +513,7 @@ We can submit this notebook file to a JOB in another container.
 
 There is a notebook file compiled previous works. We can use it directly.
 
-:download:`dog_breed.ipynb </_static/tutorial/dog_breed.ipynb>` 
+:download:`dog_breed.ipynb <../_static/tutorial/dog_breed.ipynb>` 
 
 Open mlsteam.yml in lab folder, typing 'ipython3 /mlsteam/lab/dog_breed.ipynb' behind 'command:'.
 
