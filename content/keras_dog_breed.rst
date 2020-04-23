@@ -121,7 +121,7 @@ The folder structure should be like this:
 
 
 It contains 120 breeds, 
-but we only choose the most popular 10 of those breeds to do classification.
+but we only choose the most popular 20 of those breeds to do classification.
 
 The labels.csv records mappings between dog images and labels of breeds.
 
@@ -141,7 +141,7 @@ In the first, we have to define pathes of data:
     label_file = os.path.join(base_folder, 'labels.csv')
 
 Read name and label of images from label_file, 
-get the most top 10 breeds of count number, 
+get the most top 20 breeds of count number, 
 and then filter those breeds and shuffle the arrange, 
 finally split it to two parts: train and valid.
 
@@ -203,18 +203,21 @@ Create a image generator for training and add augmentation here,
 the parameters contains: the angle range of rotation, 
 the shift range of horizontal and vertical direction, 
 randomly flip images, and the switch of normalization for sample-wise
-(you can understand it as batch-wise)
+(you can understand it as batch-wise) ... etc.
 
 .. code-block:: python
 
     from keras.preprocessing.image import ImageDataGenerator
     train_datagen = ImageDataGenerator(
-        samplewise_center=True,
-        samplewise_std_normalization=True,
-        rotation_range=20,
+        #samplewise_center=True,
+        #samplewise_std_normalization=True,
+        rotation_range=45,
         width_shift_range=0.2,
         height_shift_range=0.2,
+        shear_range=0.2,
+        zoom_range=0.25,
         horizontal_flip=True,
+        fill_mode='nearest',
         rescale=1./255
     )
 
@@ -249,9 +252,28 @@ except the rescale parameter.
                             y_col="breed",
                             class_mode="categorical",
                             target_size=(299, 299),
-                            batch_size=16,
-                            shuffle=True)
+                            batch_size=32,
+                            shuffle=False)
 
+Save GPU memory
+###############
+
+The keras will occupy the whole GPU memory when start training, 
+this makes more fast but waste alot of memory.
+
+We can set the session config before training to save some memory for GPU resource.
+
+.. code-block:: python
+
+    # ========== Saving GPU memory ========== #
+    import tensorflow as tf
+    import keras.backend.tensorflow_backend as KTF
+
+    config = tf.ConfigProto()  
+    config.gpu_options.allow_growth=True   
+    session = tf.Session(config=config)
+    KTF.set_session(session)
+    # ======================================= #
 
 Model Training
 ++++++++++++++
@@ -299,7 +321,7 @@ The `Xception Model Paper <https://arxiv.org/abs/1610.02357>`_
     model.summary()
 
 
-Start Training and validation for 3 epochs.
+Start Training and validation for 10 epochs.
 
 Training shows the progress bar of every epoch, the loss and accuracy will be printed behind each bar. 
 
@@ -325,6 +347,8 @@ Training shows the progress bar of every epoch, the loss and accuracy will be pr
                         verbose=0, 
                         callbacks=[tb_callBack, model_checkpoint, TrainLogger()])
 
+.. image:: ../_static/tutorial/dog_breed_train_output.png
+
 Here also create a TensorBoard and define the log folder in './tb', you can use it to track the activity by launch a tensorboard server:
 
 .. image:: ../_static/tutorial/launch_tensorboard_server.png
@@ -335,15 +359,177 @@ To store the training result, we can save the model parameters as a HDF5 format 
 
     model.save('my_model.h5')
 
+Evaluate Model
+++++++++++++++
+
+We can evaluate the model by predicting the validation images.
+
+.. code-block:: python
+
+    from sklearn.metrics import confusion_matrix
+    import numpy as np
+
+    cnf_matrix = confusion_matrix(valid_generator.labels,  np.argmax(valid_pred,axis=1))
+
+And plot a confusion matrix:
+
+.. code-block:: python
+
+    # Mapping
+    breed_mapping = {v: k for k, v in train_generator.class_indices.items()}
+
+    breed_list = [b for b in breed_mapping.values()]
+    df_cm = pd.DataFrame(cnf_matrix, index=breed_list, columns=breed_list)
+
+    import matplotlib.pyplot as plt
+
+    fig = plt.figure(figsize=(10, 7))
+    try:
+        import seaborn as sns
+        heatmap = sns.heatmap(df_cm, annot=True, fmt="d")
+    except ValueError:
+        raise ValueError("Confusion matrix values must be integers.")
+
+    heatmap.yaxis.set_ticklabels(heatmap.yaxis.get_ticklabels(), rotation=0, ha='right', fontsize=10)
+    heatmap.xaxis.set_ticklabels(heatmap.xaxis.get_ticklabels(), rotation=45, ha='right', fontsize=10)
+    plt.title('Confusion Matrix')
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
+
+    plt.show()
+
+.. image:: ../_static/tutorial/dog_breed_confusion_matrix.png
+
+
+
+Image Prediction
+++++++++++++++++
+
+The test_folder contain 10360 images to be predicted.
+
+After model training, we can use it to prediction the breed of dog in those images.
+
+Since there is no label but only images is the test folder. 
+In order to fit the flow_from_dataframe function input: a dataframe, 
+we have to get all path of images and put them in a new dataframe with one column.
+
+In the prediction case, we can specify only x_col, and set the class_mode=None. 
+The prediction generator will output each item that is a tuple but only contain a single element (images).
+
+.. code-block:: python
+
+    def get_imgs(path):
+        imgs = []
+        for entry in os.scandir(path):
+            if entry.is_dir():
+                imgs.extend(get_imgs(entry.path))
+            else:
+                imgs.append(entry.path)
+        return imgs
+
+    test_imgs = get_imgs(test_folder)
+
+    test_df = pd.DataFrame({"x":test_imgs})
+
+    test_generator = ImageDataGenerator(rescale=1./255).flow_from_dataframe(
+                            test_df,
+                            x_col='x',
+                            class_mode=None,
+                            target_size=(299, 299),
+                            batch_size=32,
+                            shuffle=False)
+
+Now we can start prediction and save the result to a variable.
+
+.. code-block:: python
+
+    pred = model.predict_generator(test_generator, verbose=1)
+
+The prediction result is a array, it contains probability of breeds. 
+We can get the largest probability to get the breed index.
+
+But we don't know the mapping between index and breed name.
+
+Use this to get the mapping:
+
+.. code-block:: python
+
+    breed_mapping = {v: k for k, v in train_generator.class_indices.items()}
+
+.. image:: ../_static/tutorial/dog_breed_mapping.png
+
+If we want to show some prediction of images, we can use the code to show it:
+
+.. code-block:: python
+
+    # Get first batch
+    test_generator.reset()
+    first_batch = test_generator.next()
+    (first_batch_imgs) = first_batch
+    first_batch_pred = pred[:len(first_batch_imgs)]
+
+    def get_max_index(array):
+        max = 0
+        max_index = 0
+        for i in range(len(array)):
+            if array[i] > max:
+                max = array[i]
+                max_index = i
+        return max_index
+
+    # Mapping
+    breed_mapping = {v: k for k, v in train_generator.class_indices.items()}
+
+    # Start to Plot
+    import matplotlib.pyplot as plt
+
+    fig=plt.figure(figsize=(16, 16))
+    columns = 4
+    rows = 5
+
+    for i in range(1, columns*rows +1):
+        fig.add_subplot(rows, columns, i)
+        plt.tick_params(
+            bottom=False,
+            left=False,
+            labelbottom=False,
+            labelleft=False
+        )
+        plt.tight_layout(pad=2, h_pad=0.2, w_pad=0.2)
+        plt.title(breed_mapping[get_max_index(first_batch_pred[i-1])])
+        plt.imshow(first_batch_imgs[i-1])
+    plt.show()
+    plt.savefig('prediction_20.png')
+
+The output should be like this:
+
+.. image:: ../_static/tutorial/dog_breed_prediction_20_output.png
+
+
 Submit a training JOB
 +++++++++++++++++++++
 
 We can submit this notebook file to a JOB in another container.
 
-Open mlsteam.yml in lab folder, edit 'ipython3 /mlsteam/lab/dog_breed.ipynb' behind 'command:'.
+There is a notebook file compiled previous works. We can use it directly.
 
-.. image:: ../_static/lab/commit_run.png
+:download:`dog_breed.ipynb <../_static/tutorial/dog_breed.ipynb>` 
 
-Click the 'COMMIT AND RUN' button, and click 'COMMIT' in the confirm modal, 
-the browser will pop another tab page on LAB home, 
-and a new JOB is running now.
+Open mlsteam.yml in lab folder, typing 'ipython3 /mlsteam/lab/dog_breed.ipynb' behind 'command:'.
+
+And edit the GPU number, 0 is only using cpu.
+
+.. image:: ../_static/tutorial/edit_yml_dog_breed.png
+
+Click the 'COMMIT AND RUN' button.
+
+.. image:: ../_static/tutorial/dog_breed_job_commit.png
+
+Click 'COMMIT' in the confirm modal, 
+the browser will pop another tab page on LAB home.
+
+.. image:: ../_static/tutorial/dog_breed_job_commit_confirm.png
+
+A new JOB is running now.
+
+.. image:: ../_static/tutorial/dog_breed_job_window.png
