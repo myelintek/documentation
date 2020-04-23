@@ -261,7 +261,7 @@ Save GPU memory
 The keras will occupy the whole GPU memory when start training, 
 this makes more fast but waste alot of memory.
 
-We can set the session config before training to save some memory for GPU resource.
+We can set the session config in the beginning to save some memory for GPU resource.
 
 .. code-block:: python
 
@@ -513,7 +513,7 @@ We can submit this notebook file to a JOB in another container.
 
 There is a notebook file compiled previous works. We can use it directly.
 
-:download:`dog_breed.ipynb <../_static/tutorial/dog_breed.ipynb>` 
+`dog_breed.ipynb <https://github.com/myelintek/documentation/blob/master/_static/tutorial/dog_breed.ipynb>`_ 
 
 Open mlsteam.yml in lab folder, typing 'ipython3 /mlsteam/lab/dog_breed.ipynb' behind 'command:'.
 
