@@ -18,11 +18,13 @@ Terminology
 Here we list all terminology used in MLSteam web.
 
 
-* :ref:`Project`
-* :ref:`Dataset`
-* :ref:`Lab`
-* :ref:`Job`
-* :ref:`Template`
+* :ref:`project_term`
+* :ref:`dataset_term`
+* :ref:`lab_term`
+* :ref:`job_term`
+* :ref:`template_term`
+
+.. _project_term:
 
 Project
 =======
@@ -31,6 +33,9 @@ The project is a collection of all works when you developing a DNN models.
 You can launch a either a jupyterlab (we call them labs) or launch experiments 
 and training iterations (we call them jobs) will be kept and organized.
 
+
+.. _dataset_term:
+
 Dataset
 =======
 
@@ -38,16 +43,23 @@ Dataset is any collection of data. You can organized you data into different dir
 You can preview images and upload/download dataset files on dataset pages.
 All datasets can be used in your labs.
 
+.. _lab_term:
+
 Lab
 ====
 
 A lab is a web IDE (based on JupyterLab) organized in container basis.
 You can develop DNN models in a lab and start training in the same lab or create another training containers (we call jobs) for keeping records.
 
+.. _job_term:
+
 Job
 ===
 
 A job is a run of specific code, can be connected to dataset.
+
+
+.. _template_term:
 
 Template
 ========
