@@ -1,4 +1,3 @@
-.. _download_multiple_files_from_lab:
 
 How to download multiple files from a lab?
 ==========================================
