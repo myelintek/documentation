@@ -9,15 +9,15 @@ On the top bar click "Template".
 
 Then click "Use Template" on the classification card. This will create an image classification project named "classification" with Mnist dataset already attached to it.
 
-.. image:: ../_static/create_template.png
+.. image:: ../_static/template/create_template.png
 
 Click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/run_template.png
+.. image:: ../_static/template/run_template.png
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: ../_static/view_job1.png
+.. image:: ../_static/template/view_job1.png
 
 Job page displays 
 
@@ -26,4 +26,4 @@ Job page displays
 * Configuration file (mlsteam.yml)
 * Used docker image name, gpus, status, status button (top panel)
 
-.. image:: ../_static/view_job2.png
+.. image:: ../_static/template/view_job2.png

@@ -17,14 +17,12 @@ Upload Dataset
 First, click 'New Dataset' button in dataset page to create an empty directory. 
 
 .. figure:: ../_static/dataset/new_dataset.png
-  :align: center
 
   click *New Dataset* in dataset page.
 
 Input the dataset name 'Dog Breed Identification'.
 
 .. figure:: ../_static/tutorial/new_dogbreed_dataset.png
-  :align: center
   :width: 200
 
   name the dataset as 'Dog Breed Identification'.
@@ -35,23 +33,19 @@ In the previous created **Dog Breed Identification** dataset, click **Upload** b
 
 .. image:: ../_static/tutorial/upload_dogbreed_button.png
   :width: 400
-  :align: center
 
 Choose the archive file.
 
 .. image:: ../_static/tutorial/upload_dogbreed_open_window.png
-  :align: center
 
 
 .. figure:: ../_static/tutorial/upload_dogbreed_bar.png
-  :align: center
 
   uploading.
 
 After uploading done, choose the archive file and then click the **Extract** button. It takes a few seconds for extracting.
 
 .. figure:: ../_static/tutorial/extract_dogbreed_archive.png
-  :align: center
   :width: 400
 
   click extract button to extract the compressed file
@@ -59,7 +53,6 @@ After uploading done, choose the archive file and then click the **Extract** but
 Now we can scan the content as shown below.
 
 .. image:: ../_static/tutorial/dogbreed_folder.png
-  :align: center
   :width: 400
 
 
@@ -69,7 +62,6 @@ Create a LAB
 Click **LAB** button in your project and click **NEW LAB** in Lab home page
 
 .. figure:: ../_static/lab/create_lab.png
-  :align: center
 
   click *NEW LAB* to launch a modal.
 
@@ -77,7 +69,6 @@ Choose the *python-gpu* image and select 1 GPU for this lab.
 
 .. figure:: ../_static/lab/create_lab_modal.png
   :width: 500
-  :align: center
 
   specify which image to use
 
@@ -93,7 +84,6 @@ Now we can attach the Dog Breed dataset to a LAB.
 Open the Lab page, click the dataset icon at top-right of the Lab page. Select Dog Breed dataset. 
 
 .. figure:: ../_static/tutorial/attach_dogbreed_dataset.png
-  :align: center
   :width: 300
   
   select dataset at top-right of the Lab page
@@ -101,7 +91,6 @@ Open the Lab page, click the dataset icon at top-right of the Lab page. Select D
 Click *Attach Dataset* button and confirm the warning, the LAB will restart for dataset connection.
 
 .. image:: ../_static/lab/attach_dataset_alert.png
-  :align: center
   :width: 400
 
 
@@ -115,17 +104,14 @@ Start a notebook
 Click the '+' button if you can't find the launcher tab.
 
 .. image:: ../_static/lab/open_launcher.png
-  :align: center
 
 Choose the Python3 Notebook.
 
 .. image:: ../_static/lab/open_notebook_python3.png
-  :align: center
 
 We might rename the notebook file to 'dog_breed.ipynb'.
 
 .. image:: ../_static/lab/rename_file.png
-  :align: center
 
 In the notebook window, we can input our code in the cell, 
 and then click the run button.
@@ -133,7 +119,6 @@ and then click the run button.
 The interpreter will excute code in the cell section and print the output below the cell. 
 
 .. image:: ../_static/lab/notebook_execute_cell_code.png
-  :align: center
 
 Dataset Preprocessing
 ---------------------
@@ -357,7 +342,6 @@ Training shows the progress bar of every epoch, the loss and accuracy will be pr
                         callbacks=[tb_callBack, model_checkpoint, TrainLogger()])
 
 .. figure:: ../_static/tutorial/dog_breed_train_output.png
-  :align: center
 
 
 Tensorboard visualization
@@ -366,7 +350,6 @@ Tensorboard visualization
 A Tensorboard can be launched from web, at right sidebar menu, speficy the logdir path for tensorboard to read the summary files.
 
 .. figure:: ../_static/tutorial/launch_tensorboard_server.png
-  :align: center
 
   input logdir path for tensorboard to read the summary files.
 
@@ -477,7 +460,6 @@ Use this to get the mapping:
 
 
 .. figure:: ../_static/tutorial/dog_breed_mapping.png
-  :align: center
   
   mapping between index and breed name
 
@@ -528,7 +510,6 @@ If we want to show some prediction of images, we can use the code to show it:
 The output should be like this:
 
 .. figure:: ../_static/tutorial/dog_breed_prediction_20_output.png
-  :align: center
 
   prediction results with trained model
 
@@ -548,7 +529,6 @@ Open mlsteam.yml in lab folder, typing 'ipython3 /mlsteam/lab/dog_breed.ipynb' b
 
 
 .. figure:: ../_static/tutorial/edit_yml_dog_breed.png
-  :align: center
 
   specify 'command' for training job
 
@@ -556,11 +536,9 @@ Open mlsteam.yml in lab folder, typing 'ipython3 /mlsteam/lab/dog_breed.ipynb' b
 Click the 'COMMIT AND RUN' button and confirm the training parameters.
 
 .. figure:: ../_static/tutorial/dog_breed_job_commit_confirm.png
-  :align: center
   :width: 400
 
 
 A new JOB is running now.
 
 .. figure:: ../_static/tutorial/dog_breed_job_window.png
-  :align: center
