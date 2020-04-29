@@ -1,69 +1,98 @@
-.. _lab:
-
-***
+####
 Lab
-***
+####
+
+A lab is a web IDE (based on JupyterLab). Here we listed all available operations in each section.
+
+* :ref:`create_lab`
+* :ref:`browse_lab`
+* :ref:`stop_lab`
+* :ref:`start_lab`
+* :ref:`restart_lab`
+* :ref:`attach_dataset_lab`
+* :ref:`pass parameters`
+* :ref:`lab_tensorboard`
+* :ref:`commit_lab`
+* :ref:`delete_lab`
+
 
 .. _create_lab:
 
 Create lab
 ==========
 
-Select project then click "Lab" tab.
+To create a lab, click *Lab* tab in a project page and click *New Lab* button.
 
-.. image:: ../_static/lab/list_lab.png
+.. figure:: ../_static/lab/list_lab.png
 
-Click "New Lab".
+  click *Lab* tab in project page
 
-.. image:: ../_static/lab/create_lab.png
+.. figure:: ../_static/lab/create_lab.png
 
-Select docker image to create lab in. The default image is "myelintek/python-gpu".
-Select the number of gpus to assign to lab. Add comments, if needed.
-Click "Submit" to create new lab and redirect lab page.
+  click *new lab*button
 
-.. image:: ../_static/lab/create_lab_modal.png
+Select a container image to create a lab. The recommanded image is *myelintek/python-gpu* which built-in all common libraries for deep learning.
+Then, set the number of GPU to use within the lab, add comments if needed.
+Click *Submit* to create the lab!
+
+.. figure:: ../_static/lab/create_lab_modal.png
+
+  create a lab with 1 GPU and python-gpu:v12 image
+
+
+.. caution::
+
+  GPU number is exclusive for each lab and job. Be caution that system may run out of GPU resources and labs can not be launched unless GPU resources are released.
+
+.. tip::
+
+  Set GPU number to 0 means the lab only use CPU.
 
 .. _browse_lab:
  
 Browse labs
 ===========
 
-Browse labs of the specific project. Go to project page. Click "Lab" tab.
+To browse a lab, click *Lab* tab in a project page and click lab id or *browse* button at the action column.
 
-.. image:: ../_static/lab/list_lab.png
+.. figure:: ../_static/lab/view_lab.png
 
-Click on lab id or "Browse" button at the Actions collumn.
+  click lab id or *browse* button to open the lab
 
-.. image:: ../_static/lab/view_lab.png
-
-Start lab
-=========
-
-Click "Done" dropdown, then select "Start" 
-
-.. image:: ../_static/lab/start_lab_in.png
-
-or click "Start" at the Actions column.
-
-.. image:: ../_static/lab/start_lab_out.png
+.. _stop_lab:
 
 Stop lab
 ========
 
-Click on "Running" button, then select "Stop"
+To start a lab, click *Running* button and select *Stop*
 
 .. image:: ../_static/lab/stop_lab_in.png
 
-or click "Stop" at the Actions column.
+or click *Stop* at the lab list page.
 
 .. image:: ../_static/lab/stop_lab_out.png
 
+
 .. _start_lab:
+
+Start lab
+=========
+
+To start a lab, click *Done* button and select *Start* 
+
+.. image:: ../_static/lab/start_lab_in.png
+
+or click *Start* at the lab list page.
+
+.. image:: ../_static/lab/start_lab_out.png
+
+
+.. _restart_lab:
 
 Restart lab
 ===========
 
-Click "Running" button, then select "Restart"
+To restart a lab, click *Running* button and select *Restart* in the lab page.
 
 .. image:: ../_static/lab/restart_lab_in.png
 
@@ -76,34 +105,45 @@ or click "Restart" at the Actions column.
 Attach dataset to the lab
 =========================
 
-Type dataset name at the "Attach dataset" box.
-Click "Attach dataset" button. 
+To attach a dataset, select the desired dataset in dataset section and click *attach dataset*.
+
+.. figure:: ../_static/lab/attach_dataset.png
+  :width: 400
+
+  attach *developer1/mnist* dataset for this lab.
 
 .. note::
 
-    Need restart lab container to re-mount data directory.
-    Make sure all the files saved already.
-
-.. image:: ../_static/lab/attach_dataset.png
+    Attaching dataset will automatically restart the lab, make sure all the files saved already.
 
 
-.. image:: ../_static/lab/attach_dataset_alert.png
+.. figure:: ../_static/lab/attach_dataset_alert.png
+  :width: 500
 
-Attached dataset info will appear on the right.
+  confirm to restart the lab
+
+
+Attached dataset info will appear on the dataset section.
 
 .. image:: ../_static/lab/attach_dataset_done.png
+  :width: 400
 
 Dataset files can be browsed in the window on the left under `/input` directory.
 
-.. image:: ../_static/lab/attach_dataset_file.png
+.. figure:: ../_static/lab/attach_dataset_file.png
+  :width: 300
+
+  browse dataset files in /mlsteam/input folder
 
 Add new directory to dataset, if needed.
 
 .. image:: ../_static/lab/attach_dataset_folder.png
+  :width: 300
 
 Upload new files to dataset, if needed.
 
 .. image:: ../_static/lab/attach_dataset_upload.png
+  :width: 300
 
 .. _pass parameters:
 
@@ -125,34 +165,30 @@ Replace code as below to enable parameter update from web page. in this example,
   -      default=128,
   +      default=stparams.get_value('train_bs', 128),
 
-All parameters will show on the right.
+All parameters will show on the right hyperparameter section.
 
 .. image:: ../_static/lab/list_params.png
+  :width: 400
 
 Use comma separator to pass multiple values, or select multiple values from a list to create multiple jobs.
 
 .. image:: ../_static/lab/custom_params.png
+  :width: 400
 
-Click "Reset" button to reset to default parameters.
+Click *Reset* button to reset to default parameters.
 
 .. image:: ../_static/lab/reset_params.png
+  :width: 400
 
 Now you can define default keyword value in mlsteam.yml of a lab.
 
 If you want to make a dropdown and selector, use "-" to perform it is list.
 
-If you want to make a text editor, use type "String" or type "Int".
+If you want to make a text editor, use type *String* or type *Int*.
 
 .. image:: ../_static/lab/default_params.png
+  :width: 400
 
-Don't use like following example.
-
-.. code-block:: YAML
-
-  params:
-    train_bs:
-      - 32
-      - 64
 
 .. _lab_tensorboard:
 
@@ -167,10 +203,12 @@ Users can open tensorboard for current lab. First, use classification template t
 checkpoint files will located in backup folder. Now, click tensorboard -> start button on top-right corner of lab page.
     
 .. image:: ../_static/lab/start_lab_tensorboard.png
+  :width: 400
 
 Click tensorboard button again, the dropdown list will show OPEN button. Click open button to open tensorboard in a new tab.
 
 .. image:: ../_static/lab/open_lab_tensorboard.png
+  :width: 400
 
 The tensorboard will read current lab folder and display content accordingly.
 
@@ -185,10 +223,10 @@ To close tensorboard, click tensorboard -> close button to terminate tensorboard
   tensorboard will been terminated when the associated lab is deleted.
 
 
-.. _run_lab:
+.. _commit_lab:
 
-Run lab
-=======
+Commit lab
+==========
 
 First attach dataset to the lab.
 
@@ -203,12 +241,15 @@ Click "Commit and run".
 Check parameters if any wrong.
 
 .. image:: ../_static/lab/check_params.png
+  :width: 400
 
 This will create a job from the code that lab contains.
 
 Browse job to see output. In our case, output is the content of folder `/mlsteam/input`.
 
-.. image:: ../_static/lab/run_output.png
+.. figure:: ../_static/lab/run_output.png
+
+  a training job with output display
 
 
 .. _delete_lab:
