@@ -1,121 +1,181 @@
-.. _dataset:
-
-
-*******
+########
 Dataset
-*******
+########
+
+Dataset is any collection of data. here we listed all available operations below in each section.
+
+* :ref:`create_dataset`
+* :ref:`create_dataset_from_nfs`
+* :ref:`manipulate_dataset`
+* :ref:`visualize_dataset`
+* :ref:`delete_dataset`
 
 .. _create_dataset:
 
 Create dataset
 ==============
 
-Click "New dataset" button.
+To create an empty dataset, click new dataset button and specify dataset name.
 
-.. image:: ../_static/dataset/new_dataset.png
+.. figure:: ../_static/dataset/new_dataset.png
 
-Input dataset name and click "Create".
+  click new dataset button on the dataset page
 
-Empty dataset will be created.
+.. figure:: ../_static/dataset/new_dataset_modal.png
 
-.. image:: ../_static/dataset/new_dataset_modal.png
+  named 'demo' for this dataset
 
-Create dataset from remote source
-=================================
 
-Currently system supports creation of dataset from NFS. Admin needs first setup host with password-less privilege for mount.
+.. tip::
 
-Click "New dataset". Input dataset name and check "External storage" box. From drop down menu select dataset type as NFS.
-Input ip and mount point. click "Create".
+  All created datasets are private and within in your account's namespace.
 
-.. image:: ../_static/dataset/nfs_dataset.png
 
+.. _create_dataset_from_nfs:
+
+Create dataset from NFS volume
+==============================
+
+You can create a dataset which mounts a remote NFS volume and manage the data in the system.
+
+Simply click new dataset button, specify the dataset name and check *External Storage* checkbox. From drop down menu select NFS.
+Input the NFS server ip and mount point path. click *Create*.
+
+.. figure:: ../_static/dataset/nfs_dataset.png
+
+  create a dataset which mounts remote NFS volume
+
+
+.. _manipulate_dataset:
 
 Manipulate dataset
 ==================
 
-Browse dataset
-++++++++++++++
+Below shows all available operation can do in the dataset page.
 
-Click on dataset name.
+Browse dataset
+--------------
+
+To browse the dataset, click on dataset name.
 
 .. image:: ../_static/dataset/browse_dataset.png
 
 Clone dataset
-+++++++++++++
+-------------
 
-Click "Clone" button to create a copy of dataset.
+To clone a dataset, click *Clone* button to create a copy of dataset.
 
 .. image:: ../_static/dataset/clone_dataset.png
 
 Upload files to dataset
-+++++++++++++++++++++++
+-----------------------
 
-Browse needed dataset.
-
-Then drag and drop files from local pc. Or click "Upload" button.
+To upload files to a dataset, simply drag and drop files from local PC or click *Upload* button to select local files.
 
 .. image:: ../_static/dataset/upload_dataset.png
 
+
 Extract files from archive
-++++++++++++++++++++++++++
+---------------------------
 
-Supported format *tar, tgz, tar.gz, zip.*
+Upload too many files will cause the web browser freeze. Therefore, you can compress files into one archive file and uncompress the file on the dataset page.
 
-Select archive file and click "Extract".
 
-.. image:: ../_static/dataset/extract_dataset.png
+.. figure:: ../_static/dataset/extract_dataset.png
+
+  select archive file and click "Extract".
+
+.. tip::
+
+  Supported compress file format *tar, tgz, tar.gz, zip.*
+
 
 New folder
-++++++++++
+-----------
 
-Click "New folder" button to create new folder within dataset.
+To create folders in dataset, click *new folder* button within a dataset.
 
-.. image:: ../_static/dataset/new_folder_dataset0.png
+.. figure:: ../_static/dataset/new_folder_dataset0.png
 
-Input folder name. click create.
+  click *new folder*
 
-.. image:: ../_static/dataset/new_folder_dataset.png
+.. figure:: ../_static/dataset/new_folder_dataset.png
 
-Download folder/file
-++++++++++++++++++++
+  input folder name and click create.
 
-Select folders and/or files that need to be downloaded and click "Download".
 
-.. image:: ../_static/dataset/download_dataset.png
+Download files
+--------------
+
+To download files, select a file and click *download* button.
+
+.. figure:: ../_static/dataset/download_dataset.png
+
+  download a file
+
 
 Delete folder/file
-++++++++++++++++++
+------------------
 
-Select folders and/or files that need to be deleted and click "Delete".
+To delete files or folders, select a folder or a file and click *delete*.
 
-.. image:: ../_static/dataset/delete_file_dataset.png
+.. figure:: ../_static/dataset/delete_file_dataset.png
 
-Visualize dataset
-=================
+  delete a file in dataset page
 
-If the dataset is of standart types it can be visualized.
+.. _visualize_dataset:
 
-Sellect folder with images, then click "Visualize" button. Sellect dataset type.
-In our example the dataset is of yolov3 type.
+Visualize labeled dataset
+=========================
 
-.. image:: ../_static/dataset/visualize_dataset.png
+For supervised learning, dataset has to be labeled with correct answers. For better visualization, system support following labeling format for visualization.
 
-Fill all fields with pathes inside datased folder. click "Start". Refresh page to see changes.
+* :ref:`yolo`
 
-.. image:: ../_static/dataset/visualize_dataset_modal.png
+.. _yolo:
 
-Visualization with bounding boxes will appear on the left when one image is selected.
+YOLO format
+-----------
 
-.. image:: ../_static/dataset/visualize_dataset_show.png
+To visualize YOLO dataset, we have to select the folder which contains images and specify it's *yolo* format in dataset page.
 
-If visualization needs to be removed go inside folder with images and click cross on the visualization tag.
+.. figure:: ../_static/dataset/yolo1.jpg
 
-.. image:: ../_static/dataset/visualize_dataset_remove.png
+  select *images* folder and selct yolo in *Visualize* dropdown list.
+
+
+To visualize YOLO dataset, we need following annotation files and inputs:
+
+* class_file: specify each index name of labels.
+* label_path: contains YOLO format label files.
+* predict_path: (optional) contains model prediction results in YOLO format.
+
+.. figure:: ../_static/dataset/yolo2.jpg
+  :width: 300
+
+  example of specifying a YOLO format image folder
+
+If success, *yolo* tag will appear in related files and folder.
+
+click images to visualize bounding box in each labeld image.
+
+.. figure:: ../_static/dataset/yolo3.png
+
+  visualize bouding box in a yolo image
+
+If you want remove the *yolo* tag, click 'x' on top of the dataset page.
+
+.. figure:: ../_static/dataset/visualize_dataset_remove.png
+
+  remove yolo tag images
+
+.. _delete_dataset:
 
 Delete dataset
 ==============
 
-Open the list of datasets then click trash icon in front of dataset name. Confirm.
+To delete a dataset, click trash icon in the dataset page.
 
-.. image:: ../_static/dataset/delete_dataset.png
+.. figure:: ../_static/dataset/delete_dataset.png
+
+  delete a dataset.

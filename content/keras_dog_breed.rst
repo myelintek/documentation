@@ -8,7 +8,7 @@ Introduction
 ============
 In this tutorial, you will learn how to upload dataset to the system and start a training environment (lab) in the system.
 
-This tutorial uses `Dog Breed Identification <https://www.kaggle.com/c/dog-breed-identification/data>`__  dataset to train a classification model to identify the dog breeds.
+This tutorial uses `Dog Breed Identification <https://www.kaggle.com/c/dog-breed-identification/data>`__  dataset to train a classification model to identify dog breeds.
 
 
 Upload Dataset
@@ -31,13 +31,15 @@ Download the `Dog Breed Identification <https://www.kaggle.com/c/dog-breed-ident
 
 In the previous created **Dog Breed Identification** dataset, click **Upload** button to upload the archive dataset from you PC.
 
-.. image:: ../_static/tutorial/upload_dogbreed_button.png
+.. figure:: ../_static/tutorial/upload_dogbreed_button.png
   :width: 400
 
-Choose the archive file.
+  click upload button to select files from PC
 
-.. image:: ../_static/tutorial/upload_dogbreed_open_window.png
 
+.. figure:: ../_static/tutorial/upload_dogbreed_open_window.png
+
+  choose the archive file.
 
 .. figure:: ../_static/tutorial/upload_dogbreed_bar.png
 
@@ -50,7 +52,7 @@ After uploading done, choose the archive file and then click the **Extract** but
 
   click extract button to extract the compressed file
 
-Now we can scan the content as shown below.
+The file content should be same as shown below.
 
 .. image:: ../_static/tutorial/dogbreed_folder.png
   :width: 400
@@ -59,7 +61,7 @@ Now we can scan the content as shown below.
 Create a LAB
 ============
 
-Click **LAB** button in your project and click **NEW LAB** in Lab home page
+Click *LAB* button in your project and click *NEW LAB* in Lab home page
 
 .. figure:: ../_static/lab/create_lab.png
 
@@ -70,10 +72,10 @@ Choose the *python-gpu* image and select 1 GPU for this lab.
 .. figure:: ../_static/lab/create_lab_modal.png
   :width: 500
 
-  specify which image to use
+  specify lab environment
 
 .. tip::
-   You can set GPU to 0, which means created labs use CPU only.
+   If GPU is set to 0, the created lab uses CPU only.
 
 
 Attach Dataset in a LAB
@@ -90,9 +92,10 @@ Open the Lab page, click the dataset icon at top-right of the Lab page. Select D
 
 Click *Attach Dataset* button and confirm the warning, the LAB will restart for dataset connection.
 
-.. image:: ../_static/lab/attach_dataset_alert.png
+.. figure:: ../_static/lab/attach_dataset_alert.png
   :width: 400
-
+  
+  lab will restart for attaching selected dataset
 
 Write a Notebook file for training
 ==================================
@@ -105,24 +108,25 @@ Click the '+' button if you can't find the launcher tab.
 
 .. image:: ../_static/lab/open_launcher.png
 
-Choose the Python3 Notebook.
 
-.. image:: ../_static/lab/open_notebook_python3.png
+.. figure:: ../_static/lab/open_notebook_python3.png
 
-We might rename the notebook file to 'dog_breed.ipynb'.
+  create a python3 notebook.
 
-.. image:: ../_static/lab/rename_file.png
 
-In the notebook window, we can input our code in the cell, 
-and then click the run button.
+.. figure:: ../_static/lab/rename_file.png
 
-The interpreter will excute code in the cell section and print the output below the cell. 
+  rename the notebook file to 'dog_breed.ipynb'.
+
+
+In the notebook, click '+' to add a cell and click run button to executed the selected cell.
+Here is an example to execute the cell.
 
 .. image:: ../_static/lab/notebook_execute_cell_code.png
 
 Dataset Preprocessing
 ---------------------
-The Dog breed dataset contains a lot of images with different breeds of dogs.
+The dog breed dataset contains different breeds of dogs images.
 The folder structure should be like this:
 
 .. code-block:: plant
@@ -134,15 +138,9 @@ The folder structure should be like this:
            |- sample_submission.csv
             
 
+The labels.csv records mappings of each dog image path and related label of breeds.
 
-The dataset contains 120 breeds, but we will select the most common 20 of those breeds for simplicity.
-
-The labels.csv records mappings between dog images and labels of breeds.
-
-Now we start to read labels.csv, and to produce the train_df and valid_df, 
-each contains a dataframe consists of many (id, breed) pairs.
-
-In the first, define path of data: 
+First, define path of data: 
 
 .. code-block:: python
 
@@ -154,16 +152,12 @@ In the first, define path of data:
 
     label_file = os.path.join(base_folder, 'labels.csv')
 
-Read name and label of images from label_file, 
-get the most common 20 breeds based on number of images per bread in the dataset.
-and then filter those breeds and shuffle the arrange, 
-finally split it to two parts: train and valid.
 
-The image name in 'id' column is missing the file extension, 
-so we should append '.jpg' following those 'id'.
+The dataset contains 120 breeds, but we only select the most common 20 breeds for simplicity.
 
-We can modify 'NUM_CLASSES' to change the breed number to be filtered, 
-and 'ratio' for train/validation data ratio.
+For verifying model accuracy during training, we take 20% of training images as validation dataset.
+The following code reads labels.csv and produce the train_df and valid_df, 
+each contains a dataframe consists of many (id, breed) pairs.
 
 .. code-block:: python
 
@@ -200,14 +194,6 @@ and 'ratio' for train/validation data ratio.
 
     for i, row in valid_df.iterrows():
         valid_df.at[i, 'id'] = row['id'] + '.jpg'
-        
-
-Show the train and validation dataframe:
-
-.. code-block:: python
-
-    print(train_df)
-    print(valid_df)
 
 
 Use ImageDataGenerator for model input
@@ -216,7 +202,7 @@ Use ImageDataGenerator for model input
 Create a image generator for training and add augmentation here, 
 the parameters contains: the angle range of rotation, 
 the shift range of horizontal and vertical direction, 
-randomly flip images, and the switch of normalization for sample-wise
+randomly flip images, and the switch of normalization for sample-wise.
 
 .. code-block:: python
 
@@ -343,6 +329,8 @@ Training shows the progress bar of every epoch, the loss and accuracy will be pr
 
 .. figure:: ../_static/tutorial/dog_breed_train_output.png
 
+  training output.
+
 
 Tensorboard visualization
 -------------------------
@@ -353,7 +341,7 @@ A Tensorboard can be launched from web, at right sidebar menu, speficy the logdi
 
   input logdir path for tensorboard to read the summary files.
 
-To store the training result, we can save the model parameters as a HDF5 format file.
+After training finished, we can save the model parameters as a HDF5 format by following command.
 
 .. code-block:: python
 
@@ -363,16 +351,17 @@ To store the training result, we can save the model parameters as a HDF5 format 
 Evaluate Model
 ================
 
-We can evaluate the model by predicting the validation images.
+We can evaluate the model by producing confusion matrix from validation images.
 
 .. code-block:: python
 
     from sklearn.metrics import confusion_matrix
     import numpy as np
 
+    valid_pred = model.predict_generator(valid_generator, verbose=1)
     cnf_matrix = confusion_matrix(valid_generator.labels,  np.argmax(valid_pred,axis=1))
 
-And plot a confusion matrix:
+And plot the generated confusion matrix:
 
 .. code-block:: python
 
@@ -407,16 +396,9 @@ And plot a confusion matrix:
 Image Prediction
 ================
 
-The test_folder contain 10360 images to be predicted.
+The test_folder in the dataset contains 10360 images to be predicted.
 
-After model training, we can use it to prediction the breed of dog in those images.
-
-Since there is no label but only images is the test folder. 
-In order to fit the flow_from_dataframe function input: a dataframe, 
-we have to get all path of images and put them in a new dataframe with one column.
-
-In the prediction case, we can specify only x_col, and set the class_mode=None. 
-The prediction generator will output each item that is a tuple but only contain a single element (images).
+Here we load the test images and create the test_generator for later prediction.
 
 .. code-block:: python
 
@@ -441,18 +423,15 @@ The prediction generator will output each item that is a tuple but only contain 
                             batch_size=32,
                             shuffle=False)
 
-Now we can start prediction and save the result to a variable.
+We use the trained model to predict the test images:
 
 .. code-block:: python
 
     pred = model.predict_generator(test_generator, verbose=1)
 
-The prediction result is a array, it contains probability of breeds. 
-We can get the largest probability to get the breed index.
+The prediction result is an array, it contains probability of breeds for each image. 
 
-But we don't know the mapping between index and breed name.
-
-Use this to get the mapping:
+Now, we need the mapping between index and breed name for readability.
 
 .. code-block:: python
 
@@ -464,7 +443,7 @@ Use this to get the mapping:
   mapping between index and breed name
 
 
-If we want to show some prediction of images, we can use the code to show it:
+And, use the following code to display the test images with prediction results.
 
 .. code-block:: python
 
@@ -517,28 +496,30 @@ The output should be like this:
 Submit a training job
 =====================
 
-We can create to a training job in another container to keep each training results.
+For advance users who want to tune hyper-parameters. we suggest to run each training as a job for better organization. 
 
-First, download the `dog_breed.ipynb <https://github.com/myelintek/documentation/blob/master/_static/tutorial/dog_breed.ipynb>`_ file which includes above code.
+You can download the above training code `here <https://github.com/myelintek/documentation/blob/master/_static/tutorial/dog_breed.ipynb>`_ file which includes above code.
 
-Open mlsteam.yml in lab folder, typing 'ipython3 /mlsteam/lab/dog_breed.ipynb' behind 'command:'.
-
-.. caution::
-  
-  set the GPU number to 1 for GPU training.
-
+Open mlsteam.yml in lab folder, specify the training job command 'ipython3 /mlsteam/lab/dog_breed.ipynb'.
 
 .. figure:: ../_static/tutorial/edit_yml_dog_breed.png
 
   specify 'command' for training job
 
+.. caution::
+  
+  Please set the GPU number to 1 for GPU training.
 
-Click the 'COMMIT AND RUN' button and confirm the training parameters.
+
+Click the 'COMMIT AND RUN' button on top of the lab and confirm the training parameters.
 
 .. figure:: ../_static/tutorial/dog_breed_job_commit_confirm.png
   :width: 400
 
+  click commit to submit a training job
 
-A new JOB is running now.
+You can click the new created training job for monitoring.
 
 .. figure:: ../_static/tutorial/dog_breed_job_window.png
+
+  content of a training job page.
