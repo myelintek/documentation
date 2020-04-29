@@ -80,4 +80,5 @@ Serves as an example or template for users.
    content/job
    content/template
    content/admin
+   content/guide
 

@@ -1,9 +1,9 @@
 .. _guide:
 
-
-*****
+######
 Guide
-*****
+######
+
 These guides will help you through specific cases related to MLSteam itself.
 
 
