@@ -29,7 +29,7 @@ To create a lab, click *Lab* tab in a project page and click *New Lab* button.
 
 .. figure:: ../_static/lab/create_lab.png
 
-  click *new lab*button
+  click *new lab* button
 
 Select a container image to create a lab. The recommanded image is *myelintek/python-gpu* which built-in all common libraries for deep learning.
 Then, set the number of GPU to use within the lab, add comments if needed.

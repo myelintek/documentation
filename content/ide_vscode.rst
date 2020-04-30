@@ -1,47 +1,58 @@
-.. _ide_vscode:
-
+#######
 VSCode
-======
+#######
 
-Step by step tutorial to setup VSCode for a lab
+Step by step tutorial to setup VSCode for connecting to a lab
 
 
 Install VSCode
 -----------------
 
-Download VSCode that according to your operating system from following link
+Download VSCode according to your operating system from `code.visualstudio.com <https://code.visualstudio.com/Download>`__
 
-https://code.visualstudio.com/Download
 
-.. image:: ../_static/remote_ide/vscode/vscode-install.gif
+.. figure:: ../_static/remote_ide/vscode/vscode-install.gif
 
-Click downloaded file to install VSCode.
+  downloaded and install VSCode.
 
 
 Install extenstions in VSCode
 --------------------------------
 
-Search and install extension for remote SSH
+Open VSCode, search and install extension of *remote SSH*
 
-.. image:: ../_static/remote_ide/vscode/vscode-ssh.gif
+.. figure:: ../_static/remote_ide/vscode/vscode-ssh.gif
 
+  install *remote ssh* extension
 
 SSH key and SSH config
 -----------------------
 
-Open someone lab you want to remote in brower. Make sure the lab is running, click SSH tab in right navbar and generate SSH conifg.
+Open a lab you want to access. Make sure the lab is in running state, click SSH tab at right navbar and generate SSH conifg.
 
-Download the ssh private key by clicking sshkey link
+You will see the following content and click the ssh key to download to your PC.
 
-.. note:: In the Linux operating system, you need to change the sshkey file to 600 mode.
+.. figure:: ../_static/remote_ide/sshkey.jpg
+  :width: 600
 
-.. image:: ../_static/remote_ide/sshkey.jpg
+  download SSH key
 
-Copy the ssh config by clicking copy icon on top right of the config
+.. note::
+  
+  In Linux, you need to change the sshkey file to 600 mode.
+
+  *ex. chmod 600 u0f2fc5d_sshkey*
+
+
+Copy the ssh config by clicking copy icon at top-right of the config
 
 .. image:: ../_static/remote_ide/copyconf.jpg
+  :width: 600
 
-.. note:: Windows10 accept both / and \ as path separator
+  copy SSH config
+
+
+.. note:: Windows10 accepts both / and \ as path separator
 
 
 Paste ssh config in VSCode
@@ -49,7 +60,7 @@ Paste ssh config in VSCode
 
 Open remote explorer in VSCode. Click configure in ssh targets. 
 
-Paste the copied ssh config to ssh config in VSCode. Save the config file and click refresh button in the ssh targets.
+Paste the copied ssh config to ssh config in VSCode. Save the config file and the new created host will shown on the *SSH TARGETS* section.
 
 .. image:: ../_static/remote_ide/vscode/vscode-sshconfig.gif
 
@@ -67,20 +78,20 @@ Click created ssh target to connect to remote lab
 Open remote folder
 ---------------------
 
-Once connected to remote lab, open remote folder in left column to browse files
+Congradulation! You have successfully connected to a lab. You can open a remote folder in the *Explorer* at left side of VSCode.
 
 .. image:: ../_static/remote_ide/vscode/vscode-openfolder.gif
 
 
-Edit in VSCode
+Console in VSCode
 -----------------
 
-You can open console in VSCode and upload/download files in left column.
+You can also open a console in VSCode by dragging up from buttom of the window. 
 
 .. image:: ../_static/remote_ide/vscode/vscode-edit.gif
 
 
-You can visit VSCode website to find out more extensions supported by VSCode!
+Visit VSCode website to find out more extensions!
 
 https://code.visualstudio.com/docs/editor/extension-gallery
 
