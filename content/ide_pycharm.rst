@@ -1,106 +1,104 @@
-.. _ide_pycharm_windows:
-
+########
 PyCharm
-=======
+########
 
-Tested setup: Window 10, 2019.3.3 (Professional Edition)
+The following tutorial is based on Windows 10, 2019.3.3 (Professional Edition)
+
+.. caution::
+
+  Please note that remote connection feature only supported at PyCharm Professional!
 
 Install PyCharm
----------------
+================
 
-Download VSCode that according to your operating system from following link
+Download PyCharm according to your operating system from `jetbrains.com/pycharm <https://www.jetbrains.com/pycharm/download/>`__
 
-https://www.jetbrains.com/pycharm/download/
 
 .. image:: ../_static/remote_ide/pycharm/install.png
 
 SSH key
--------
+=========
 
-Open needed lab in the browser and generate ssh key.
+Open your lab and make sure the ssh key is generated. Click the ssh key to download to your PC.
 
-.. image:: ../_static/remote_ide/sshkey.jpg
+.. figure:: ../_static/remote_ide/sshkey.jpg
+  :width: 600
 
-Download <lab_id>_sshkey file (downloading will start automatically, if it does not press "Download" button).
+  SSH Config, download SSH key by clicking the ssh key link
 
-.. image:: ../_static/remote_ide/pycharm/download_ssh.png
+.. tip::
 
-.. note:: In the Linux operating system, you need to change the sshkey file to 600 mode.
+  downloading will start automatically, if it does not press the ssh key link.
+
+.. note:: 
+
+  In Linux, you need to change the sshkey file to 600 mode.
 
 PyCharm Project
----------------
+===============
 
-Open the PyCharm application and create new project.
+Open the PyCharm and create a new project.
 
 .. image:: ../_static/remote_ide/pycharm/pycharm_open.png
 
-Find the existing interpreter and click the rightmost button in "Pure Python" tab.
+Create a new *SSH Interpreter* from **Pure Python** -> **Existing interpreter** -> **...**
 
 .. image:: ../_static/remote_ide/pycharm/pure_python.png
 
-Connect
--------
+Setup Remote Interpreter
+------------------------
 
-Type your host, port and user information. (You can find it in lab page)
+Type in the SSH host IP, port and user information in **SSH Interpreter** section. (Fill in the information based on *SSH Config* above)
 
 .. image:: ../_static/remote_ide/pycharm/ssh_interpreter.png
 
-Jump out the warning modal to ask if you need to add new host in ~/.ssh/known_host
-
-Click Yes to continue
+Click *Next* and PyCharm will try to connect to the Lab, click *Yes* to continue.
 
 .. image:: ../_static/remote_ide/pycharm/connect.png
 
-Select the Key pair option and input the location of the private key.
+PyCharm will ask you for authentication, select the downloaded SSH Key at **Key pair** -> **Private key file**.
 
 .. image:: ../_static/remote_ide/pycharm/private_key.png
 
-PyCharm will connect and find the default python path. However, if using MLSteam, you need to select "/ var / bin / python3".
-
-Click Finish to complete the configuration in PyCharm.
+Once PyCharm successfully connect to the lab, you can set the interpreter path */usr/bin/python3*. Then, click *Finish* to complete the interpreter setup.
 
 .. image:: ../_static/remote_ide/pycharm/python_interpreter.png
 
-Make sure your existing interpreter is correct, then click the "Create" button. You can select a remote project location at this time or later.
+Now the remote interpreter is added, click the *Create* button to open the project page.
 
 .. image:: ../_static/remote_ide/pycharm/create.png
 
-Synchronize
------------
+.. tip::
 
-If you want to change the location of the remote project after the project is created. You can find the configuration in the toolbar. (Tools-> Deployment-> Configuration)
+  You can select the *remote project location* at this page or later.
+
+Project Files Synchronize
+==========================
+
+In PyCharm, all the file editions happen in you PC. We have to download lab files to your PC first. Click **Tools** -> **Deployment** -> **Configuration** to select remote folder.
 
 .. image:: ../_static/remote_ide/pycharm/configuration.png
 
-Select the configuration you want to edit. Select the Mapping tab. Click the folder button at the right of Deployment Path.
+Select remote folder by clicking *remote host* -> *Mappings* -> *Deployment path*.
 
 .. image:: ../_static/remote_ide/pycharm/deployment.png
 
-Selector will display the remote path after a success connection.
-
-Select the desired path and click OK.
+Choose the remote path **/mlsteam/lab** and click *OK*.
 
 .. image:: ../_static/remote_ide/pycharm/deployment_path.png
 
-There is nothing in your folder now.
-You can find "Download from" in the toolbar. (Tools-> Deployment-> Download from ...)
+Now we can download the remote */mlsteam/lab* folder to your PC.
+
+First, select your project folder, in this case is **untitled** at left column of PyCharm. Then, click **Tools** -> **Deployment** -> **Download from** -> remote host.
 
 .. image:: ../_static/remote_ide/pycharm/download_file.png
 
-Click this button and download all folders and data files from the mapped folder.
-You can also click the "Sync with Deployed to ..." button to synchronize the mapped folder and working directory on your local host.
+The download should proceed and you will see the following messages if the lab has many files.
 
 .. image:: ../_static/remote_ide/pycharm/download_log.png
 
-Interpreter
------------
+You can browse and edit the loaded files in left column of PyCharm. Any modification in the files will be synchronized to remote folder automatically.
 
-Next, set up a python interpreter for your project.
-Click Settings (Ctrl + Alt + S) in the File tab.
+.. note::
 
-.. image:: ../_static/remote_ide/pycharm/setting.png
-
-Select the project interpreter below the project: <localhost_folder>.
-Select your remote python via the drop-down menu.
-
-.. image:: ../_static/remote_ide/pycharm/project_interpreter.png
+  If you want to synchronize(upload) local PC files to remote manually by clicking **Tools** -> **Deployment** -> **Sync with Deployed to ...**

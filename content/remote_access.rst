@@ -2,7 +2,7 @@
 Remote connection to the lab
 ****************************
 
-This chapter will explain how to connect IDE on user's PC to the lab running on server.
+A lab can be accessed by your favorate IDE on your PC. Here listed all supported IDEs and you can find tutorial in each section.
 
 
 .. toctree::
