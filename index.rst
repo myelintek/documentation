@@ -78,6 +78,7 @@ Serves as an example or template for users.
    content/project
    content/lab
    content/job
+   content/image
    content/template
    content/remote_access
    content/admin
