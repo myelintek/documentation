@@ -38,3 +38,61 @@ Inference example
 Back to the Lab page, open the file 'try_detection.ipynb' in jupyterlab. Click run multiple times to examine a pretrained yolov3-tiny.weights file.
 
 .. image:: ../_static/lab/run_lab.jpg
+
+
+Custom dataset
+-----------------
+
+1.Prepare your data set
+
+Before starting to train, you must prepare your data for object detection.
+To prepare your data, you can use VoTT (Microsoft's Visual Object Tagging Tool) to and annotate images.
+https://github.com/microsoft/VoTT
+
+
+2.Prepare YOLOv3 configuration files
+
+YOLOv3 needs certain specific files to know how and what to train.
+You must create these three files(.data, .names, and .cfg)
+
+3.Upload your dataset. (Please see the page: :ref:`create_dataset`).
+:ref:`attach_dataset_lab`
+
+4.Check the file voc.data (/lab/cfg/voc.data)
+
+.. code-block:: bash
+
+    classes = 20 #number of class in your data set
+    train  = /mlsteam/input/pascalvoc/train.txt #relpace to your train file path
+    valid  = /mlsteam/input/pascalvoc/2007_test.txt #replace to your test file path
+    names = data/voc.names #class names file
+    backup = backup
+
+
+5.Check the file data/voc.names
+
+Every new category should be on a new line.
+
+.. code-block:: bash
+
+    aeroplane
+    bicycle
+    bird
+    boat
+    bottle
+    bus
+    car
+    cat
+    chair
+    cow
+    diningtable
+    dog
+    horse
+    motorbike
+    person
+    pottedplant
+    sheep
+    sofa
+    train
+    tvmonitor
+
