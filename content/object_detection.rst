@@ -37,7 +37,7 @@ Inference example
 
 Back to the Lab page, open the file 'try_detection.ipynb' in jupyterlab. Click run multiple times to examine a pretrained yolov3-tiny.weights file.
 
-.. image:: ../_static/lab/run_lab.jpg
+.. image:: ../_static/template/run_lab.jpg
 
 
 Custom dataset
