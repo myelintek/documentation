@@ -14,15 +14,15 @@ On the top bar click "Project" to create your own project.
 
 Change to template tab. Then click "Use Template" on the classification card. This will create a new lab with Mnist dataset already attached to it.
 
-.. image:: ../_static/template/create_template.png
+.. image:: ../_static/template/create_template1.png
 
-In the lab page, click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
+In the lab page, click "Commit job". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/lab/commit_run.png
+.. image:: ../_static/template/run_template.png
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: ../_static/job/list_job.png
+.. image:: ../_static/template/view_job1.png
 
 Job page displays 
 
@@ -49,11 +49,15 @@ For this go to Dataset page and click "New Dataset". Then enter dataset name and
 
 .. image:: ../_static/template/template_empty_dataset2.png
 
-Go back to lab. For this click "Project" -> "classification" -> "Lab" -> <lab_id>.
+Go back to lab. For this click "Project" -> "Lab".
 
 .. image:: ../_static/template/template_empty_dataset3.png
 
-.. image:: ../_static/lab/list_lab.png
+.. image:: ../_static/template/template_empty_dataset4.png
+
+Click start botton to start the project.
+
+.. image:: ../_static/template/template_empty_dataset5.png
 
 To attach dataset to lab enter it's name and click "Attach dataset".
 

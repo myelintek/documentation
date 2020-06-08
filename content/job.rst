@@ -13,7 +13,7 @@ Browse jobs
 ===========
 
 Go into project page.
-Click on "Job" tab.
+Click on "Job".
 
 List of jobs belonging to project will show up.
 Click on job's id or screen icon next to it to see details.

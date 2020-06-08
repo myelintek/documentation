@@ -37,7 +37,9 @@ When the installation finishes, Docker starts automatically. The whale in the no
 List Image
 ===========
 
-Click the **Image** tab in a project, the image list table shows all available container images.
+Click the **Image** botton in a project, the image list table shows all available container images.
+
+.. image:: ../_static/image/list_image.png
 
 Delete Image
 ============
@@ -64,11 +66,6 @@ Click "Save as" button in a running lab and type-in image name to store the imag
   type-in image name
 
 
-.. figure:: ../_static/image/upload_image.png
-  :width: 700
-
-  uploading the created image
-
 .. note:: 
     Image name must be valid ASCII, lowercase, uppercase letters, digits, underscores, periods and dashes.
 
@@ -77,8 +74,6 @@ Build DockerFile
 ================
 
 If you want to upload your own dockerfile and build it. Click the "New Image" button.
-
-.. image:: ../_static/image/new_image.png
 
 Type the image name and select dockerfile in your file system.
 

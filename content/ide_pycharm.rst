@@ -21,7 +21,7 @@ SSH key
 
 Open your lab and make sure the ssh key is generated. Click the ssh key to download to your PC.
 
-.. figure:: ../_static/remote_ide/sshkey.jpg
+.. figure:: ../_static/remote_ide/sshkey.png
   :width: 600
 
   SSH Config, download SSH key by clicking the ssh key link

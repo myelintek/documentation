@@ -4,14 +4,14 @@
 Administration
 **************
 
-To enter administration settings click "System" on the drop down menu in the top-right corner.
+To enter administration settings click the bottom-left corner button.
 
 Default login
 =============
 
 The default administration credentials are **admin/admin**.
 
-.. image:: ../_static/admin/dropdown.png
+.. image:: ../_static/admin/popup.png
 
 Profile
 =======
@@ -36,9 +36,13 @@ Allows create, edit and delete user.
 Create
 ++++++
 
-Click "Create" button.
+Click "Users" button.
 
 .. image:: ../_static/admin/create_user.png
+
+Click "Create" button.
+
+.. image:: ../_static/admin/create_user2.png
 
 Fill username and password.
 
