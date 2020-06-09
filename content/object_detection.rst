@@ -64,7 +64,17 @@ You must create these three files(.data, .names, and .cfg)
     train  = /mlsteam/input/pascalvoc/train.txt #relpace to your train file path
     valid  = /mlsteam/input/pascalvoc/2007_test.txt #replace to your test file path
     names = data/voc.names #class names file
-    backup = backup
+    backup = /mlsteam/input/backup
+
+.. tip::
+
+  backup: backup the weights files to your dataset path.
+
+  The public dataset(pascalvoc) is read only.
+
+  Please make sure you have already create/clone your own dataset.
+
+  Please see the page :ref:`create_dataset` for creating or cloning the dataset.
 
 
 5.Check the file data/voc.names
