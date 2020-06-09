@@ -68,9 +68,14 @@ You must create these three files(.data, .names, and .cfg)
 
 .. tip::
 
-  backup: backup the weights files to your private dataset path.
+  backup: backup the weights files to your dataset path.
 
-  Please create your own dataset in the first.
+  The public dataset(pascalvoc) is read only.
+
+  Please make sure you have already create/clone your own dataset.
+
+  Please see the page :ref:`create_dataset` for creating or cloning the dataset.
+
 
 5.Check the file data/voc.names
 
