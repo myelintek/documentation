@@ -38,6 +38,13 @@ Back to the Lab page, open the file 'try_detection.ipynb' in jupyterlab. Click r
 .. image:: ../_static/template/run_lab.jpg
 
 
+If you want to follow the YOLO webside (https://pjreddie.com/darknet/yolo/) to train the yolo model step by step.
+
+You can launch a new lab and execute the terminal then follow the instructions provided in the YOLO webside.
+
+.. image:: ../_static/template/exe_terminal.png
+
+
 Custom dataset
 -----------------
 
