@@ -8,7 +8,6 @@ A lab is a web IDE (based on JupyterLab). Here we listed all available operation
 * :ref:`browse_lab`
 * :ref:`stop_lab`
 * :ref:`start_lab`
-* :ref:`restart_lab`
 * :ref:`attach_dataset_lab`
 * :ref:`pass parameters`
 * :ref:`lab_tensorboard`
@@ -59,6 +58,10 @@ To browse a lab, click *Lab* tab in a project page and click lab id or *browse* 
 
   click lab id or *browse* button to open the lab
 
+.. figure:: ../_static/lab/detail_lab.png
+
+  See the detail of the lab.
+
 .. _stop_lab:
 
 Stop lab
@@ -85,20 +88,6 @@ To start a lab, click *Done* button and select *Start*
 or click *Start* at the lab list page.
 
 .. image:: ../_static/lab/start_lab_out.png
-
-
-.. _restart_lab:
-
-Restart lab
-===========
-
-To restart a lab, click *Running* button and select *Restart* in the lab page.
-
-.. image:: ../_static/lab/restart_lab_in.png
-
-or click "Restart" at the Actions column.
-
-.. image:: ../_static/lab/restart_lab_out.png
 
 .. _attach_dataset_lab:
 

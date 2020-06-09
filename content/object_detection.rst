@@ -12,11 +12,11 @@ On the top bar click "Template".
 
 Then click "Use Template" on the object detection card. This will create an object detection project named "objectdetection" with Pascal dataset already attached to it.
 
-.. image:: ../_static/template/use_template2.jpg
+.. image:: ../_static/template/create_template1.png
 
 In the lab page, click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: ../_static/template/run_template2.jpg
+.. image:: ../_static/template/create_template2.png
 
 Click on the job id or screen icon to view training progress.
 
@@ -28,8 +28,6 @@ Job page displays
 * Log output
 * Configuration file (mlsteam.yml)
 * Used docker image name, gpus, status, status button (top panel)
-
-.. image:: ../_static/template/view_job3.jpg
 
 
 Inference example

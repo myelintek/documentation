@@ -32,7 +32,7 @@ Open a lab you want to access. Make sure the lab is in running state, click SSH 
 
 You will see the following content and click the ssh key to download to your PC.
 
-.. figure:: ../_static/remote_ide/sshkey.jpg
+.. figure:: ../_static/remote_ide/sshkey.png
   :width: 600
 
   download SSH key
