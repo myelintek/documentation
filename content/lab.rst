@@ -134,6 +134,18 @@ Upload new files to dataset, if needed.
 .. image:: ../_static/lab/attach_dataset_upload.png
   :width: 300
 
+Upload a zip file to lab.
+
+.. image:: ../_static/lab/zipfile.png
+
+Launch the terminal and unzip the file.
+
+.. code-block:: batch
+
+  unzip <file_name.zip>
+
+.. image:: ../_static/lab/unzipfile.png
+
 .. _pass parameters:
 
 Pass parameters
