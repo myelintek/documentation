@@ -110,12 +110,26 @@ Add insecure registry
 
 Add the following contents in the ``daemon.json`` file, whose default location is ``/etc/docker/daemon.json`` on Linux or ``C:\ProgramData\docker\config\daemon.json`` on Windows Server. If you use Docker Desktop for Mac or Docker Desktop for Windows, click the Docker icon, choose Preferences, and choose +Daemon.
 
+An example for Linux:
+
+.. code-block:: bash
+
+  vim /etc/docker/daemon.json
+
 
 .. code-block:: bash
 
   {
       "insecure-registries" : ["<domain.sample.com>:<port>"]
+      ,"runtimes": {
+          "nvidia": {
+              "path": "nvidia-container-runtime",
+              "runtimeArgs": []
+          }
+      }
   }
+
+.. image:: ../_static/image/daemon_example.png
 
 
 Substitute the address of your insecure registry for the one in the example.
@@ -124,6 +138,11 @@ Substitute the address of your insecure registry for the one in the example.
     You can find the registry address in Project -> Image page.
 
 Remember to restart Docker for the changes to take effect.
+
+.. code-block:: bash
+
+  systemctl restart docker
+
 
 Login registry
 --------------
