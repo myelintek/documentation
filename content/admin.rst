@@ -210,7 +210,7 @@ Then generate the pair of ssh-keys (select all defaults). For this on host machi
   ssh-keygen -t rsa -b 4096 -C "<your_string>"
   eval "$(ssh-agent -s)"
   ssh-add ~/.ssh/id_rsa
-  cat ~/.ssh/id_rsa.pub > authorized_keys
+  cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
 
 On MLSteam webportal Host page click "Create". 
 
