@@ -21,8 +21,8 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = u'MLSteam'
-copyright = u'2020, Myelintek'
-author = u'Myelintek'
+copyright = u'2020, MyelinTek'
+author = u'MyelinTek'
 
 # The short X.Y version
 version = u''
@@ -150,7 +150,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'MLSteam.tex', u'MLSteam Documentation',
-     u'Myelintek', 'manual'),
+     u'MyelinTek', 'manual'),
 ]
 
 
