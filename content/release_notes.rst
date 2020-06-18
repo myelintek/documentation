@@ -2,6 +2,29 @@
 Realese notes
 *************
 
+v3.6.0
+======
+
+
+Features
+++++++++
+
+* UI/UX refactoring
+* Add user storage space quota setting
+* Add create/update timestamp in image table
+* Add # of gpu setting when click "commit & run" in lab page
+* Upport attaching multiple datasets in a lab
+
+
+v3.5.2
+======
+
+BugFixes
+++++++++
+
+* Fix usage time api
+
+
 v3.5.1
 ======
 
@@ -15,7 +38,6 @@ BugFixes
 
 v3.5.0
 ======
-
 
 Features
 ++++++++
