@@ -2,6 +2,28 @@
 Realese notes
 *************
 
+v3.6.1
+======
+
+
+Features
+++++++++
+
+* Refactor dataset page
+* Make lab ssh, dockerfile build and CVAT configurable in admin page
+* Add home page for project
+
+BugFixes
+++++++++
+
+* Fix tensorboard buttons not automatically update
+* Close commit & run menu when click 'start'
+* Fix image list page sometime shows 404 error
+* Fix i18n translations
+* Fix pie chart shows running tasks
+* Bugfixes
+
+
 v3.6.0
 ======
 
