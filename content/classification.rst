@@ -214,3 +214,37 @@ Example
     memory_saving_method: none
     num_epochs: 10
     small_chunk: 1
+
+
+How to use TensorBoard
+----------------------
+
+TensorBoard provides the visualization and tooling needed for machine learning experimentation:
+
+* Tracking and visualizing metrics such as loss and accuracy
+* Visualizing the model graph (ops and layers)
+* Viewing histograms of weights, biases, or other tensors as they change over time
+* Projecting embeddings to a lower dimensional space
+* Displaying images, text, and audio data
+* Profiling TensorFlow programs
+* And much more
+
+.. tip::
+   TensorBoard working with TensorFlow-based code.
+
+.. image:: ../_static/template/template_tensorflow.png
+
+Starting TensorBoard
+^^^^^^^^^^^^^^^^^^^^
+
+Summit a job in the first, and wait for the job finished.
+
+Then specify the file path of training result in logdir and click start. (The default directory is /mlsteam/output)
+
+.. image:: ../_static/template/tensorboard_example1.png
+
+Click the url for starting TensorBoard.
+
+.. image:: ../_static/template/tensorboard_example2.png
+
+For more details, please see the link https://www.tensorflow.org/tensorboard/get_started.
