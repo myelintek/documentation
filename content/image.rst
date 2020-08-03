@@ -69,6 +69,39 @@ Click "Save as" button in a running lab and type-in image name to store the imag
 .. note:: 
     Image name must be valid ASCII, lowercase, uppercase letters, digits, underscores, periods and dashes.
 
+Enable docker build config
+==========================
+
+Login as administrator.
+Click "Setting".
+
+.. image:: ../_static/image/dockerfile_1.png
+
+Click "Config".
+Edit docker_build value as True.
+
+.. image:: ../_static/image/dockerfile_2.png
+
+.. image:: ../_static/image/dockerfile_3.png
+
+.. image:: ../_static/image/dockerfile_4.png
+
+
+Create a DockerFile
+===================
+
+In this step, you write a Dockerfile that builds a Docker image.
+
+For example, create a file named Dockerfile and paste the following:
+
+.. code-block:: bash
+
+  FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+  RUN pip install jupyterlab
+  RUN rm -rf /usr/lib/x86_64-linux-gnu/libcuda.so /usr/lib/x86_64-linux-gnu/libcuda.so.1 /tmp/*
+  WORKDIR /mlsteam/lab
+  CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root"]
+
 
 Build DockerFile
 ================
