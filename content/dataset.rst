@@ -17,11 +17,11 @@ Create dataset
 
 To create an empty dataset, click new dataset button and specify dataset name.
 
-.. figure:: ../_static/dataset/new_dataset.png
+.. figure:: ../_static/dataset/new_dataset.jpg
 
   click new dataset button on the dataset page
 
-.. figure:: ../_static/dataset/new_dataset_modal.png
+.. figure:: ../_static/dataset/new_dataset_modal.jpg
 
   named 'demo' for this dataset
 
@@ -41,7 +41,7 @@ You can create a dataset which mounts a remote NFS volume and manage the data in
 Simply click new dataset button, specify the dataset name and check *External Storage* checkbox. From drop down menu select NFS.
 Input the NFS server ip and mount point path. click *Create*.
 
-.. figure:: ../_static/dataset/nfs_dataset.png
+.. figure:: ../_static/dataset/nfs_dataset.jpg
 
   create a dataset which mounts remote NFS volume
 
@@ -58,21 +58,22 @@ Browse dataset
 
 To browse the dataset, click on dataset name.
 
-.. image:: ../_static/dataset/browse_dataset.png
+.. image:: ../_static/dataset/browse_dataset.jpg
 
 Clone dataset
 -------------
 
 To clone a dataset, click *Clone* button to create a copy of dataset.
 
-.. image:: ../_static/dataset/clone_dataset.png
+.. image:: ../_static/dataset/clone_dataset.jpg
 
 Upload files to dataset
 -----------------------
 
-To upload files to a dataset, simply drag and drop files from local PC or click *Upload* button to select local files.
+To upload files to a dataset, simply drag and drop files from local PC or click *Add Data* -> *Local* -> *Browse* to select local files.
 
-.. image:: ../_static/dataset/upload_dataset.png
+.. image:: ../_static/dataset/upload_dataset.jpg
+.. image:: ../_static/dataset/upload_dataset_local.jpg
 
 
 Extract files from archive
@@ -81,7 +82,7 @@ Extract files from archive
 Upload too many files will cause the web browser freeze. Therefore, you can compress files into one archive file and uncompress the file on the dataset page.
 
 
-.. figure:: ../_static/dataset/extract_dataset.png
+.. figure:: ../_static/dataset/extract_dataset.jpg
 
   select archive file and click "Extract".
 
@@ -95,11 +96,11 @@ New folder
 
 To create folders in dataset, click *new folder* button within a dataset.
 
-.. figure:: ../_static/dataset/new_folder_dataset0.png
+.. figure:: ../_static/dataset/new_folder_dataset0.jpg
 
   click *new folder*
 
-.. figure:: ../_static/dataset/new_folder_dataset.png
+.. figure:: ../_static/dataset/new_folder_dataset.jpg
 
   input folder name and click create.
 
@@ -109,7 +110,7 @@ Download files
 
 To download files, select a file and click *download* button.
 
-.. figure:: ../_static/dataset/download_dataset.png
+.. figure:: ../_static/dataset/download_dataset.jpg
 
   download a file
 
@@ -119,7 +120,7 @@ Delete folder/file
 
 To delete files or folders, select a folder or a file and click *delete*.
 
-.. figure:: ../_static/dataset/delete_file_dataset.png
+.. figure:: ../_static/dataset/delete_file_dataset.jpg
 
   delete a file in dataset page
 
@@ -159,13 +160,13 @@ If success, *yolo* tag will appear in related files and folder.
 
 click images to visualize bounding box in each labeld image.
 
-.. figure:: ../_static/dataset/yolo3.png
+.. figure:: ../_static/dataset/yolo3.jpg
 
   visualize bouding box in a yolo image
 
 If you want remove the *yolo* tag, click 'x' on top of the dataset page.
 
-.. figure:: ../_static/dataset/visualize_dataset_remove.png
+.. figure:: ../_static/dataset/visualize_dataset_remove.jpg
 
   remove yolo tag images
 
@@ -176,6 +177,6 @@ Delete dataset
 
 To delete a dataset, click trash icon in the dataset page.
 
-.. figure:: ../_static/dataset/delete_dataset.png
+.. figure:: ../_static/dataset/delete_dataset.jpg
 
   delete a dataset.
