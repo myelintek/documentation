@@ -16,26 +16,30 @@ Upload Dataset
 
 First, click 'New Dataset' button in dataset page to create an empty directory. 
 
-.. figure:: ../_static/dataset/new_dataset.png
+.. figure:: ../_static/dataset/new_dataset.jpg
 
   click *New Dataset* in dataset page.
 
-Input the dataset name 'Dog Breed Identification'.
+Input the dataset name 'Dog_Breed_Identification'.
 
 .. figure:: ../_static/tutorial/new_dogbreed_dataset.png
-  :width: 200
+  :width: 400
 
-  name the dataset as 'Dog Breed Identification'.
+  name the dataset as 'Dog_Breed_Identification'.
 
 Download the `Dog Breed Identification <https://www.kaggle.com/c/dog-breed-identification/data>`__ archive file to your PC.
 
-In the previous created **Dog Breed Identification** dataset, click **Upload** button to upload the archive dataset from you PC.
+In the previous created **Dog_Breed_Identification** dataset, click **Add Dataset** button to upload the archive dataset from you PC.
 
 .. figure:: ../_static/tutorial/upload_dogbreed_button.png
   :width: 400
 
-  click upload button to select files from PC
+  click upload button to select files
 
+.. figure:: ../_static/tutorial/upload_dogbreed_browse.png
+  :width: 400
+
+  Tick Local to select files from your PC and then Browse
 
 .. figure:: ../_static/tutorial/upload_dogbreed_open_window.png
 
@@ -63,22 +67,21 @@ Create a LAB
 
 Click *LAB* button in your project and click *NEW LAB* in Lab home page
 
-.. figure:: ../_static/lab/create_lab.png
+.. figure:: ../_static/lab/create_lab.jpg
 
   click *NEW LAB* to launch a modal.
 
-Choose the *python-gpu* image and select 1 GPU for this lab. 
+Choose the *python-gpu* image and select "small" Flavor to support 1 GPU for this lab. 
 
-.. figure:: ../_static/lab/create_lab_modal.png
-  :width: 500
+.. figure:: ../_static/lab/create_lab_modal.jpg
 
   specify lab environment
 
 .. tip::
-   If GPU is set to 0, the created lab uses CPU only.
+   If Flavor is set to micro, the created lab uses CPU only.
 
 
-Attach Dataset in a LAB
+Attach Dataset to a LAB
 ========================
 
 Now we can attach the Dog Breed dataset to a LAB.
@@ -90,9 +93,9 @@ Open the Lab page, click the dataset icon at top-right of the Lab page. Select D
   
   select dataset at top-right of the Lab page
 
-Click *Attach Dataset* button and confirm the warning, the LAB will restart for dataset connection.
+Click *Add* button first, and then *Attach Dataset* button and confirm the warning, the LAB will restart for dataset connection.
 
-.. figure:: ../_static/lab/attach_dataset_alert.png
+.. figure:: ../_static/lab/attach_dataset_alert.jpg
   :width: 400
   
   lab will restart for attaching selected dataset
@@ -337,10 +340,14 @@ Tensorboard visualization
 
 A Tensorboard can be launched from web, at right sidebar menu, speficy the logdir path for tensorboard to read the summary files.
 
-.. figure:: ../_static/tutorial/launch_tensorboard_server.png
-
+.. figure:: ../_static/template/tensorboard_example1.png
+  :width: 400
   input logdir path for tensorboard to read the summary files.
 
+Click the url for starting TensorBoard.
+
+.. image:: ../_static/template/tensorboard_example2.png
+  :width: 400
 After training finished, we can save the model parameters as a HDF5 format by following command.
 
 .. code-block:: python
@@ -496,27 +503,27 @@ The output should be like this:
 Submit a training job
 =====================
 
-For advance users who want to tune hyper-parameters. we suggest to run each training as a job for better organization. 
+For advanced users who want to tune hyper-parameters, we suggest to run each training as a job for better organization. 
 
 You can download the above training code `here <https://github.com/myelintek/documentation/blob/master/_static/tutorial/dog_breed.ipynb>`_ file which includes above code.
 
-Open mlsteam.yml in lab folder, specify the training job command 'ipython3 /mlsteam/lab/dog_breed.ipynb'.
+Open mlsteam.yml in lab folder, specify the training job command 'ipython3 dog_breed.ipynb'.
 
 .. figure:: ../_static/tutorial/edit_yml_dog_breed.png
-
+  :width: 500
+  
   specify 'command' for training job
 
-.. caution::
-  
-  Please set the GPU number to 1 for GPU training.
-
-
-Click the 'COMMIT AND RUN' button on top of the lab and confirm the training parameters.
+Click the 'Submit Job' button on top right of the lab and confirm the training parameters.
 
 .. figure:: ../_static/tutorial/dog_breed_job_commit_confirm.png
   :width: 400
 
   click commit to submit a training job
+
+.. note:: 
+
+    choose a "small" flavor to use 1 GPU
 
 You can click the new created training job for monitoring.
 
