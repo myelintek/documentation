@@ -7,7 +7,7 @@
 Welcome to MLSteam!
 #####################
 
-Here is the complete guide for training and developing your deep learning application with our platform.
+Here is the complete guide to training and developing your deep learning application with our platform MLSteam.
 
 To have a quick tutorial for using our system is to use :ref:`quick_start`. You will create a lab in a project on MLSteam with same code in the lab.
 

@@ -3,25 +3,24 @@
 **************
 Administration
 **************
-
-To enter administration settings click the bottom-left corner button.
-
-Default login
-=============
-
-The default administration credentials are **admin/admin**.
+After entering administration credentials in the login page, a *More* icon will apear in the left. Click it to see a popup window with different options for administration.
 
 .. image:: ../_static/admin/popup.png
+  :width: 400
 
 Profile
 =======
 
-It shows current user profile and change password operation.
+You can see current user profile and an option to change password.
+
+.. image:: ../_static/admin/popup_profile.png
+  :width: 400
 
 .. image:: ../_static/admin/profile.png
+  :width: 600
 
 .. image:: ../_static/admin/change_password.png
-
+  :width: 400
 
 Account
 =======
@@ -29,30 +28,25 @@ Account
 User
 ----
 
-In user managment tab
-
-Allows create, edit and delete user.
+User managment tab allows creating, editing and deleting users.
 
 Create
 ++++++
 
 Click "Users" button.
 
-.. image:: ../_static/admin/create_user.png
+.. image:: ../_static/admin/popup_users.png
+  :width: 400
 
 Click "Create" button.
 
-.. image:: ../_static/admin/create_user2.png
+.. image:: ../_static/admin/create_user.png
 
-Fill username and password.
-
-Select single role from drop down list.
-
-Gpu limit is how many gpus can this user occupy, "-1" means no restriction.
-
+Fill username and password. Select single role from drop down list. Choose what plan this user will utilize. Limit storage space.
 Manage group if user needs.
 
 .. image:: ../_static/admin/create_user_modal.png
+  :width: 400
 
 Edit
 ++++
@@ -61,23 +55,27 @@ Select user that needs to be edited, click "Edit" button.
 
 .. image:: ../_static/admin/edit_user.png
 
-Fill new info.
+Fill new info. We decrease the sotrage limit from 2 to 1 GB.
 
 .. image:: ../_static/admin/edit_user_modal.png
+  :width: 400
 
 Delete
 ++++++
 
-Select user that needs to be deleted, click "Delete" button. Confirm.
+Select user that needs to be deleted, click "Delete" button. Notice the change in the storage limit.
 
 .. image:: ../_static/admin/delete_user.png
+
+Confirm.
+
+.. image:: ../_static/admin/delete_user_confirmation.png
+  :width: 400
 
 Group
 -----
 
-Is group managment tab
-
-Allows new and delete group.
+You can create and delete groups in this tab.
 
 Create
 ++++++
@@ -89,6 +87,7 @@ Click "Create" button.
 Fill group name and confirm.
 
 .. image:: ../_static/admin/create_group_modal.png
+  :width: 400
 
 Delete
 ++++++
@@ -96,10 +95,15 @@ Delete
 Select group that needs to be deleted, click "Delete" button. Confirm.
 
 .. image:: ../_static/admin/delete_group.png
-
+  :width: 600  
 
 Dashboard
 =========
+
+Check various statistics about the system
+
+.. image:: ../_static/admin/popup_dashboard.png
+  :width: 400  
 
 Task
 ----
@@ -113,7 +117,7 @@ Stop
 
 Select the instance that needs to be stopped, and then click "Stop".
 
-Only running status can be stopped.
+Only instances with running status can be stopped.
 
 .. image:: ../_static/admin/stop_task.png
 
@@ -122,7 +126,7 @@ Delete
 
 Select the instance to be deleted, and click "Delete" to delete the task.
 
-Only not running status can be deleted.
+Only not running instances can be deleted.
 
 .. image:: ../_static/admin/delete_task.png
 
@@ -143,7 +147,7 @@ Click create button.
 Fill project name and annotation, click "Create".
 
 .. image:: ../_static/admin/create_project_modal.png
-
+  :width: 400
 
 Members
 +++++++
@@ -155,10 +159,12 @@ To edit project members click "Members" button next to the project name.
 To add user to the project click "Add member", then type their name, select permissions and click "Save", then click "Done".
 
 .. image:: ../_static/admin/members_project_modal.png
+  :width: 400
 
 To delete user from project click "Delete" next to the username, then click "Done".
 
 .. image:: ../_static/admin/delete_members_project.png
+  :width: 400
 
 Delete
 ++++++
@@ -177,7 +183,7 @@ Log of system events in chronological order. Use "Search" box on top to look for
 Device
 ======
 
-Shows All hosts' hardwave informations.
+Shows hardwave information of all hosts.
 
 .. image:: ../_static/admin/view_device.png
 
@@ -195,30 +201,18 @@ Shows list of hosts in the system.
 Create
 ++++++
 
-First on the target host create a sudo user account.
+To add a new node to the system, click "Add" and follow shown instructions. Download the host agent installer to the machine you want to use as a host and run it.
 
-Give it the password-less privilege for mount related commands. For this create fallowing file `/etc/sudoers.d/<account>` with content
+.. image:: ../_static/admin/add_host.png
+  :width: 600
 
-.. code-block:: console
+Authorize
++++++++++
 
-  <account> ALL=(ALL) NOPASSWD: /usr/bin/mount,/usr/bin/umount,/bin/sh
+After successfull creation of a new host node, you should see it in the host list. However, you need to authorize it first for full operation.
 
-Then generate the pair of ssh-keys (select all defaults). For this on host machine console type:
-
-.. code-block:: console
-
-  ssh-keygen -t rsa -b 4096 -C "<your_string>"
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_rsa
-  cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
-
-On MLSteam webportal Host page click "Create". 
-
-.. image:: ../_static/admin/new_host.png
-
-Then fill the form with ip address, account name and for "SSH KEY" field copy the content of `~/.ssh/id_rsa`.
-
-.. image:: ../_static/admin/new_host_modal.png
+.. image:: ../_static/admin/authorize_host.png
+  :width: 600
 
 Delete
 ++++++
@@ -226,7 +220,11 @@ Delete
 Select needed host and click "Delete" button. Confirm.
 
 .. image:: ../_static/admin/delete_host.png
+  :width: 600
 
+.. image:: ../_static/admin/delete_host_modal.png
+  :width: 400
+  
 Certificate
 -----------
 
@@ -241,9 +239,10 @@ Click create button.
 
 .. image:: ../_static/admin/create_certificate.png
 
-Input certificate name and doamin name, click "Test anc Create". (Optional, email) 
+Input certificate name and doamin name, click "Test and Create". (Optional, email) 
 
 .. image:: ../_static/admin/create_certificate_modal.png
+  :width: 600
 
 Delete
 ++++++
@@ -253,17 +252,106 @@ Select needed host and click "Delete" button. Confirm.
 .. image:: ../_static/admin/delete_certificate.png
 
 Repository
-++++++++++
+----------
+
+Create
+++++++
+
+Plan
+----
+Setup different plans for different kinds of users
+
+Create
+++++++
+
+Click "Create"
+
+.. image:: ../_static/admin/create_plan.png
+
+Come up with a name, GPU number, GPU type, number of CPU cores & labs, available memory, and whether your new plan is preserved.
+
+.. image:: ../_static/admin/create_plan_modal.png
+  :width: 600
+
+Edit
+++++
+
+To change preciously created plan you need to first select the plan you want to alter and click "Edit".
+
+.. image:: ../_static/admin/edit_plan.png
+
+Choose what you want to change, we'll adjust the number of GPUs available to subscribers of this plan.
+
+.. image:: ../_static/admin/edit_plan_modal.png
+  :width: 600
+
+Delete
+++++++
+
+To remove a plan, select it and click "Delete"
+
+.. image:: ../_static/admin/delete_plan.png
+
+Confirm your choice and proceed. 
+
+.. image:: ../_static/admin/delete_plan_modal.png
+  :width: 400
+
+Flavor
+------
+
+Users can choose a flavor for their Labs/Jobs, which corresponds to designating hardware resources
+
+Create
+++++++
+
+To add a new flavor, click "Create"
+
+.. image:: ../_static/admin/create_flavor.png
+
+Similar to a plan, choose the name, number of GPUs, their type, number of CPU cores, and memory for your new flavor, then click "Create".
+
+.. image:: ../_static/admin/create_flavor_modal.png
+  :width: 600
+
+Edit
+++++
+
+To change preciously created flavor you need to first select the flavor you want to alter and click "Edit".
+
+.. image:: ../_static/admin/edit_flavor.png
+
+Choose what you want to change, we'll adjust the number of GPUs available to in this flavor.
+
+.. image:: ../_static/admin/edit_flavor_modal.png
+  :width: 600
+
+Delete
+++++++
+
+To remove a flavor, select it and click "Delete"
+
+.. image:: ../_static/admin/delete_flavor.png
+
+Confirm your choice and proceed. 
+
+.. image:: ../_static/admin/delete_flavor_modal.png
+  :width: 400
 
 License
-+++++++
+-------
+
+Edit
+++++++
 
 Shows current license file.
 
 If license needs to be updated click "Edit" to input new license file.
 
 .. image:: ../_static/admin/license_system.png
+  :width: 600
 
 Input license text in the field and click "Save".
 
 .. image:: ../_static/admin/license_system_modal.png
+  :width: 600

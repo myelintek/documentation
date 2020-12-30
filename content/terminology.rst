@@ -17,17 +17,22 @@ Is any collection of data.
 Lab
 ***
 
-Jupyter notebook environment that then can be runned as job, can be connected to dataset.
+Jupyter notebook environment that then can be run as job and can be connected to a dataset.
 
 Job
 ***
 
-Is a run of specific code, can be connected to dataset.
+Is an instance of running specific code from a Lab, can be connected to dataset.
+
+Flavor
+******
+
+Is the hardware setting for a Lab or a Job, describes how much resources (CPUs, GPUs) are allocated
 
 Template
 ********
 
-Is an example of project of specific type with already preloaded dataset connected to it. Serves as an example or template for users.
+Is an example project of a specific type with a preloaded dataset already connected to it. Serves as a reference project for users.
 
 Image
 *****

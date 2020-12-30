@@ -13,7 +13,7 @@ Click "Project" or "Create Project" button.
 
 .. image:: ../_static/project/create_project.jpg
 
-Click on the upper right button to create a new project.
+At the *Home* tab, you will see a dashboard with overall usage of resources available to you and browse all created projects. You can add a new project here.
 
 .. image:: ../_static/project/create_project_modal.jpg
 
@@ -21,65 +21,50 @@ Input project name and any related notes, then click "Create".
 
 .. image:: ../_static/project/create_project_modal2.jpg
 
-The last created project becomes the default project.
-
-Browse projects
-===============
-
-Click the button "view" to see your project status and the dashboard.
-
-.. image:: ../_static/project/browse_project.jpg
-
-.. image:: ../_static/project/browse_project_dashboard.jpg
+The last created project becomes the default project and can be directly accessed from the *Project* tab.
 
 View project
-============
+===============
 
-Open list of projects. 
-
-.. image:: ../_static/project/view_project_model.jpg
-
-Click on project's view button to view its content.
+Click the "View" button to see your project status and the dashboard.
 
 .. image:: ../_static/project/browse_project.jpg
 
+From this dashboard, you can access your Labs, Jobs, as well as settings of your chosen project.
+
+.. image:: ../_static/project/browse_project_dashboard.jpg
 
 Add member
 ==========
 
-On the projects page click the setting button at the upper right of screen.
-
-Click "Member".
+In your projects' dashboard click the setting button at the upper right of screen and choose the "Member" option from teh drop-down list.
 
 .. image:: ../_static/project/member_project.jpg
 
-Type members name. Select role. Click "Add".
-
-If you haven't create any user, please create a user in the first.
-(Please see the page: :ref:`admin`)
+In the page you've been redirected, you can see all members of a given *Project*, yourself included. You can add other members to your project by clicking the "Add Member" button.
 
 .. image:: ../_static/project/member_project_add.jpg
 
-Modify user name and click "save" button.
+Write the name of the member to add and set their permission. *Writer* can modify your project, while *Reader* can only look at the code and run *Jobs*.
 
 .. image:: ../_static/project/member_project_save.jpg
 
-"Delete" button will remove member from project.
+You can edit permissions by clicking "Edit" or remove an unwanted member from your project with a "Delete" button next to that users' name.
 
 .. image:: ../_static/project/edit_delete_member.jpg
 
 Delete project
 ==============
 
-Click the button with the default project name to open the list of projects. 
+To delete a project, you must navigate back to the *Home* dashboard first. 
 
 .. image:: ../_static/project/browse_project2.jpg
 
-Click trash icon on the side of project that needs to be deleted.
+Click the additional settings button at the top left corner of the project you with to remove, and click "Delete" button that will appear.
 
 .. image:: ../_static/project/delete_project.jpg
 
-Confirm.
+Make sure you have selected the right project for removal and then confirm this change.
 
 .. image:: ../_static/project/delete_project_modal.jpg
 

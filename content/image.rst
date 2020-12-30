@@ -46,7 +46,7 @@ Delete Image
 
 Click the trash icon of the image you want to delete.
 
-.. image:: ../_static/image/delete.png
+.. image:: ../_static/image/delete_image.png
 
 Save Image
 ==========
@@ -55,7 +55,7 @@ In the lab page, you can save the lab environment as an image.
 Click "Save as" button in a running lab and type-in image name to store the image.
 
 .. figure:: ../_static/image/save_as.png
-  :width: 600
+  :width: 400
 
   click save as image button
 
@@ -76,15 +76,22 @@ Login as administrator.
 Click "Setting".
 
 .. image:: ../_static/image/dockerfile_1.png
+  :width: 400
 
 Click "Config".
-Edit docker_build value as True.
+Tick the docker_build checkbox.
 
-.. image:: ../_static/image/dockerfile_2.png
+.. figure:: ../_static/image/dockerfile_2.png
 
-.. image:: ../_static/image/dockerfile_3.png
+  Click *Edit* to change value
 
-.. image:: ../_static/image/dockerfile_4.png
+.. figure:: ../_static/image/dockerfile_3.png
+  :width: 600
+  Update value
+
+.. figure:: ../_static/image/dockerfile_4.png
+
+  Check the result
 
 
 Create a DockerFile
@@ -96,8 +103,8 @@ For example, create a file named Dockerfile and paste the following:
 
 .. code-block:: bash
 
-  FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
-  RUN pip install jupyterlab
+  FROM nvcr.io/nvidia/tensorflow:18.08-py3
+  RUN pip3 install jupyterlab
   RUN rm -rf /usr/lib/x86_64-linux-gnu/libcuda.so /usr/lib/x86_64-linux-gnu/libcuda.so.1 /tmp/*
   WORKDIR /mlsteam/lab
   CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root"]
@@ -106,7 +113,7 @@ For example, create a file named Dockerfile and paste the following:
 Build DockerFile
 ================
 
-If you want to upload your own dockerfile and build it. Click the "New Image" button.
+If you want to upload your own dockerfile and build it into an image. Click the "Builder" button inside image list.
 
 Type the image name and select dockerfile in your file system.
 
@@ -114,7 +121,9 @@ Type the image name and select dockerfile in your file system.
 
 System will start building dockerfile once you click submit.
 
-If the build success, the built image will be pushed to the repository server (optional).
+.. image:: ../_static/image/new_image1.png
+
+If the build is successfull, the image will be given an ID and saved locally.
 
 .. image:: ../_static/image/new_image2.png
 
@@ -125,15 +134,11 @@ You can view the building log message by clicking the image file icon.
 
   dockerfile with same image name will be grouped
 
-.. figure:: ../_static/image/dockerfile_log.png
-
-  build image log message
-
-dockerfile example is shown below
+The contents of the dockerfile used to build the image are shown in the *Dockerfile* tab 
 
 .. image:: ../_static/image/dockerfile_content.png
 
-Push & Pull Image
+Push & Pull Image (To Be Updated)
 ==================
 
 Following steps show how to manage project images from your PC

@@ -20,54 +20,80 @@ A lab is a web IDE (based on JupyterLab). Here we listed all available operation
 Create lab
 ==========
 
-To create a lab, click *check* button in a project page Lab panel and click *Create New* button.
+To create a lab, navigate to your project dashboard and click the *Check* button on the *Lab* panel.
 
 .. figure:: ../_static/lab/list_lab.jpg
 
-  click *Lab* tab in project page
+  click the *Check* button on the *Lab* panel
 
 .. figure:: ../_static/lab/create_lab.jpg
 
-  click *Create Lab* button
+  click the *Create New* button
 
-Select a container image to create a lab. The recommanded image is *myelintek/python-gpu* which built-in all common libraries for deep learning.
-Then, set the number of GPU to use within the lab, add comments if needed.
-Click *Create* to create the lab!
+Write a name for your lab, choose a flavor you want, and select a docker image to create a lab. Choose from 2 images based on *myelintek/python-gpu*, which have all common libraries for deep learning built-in, but use different versions of tensorflow. You can also choose the type of lab to run, it will either use Jupyterlab or a simple terminal.  
+Finalize your choice by clicking *Create* button and your lab should be ready in a moment!
 
 .. figure:: ../_static/lab/create_lab_modal.jpg
 
-  create a lab with small flavor and python-gpu:tf-1.15.0-v14 image
+  create a lab with small flavor and python-gpu:tf-1.15.0-v14 (tensorflow v1) image
 
 
 .. caution::
 
-  GPU number is exclusive for each lab and job. Be caution that system may run out of GPU resources and labs can not be launched unless GPU resources are released.
+  GPU number is exclusive for each lab and job. Be cautious that system may run out of GPU resources and labs won't be launched unless GPU resources are released.
 
 .. tip::
 
-  Set falvor to micro (gpu 0) means the lab only use CPU.
+  Set flavor to micro (gpu 0), which will make your lab run with CPU only.
 
 .. _browse_lab:
  
 Browse labs
 ===========
 
-To browse a lab, click *Check* button in a project page Lab panel and click *+* button.
+To browse labs of a specific project, navigate to the *Home* dashboard first and choose the project you want. 
 
-.. figure:: ../_static/lab/view_lab.jpg
+.. figure:: ../_static/lab/browse_project.jpg
 
-  click lab id or *Jupyter* button to open the lab
+  click *View* button to enter that project dashboard
+
+This project will become *default* and can be accessed quickly from the *Project* tab. To look at all the labs created in the current project, click the *Check* button. 
+
+.. figure:: ../_static/lab/list_lab.jpg
+
+  click the *Check* button on the *Lab* panel
+
+Labs are listed together with information like name, UUID, status indicator, number of GPUs used, and also time of creation. You can get more details by clicking the *+* sign.
 
 .. figure:: ../_static/lab/detail_lab.jpg
 
-  See the detail of the lab.
+  Check the detail of the lab.
+
+To open the lab to modify it or run experiments click *Jupyter*, this will open another window, where you need to start your lab.
+
+.. figure:: ../_static/lab/view_lab.jpg
+
+  click *Jupyter* button to open the lab
+
+.. _start_lab:
+
+Start lab
+=========
+
+To start a lab, click *Start* indicator
+
+.. image:: ../_static/lab/start_lab_in.jpg
+
+or click *Start* at the lab list page.
+
+.. image:: ../_static/lab/start_lab_out.jpg
 
 .. _stop_lab:
 
 Stop lab
 ========
 
-To start a lab, click *Stop* button
+To stop a lab, click the *Stop* button
 
 .. image:: ../_static/lab/stop_lab_in.jpg
 
@@ -75,19 +101,6 @@ or click *Stop* at the lab list page.
 
 .. image:: ../_static/lab/stop_lab_out.jpg
 
-
-.. _start_lab:
-
-Start lab
-=========
-
-To start a lab, click *Start* 
-
-.. image:: ../_static/lab/start_lab_in.jpg
-
-or click *Start* at the lab list page.
-
-.. image:: ../_static/lab/start_lab_out.jpg
 
 .. _attach_dataset_lab:
 
@@ -99,11 +112,11 @@ To attach a dataset, select the desired dataset in dataset section and click *at
 .. figure:: ../_static/lab/attach_dataset.png
   :width: 400
 
-  attach *demo1/mnist* dataset for this lab.
+  attach *mnist* dataset for this lab.
 
 .. note::
 
-    Attaching dataset will automatically restart the lab, make sure all the files saved already.
+    Attaching dataset will automatically restart the lab, make sure all the files have already been saved.
 
 
 .. figure:: ../_static/lab/attach_dataset_alert.jpg
@@ -118,6 +131,10 @@ Attached dataset info will appear on the dataset section.
   :width: 400
 
 Dataset files can be browsed in the window on the left under `/input` directory.
+
+.. tip::
+
+    You can choose to mount your dataset in a subdirectory inside /input/ by writing appropriate name in the *Mount* form
 
 .. figure:: ../_static/lab/attach_dataset_file.jpg
   :width: 300
@@ -159,14 +176,14 @@ In your model source code. Please import mlsteam function
 
   from mlsteam import stparams
 
-Replace code as below to enable parameter update from web page. in this example, we define 'train_bs' keyword.
+Replace code as below to enable parameter update from web page. In this example, we define 'train_bs' keyword.
 
 .. code-block:: python
 
   -      default=128,
   +      default=stparams.get_value('train_bs', 128),
 
-All parameters will show on the right hyperparameter section.
+All parameters will be show on the right hyperparameter section.
 
 .. image:: ../_static/lab/list_params.jpg
   :width: 400
@@ -178,7 +195,7 @@ Use comma separator to pass multiple values, or select multiple values from a li
 
 Now you can define default keyword value in mlsteam.yml of a lab.
 
-If you want to make a dropdown and selector, use "-" to perform it is list.
+If you want to make a dropdown and selector, use "-" to perform it in a list.
 
 If you want to make a text editor, use type *String* or type *Int*.
 
@@ -190,13 +207,13 @@ If you want to make a text editor, use type *String* or type *Int*.
 
 Use Tensorboard
 ===============
-Users can open tensorboard for current lab. First, use classification template to open a lab. then, type following command in console to generate checkpoint files.
+Users can open tensorboard for current lab. First, use classification template to open a lab. Then, type following command in console to generate checkpoint files.
 
 .. code-block:: console
 
   python2 trainer.py --num_gpus=1 --batch_size=32 --network=lenet.py --data_dir=../input/mnist --train_dir=backup
 
-checkpoint files will located in backup folder. Now, click tensorboard -> start button on top-right corner of lab page.
+Checkpoint files will be located in the backup folder. Now, click tensorboard -> start button on top-right corner of lab page.
     
 .. image:: ../_static/lab/start_lab_tensorboard.jpg
   :width: 400
@@ -216,7 +233,7 @@ To close tensorboard, click tensorboard -> stop button to terminate tensorboard 
 
 .. note::
 
-  tensorboard will been terminated when the associated lab is deleted.
+  Tensorboard will been terminated when the associated lab is deleted.
 
 
 .. _commit_lab:
@@ -226,11 +243,11 @@ Commit lab
 
 First attach dataset to the lab.
 
-Click "Submit Job ".
+Click "Submit Job".
 
 .. image:: ../_static/lab/commit_run.jpg
 
-Check parameters if any wrong.
+Check parameters to be correct.
 
 .. image:: ../_static/lab/check_params.jpg
   :width: 400

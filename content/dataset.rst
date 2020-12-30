@@ -2,7 +2,7 @@
 Dataset
 ########
 
-Dataset is any collection of data. here we listed all available operations below in each section.
+Dataset is any collection of data. Here we listed all available operations below, each in a separate section.
 
 * :ref:`create_dataset`
 * :ref:`create_dataset_from_nfs`
@@ -28,7 +28,7 @@ To create an empty dataset, click new dataset button and specify dataset name.
 
 .. tip::
 
-  All created datasets are private and within in your account's namespace.
+  All created datasets are private and are within your account's namespace.
 
 
 .. _create_dataset_from_nfs:
@@ -39,7 +39,7 @@ Create dataset from NFS volume
 You can create a dataset which mounts a remote NFS volume and manage the data in the system.
 
 Simply click new dataset button, specify the dataset name and check *External Storage* checkbox. From drop down menu select NFS.
-Input the NFS server ip and mount point path. click *Create*.
+Input the NFS server ip and mount point path. Click *Create*.
 
 .. figure:: ../_static/dataset/nfs_dataset.jpg
 
@@ -51,7 +51,7 @@ Input the NFS server ip and mount point path. click *Create*.
 Manipulate dataset
 ==================
 
-Below shows all available operation can do in the dataset page.
+All available operations, that one can do in the dataset page, are shown below.
 
 Browse dataset
 --------------
@@ -79,7 +79,7 @@ To upload files to a dataset, simply drag and drop files from local PC or click 
 Extract files from archive
 ---------------------------
 
-Upload too many files will cause the web browser freeze. Therefore, you can compress files into one archive file and uncompress the file on the dataset page.
+Uploading too many files at the same time will cause your web browser to freeze. A better way to upload large collection of files is to compress them first into one archive file and uncompress the file on the dataset page.
 
 
 .. figure:: ../_static/dataset/extract_dataset.jpg
@@ -145,7 +145,7 @@ To visualize YOLO dataset, we have to select the folder which contains images an
   select *images* folder and selct yolo in *Visualize* dropdown list.
 
 
-To visualize YOLO dataset, we need following annotation files and inputs:
+To visualize YOLO dataset, we need the following annotation files and inputs:
 
 * class_file: specify each index name of labels.
 * label_path: contains YOLO format label files.
@@ -156,7 +156,7 @@ To visualize YOLO dataset, we need following annotation files and inputs:
 
   example of specifying a YOLO format image folder
 
-If success, *yolo* tag will appear in related files and folder.
+If visualization is successfull, *yolo* tag will appear in related files and folder.
 
 click images to visualize bounding box in each labeld image.
 
@@ -175,7 +175,7 @@ If you want remove the *yolo* tag, click 'x' on top of the dataset page.
 Delete dataset
 ==============
 
-To delete a dataset, click trash icon in the dataset page.
+To delete a dataset, simply click trash icon in the dataset page.
 
 .. figure:: ../_static/dataset/delete_dataset.jpg
 
