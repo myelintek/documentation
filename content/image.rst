@@ -113,7 +113,9 @@ For example, create a file named Dockerfile and paste the following:
 Build DockerFile
 ================
 
-If you want to upload your own dockerfile and build it into an image. Click the "Builder" button inside image list.
+If you want to upload your own dockerfile and build it into an image. Click the "Add" button inside image list, then click "Builder".
+
+.. image:: ../_static/image/dockerfile.png
 
 Type the image name and select dockerfile in your file system.
 
@@ -137,6 +139,27 @@ You can view the building log message by clicking the image file icon.
 The contents of the dockerfile used to build the image are shown in the *Dockerfile* tab 
 
 .. image:: ../_static/image/dockerfile_content.png
+
+Load image from dataset
+=======================
+
+Upload tar file to the dataset of your choice. 
+
+.. image:: ../_static/image/upload_tar.png
+
+Click the "Add" button inside image list, then click "Load".
+
+.. image:: ../_static/image/load_image.png
+
+Type prefered image tag. Type image path. Path format is the following: <username>/<dataset name>/<path in dataset>, 
+ex: admin/to_build/hello-world.tar
+
+.. image:: ../_static/image/load_image_modal.png
+
+Wait for image to appear on the list (might take some time for a bigger images).
+
+.. image:: ../_static/image/load_image_list.png
+
 
 Push & Pull Image (To Be Updated)
 ==================

@@ -338,6 +338,17 @@ Confirm your choice and proceed.
 .. image:: ../_static/admin/delete_flavor_modal.png
   :width: 400
 
+LDAP
+----
+
+To enable LDAP authentification go to LDAP tab. Press "Create" to create new configuration.
+
+.. image:: ../_static/admin/create_ldap.png
+
+Fill all the fields according to your LDAP server settings, then press apply.
+
+.. image:: ../_static/admin/create_ldap_modal.png
+
 License
 -------
 

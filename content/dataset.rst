@@ -38,13 +38,23 @@ Create dataset from NFS volume
 
 You can create a dataset which mounts a remote NFS volume and manage the data in the system.
 
-Simply click new dataset button, specify the dataset name and check *External Storage* checkbox. From drop down menu select NFS.
+Simply click new dataset button, specify the dataset name and check *External Storage* toggle. From drop down menu select NFS.
 Input the NFS server ip and mount point path. Click *Create*.
 
 .. figure:: ../_static/dataset/nfs_dataset.jpg
 
   create a dataset which mounts remote NFS volume
 
+
+Create dataset from Windows shared folder
+==========================================
+
+You can create dataset from remote Windows shared folder.
+
+Click new dataset button, specify the dataset name and check *External Storage* toggle. From drop down menu select CIFS.
+Input the shared folder server ip, mount point path and remote machine credentials. Click *Create*.
+
+.. figure:: ../_static/dataset/cifs_dataset.png
 
 .. _manipulate_dataset:
 

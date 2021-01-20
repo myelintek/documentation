@@ -205,6 +205,29 @@ If you want to make a text editor, use type *String* or type *Int*.
 
 .. _lab_tensorboard:
 
+Generate ssh key (if enabled)
+=============================
+
+This feature is disabled by default. Generates ssh key to be able to ssh into lab. Click on ssh tab, inside tab click "Generate", save sshkey file to your local PC.
+More about connecting to the lab in "Remote connection to the lab" section.
+
+.. image:: ../_static/lab/create_ssh_key.png
+
+Expose port with proxy
+======================
+
+Expose port from inside of the lab to the outer world. Click on "Proxy" tab, enter port you want to expose, press "Expose".
+
+.. image:: ../_static/lab/expose_port.png
+
+Use the shown link to access specified port.
+
+.. image:: ../_static/lab/expose_port_proxy.png
+
+To stop expossing port and delete the proxy press "Delete".
+
+.. image:: ../_static/lab/expose_port_delete.png
+
 Use Tensorboard
 ===============
 Users can open tensorboard for current lab. First, use classification template to open a lab. Then, type following command in console to generate checkpoint files.
