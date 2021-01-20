@@ -345,9 +345,15 @@ To enable LDAP authentification go to LDAP tab. Press "Create" to create new con
 
 .. image:: ../_static/admin/create_ldap.png
 
-Fill all the fields according to your LDAP server settings, then press apply.
+Fill all the fields according to your LDAP server settings, then press apply. Default ports are 389 for ldap or 636 for ldaps.  
 
 .. image:: ../_static/admin/create_ldap_modal.png
+
+If the operation is successfull you will see ldap info. 
+To delete ldap press "Delete" button.
+
+.. image:: ../_static/admin/delete_ldap.png
+
 
 License
 -------
