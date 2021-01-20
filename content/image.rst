@@ -145,7 +145,7 @@ Load image from dataset
 
 Upload tar file to the dataset of your choice. 
 
-.. image:: ../_static/image/upload_tar.png
+.. image:: ../_static/image/upload_tar.PNG
 
 Click the "Add" button inside image list, then click "Load".
 
@@ -154,7 +154,7 @@ Click the "Add" button inside image list, then click "Load".
 Type prefered image tag. Type image path. Path format is the following: <username>/<dataset name>/<path in dataset>, 
 ex: admin/to_build/hello-world.tar
 
-.. image:: ../_static/image/load_image_modal.png
+.. image:: ../_static/image/load_image_modal.PNG
 
 Wait for image to appear on the list (might take some time for a bigger images).
 
