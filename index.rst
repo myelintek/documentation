@@ -84,4 +84,4 @@ Serves as an example or template for users.
    content/admin
    content/guide
    content/release_notes
-
+   content/software_version

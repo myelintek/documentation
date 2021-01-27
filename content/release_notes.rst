@@ -1,5 +1,5 @@
 *************
-Realese notes
+Release notes
 *************
 
 v3.8.8
