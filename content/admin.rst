@@ -355,6 +355,45 @@ To delete ldap press "Delete" button.
 .. image:: ../_static/admin/delete_ldap.png
 
 
+Webhook
+-------
+
+Webhook is designed to help calculate system usage data. Webhook is triggered at the next events: lab stop/start/restart/delete, job start/stop/delete.
+Webhook sends POST request to the specified url containing data in the next format:
+
+.. code-block:: python
+
+  {
+    'username': 'admin', 
+    'timestamp': '2021-02-01 06:54:11.375141',
+    'action': 'lab_start', 
+    'uuid': 'u52ca065', 
+    'flavor': "{
+                  'id': 2, 
+                  'name': 'micro', 
+                  'cpu': 2, 
+                  'gpu': 0, 
+                  'gpu_type': 'Any', 
+                  'memory': 2048, 
+                  'cpu_lab': True, 
+                  'info': '(vCPUs: 2, RAM: 2GB, GPU: 0)'
+                }"
+  }
+
+
+To create webhook go to Settings Webhook page and press "Create".
+
+.. image:: ../_static/admin/create_webhook.png
+
+Enter desired url, include token if needed, press "Apply".
+
+.. image:: ../_static/admin/create_webhook_modal.png
+
+To delete webhook sellect checkbox and press "Delete". Than confirm action.
+ 
+.. image:: ../_static/admin/delete_webhook.png
+
+
 License
 -------
 
