@@ -1,6 +1,230 @@
 *************
-Realese notes
+Release notes
 *************
+
+3.8.24
+======
+
+Feature
++++++++
+* Show lab disk usage (#2334)
+* Add labs status check in health API (#2350)
+
+Bugfix
++++++++
+
+* Fix auditlog show multiple stop while stopping labs (#2338)
+* Fix agent installation error (#2339)
+* Fix scheduler didn't recalculate resources after restart issue (#2340)
+* Fix https certificate upgrade issue (#2343)
+* Fix dataset upload file token timeout issue (#2345, #2349)
+* Fix file extraction timeout issue (#2349)
+
+
+3.8.23
+======
+
+Features
+++++++++
+
+* Admin device monitoring change to history metrics charts (#2278)
+* Use NFSv4 for internal datastore service (#2293)
+* Add system preserved resources info in admin/resources API (#2291)
+* Add lab ssh feature for QC theme (#2328)
+* Add AMD GPU detection support (#2299, experimental)
+* Add MLFlow support (#2330, experimental)
+
+BugFix
+++++++
+
+* Fix QC theme web title to 'QuantumCloud AI/ML' (#2280)
+* Fix agent upgrade may fail due to pip issue (#2290)
+* Fix vulnerability cve-2020-11022, cve-2020-11023 by upgrading jQuery from v3.4.1 to v3.6.0 (#2297)
+* Fix ssh key auto download when page refresh issue (#2297)
+* Fix vulnerability CVE-2016-10540, CVE-2019-10744, CVE-2020-8203, CVE-2018-16487, CVE-2019-10744, CVE-2020-1971, CVE-2021-3449, CVE-2021-28092 (#2301)
+* Fix failed to manually create template from env.yml issue (#2307)
+* Change API project delete and user delete to asynchronous, prevent API timeout and performance issue (#2292)
+* Remove cuda dependency on MLSteam container (#2305)
+* Fix error message no popup issue (#2318)
+* Fix timeout issue for importing large docker image (#2320)
+* Fix dataset delay in slowing directories issue (#2322)
+* Fix users can see flavors event beyond their resource plan in terminal Lab page (#2321)
+* Fix dataset file disappear issue (#2332)
+* Refactor Dockerfile, separate build and install into two stages; Fetch templates from Internet (#2333)
+
+
+v3.9.20
+=======
+
+Features
+++++++++
+
+* Upgrade netdata to 1.29.0 (#2234)
+* Add system reset (cleanup) button (#2226)
+* Auto-configure features based on license content (#2228)
+* Add 'document_url' parameter in mlsteam.ini (#2232)
+* Support connecting 3rd party Harbor as registry server (#2222)
+* Remember login users during system restart (#2216)
+
+Bugfix
+++++++
+
+* Fix tensorboard cannot start issue (#2242)
+* Fix unable to mount no password CIFS issue (#2239)
+* Remove image information from Lab page on QC theme (#2233)
+* Fix job images not deleted issue (#2236)
+* UI change for QC theme (#2235)
+* Fix fail to mount purestorage NFS issue (#2230)
+* Auto install nvidia driver if kernel upgraded (#2224)
+* Secure minio default user as read-only user (#2223)
+
+
+v3.8.19
+=======
+
+Feature
++++++++
+
+* Add user notification page for standard version of MLSteam (#2206)
+* Add stop GPU Lab warning for non-reserved plan users if there are CPU Labs running (#2198)
+
+Bugfix
+++++++
+
+* Popup warning when clicking SSH keygen button if the Lab has no sshd service (#2212)
+* Fix webhooks send the Lab stop events twice issue (#2208)
+* Fix 'server_path' error when deleting a user account (#2204)
+* Add default log rotation for CVAT service (#2211)
+* Fix permission check for dataset file extraction API (#2200)
+* Fix Lab cannot start issue when the disk quota full (#2199)
+* Improve API query speed (#2197)
+* Fix project image list cannot loading issue triggered by image builder naming (#2196,#2184)
+* Fix stress testing failed to start lab if vcpu larger than 2 (#2192)
+* Fix Lab dataset dynamic update during collaboration (#2193,#2186)
+* Remove change password for user authenticated from LDAP (#2191,#2187)
+
+
+v3.8.18
+=======
+
+Feature
++++++++
+
+* Support Active Directory authentication (#2183)
+* API for personal pop up message notification (#2179)
+
+Bugfix
+++++++
+
+* Remove about and logout for QC theme (#2190)
+* Fix license update issue (#2178)
+* Fix container limitation no applied issue (#2142)
+
+
+v3.8.16
+=======
+
+Feature
++++++++
+
+N/a
+
+Bugfix
+++++++
+
+* Project image list not updated when uploaded or deleted images (#2106)
+* Fix agent version API error handling (#2118)
+* Fix running labs cannot been connected after system upgraded (#2104)
+* Fix resources not reclaim during stress testing (#2090)
+* Fix building Dockerfile shows image_tag undefined (#2109)
+* Fix Labs stuck at INIT due to CVAT services issue (#2086)
+
+
+v3.8.15
+=======
+
+Feature
++++++++
+
+* Fix webhooks message format
+* Add version in license file
+* Show parent lab name in the project jobs list page (#2071)
+* Add force GPU option in plan to force users to use the CPU lab along with GPU labs (#2081)
+* Optimize CPU training performance by CPU affinity (#2087)
+
+Bugfix
+++++++
+
+* Fix LDAP login disconnect from server issue (#2083)
+* Improve project page performance (#2096)
+* Fix Job elapse time always zero issue (#2068)
+
+
+v3.8.13
+=======
+
+Feature
++++++++
+
+* Add YOLOv4 template
+* Add squash warning and cleaning if the Lab image layers exceed 110 layers
+* Change default image to python-gpu:16.01, add machine-learning-tutorials code
+
+Bugfix
+++++++
+
+* change system out of resource and user reached limits warning messages
+* Fix web page loading fonts issue and icons moving issue
+* Remove deprecated templates, data-augmentation, cross validation templates.
+* Update code in templates for YOLOv3, pytorch-cifar10 and classification
+* Fix cluster init error (#2031)
+* Fix job submit failed issue (#2028)
+* Fix Nginx config issue (#2026)
+* Fix agent may disconnect with master issue
+
+
+v3.8.12
+=========
+
+Feature
++++++++
+
+* support maintenance redirect url
+* support non-stop upgrade
+
+Bugfix
+++++++
+
+* fix warning message wording
+* fix naming rules wording
+* fix mount cifs/nfs issue
+* add uid in LDAP setting (#2020)
+
+v3.8.10
+=======
+
+Feature
++++++++
+* Launch job from templates (#1962)
+* Add GPU alias in admin panel. (#1966)
+* Add lab proxy for Rest API service (#1968)
+* Support MIG config in mlsteam_agent.ini (#1982)
+* Dataset support Samba/cifs as external storage (#1984)
+* Change Lab dataset attach path from 'mlsteam/input' to 'mlsteam/data' (#1944)
+* User login to home page for poject list instead of current project page (#1989)
+* Add Lab/Project/Image naming rules in each create dialog (#1991)
+* Upload docker saved images to projects (#1993)
+
+Bugfix
+++++++
+
+* Fix dataset tooltips not show issue
+* Fix quantumcloud theme error messages
+* Fix admin tasks dashboard not show num_gpu
+* Sort project list from new to old order
+* Change overview 'Finish' tasks to 'Stopped'
+* Fix repository create failed issue
+
 
 v3.8.8
 ======
