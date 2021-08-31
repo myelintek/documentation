@@ -12,3 +12,4 @@ Deep Learning Templates.
    classification
    object_detection
    segmentation_by_request
+   face_recognition
