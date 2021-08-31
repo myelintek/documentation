@@ -20,8 +20,27 @@ Quick Start
 
     docker pull myelintek/face_rec:v1.0-tx2
     
+2. Check camera device
+-------------------------
 
-2. Start face recognition applicatinon
+Check dvice path
+
+.. code-block:: bash
+  
+    ls /dev/video*
+
+If target vdieo device are **/dev/video1** .
+Modify **scripts/start.sh** and **scripts/start-daemon.sh**.
+
+.. code-block:: bash
+
+    ...
+    CAMERA_DEVICE=/dev/video1
+    CAMERA_DEVICE_NO=1
+    ...
+
+
+3. Start face recognition applicatinon
 --------------------------------------
 
 Run face recognition applicatin in foregrond mode.
@@ -37,7 +56,7 @@ Run face recognition application in background mode.
 
     bash scripts/start-daemon.sh
 
-3. setup Grafana dashboard
+4. setup Grafana dashboard
 ---------------------------
 
 Connect to http://localhost:3000 , login with default user **admin**, default password **admin**.
@@ -77,7 +96,7 @@ Upload JSON file configs/face_rec_grafana_dashboard.json, then click import
 .. image:: ../_static/template/face_recognition/grafana_10_import_3.png
 
 
-4. Start Monitoring
+5. Start Monitoring
 --------------------
 
 .. image:: ../_static/template/face_recognition/grafana_11_dashboard.png
