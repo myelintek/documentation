@@ -1,38 +1,13 @@
 .. _image:
 
-****************
-Image Management
-****************
+************
+Docker Image
+************
 
-Install Docker Desktop
-=======================
+Each user can manage his/her own docker images in the image page. User saved images are private
+which can only seen by the user itself, unless the image is tagged under group namespaces and all users in the same group share the images.
 
-Docker Desktop for Windows is Docker designed to run on Windows 10.
 
-System Requirements
--------------------
-
-- Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later).
-- Hyper-V and Containers Windows features must be enabled.
-- The following hardware prerequisites are required to successfully run Client Hyper-V on Windows 10:
-    - 64 bit processor with Second Level Address Translation (SLAT) 4GB system RAM
-    - BIOS-level hardware virtualization support must be enabled in the BIOS settings. For more information, see Virtualization.
-
-You can get Docker Desktop on Windows from following link.
-
-https://hub.docker.com/editions/community/docker-ce-desktop-windows/
-
-.. image:: ../_static/image/install.png
-
-Legacy desktop solution. Docker Toolbox is for older Mac and Windows systems that do not meet the requirements of Docker Desktop for Mac and Docker Desktop for Windows. We recommend updating to the newer applications, if possible.
-
-You can get Docker Toolbox on Windows from following link:
-
-https://docs.docker.com/toolbox/toolbox_install_windows/
-
-Double-click Docker for Windows Installer to run the installer.
-
-When the installation finishes, Docker starts automatically. The whale in the notification area indicates that Docker is running, and accessible from a terminal.
 
 List Image
 ===========
@@ -69,8 +44,13 @@ Click "Save as" button in a running lab and type-in image name to store the imag
 .. note:: 
     Image name must be valid ASCII, lowercase, uppercase letters, digits, underscores, periods and dashes.
 
+Build Image
+============
+
+Following steps show you how to upload a dockerfile to build your own image
+
 Enable docker build config
-==========================
+----------------------------
 
 Login as administrator.
 Click "Setting".
@@ -95,7 +75,7 @@ Tick the docker_build checkbox.
 
 
 Create a DockerFile
-===================
+--------------------
 
 In this step, you write a Dockerfile that builds a Docker image.
 
@@ -111,7 +91,7 @@ For example, create a file named Dockerfile and paste the following:
 
 
 Build DockerFile
-================
+-------------------
 
 If you want to upload your own dockerfile and build it into an image. Click the "Add" button inside image list, then click "Builder".
 
@@ -140,8 +120,8 @@ The contents of the dockerfile used to build the image are shown in the *Dockerf
 
 .. image:: ../_static/image/dockerfile_content.png
 
-Load image from dataset
-=======================
+Load Image File
+================
 
 Upload tar file to the dataset of your choice. 
 
@@ -161,13 +141,49 @@ Wait for image to appear on the list (might take some time for a bigger images).
 .. image:: ../_static/image/load_image_list.png
 
 
-Push & Pull Image (To Be Updated)
+Push & Pull Image
 ==================
 
 Following steps show how to manage project images from your PC
+Your PC has to install docker for managing images from command.
+
+If your PC is Windows, install the Docker Desktop
+
+Install Docker Desktop
+----------------------
+
+Docker Desktop for Windows is Docker designed to run on Windows 10.
+
+**System Requirements**
+
+
+- Windows 10 64-bit: Pro, Enterprise, or Education (Build 15063 or later).
+- Hyper-V and Containers Windows features must be enabled.
+- The following hardware prerequisites are required to successfully run Client Hyper-V on Windows 10:
+    - 64 bit processor with Second Level Address Translation (SLAT) 4GB system RAM
+    - BIOS-level hardware virtualization support must be enabled in the BIOS settings. For more information, see Virtualization.
+
+You can get Docker Desktop on Windows from following link.
+
+https://hub.docker.com/editions/community/docker-ce-desktop-windows/
+
+.. image:: ../_static/image/install.png
+
+Legacy desktop solution. Docker Toolbox is for older Mac and Windows systems that do not meet the requirements of Docker Desktop for Mac and Docker Desktop for Windows. We recommend updating to the newer applications, if possible.
+
+You can get Docker Toolbox on Windows from following link:
+
+https://docs.docker.com/toolbox/toolbox_install_windows/
+
+Double-click Docker for Windows Installer to run the installer.
+
+When the installation finishes, Docker starts automatically. The whale in the notification area indicates that Docker is running, and accessible from a terminal.
+
+
+Please add insecure registry. Edit daemon.json for Linux OS.
 
 Add insecure registry
----------------------
+------------------------
 
 Add the following contents in the ``daemon.json`` file, whose default location is ``/etc/docker/daemon.json`` on Linux or ``C:\ProgramData\docker\config\daemon.json`` on Windows Server. If you use Docker Desktop for Mac or Docker Desktop for Windows, click the Docker icon, choose Preferences, and choose +Daemon.
 
@@ -263,3 +279,23 @@ You will see the image shown in the project image list.
 
 .. image:: ../_static/image/push_success.png
 
+Download Image
+================
+
+Here show you how to download docker image from NGC (nvidia gpu cloud)
+
+Step 1. click Pull button on your Image page
+
+.. image:: ../_static/image/image_pull1.png
+
+
+Step 2. put full docker image path in Image Link input and the image name you want (including namespace, name and tag)
+
+.. image:: ../_static/image/image_pull2.png
+
+.. note:: 
+    Image namespace could be your project uuid, your account name, or your group name
+
+System will start pulling the image. You can see the image in the create lab page once the image downloaded.
+
+.. image:: ../_static/image/image_pull3.png
