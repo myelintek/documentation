@@ -299,3 +299,25 @@ Step 2. put full docker image path in Image Link input and the image name you wa
 System will start pulling the image. You can see the image in the create lab page once the image downloaded.
 
 .. image:: ../_static/image/image_pull3.png
+
+
+Tag Image
+===========
+
+Once you downloaded an image, you may want to share the image with other users.
+Here shows you the steps to share your image with other users in the same group
+
+Step 1. admin should already created a group and add you and other users in the same group. 
+You will see groups you have joined in the Group page. ex. objectdetection group
+Click the group name to see members in the group
+
+.. image:: ../_static/image/usergroup1.png
+
+Step 2. in the Image page, click tag button of the image you want to share, type the image name with the group as namespace
+ex. objectdetection/pytorch:21.06-py3
+
+.. image:: ../_static/image/groupimage1.png
+
+Now you will see the image in both `admin` and `objectdetection` namespaces. Other users in the objectdetection group will be able to use the image.
+
+.. image:: ../_static/image/groupimage2.png
