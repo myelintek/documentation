@@ -213,8 +213,11 @@ More about connecting to the lab in "Remote connection to the lab" section.
 
 .. image:: ../_static/lab/create_ssh_key.png
 
-Expose port with proxy (after v3.8.30 replaced by port expose)
-==============================================================
+Expose port with proxy 
+======================
+
+.. caution::
+  After v3.8.30 replaced by Port expose
 
 Expose port from inside of the lab to the outer world. Click on "Proxy" tab, enter port you want to expose, press "Expose".
 
@@ -239,6 +242,9 @@ Expose port from inside of the lab to the outer world. Click on "Port" tab, ente
 Shown port is exposed to the world and mapped to specified port inside container.
 
 .. image:: ../_static/lab/port_expose2.png
+
+.. tip::
+  Bind application ip to 0.0.0.0 to be able to access from outside
 
 To stop expossing port press "Delete".
 
