@@ -213,8 +213,8 @@ More about connecting to the lab in "Remote connection to the lab" section.
 
 .. image:: ../_static/lab/create_ssh_key.png
 
-Expose port with proxy
-======================
+Expose port with proxy (after v3.8.30 replaced by port expose)
+==============================================================
 
 Expose port from inside of the lab to the outer world. Click on "Proxy" tab, enter port you want to expose, press "Expose".
 
@@ -227,6 +227,23 @@ Use the shown link to access specified port.
 To stop expossing port and delete the proxy press "Delete".
 
 .. image:: ../_static/lab/expose_port_delete.png
+
+
+Port expose
+===========
+
+Expose port from inside of the lab to the outer world. Click on "Port" tab, enter port you want to expose, press "Expose".
+
+.. image:: ../_static/lab/port_expose1.png
+
+Shown port is exposed to the world and mapped to specified port inside container.
+
+.. image:: ../_static/lab/port_expose2.png
+
+To stop expossing port press "Delete".
+
+.. image:: ../_static/lab/port_expose_delete.png
+
 
 Use Tensorboard
 ===============
