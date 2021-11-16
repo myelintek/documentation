@@ -46,7 +46,7 @@ You will see the following content and click the ssh key to download to your PC.
 
 Copy the ssh config by clicking copy icon at top-right of the config
 
-.. image:: ../_static/remote_ide/copyconf.jpg
+.. figure:: ../_static/remote_ide/copyconf.jpg
   :width: 600
 
   copy SSH config

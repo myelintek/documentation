@@ -67,6 +67,7 @@ Tick the docker_build checkbox.
 
 .. figure:: ../_static/image/dockerfile_3.png
   :width: 600
+  
   Update value
 
 .. figure:: ../_static/image/dockerfile_4.png
