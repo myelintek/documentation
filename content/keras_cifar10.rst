@@ -12,11 +12,11 @@ Create a LAB
 
 Click LAB button in your project and click NEW LAB in Lab home page
 
-.. image:: ../_static/lab/create_lab.png
+.. image:: ../_static/lab/create_lab.jpg
 
 Choose the python-gpu image and specify GPU number. 
 
-.. image:: ../_static/lab/create_lab_modal.png
+.. image:: ../_static/lab/create_lab_modal.jpg
 
 If GPU number is 0, it will only for cpu.
 
@@ -35,7 +35,7 @@ We download the CIFAR-10 python version.
 Go to Dataset Panel, click NEW DATASET button.
 
 
-.. image:: ../_static/dataset/new_dataset.png
+.. image:: ../_static/dataset/new_dataset.jpg
 
 Input the dataset name, it's cifar10 here.
 
@@ -63,7 +63,7 @@ Click into the extracted cifar-10-batches-py folder, now we can scan the content
 
 
 Attach Cifar10 Dataset
-++++++++++++++++++
++++++++++++++++++++++++
 
 Attach the cifar10 dataset folder.
 
@@ -72,7 +72,7 @@ The LAB need to restart for dataset load.
 
 .. image:: ../_static/tutorial/attach_cifar10_dataset.png
 
-.. image:: ../_static/lab/attach_dataset_alert.png
+.. image:: ../_static/lab/attach_dataset_alert.jpg
 
 
 Write a Notebook file

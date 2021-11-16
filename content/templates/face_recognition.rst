@@ -1,8 +1,8 @@
 .. _face_recognition:
 
-***********
+*****************
 Face Recognition
-***********
+*****************
 
 Prerequisite
 ============
@@ -14,7 +14,7 @@ Quick Start
 ===========
 
 1. Download docker image
------------------------
+------------------------
 
 .. code-block:: bash
 

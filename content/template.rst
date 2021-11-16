@@ -1,8 +1,8 @@
 .. _template:
 
-***********************
-Template
-***********************
+*************
+Template List
+*************
 
 Deep Learning Templates.
 

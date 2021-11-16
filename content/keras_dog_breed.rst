@@ -340,15 +340,18 @@ Tensorboard visualization
 
 A Tensorboard can be launched from web, at right sidebar menu, speficy the logdir path for tensorboard to read the summary files.
 
-.. figure:: ../_static/template/tensorboard_example1.png
+.. image:: ../_static/template/tensorboard_example1.png
   :width: 400
-  input logdir path for tensorboard to read the summary files.
+
+input logdir path for tensorboard to read the summary files.
 
 Click the url for starting TensorBoard.
 
 .. image:: ../_static/template/tensorboard_example2.png
   :width: 400
+
 After training finished, we can save the model parameters as a HDF5 format by following command.
+
 
 .. code-block:: python
 

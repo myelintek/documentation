@@ -1,7 +1,7 @@
 .. _classification:
 
-Classification
-==============
+Image Classification
+====================
 
 This part will show how to train an image classification model from template.
 
@@ -66,7 +66,7 @@ For this go to Dataset page and click "New Dataset". Then enter dataset name and
   click new dataset button on the dataset page
 
 .. figure:: ../../_static/dataset/new_dataset_modal.jpg
-  :width: 400
+  
   named 'demo' for this dataset
 
 This will create an empty dataset, where you can upload your custom dataset. Typically, a dataset needs to follow certain structure, we describe structure used in the classification template below.
@@ -183,7 +183,7 @@ When you submit a *Job* to run this *Lab*, the *command* line will be run with o
   :width: 400
 
 Classification Template Parameters (optional)
-+++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++
 
 For this classification template, following parameters are supported:
 
@@ -200,6 +200,7 @@ aug_list
 * *color_distortion* - apply color distortion to training images
 * *flip_random* - randomply flip training images.
 * *both* - use both options.
+
 num_epoch
 ^^^^^^^^^
 
