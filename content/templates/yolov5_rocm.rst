@@ -39,11 +39,13 @@ You can also click **GPU Utitlization** tab on the right panel to see the GPU na
 
 .. image:: ../../_static/template/yolov5_rocm/lab_2.jpg
 
+
 Scroll down to the **Train** section, click the below code section. You can click **run** to start the model training, this section will download the yolov5s.pt model file as pretrained model,
 and start 3 epochs trainings with batch size 16. 
 
 
 .. image:: ../../_static/template/yolov5_rocm/lab_3.jpg
+
 
 The training will take around 20 minutes to finish.
 
