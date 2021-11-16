@@ -61,45 +61,45 @@ Run face recognition application in background mode.
 
 Connect to http://localhost:3000 , login with default user **admin**, default password **admin**.
 
-.. image:: /_static/template/face_recognition/grafana_1_login.png
+.. image:: ../../_static/template/face_recognition/grafana_1_login.png
 
 Change password
 
-.. image:: /_static/template/face_recognition/grafana_2_chpass.png
+.. image:: ../../_static/template/face_recognition/grafana_2_chpass.png
 
 Go to "Config" > Data sources > Add Data sources
 
-.. image:: /_static/template/face_recognition/grafana_3_config_ds.png
+.. image:: ../../_static/template/face_recognition/grafana_3_config_ds.png
 
-.. image:: /_static/template/face_recognition/grafana_4_add_ds.png
+.. image:: ../../_static/template/face_recognition/grafana_4_add_ds.png
 
 Add an influxdb data source
 
-.. image:: /_static/template/face_recognition/grafana_5_add_ds.png
+.. image:: ../../_static/template/face_recognition/grafana_5_add_ds.png
 
 In HTTP scetion, specify URL http://localhost:8086
 
-.. image:: /_static/template/face_recognition/grafana_6_ds_conf.png
+.. image:: ../../_static/template/face_recognition/grafana_6_ds_conf.png
 
 In Influxdb detail section, specify database face_rec, then click "Save & test"
 
-.. image:: /_static/template/face_recognition/grafana_7_ds_conf2.png
+.. image:: ../../_static/template/face_recognition/grafana_7_ds_conf2.png
 
 Go to "+" > Import > Upload JSON file
 
-.. image:: /_static/template/face_recognition/grafana_8_import_1.png
+.. image:: ../../_static/template/face_recognition/grafana_8_import_1.png
 
 Upload JSON file configs/face_rec_grafana_dashboard.json, then click import
 
-.. image:: /_static/template/face_recognition/grafana_9_import2.png
+.. image:: ../../_static/template/face_recognition/grafana_9_import2.png
 
-.. image:: /_static/template/face_recognition/grafana_10_import_3.png
+.. image:: ../../_static/template/face_recognition/grafana_10_import_3.png
 
 
 5. Start Monitoring
 --------------------
 
-.. image:: /_static/template/face_recognition/grafana_11_dashboard.png
+.. image:: ../../_static/template/face_recognition/grafana_11_dashboard.png
 
 * Face log : When and who detected
 * Face count:  Count in time period.

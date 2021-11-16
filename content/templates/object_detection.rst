@@ -12,15 +12,15 @@ On the top bar click "Template".
 
 Then click "Use Template" on the object detection card. This will create an object detection project named "objectdetection" with Pascal dataset already attached to it.
 
-.. image:: /_static/template/create_template1.png
+.. image:: ../../_static/template/create_template1.png
 
 In the lab page, click "Commit and run". This will start training job from the template code and redirect to the jobs list page.
 
-.. image:: /_static/template/create_template2.png
+.. image:: ../../_static/template/create_template2.png
 
 Click on the job id or screen icon to view training progress.
 
-.. image:: /_static/template/view_job1.png
+.. image:: ../../_static/template/view_job1.png
 
 Job page displays 
 
@@ -35,14 +35,14 @@ Inference example
 
 Back to the Lab page, open the file 'try_detection.ipynb' in jupyterlab. Click run multiple times to examine a pretrained yolov3-tiny.weights file.
 
-.. image:: /_static/template/run_lab.jpg
+.. image:: ../../_static/template/run_lab.jpg
 
 
 If you want to follow the YOLO webside (https://pjreddie.com/darknet/yolo/) to train the yolo model step by step.
 
 You can launch a new lab and execute the terminal then follow the instructions provided in the YOLO webside.
 
-.. image:: /_static/template/exe_terminal.png
+.. image:: ../../_static/template/exe_terminal.png
 
 
 Custom dataset
