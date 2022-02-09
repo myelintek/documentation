@@ -7,6 +7,23 @@ Here is the complete guide to training and developing your deep learning applica
 To have a quick tutorial for using our system is to use :ref:`quick_start`. You will create a lab in a project on MLSteam with same code in the lab.
 
 
+.. toctree::
+   :hidden:
+
+   getting_started
+   dataset
+   project
+   lab
+   job
+   image
+   template
+   remote_access
+   admin
+   guide
+   release_notes
+   software_version
+
+
 ***********
 Terminology
 ***********
@@ -62,19 +79,4 @@ Template
 A template is an example of a lab with specific type of DNN model with already preloaded dataset connected to it. 
 Serves as an example or template for users.
 
-.. toctree::
-   :hidden:
-
-   getting_started
-   dataset
-   project
-   lab
-   job
-   image
-   template
-   remote_access
-   admin
-   guide
-   release_notes
-   software_version
    
