@@ -73,16 +73,6 @@ Serves as an example or template for users.
    :hidden:
    :maxdepth: 2
 
+   user/index
+   administration/index
    content_old/index
-   content_old/getting_started
-   content_old/dataset
-   content_old/project
-   content_old/lab
-   content_old/job
-   content_old/image
-   content_old/template
-   content_old/remote_access
-   content_old/admin
-   content_old/guide
-   content_old/release_notes
-   content_old/software_version
