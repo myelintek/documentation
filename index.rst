@@ -31,8 +31,8 @@ Welcome to MLSteam!
    :maxdepth: 2
 
    administration/user_management
-   administration/system_managemt
    administration/infrastructure_management
+   administration/system_managemt
    administration/marketplace
    administration/license
    administration/event
