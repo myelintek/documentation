@@ -9,9 +9,39 @@ Welcome to MLSteam!
 
 
 .. toctree::
+   :caption: User Guide
    :hidden:
    :maxdepth: 2
 
-   user/index
-   administration/index
-   Documentation (Old UI) <content_old/index>
+   user/quick_start
+   user/core_concept
+   user/project
+   user/dataset
+   user/lab
+   user/track
+   user/pipeline
+   user/webapp
+   user/model
+   user/mlops_examples
+
+
+.. toctree::
+   :caption: Administration Guide
+   :hidden:
+   :maxdepth: 2
+
+   administration/user_management
+   administration/system_managemt
+   administration/infrastructure_management
+   administration/marketplace
+   administration/license
+   administration/event
+   administration/maintenance
+   
+
+.. toctree::
+   :caption: Old UI
+   :hidden:
+   :maxdepth: 2
+
+   content_old/index
