@@ -5,7 +5,7 @@ Infrastructure
 Add a Host
 ----------
 
-To ass a host:
+To add a host:
 
 #) Click on the *ADD* button.
 
@@ -21,11 +21,24 @@ To ass a host:
    #) Copy the host agent installer to the host to add.
    #) Run the host agent installer on the host to add.
 
-      .. code-block: shell
+      .. code-block:: shell
 
          sudo bash mlsteam_agent_installer.sh
    
-      Replace the installer's file name with the actual one.
+      .. note::Replace the installer's file name with the actual one.
+
+#) (Optional) After the installation is finished, you may check the logged messages.
+
+   .. code-block:: shell
+
+      sudo journalctl -f -u mlsteam_agent_192.168.0.12_5000.service
+
+#) The host added will be in the list. Reload the page if the list has not been updated.
+   
+   .. image:: /_static/imgs/administration/infrastructure/add_host_3.png
+       :width: 600
+
+#) TODO: authorize
 
 Delete a Host
 -------------
