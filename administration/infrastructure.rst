@@ -9,11 +9,23 @@ To ass a host:
 
 #) Click on the *ADD* button.
 
-.. image:: /_static/imgs/administration/infrastructure/add_host_1.png
-    :width: 600
+   .. image:: /_static/imgs/administration/infrastructure/add_host_1.png
+       :width: 600
 
-.. image:: /_static/imgs/administration/infrastructure/add_host_2.png
-    :width: 600
+#) Follow the instructions displayed.
+
+   .. image:: /_static/imgs/administration/infrastructure/add_host_2.png
+       :width: 600
+    
+   #) Download the host agent installer.
+   #) Copy the host agent installer to the host to add.
+   #) Run the host agent installer on the host to add.
+
+      .. code-block: shell
+
+         sudo bash mlsteam_agent_installer.sh
+   
+      Replace the installer's file name with the actual one.
 
 Delete a Host
 -------------
