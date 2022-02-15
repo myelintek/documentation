@@ -30,8 +30,8 @@ Welcome to MLSteam!
    :hidden:
    :maxdepth: 2
 
-   administration/user_management
-   administration/infrastructure_management
+   administration/account
+   administration/infrastructure
    administration/system_managemt
    administration/marketplace
    administration/license
