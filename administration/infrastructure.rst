@@ -12,7 +12,7 @@ To add a host:
    .. image:: /_static/imgs/administration/infrastructure/add_host_1.png
        :width: 600
 
-#) Follow the instructions displayed.
+#) Follow the instructions displayed:
 
    .. image:: /_static/imgs/administration/infrastructure/add_host_2.png
        :width: 600
@@ -25,13 +25,15 @@ To add a host:
 
          sudo bash mlsteam_agent_installer.sh
    
-      .. note::Replace the installer's file name with the actual one.
+      .. note:: Replace the installer's file name with the actual one.
 
 #) (Optional) After the installation is finished, you may check the logged messages.
 
    .. code-block:: shell
 
-      sudo journalctl -f -u mlsteam_agent_192.168.0.12_5000.service
+      sudo journalctl -f -u mlsteam_agent_xxx.xxx.xx.xx_xxxx.service
+
+   .. note:: Refer to the end of the installer outputs for the actual `journalctl` command to run.
 
 #) The host added will be in the list. Reload the page if the list has not been updated.
    
