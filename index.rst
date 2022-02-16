@@ -7,6 +7,9 @@
 Welcome to MLSteam!
 #####################
 
+.. raw:: latex
+
+   \part{User Guide}
 
 .. toctree::
    :caption: User Guide
@@ -24,6 +27,9 @@ Welcome to MLSteam!
    user/template
    user/user_profile
 
+.. raw:: latex
+
+   \part{Administration Guide}
 
 .. toctree::
    :caption: Administration Guide
@@ -37,7 +43,10 @@ Welcome to MLSteam!
    administration/license
    administration/event
    administration/maintenance
-   
+
+.. raw:: latex
+
+   \part{Old UI}   
 
 .. toctree::
    :caption: Old UI
