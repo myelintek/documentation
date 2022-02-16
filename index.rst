@@ -13,16 +13,16 @@ Welcome to MLSteam!
    :hidden:
    :maxdepth: 2
 
-   user/quick_start
-   user/core_concepts
+   user/get_started
    user/project
    user/dataset
    user/lab
-   user/track
    user/pipeline
-   user/webapp
+   user/track
    user/model
-   user/mlops_examples
+   user/webapp
+   user/template
+   user/user_profile
 
 
 .. toctree::
