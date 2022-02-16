@@ -14,7 +14,7 @@ Welcome to MLSteam!
    :maxdepth: 2
 
    user/quick_start
-   user/core_concept
+   user/core_concepts
    user/project
    user/dataset
    user/lab
