@@ -10,10 +10,12 @@ A number of useful services could be installed in marketplace.
 * To install a service, click on the *INSTALL* button for the service.
 
     .. image:: /_static/imgs/administration/marketplace/add_service_1.png
+        :width: 300
 
 * To customize a service, click on the *VIEW* button for the service.
 
     .. image:: /_static/imgs/administration/marketplace/set_service_1.png
+        :width: 300
 
 * To delete a service, click on the *REMOVE* button for the service.
 
