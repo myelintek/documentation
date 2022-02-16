@@ -2,7 +2,7 @@
 Marketplace
 ###########
 
-A number of useful services could be installed in marketplace.
+Some useful services could be installed in marketplace.
 
 .. image:: /_static/imgs/administration/marketplace/view_marketplace.png
     :width: 600
@@ -40,7 +40,7 @@ LDAP settings:
 * Bind DN: distinguished name (DN) for the user making queries
 * Password: password for the user making queries
 * Filter: query filter
-* UID: locating the user record given the user name
+* UID: locating the user record given the username
 
 HedgeDoc
 ========
@@ -51,7 +51,7 @@ Basic settings:
 * Port: TODO: desc
 * Web port: port number for the Web server
 
-Refer to the GitLab setction for :ref:`LDAP settings <gitlab-ldap-settings>`.
+Refer to the GitLab section for :ref:`LDAP settings <gitlab-ldap-settings>`.
 
 OpenLDAP
 ========

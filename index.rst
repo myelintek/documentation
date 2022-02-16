@@ -38,7 +38,7 @@ Welcome to MLSteam!
 
    administration/account
    administration/infrastructure
-   administration/system_managemt
+   administration/management
    administration/marketplace
    administration/license
    administration/event
