@@ -19,8 +19,32 @@ To create a new project:
     .. image:: /_static/imgs/user/project/add_project_2.png
         :width: 600
 
+    .. image:: /_static/imgs/user/project/add_project_3.png
+        :width: 600
+
 Manage Members in a Project
 ===========================
 
+To set the members in a project:
+
+#) Click on the settings button on the project details page.
+
+    .. image:: /_static/imgs/user/project/set_project_member_1.png
+        :width: 600
+    
+    TODO: need more users
+
 Delete a Project
 ================
+
+To delete a project:
+
+#) Click on the settings button on the project details page.
+#) Scroll to the bottom of the page and click on the *DELETE* button.
+
+    .. image:: /_static/imgs/user/project/del_project_1.png
+        :width: 600
+
+#) Confirm the deletion.
+    
+    .. warning:: A project could no longer be restored once it has been deleted.
