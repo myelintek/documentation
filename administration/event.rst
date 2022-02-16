@@ -9,7 +9,7 @@ The *Auditlog* tab lists the logged events. An event includes the following info
 
 #) Time stamp: event reporting time
 #) Level: logging level
-#) User: user name (for a user event) or `SYSTEM` (for a system event)
+#) User: username (for a user event) or `SYSTEM` (for a system event)
 #) Type: event type, could be `User` (user event) or `System` (system event)
 #) Message: event message
 
@@ -21,7 +21,7 @@ The events could be filtered by entering the search terms.
 Add a Webhook
 -------------
 
-The *Notification* tab lists the notifications receivers (Webhooks). A Webhook is trigger on the occurences of the following events:
+The *Notification* tab lists the notifications receivers (Webhooks). A Webhook is triggered on the occurrences of the following events:
 
 #) Lab start, stop, restart, or deletion
 #) Pipeline start, stop, restart, or deletion
