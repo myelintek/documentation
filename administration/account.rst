@@ -7,6 +7,7 @@ Create and Manage a User
 
 #) Click on the *CREATE* button.
 #) Fill in the user settings:
+
     * Name: the displayed name
     * Account: the login account name
     * Password: the login password
@@ -20,6 +21,7 @@ Create and Manage a User
         .. note:: Set `0` to disable storage usage limitation
         
         TODO: what kind of storage limitation?
+        
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/administration/account/add_user_1.png
