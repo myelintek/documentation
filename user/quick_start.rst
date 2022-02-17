@@ -66,7 +66,7 @@ We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a 
     .. image:: /_static/imgs/user/get_started/add_lab_2.png
         :width: 600
 
-#) The newly created lab is now displayed with status running.
+#) The newly created lab is now displayed with status *running*.
 
     .. image:: /_static/imgs/user/get_started/add_lab_3.png
         :width: 600

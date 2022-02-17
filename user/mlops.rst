@@ -38,3 +38,36 @@ We will start a pipeline to train and run a YOLOv5 model.
 
     .. image:: /_static/imgs/user/get_started/add_pipeline_1.png
         :width: 600
+
+#) The newly created pipeline is now displayed with status *Not Run Yet*.
+
+    .. image:: /_static/imgs/user/get_started/add_pipeline_2.png
+        :width: 600
+
+Define the Pipeline Process
+===========================
+
+#) Click on the *Add Action* button.
+
+    .. image:: /_static/imgs/user/get_started/btn_add_action.png
+        
+#) In the new action dialog, click on the *Git Pull* action.
+
+    .. image:: /_static/imgs/user/get_started/add_pipeline_action_1.png
+        :width: 600
+
+#) In the action settings dialog, input the following field in the *Git* tab:
+
+    * Git URL: `<https://github.com/myelintek/yolov5.git>`_
+
+    .. image:: /_static/imgs/user/get_started/add_pipeline_action_2.png
+        :width: 300
+
+#) Input the following field in the *Settings* tab:
+
+    * Name (action name): `get latest code`
+
+#) Click on the *CREATE* button.
+
+    .. image:: /_static/imgs/user/get_started/add_pipeline_action_3.png
+        :width: 300
