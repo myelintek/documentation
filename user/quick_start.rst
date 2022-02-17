@@ -35,7 +35,7 @@ Make sure there is a project for you to run a lab. Otherwise, create a new proje
 Create a CIFAR-10 Lab
 =====================
 
-We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a built-in model for CIFAR-10, so we could simply create a lab from the template.
+We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a built-in image classification model for CIFAR-10, which saves lots of efforts. Simply create a lab from template.
 
 #) Go to the project page by clicking on the project card.
 
@@ -69,4 +69,44 @@ We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a 
 #) The newly created lab is now displayed with status running.
 
     .. image:: /_static/imgs/user/get_started/add_lab_3.png
+        :width: 600
+
+Train the Model
+===============
+
+We will then train the model in the lab.
+
+#) Go to the lab page by clicking on the lab item. The lab interactive environment will be opened.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_1.png
+        :width: 600
+
+#) Open the model training notebook by double clicking on the *entry.ipynb* file on the left.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_2.png
+        :width: 600
+
+#) Train the model by clicking on the menu item: *Run* → *Restart Kernel and Run All Cells*.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_3a.png
+        :width: 600
+
+    Alternatively, click on the toolbar icon.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_3b.png
+        :width: 600
+
+#) Click on the *Restart* button.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_4.png
+        :width: 300
+
+#) The training program will start running cell by cell.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_5.png
+        :width: 600
+
+#) You could also monitor the real-time resource utilization by clicking on the top area. A watch window will be opened.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_6.png
         :width: 600
