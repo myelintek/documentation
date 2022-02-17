@@ -4,7 +4,7 @@ Quick Start: Machine Learning Lab
 
 This tutorial will show you how to:
 
-* Start a machine learning lab for classifying CIFAR-10 image data.
+* Start a machine learning lab for classifying `CIFAR-10 <https://www.cs.toronto.edu/~kriz/cifar.html>`_ image data.
 * Train the model and monitor the resource consumption.
 
 Preparation
@@ -110,3 +110,5 @@ We will then train the model in the lab.
 
     .. image:: /_static/imgs/user/get_started/run_lab_6.png
         :width: 600
+
+TODO: submit as a track for visualization
