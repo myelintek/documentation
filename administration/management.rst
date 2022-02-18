@@ -100,5 +100,25 @@ Template management operations:
 Image
 =====
 
+The image tab lists the Docker images in the system.
+
+* Name: image tagged names
+* UUID: image identifier
+* Project: project in the image registry
+* Layer: image layer numbers
+* Size: image size
+* Local: TODO: meaning
+* Create time: image creation time
+
+.. image:: /_static/imgs/administration/management/view_images.png
+    :width: 600
+
+Image management operations:
+
+#) Delete
+
+.. note::
+    All Docker images, including those are not used in MLSteam, are listed here.
+
 Setting
 =======
