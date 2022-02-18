@@ -56,11 +56,49 @@ Dataset
 Project
 =======
 
+The project tab lists the projects in the system.
+
+* Name: project name
+* UUID: project identifier
+* Note: project description
+* Owner: project owner
+* Create time: project creation time
+
+.. image:: /_static/imgs/administration/management/view_projects.png
+    :width: 600
+
+Project management operations:
+
+#) Delete
+
+.. note::
+    A project could be created or edited only through the normal user interface.
+
 Template
 ========
 
-Setting
-=======
+The template tab lists the templates in the system.
+
+* Name: template name
+* Description: template description
+* Author: template author. `MLSteam` means a built-in template.
+* Version: template version
+* Tag: template tags
+* Create time: template creation time
+
+.. image:: /_static/imgs/administration/management/view_templates.png
+    :width: 600
+
+Template management operations:
+
+#) Reload: restore all built-in templates, in case that some templates get deleted or changed accidentally
+#) Delete
+
+.. note::
+    A template could be created or edited only through the normal user interface.
 
 Image
 =====
+
+Setting
+=======
