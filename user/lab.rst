@@ -2,7 +2,7 @@
 Lab
 ##########
 
-A lab is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_ with MLSteam's add-on functionlities) that organizes files and datasets.
+A lab is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_ with MLSteam's add-on functionalities) that organizes files and datasets.
 You may design ML models and make experiments in a lab.
 When the development is done, you may convert a lab into a :doc:`template <template>` for reuse in other labs, pipelines or deployment.
 
@@ -32,7 +32,7 @@ A lab is created from a pre-defined template.
     .. caution::
         #) Some labs require one or more GPUs to run. Make sure you select a flavor that meets the lab's requirements.
         #) GPUs are independently allocated for each started lab or pipeline run.
-           If a lab could not be started due to a shortage of resources, try to stop some labs or pipeline runs.
+           If a lab could not be started due to a shortage of resources, try to :ref:`stop unused labs <delete-lab>` or to stop pipeline runs.
 
 
 Run a Lab
@@ -61,11 +61,54 @@ click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 Attach a Dataset
 ================
 
-Monitor HW in a Lab
-===================
+Monitor Resource Consumption in a Lab
+=====================================
+
+To monitor the real-time resource consumption, click on the top area. A watch window will be opened.
+
+.. image:: /_static/imgs/user/get_started/run_lab_6.png
+    :width: 600
+
+Hardware resources displayed:
+
+* Compute
+
+    * CPU utilization in percentage
+
+* Memory
+
+    * memory utilization in percentage
+    * used memory in GB
+    * total memory in GB
+
+* Storage
+
+    * disk storage in percentage
+    * used storage in GB
+    * total storage in GB
+
+* GPU
+
+    * GPU compute utilization in percentage
+    * used GPU memory in GB
+    * total GPU memory in GB
+
+.. _delete-lab:
 
 Delete a Lab
 ============
+
+To delete a lab:
+
+#) If the lab is in the *running* state, stop the lab by clicking on the *stop* button.
+
+    .. image:: /_static/imgs/user/lab/stop_lab_1.png
+        :width: 480
+
+#) Click on the *delete* button.
+
+    .. image:: /_static/imgs/user/lab/stop_lab_2.png
+        :width: 480
 
 SSH into a Lab
 ==============
