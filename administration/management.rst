@@ -32,6 +32,24 @@ Task management operations:
 Flavor
 ======
 
+The flavor tab lists the flavors in the system.
+
+* Name: flavor name
+* Summary: flavor settings summary
+* CPU: CPU cores to allocate
+* Memory: memory to allocate in MB
+* GPU: GPU cards to allocate. `0` means no GPUs will be allocated.
+* GPU type: GPU type used. `Any` means no restrictions to GPU types.
+
+.. image:: /_static/imgs/administration/management/view_flavors.png
+    :width: 600
+
+Flavor management operations:
+
+#) Create
+#) Edit
+#) Delete
+
 Dataset
 =======
 
