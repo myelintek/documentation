@@ -2,8 +2,8 @@
 Project
 ##########
 
-Create a New Project
-====================
+Create a Project
+================
 
 To create a new project:
 
@@ -32,7 +32,21 @@ To set the members in a project:
     .. image:: /_static/imgs/user/project/set_project_member_1.png
         :width: 600
     
-    TODO: need more users
+#) Click on the *ADD MEMBER* button.
+
+    .. image:: /_static/imgs/user/project/set_project_member_2.png
+        :width: 480
+
+#) Fill in the fields:
+
+    * User: user to add
+    * Permission: could be `Writer` or `Reader`
+      TODO: writer / reader?
+
+#) Click on the `CREATE` button.
+
+    .. image:: /_static/imgs/user/project/set_project_member_3.png
+        :width: 600
 
 Delete a Project
 ================
