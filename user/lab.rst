@@ -2,7 +2,9 @@
 Lab
 ##########
 
-TODO: description. distiguish a lab from a pipeline
+A lab is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_) that organizes files and datasets.
+You may design ML models and make experiments in a lab.
+When the development is done, you may convert a lab into a :doc:`template <template>` for reuse in other labs, pipelines or deployment.
 
 Create a Lab
 ============
@@ -27,14 +29,16 @@ A lab is created from a pre-defined template.
     * Flavor: the resources allocated for the lab
     * Dataset mount paths (optional): pre-defined by the template. You may add or delete the mount paths.
 
-    .. note::
-        Some labs require one or more GPUs to run. Make sure you select a flavor that meets the lab's requirements.
+    .. caution::
+        #) Some labs require one or more GPUs to run. Make sure you select a flavor that meets the lab's requirements.
+        #) GPUs are independently allocated for each started lab or pipeline run.
+           If a lab could not be started due to a shortage of resources, try to stop some labs or pipeline runs.
 
 
 Run a Lab
 =========
 
-
+To run (evaluate) the program code in a single cell, 
 
 Attach a Dataset
 ================
