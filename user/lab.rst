@@ -2,7 +2,7 @@
 Lab
 ##########
 
-A lab is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_) that organizes files and datasets.
+A lab is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_ with MLSteam's add-on functionlities) that organizes files and datasets.
 You may design ML models and make experiments in a lab.
 When the development is done, you may convert a lab into a :doc:`template <template>` for reuse in other labs, pipelines or deployment.
 
@@ -38,7 +38,25 @@ A lab is created from a pre-defined template.
 Run a Lab
 =========
 
-To run (evaluate) the program code in a single cell, 
+Program code in a Jupyter Notebook is organized in cells. 
+A Jupyter Notebook file has a name ended with `.ipynb` and could be opened by double clicking on the entry in the file browser on the left.
+In Jupyter Notebook, code is run in a process called the Kernel.
+
+To run (evaluate) the program code in a single cell,
+click on the menu item: *Run* → *Run Selected Cells* or press the `Shift-Enter` key combination.
+
+.. note::
+    Depending on the Kernel execution state, sometimes you may need to run all previous cells before running the current one.
+    Click on the menu item: *Run* → *Run All Above Selected Cell*.
+
+To run all the program code from a clean Kernel execution state,
+click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
+
+.. image:: /_static/imgs/user/get_started/run_lab_3a.png
+    :width: 600
+
+.. note::
+    Refer to `JupyterLab Documentation <https://jupyterlab.readthedocs.io/en/stable/index.html>`_ for more usage information.
 
 Attach a Dataset
 ================
