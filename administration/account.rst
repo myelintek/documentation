@@ -8,9 +8,9 @@ Create and Manage a User
 #) Click on the *CREATE* button.
 #) Fill in the user settings:
 
-    * Name: the displayed name
-    * Account: the login account name
-    * Password: the login password
+    * Name: displayed name
+    * Account: login account name
+    * Password: login password
     * Role: could be `Admin` (system maintainer) or `Developer` (deep learning developer)
     * Plan: resource limitation plan
 
@@ -27,13 +27,19 @@ Create and Manage a User
     .. image:: /_static/imgs/administration/account/add_user_1.png
         :width: 600
 
-    FIXME: update image
-
 Set Plan for Resource Limitation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Delete a User
 -------------
+
+To delete a user:
+
+#) Select the user to delete.
+#) Click on the *DELETE* button.
+
+.. warning::
+    Deleting a user will also remove its access to all projects.
 
 Integrate LDAP/AD
 -----------------
