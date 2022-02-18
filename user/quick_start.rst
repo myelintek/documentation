@@ -56,7 +56,7 @@ We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a 
     .. image:: /_static/imgs/user/get_started/add_lab_1.png
         :width: 600
 
-#) In the new project dialog, input the following fields:
+#) In the new lab dialog, input the following fields:
 
     * name: `my-cifar10`
     * flavor: `small`
