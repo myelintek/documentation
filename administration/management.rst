@@ -1,6 +1,6 @@
-########
-Managemt
-########
+##########
+Management
+##########
 
 Task
 ====
@@ -52,6 +52,26 @@ Flavor management operations:
 
 Dataset
 =======
+
+The dataset tab lists the datasets in the system.
+
+* Name: project name
+* UUID: project identifier
+* Project: TODO: meaning
+* Permission: dataset access permission
+* Owner: dataset owner
+* Size: TODO: meaning; 0 MB?
+* Create time: dataset creation time
+
+.. image:: /_static/imgs/administration/management/view_datasets.png
+    :width: 600
+
+Dataset management operations:
+
+#) Delete
+
+.. note::
+    A dataset could be created or edited only through the normal user interface.
 
 Project
 =======
@@ -118,7 +138,30 @@ Image management operations:
 #) Delete
 
 .. note::
-    All Docker images, including those are not used in MLSteam, are listed here.
+    All Docker images, including those not used in MLSteam, are listed here.
 
 Setting
 =======
+
+The setting page lists the global system settings.
+
+* open_files: maximum number of opened files
+* pids_limit: maximum number of processes
+* shm_size: shared memory size in GB
+* storage_limit: storage size in GB
+
+.. image:: /_static/imgs/administration/management/view_setting.png
+    :width: 600
+
+TODO: per host settings?
+TODO: update image (Unit: g and G)
+
+The setting management operations:
+
+#) Edit: by clicking on the value
+
+    .. image:: /_static/imgs/administration/management/edit_setting_1.png
+        :width: 600
+
+    .. image:: /_static/imgs/administration/management/edit_setting_2.png
+        :width: 600
