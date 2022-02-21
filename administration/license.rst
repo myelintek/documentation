@@ -13,7 +13,7 @@ To update license:
 
     .. image:: /_static/imgs/administration/license/set_license_1.png
 
-#) Input the lincese text.
+#) Input the license text.
 
     .. image:: /_static/imgs/administration/license/set_license_2.png
         :width: 300
@@ -22,10 +22,10 @@ To update license:
 
 To enable or disable a feature:
 
-#) Check a feature to enable it; uncheck a feature to diable it.
+#) Check a feature to enable it; uncheck a feature to disable it.
 
     .. image:: /_static/imgs/administration/license/set_feature_1.png
         :width: 480
 
 .. note::
-    The actual features listed depend on the installed licence.
+    The actual features listed depend on the installed license.
