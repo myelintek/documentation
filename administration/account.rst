@@ -12,15 +12,13 @@ Create and Manage a User
     * Account: login account name
     * Password: login password
     * Role: could be `Admin` (system maintainer) or `Developer` (deep learning developer)
-    * Plan: resource limitation plan
+    * Plan: resource limitation plan for running the user's owning labs
 
         .. note:: Select the `Unlimited` plan to disable resource limitation.
 
-    * Storage Limit: storage usage limitation in GB
+    * Storage Limit: storage usage limitation for running the user's owning labs in GB
 
         .. note:: Set `0` to disable storage usage limitation
-        
-        TODO: what kind of storage limitation?
         
 #) Click on the *CREATE* button.
 
@@ -39,7 +37,10 @@ To delete a user:
 #) Click on the *DELETE* button.
 
 .. warning::
-    Deleting a user will also remove its access to all projects.
+    On deleting a user:
+    
+    #) That user's access to all projects will be removed.
+    #) All projects owned by that user will be deleted.
 
 Integrate LDAP/AD
 -----------------
