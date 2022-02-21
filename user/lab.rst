@@ -13,8 +13,6 @@ A lab is created from a pre-defined template.
 
 #) In the lab page, click on the *NEW* button.
 
-    .. image:: /_static/imgs/user/get_started/btn_new.png
-
     .. note::
         A :doc:`project <project>` should be created first before we could create or use a lab.
 
@@ -29,7 +27,7 @@ A lab is created from a pre-defined template.
     * Flavor: the resources allocated for the lab
     * Dataset mount paths (optional): pre-defined by the template. You may add or delete the mount paths.
 
-    .. caution::
+    .. note::
         #) Some labs require one or more GPUs to run. Make sure you select a flavor that meets the lab's requirements.
         #) GPUs are independently allocated for each started lab or pipeline run.
            If a lab could not be started due to a shortage of resources, try to :ref:`stop unused labs <delete-lab>` or to stop pipeline runs.
@@ -58,8 +56,32 @@ click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 .. note::
     Refer to `JupyterLab Documentation <https://jupyterlab.readthedocs.io/en/stable/index.html>`_ for more usage information.
 
-Attach a Dataset
-================
+Attach or Detach a Dataset
+==========================
+
+To list and manage the dataset attachments, click on the top area. A side bar will be opened.
+
+.. image:: /_static/imgs/user/lab/view_attached_datasets.png
+    :width: 600
+
+TODO: click on the dataset itself? 404 error?
+
+To attach or detach a dataset:
+
+#) Click on the settings button in the dataset side bar.
+
+    .. image:: /_static/imgs/common/btn_settings.png
+
+#) Toggle on a dataset to attach or toggle off a dataset to detach.
+
+    .. image:: /_static/imgs/user/lab/set_dataset_attachments_1.png
+        :width: 480
+
+#) Click on the *APPLY* button.
+#) Click on the *OK* button. The lab will be restarted to apply the new configuration.
+
+    .. image:: /_static/imgs/user/lab/set_dataset_attachments_2.png
+        :width: 300
 
 Monitor Resource Consumption in a Lab
 =====================================
