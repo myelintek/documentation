@@ -162,6 +162,3 @@ The setting management operations:
 
     .. image:: /_static/imgs/administration/management/edit_setting_1.png
         :width: 600
-
-    .. image:: /_static/imgs/administration/management/edit_setting_2.png
-        :width: 600
