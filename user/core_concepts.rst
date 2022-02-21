@@ -6,7 +6,7 @@ Project
     A :doc:`project <project>` is a collection of all works when you develop DNN models. You can launch either a Jupyter lab (we call them labs) or launch experiments and training iterations (we call them jobs) will be kept and organized.
 
 Dataset
-    A :doc:`dataset <dataset>` is a collection of data organized in files and directores.
+    A :doc:`dataset <dataset>` is a collection of data organized in files and directories.
     Dataset files could be used in labs for model training and validation.
 
 Lab

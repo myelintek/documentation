@@ -2,7 +2,7 @@
 Dataset
 ############
 
-A dataset is a collection of data organized in files and directores.
+A dataset is a collection of data organized in files and directories.
 Dataset files could be used in labs for model training and validation.
 
 TODO: could dataset be used in pipelines, templates, or webapps?
@@ -29,9 +29,10 @@ To create a database:
 
 #) Click on the *CREATE* button.
 
-More operations on a databse are available in the dataset page.
+More operations on a dataset are available in the dataset page.
 
-TODO: image
+.. image:: /_static/imgs/user/dataset/view_dataset.png
+    :width: 600
 
 To create a folder in a dataset:
 
@@ -52,15 +53,18 @@ Another method for file uploading:
     .. image:: /_static/imgs/user/dataset/add_file_2_1a.png
         :width: 300
 
-#) Alternatively, to add files from a Web source, input the remoke link in the *URL* tab. Repeat this step to add more URLs.
+#) Alternatively, to add files from a Web source, input the remote link in the *URL* tab. Repeat this step to add more URLs.
 
     .. image:: /_static/imgs/user/dataset/add_file_2_1b.png
         :width: 300
 
+    .. note::
+        Password-protected links are unsupported.
+
 #) Click on the *UPLOAD* button.
 
 .. note::
-    To download a large number of files efficiently:
+    To download many files efficiently:
     
     #) Compress all files in an archive file (*.zip*).
     #) Upload the archive file.
@@ -83,7 +87,7 @@ To download a file from the dataset:
 Clone a Dataset
 ===============
 
-In siturations where modifications to a read-only dataset (such as a built-in dataset) is needed, one could clone the dataset of interest and use the clone instead.
+In situations where modifications to a read-only dataset (such as a built-in dataset) is needed, one could clone the dataset of interest and use the clone instead.
 
 To clone a dataset:
 
