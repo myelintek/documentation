@@ -57,14 +57,16 @@ The dataset tab lists the datasets in the system.
 
 * Name: project name
 * UUID: project identifier
-* Project: TODO: meaning
+* Project: owner project, empty for built-in datasets
 * Permission: dataset access permission
-* Owner: dataset owner
-* Size: TODO: meaning; 0 MB?
+* Owner: dataset creator
+* Size: dataset size in MB
 * Create time: dataset creation time
 
 .. image:: /_static/imgs/administration/management/view_datasets.png
     :width: 600
+
+TODO: Owner → Creator (description & image)
 
 Dataset management operations:
 
@@ -145,16 +147,13 @@ Setting
 
 The setting page lists the global system settings.
 
-* open_files: maximum number of opened files
-* pids_limit: maximum number of processes
-* shm_size: shared memory size in GB
-* storage_limit: storage size in GB
+* open_files: maximum number of opened files for a container
+* pids_limit: maximum number of processes for a container
+* shm_size: shared memory size in GB for a container
+* storage_limit: storage size in GB for a container
 
 .. image:: /_static/imgs/administration/management/view_setting.png
     :width: 600
-
-TODO: per host settings?
-TODO: update image (Unit: g and G)
 
 The setting management operations:
 
