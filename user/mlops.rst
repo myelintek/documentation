@@ -47,7 +47,7 @@ We will start a pipeline to train and run a YOLOv5 model.
 Define the Pipeline Process
 ===========================
 
-We will define an MLops pipeline consiting of two actions: (1) to download the latest YOLOv5 code, and (2) to train the YOLOv5 model.
+We will define an MLOps pipeline consisting of two actions: (1) to download the latest YOLOv5 code, and (2) to train the YOLOv5 model.
 
 #) Click on the *Add Action* button.
 
@@ -74,7 +74,7 @@ We will define an MLops pipeline consiting of two actions: (1) to download the l
     .. image:: /_static/imgs/user/get_started/add_pipeline_action_1_3.png
         :width: 480
 
-#) Define the model-traning action. Click on the *New* button, select the *Docker Run* action template, and fill in the following fields:
+#) Define the model-training action. Click on the *New* button, select the *Docker Run* action template, and fill in the following fields:
 
     * In the *command* section:
 
@@ -134,7 +134,7 @@ To run the Pipeline:
         A pipeline run may be delayed for a while
         if the system is busy on processing other labs or pipeline runs.
 
-We could see the overall pipeline run information and the current status in the pipeline run page.
+We could see the overall pipeline run information and the status in the pipeline run page.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_2.png
     :width: 600
@@ -144,8 +144,8 @@ The immediate outputs of a pipeline action could be observed by clicking on the 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_3.png
     :width: 600
 
-We could also view the outputs fullscreen by clicking on the *fullscreen* button.
-Press :kbd:`Esc` to exit the fullscreen mode.
+We could also view the outputs in full screen by clicking on the *fullscreen* button.
+Press :kbd:`Esc` to exit the full screen mode.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_4.png
     :width: 600
@@ -169,8 +169,8 @@ The model validation results could be found in the last part of the outputs, som
            motorcycle        128          5      0.758      0.632       0.88      0.687
              airplane        128          6          1      0.823      0.995      0.789
 
-The overall precision *0.741* seems acceptible for our practice.
-We are now ready to run the pipeline again with more training epochos and
+The overall precision *0.741* seems acceptable for our practice.
+We are now ready to run the pipeline again with more training epochs and
 to visualize the results.
 
 .. note::
@@ -179,9 +179,9 @@ to visualize the results.
 Visualize the ML Results
 ========================
 
-Increase the traning epochs:
+Increase the training epochs:
 
-#) Back to the run list by clicking on the link iin the top-left corner.
+#) Back to the run list by clicking on the link in the top-left corner.
 
     .. image:: /_static/imgs/common/link_back_to_run_list.png
 
@@ -213,7 +213,7 @@ Then, we run the pipeline again. But at this time, we enable *track* to keep and
 .. note::
 
     :doc:`Track <track>` is a mechanism to keep track of the results,
-    which avoids the trained results being overwritten by succedding pipeline runs.
+    which avoids the trained results being overwritten by succeeding pipeline runs.
     It also enables visualizing the results data.
     More details could be found in the :doc:`track <track>` documentation.
 
@@ -238,7 +238,6 @@ Let's see our training results:
    TensorBoard will show up in a few seconds.
 
     .. image:: /_static/imgs/common/btn_switch_to_tensorboard.png
-        :width: 600
 
 Now, we could see various logged data displayed in various figures.
 
@@ -246,4 +245,4 @@ Now, we could see various logged data displayed in various figures.
     :width: 600
 
 .. note::
-    Refer to the `TensorBoard <https://www.tensorflow.org/tensorboard>`_ Website for more usage information.
+    Refer to the `TensorBoard <https://www.tensorflow.org/tensorboard>`_ Website for visualization operations.
