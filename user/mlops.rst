@@ -207,8 +207,8 @@ Then, we run the pipeline again. But at this time, we enable *track* to keep and
 #) Toggle on *Use Track*.
 #) Click on the *RUN NOW* button.
 
-.. image:: /_static/imgs/user/get_started/run_pipeline_2_1.png
-    :width: 480
+    .. image:: /_static/imgs/user/get_started/run_pipeline_2_1.png
+        :width: 480
 
 .. note::
 
@@ -216,3 +216,34 @@ Then, we run the pipeline again. But at this time, we enable *track* to keep and
     which avoids the trained results being overwritten by succedding pipeline runs.
     It also enables visualizing the results data.
     More details could be found in the :doc:`track <track>` documentation.
+
+Be patient and wait until the run is finished.
+
+Let's see our training results:
+
+#) Go to the track listing page by clicking on the *Track* item in the left menu.
+
+    .. image:: /_static/imgs/user/get_started/goto_tracks.png
+        :width: 600
+
+#) Go to the track details page by clicking on the corresponding track link in the list.
+
+    .. image:: /_static/imgs/user/get_started/goto_track.png
+        :width: 600
+    
+    .. note::
+        A track is named by the initial part of the project name, followed by the run number.
+
+#) In the track details page, click the *SWITCH TO TENSORBOARD* button in the top-left corner.
+   TensorBoard will show up in a few seconds.
+
+    .. image:: /_static/imgs/common/btn_switch_to_tensorboard.png
+        :width: 600
+
+Now, we could see various logged data displayed in various figures.
+
+.. image:: /_static/imgs/user/get_started/view_tensorboard.png
+    :width: 600
+
+.. note::
+    Refer to the `TensorBoard <https://www.tensorflow.org/tensorboard>`_ Website for more usage information.
