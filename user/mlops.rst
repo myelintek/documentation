@@ -5,6 +5,7 @@ Quick Start: MLOps
 This tutorial will show you how to:
 
 * Start a machine learning pipeline for `YOLOv5 <https://github.com/ultralytics/yolov5>`_ object detection.
+* Visualize the YOLOv5 model training results to see the performance.
 
 Preparation
 ===========
