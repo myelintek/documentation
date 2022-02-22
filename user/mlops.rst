@@ -177,8 +177,8 @@ to visualize the results.
 .. note::
     The actual results you get may slightly differ.
 
-Visualize the ML Results
-========================
+Visualize the YOLOv5 Results
+============================
 
 Increase the training epochs:
 
