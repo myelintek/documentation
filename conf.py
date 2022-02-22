@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = u'MLSteam'
-copyright = u'2020, MyelinTek'
+copyright = u'2022, MyelinTek'
 author = u'MyelinTek'
 
 # The short X.Y version

@@ -80,7 +80,7 @@ We will define an MLops pipeline consiting of two actions: (1) to download the l
 
         * Command:
 
-            ..code-block:: shell
+            .. code-block:: shell
 
                 apt-get update && apt-get install -y libgl1-mesa-glx
                 pip uninstall -y typer
@@ -100,9 +100,79 @@ We will define an MLops pipeline consiting of two actions: (1) to download the l
 
     * In the *settings* section:
 
-        * Name: ``train model``
+        * Action name: ``train model``
 
         .. image:: /_static/imgs/user/get_started/add_pipeline_action_2_3.png
-            :width: 400
+            :width: 480
 
     * Click on the *CREATE* button.
+
+Now, we have defined all the actions and are ready to run the pipeline.
+
+.. image:: /_static/imgs/user/get_started/add_pipeline_action_3.png
+    :width: 600
+
+Run the Pipeline
+================
+
+To run the Pipeline:
+
+#) Click on the *RUN PIPELINE* button in the top-right corner.
+
+    .. image:: /_static/imgs/common/btn_run_pipeline.png
+
+#) Write a comment to denote this run or leave it blank.
+#) Click on the *RUN NOW* button. The pipeline will start to run in a few seconds.
+
+    .. image:: /_static/imgs/user/get_started/run_pipeline_1_1.png
+        :width: 300
+    
+    .. note::
+        A pipeline run may be delayed for a while
+        if the system is busy on processing other labs or pipeline runs.
+
+We could see the overall pipeline run information and the current status in the pipeline run page.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_1_2.png
+    :width: 600
+
+The immediate outputs of a pipeline action could be observed by clicking on the *LOG* button.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_1_3.png
+    :width: 600
+
+We could also view the outputs fullscreen by clicking on the *fullscreen* button.
+Press :kbd:`Esc` to exit the fullscreen mode.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_1_4.png
+    :width: 600
+
+The model validation results could be found in the last part of the outputs, something like::
+
+    Validating /working/train/exp/weights/best.pt...
+    Fusing layers... 
+    Model Summary: 213 layers, 7225885 parameters, 0 gradients, 16.5 GFLOPs
+
+                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/4 [00:00<?, ?it/s]
+                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  25%|██▌       | 1/4 [00:00<00:02,  1.30it/s]
+                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  50%|█████     | 2/4 [00:02<00:02,  1.10s/it]
+                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  75%|███████▌  | 3/4 [00:03<00:01,  1.17s/it]
+                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]
+                Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:04<00:00,  1.19s/it]
+                    all        128        929      0.741      0.574      0.669       0.46
+                person        128        254      0.817      0.669      0.789      0.521
+                bicycle        128          6      0.776      0.586      0.627      0.388
+                    car        128         46      0.659       0.37      0.481      0.229
+            motorcycle        128          5      0.758      0.632       0.88      0.687
+                airplane        128          6          1      0.823      0.995      0.789
+
+The overall precision *0.741* seems acceptible for our practice.
+We are now ready to run the pipeline again with more training epochos and
+to visualize the results.
+
+.. note::
+    The actual results you get may slightly differ.
+
+Visualize the ML Results
+========================
+
