@@ -92,11 +92,14 @@ We will define an MLops pipeline consiting of two actions: (1) to download the l
 
     * In the *environment* section:
 
-        * Container: ``pytorch:21.06-py3`` (the actual container version number may differ)
+        * Container: ``pytorch:21.06-py3``
         * Flavor: ``small``
 
         .. image:: /_static/imgs/user/get_started/add_pipeline_action_2_2.png
             :width: 480
+
+        .. note::
+            The actual container version number may differ.
 
     * In the *settings* section:
 
@@ -159,12 +162,12 @@ The model validation results could be found in the last part of the outputs, som
                 Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:  75%|███████▌  | 3/4 [00:03<00:01,  1.17s/it]
                 Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:04<00:00,  1.05s/it]
                 Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95: 100%|██████████| 4/4 [00:04<00:00,  1.19s/it]
-                    all        128        929      0.741      0.574      0.669       0.46
-                person        128        254      0.817      0.669      0.789      0.521
-                bicycle        128          6      0.776      0.586      0.627      0.388
-                    car        128         46      0.659       0.37      0.481      0.229
-            motorcycle        128          5      0.758      0.632       0.88      0.687
-                airplane        128          6          1      0.823      0.995      0.789
+                  all        128        929      0.741      0.574      0.669       0.46
+               person        128        254      0.817      0.669      0.789      0.521
+              bicycle        128          6      0.776      0.586      0.627      0.388
+                  car        128         46      0.659       0.37      0.481      0.229
+           motorcycle        128          5      0.758      0.632       0.88      0.687
+             airplane        128          6          1      0.823      0.995      0.789
 
 The overall precision *0.741* seems acceptible for our practice.
 We are now ready to run the pipeline again with more training epochos and
@@ -176,3 +179,40 @@ to visualize the results.
 Visualize the ML Results
 ========================
 
+Increase the traning epochs:
+
+#) Back to the run list by clicking on the link iin the top-left corner.
+
+    .. image:: /_static/imgs/common/link_back_to_run_list.png
+
+#) Go to the action list by clicking on the *ACTIONS* button.
+
+    .. image:: /_static/imgs/common/btn_actions.png
+
+#) Click on the *train model* action and increase the epoch number from 10 to 20.
+   The complete commands:
+
+    .. code-block:: shell
+
+        apt-get update && apt-get install -y libgl1-mesa-glx
+        pip uninstall -y typer
+        pip install -qr requirements.txt
+        python train.py --img 640 --batch 16 --epochs 20 --data coco128.yaml --weights yolov5s.pt --cache
+
+#) Click on the *SAVE* button.
+
+Then, we run the pipeline again. But at this time, we enable *track* to keep and visualize the results.
+
+#) Click on the *RUN PIPELINE* button.
+#) Toggle on *Use Track*.
+#) Click on the *RUN NOW* button.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_2_1.png
+    :width: 480
+
+.. note::
+
+    :doc:`Track <track>` is a mechanism to keep track of the results,
+    which avoids the trained results being overwritten by succedding pipeline runs.
+    It also enables visualizing the results data.
+    More details could be found in the :doc:`track <track>` documentation.
