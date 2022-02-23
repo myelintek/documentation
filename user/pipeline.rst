@@ -90,3 +90,16 @@ Run a Pipeline
 
 Delete a Pipeline
 =================
+
+To delete a pipeline:
+
+#) Go to the settings page by clicking on the *SETTINGS* button.
+
+    .. image:: /_static/imgs/common/btn_settings_2.png
+
+#) Click on the *DELETE* button.
+
+    .. image:: /_static/imgs/user/pipeline/del_pipeline_1.png
+        :width: 600
+
+#) Click on the *OK* button.
