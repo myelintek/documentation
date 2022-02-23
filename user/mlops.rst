@@ -45,8 +45,8 @@ We will start a pipeline to train and run a YOLOv5 model.
     .. image:: /_static/imgs/user/get_started/add_pipeline_2.png
         :width: 600
 
-Define the Pipeline Process
-===========================
+Define the Pipeline Procedure
+=============================
 
 We will define an MLOps pipeline consisting of two actions: (1) to download the latest YOLOv5 code, and (2) to train the YOLOv5 model.
 
