@@ -19,8 +19,9 @@ Lab
 Pipeline
     A :doc:`pipeline <pipeline>` is a repeatable procedure consisting of actions for running ML tasks.
     You may define a pipeline for a subset of common ML tasks.
-    You may even define an end-to-end pipeline to fulfill `MLOps <https://en.wikipedia.org/wiki/MLOps>`_ that automatically
-    retrain the model on changes of the model design and finally deploy the ML application to a staging or production site.
+    You may even define an end-to-end pipeline to fulfill `MLOps <https://en.wikipedia.org/wiki/MLOps>`_ that
+    retrains and evaluates the model for new model designs or dataset
+    and finally deploys the ML application to an experimental or production site.
 
 Track
     TODO: track
