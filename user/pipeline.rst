@@ -32,7 +32,7 @@ Manage Pipeline Actions
 =======================
 
 A pipeline action is a step in a pipeline procedure.
-Action types available:
+Available action types:
 
 * *Git pull*: pull source code fromt git repository
 * *Docker run*: run commands in a Docker container
@@ -74,7 +74,7 @@ To delete a pipeline action:
 
 To re-order the pipeline actions:
 
-#) Press on the *re-order* icon. Hold the mouse button.
+#) Press on the *re-order* label. Hold the mouse button.
 #) Drag the action onward or downward to the new location.
 
     .. image:: /_static/imgs/user/pipeline/reorder_action_1.png
@@ -85,8 +85,38 @@ To re-order the pipeline actions:
 Run a Pipeline
 ==============
 
+To run the Pipeline:
+
+#) Click on the *RUN PIPELINE* button in the top-right corner.
+#) Write a comment to denote this run or leave it blank.
+#) Click on the *RUN NOW* button. The pipeline will start to run in a few seconds.
+
+    .. image:: /_static/imgs/user/get_started/run_pipeline_1_1.png
+        :width: 300
+    
+    .. note::
+        A pipeline run may be delayed for a while
+        if the system is busy on processing other labs or pipeline runs.
+
+The overall pipeline run information and the status are displayed.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_1_2.png
+    :width: 600
+
 .. note::
-    The pipeline run number is unique in the system.
+    The pipeline run number increases in each run but may not start from 1.
+    Pipeline runs are numbered among all pipelines in the system.
+
+The immediate outputs of a pipeline action could be observed by clicking on the *LOG* button.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_1_3.png
+    :width: 600
+
+We could also view the outputs in full screen by clicking on the *fullscreen* button.
+Press :kbd:`Esc` to exit the full screen mode.
+
+.. image:: /_static/imgs/user/get_started/run_pipeline_1_4.png
+    :width: 600
 
 Delete a Pipeline
 =================
