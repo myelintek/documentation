@@ -64,8 +64,6 @@ To list and manage the dataset attachments, click on the top area. A side bar wi
 .. image:: /_static/imgs/user/lab/view_attached_datasets.png
     :width: 600
 
-TODO: click on the dataset itself? 404 error?
-
 To attach or detach a dataset:
 
 #) Click on the settings button in the dataset side bar.

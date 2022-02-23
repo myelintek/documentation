@@ -8,7 +8,7 @@ Dataset files could be used in labs for model training and validation.
 There are system datasets and project-scoped datasets.
 The datasets page lists all projects visible to the user,
 where the system datasets are displayed in the dataset name,
-and the project-scoped datasets are displayed in the beloning project's ID followed by the dataset name.
+and the project-scoped datasets are displayed in the owner project's ID followed by the dataset name.
 
 .. image:: /_static/imgs/user/dataset/view_all_datasets.png
     :width: 600
@@ -61,7 +61,7 @@ To create a database:
         A remotely accessible NFS/CIFS shared directory could be mounted as a dataset.
 
 #) Click on the *CREATE* or the *IMPORT* button.
-    Changes to the dataset will be writen to the remote space.
+    Changes to the dataset will be written to the remote space.
 
 More operations on a dataset are available in the dataset page.
 
@@ -132,7 +132,7 @@ To clone a dataset:
 #) Select the dataset to clone.
 
     .. note::
-        Datasets beloning to the current project are not listed here.
+        Datasets belonging to the current project are not listed here.
         To modify such a dataset and to preserve its current data, :ref:`snapshot the dataset <snapshot-dataset>` instead.
 
 #) For cloning a mounted remote dataset, select the import method:

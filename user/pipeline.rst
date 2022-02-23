@@ -34,7 +34,7 @@ Manage Pipeline Actions
 A pipeline action is a step in a pipeline procedure.
 Available action types:
 
-* *Git pull*: pull source code fromt git repository
+* *Git pull*: pull source code from git repository
 * *Docker run*: run commands in a Docker container
 * *Model publish*: publish training artifacts to model
 
@@ -110,8 +110,8 @@ The overall pipeline run information and the status are displayed.
     :width: 600
 
 .. note::
-    The pipeline run number increases in each run but may not start from 1.
     Pipeline runs are numbered among all pipelines in the system.
+    The pipeline run number may not start from *1*.
 
 The immediate outputs of a pipeline action could be observed by clicking on the *LOG* button.
 
@@ -158,11 +158,9 @@ To view the contents in a track for a pipeline run,
             A track is named by the initial part of the project name, followed by the run number.
 
 .. note::
-    When a pipeline run uses *Track*, the files are displayed in the *Track* page.
-    Otherwise, the files are displayed in the *FILESYSTEM* page.
-
-.. note::
-    Refer to the :doc:`track <track>` documentation for data visualization and other *Track* operations.
+    #) When a pipeline run uses *Track*, the files are displayed in the *Track* page.
+       Otherwise, the files are displayed in the *FILESYSTEM* page.
+    #) Refer to the :doc:`track <track>` documentation for data visualization and other *Track* operations.
 
 Delete a Pipeline
 =================
