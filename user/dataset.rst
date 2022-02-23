@@ -5,13 +5,27 @@ Dataset
 A dataset is a collection of data organized in files and directories.
 Dataset files could be used in labs for model training and validation.
 
-TODO: Dataset modeling (owner, permission, naming)
+There are system datasets and project-scoped datasets.
+The datasets page lists all projects visible to the user,
+where the system datasets are displayed in the dataset name,
+and the project-scoped datasets are displayed in the beloning project's ID followed by the dataset name.
+
+.. image:: /_static/imgs/user/dataset/view_all_datasets.png
+    :width: 600
+
+The project datasets page lists all project-scoped datasets for the current project.
+A system dataset is not accessible by a project before it is :ref:`added as a project-scoped dataset <create-and-manage-project-scoped-dataset>`.
+
+.. image:: /_static/imgs/user/dataset/view_project_datasets.png
+    :width: 600
 
 A dataset could have multiple versions by creating *snapshots*.
 TODO: restoration
 
-Create and Manage a Dataset
-===========================
+.. _create-and-manage-project-scoped-dataset:
+
+Create and Manage a Project-Scoped Dataset
+==========================================
 
 To create a database:
 
@@ -104,8 +118,8 @@ To download a file from the dataset:
 #) Click on the *DELETE* button in the top toolbar or the *download* button in the preview area.
 #) Click on the *OK* button.
 
-Clone a Dataset
-===============
+Create a Project-Scoped Dataset by Cloning
+==========================================
 
 In situations where modifications to a read-only dataset (such as a built-in dataset) is needed,
 or to leverage a dataset that belongs to another project,
@@ -131,10 +145,10 @@ To clone a dataset:
 #) Click on the *IMPORT* button.
 
     .. image:: /_static/imgs/user/dataset/copy_dataset_1.png
-        :width: 480
+        :width: 300
 
 .. note::
-    The cloned dataset will belong to the current project and accessible by the labs and pipeline in the same project.
+    The cloned dataset will belong to the current project and be accessible by the labs and pipeline in the same project.
 
 Delete a Dataset
 ================
@@ -146,9 +160,11 @@ To delete a dataset:
     .. image:: /_static/imgs/user/dataset/del_dataset_1.png
         :width: 480
 
-    TODO: update
-
 #) Click on the *OK* button.
+
+.. note::
+    Deleting a mounted dataset does not delete the dataset contents;
+    it only removes the linkage to the remote space.
 
 Preview Bounding Box Images in a Dataset
 ========================================
