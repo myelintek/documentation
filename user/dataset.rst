@@ -5,8 +5,10 @@ Dataset
 A dataset is a collection of data organized in files and directories.
 Dataset files could be used in labs for model training and validation.
 
-TODO: could dataset be used in pipelines, templates, or webapps?
-TODO: Dataset modeling (owner, permission)
+TODO: Dataset modeling (owner, permission, naming)
+
+A dataset could have multiple versions by creating *snapshots*.
+TODO: restoration
 
 Create and Manage a Dataset
 ===========================
@@ -14,20 +16,34 @@ Create and Manage a Dataset
 To create a database:
 
 #) Click on the *ADD* button in the dataset page.
-#) Choose the dataset storage location and fill in the fields:
+#) Choose the dataset type and fill in the fields:
 
-    #) Filesystem (stored in the MLSteam system space):
+    #) *Empty Dataset* (create an empty dataset stored in the MLSteam system space):
 
         * Dataset name: dataset name
-        * Storage mode: `default`
 
-        .. image:: /_static/imgs/user/dataset/add_dataset_filesystem.png
+        .. image:: /_static/imgs/user/dataset/add_dataset_empty.png
             :width: 300
 
-    #) NFS (stored in a remote NFS space):
-    #) CIFS (stored in a remote CIFS/SMB space):
+    #) *Mount NFS* (mount an existing dataset stored in a remote NFS space):
 
-#) Click on the *CREATE* button.
+        * Name: dataset name
+        * NFS server path: NFS share path. E.g., ``192.168.0.1:/nfs/dataset-1``
+
+        .. image:: /_static/imgs/user/dataset/add_dataset_nfs.png
+            :width: 300
+
+    #) CIFS (mount an existing dataset stored in a remote CIFS/SMB space):
+
+        * Name: dataset name
+        * CIFS server path: CIFS share path. E.g., ``//192.168.0.1/share/dataset-x``
+        * User: CIFS username
+        * Password: CIFS password
+
+        .. image:: /_static/imgs/user/dataset/add_dataset_cifs.png
+            :width: 300
+
+#) Click on the *CREATE* or the *IMPORT* button.
 
 More operations on a dataset are available in the dataset page.
 
@@ -66,7 +82,7 @@ Another method for file uploading:
 .. note::
     To download many files efficiently:
     
-    #) Compress all files in an archive file (*.zip*).
+    #) Compress all files in an archive file (*.zip*, *.tar*, *.tar.gz*, or *.tgz*).
     #) Upload the archive file.
     #) :ref:`Extract the files <extract_files_from_dataset>` from the archive.
 
@@ -74,7 +90,7 @@ Another method for file uploading:
 
 To extract the files from an archive:
 
-#) Select the archive file for extraction (*.zip*).
+#) Select the archive file for extraction (*.zip*, *.tar*, *.tar.gz*, or *.tgz*).
 #) Click on the *EXTRACT* button.
 #) Click on the *OK* button.
 
@@ -102,6 +118,8 @@ To clone a dataset:
 
 .. note::
     The cloned dataset will belong to the current project. All modifications to a cloned dataset will not affect the original one.
+
+TODO: update
 
 Delete a Dataset
 ================
