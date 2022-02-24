@@ -36,12 +36,12 @@ A lab is created from a pre-defined template.
 Run a Lab
 =========
 
-Program code in a Jupyter Notebook is organized in cells. 
-A Jupyter Notebook file has a name ended with `.ipynb` and could be opened by double clicking on the entry in the file browser on the left.
+Program code in a *Jupyter Notebook* is organized in *cells*. 
+A Jupyter Notebook file has a name ended with ``.ipynb`` and could be opened by double clicking on the entry in the *File Browser* on the left.
 In Jupyter Notebook, code is run in a process called the Kernel.
 
 To run (evaluate) the program code in a single cell,
-click on the menu item: *Run* → *Run Selected Cells* or press the `Shift-Enter` key combination.
+click on the menu item: *Run* → *Run Selected Cells* or press the :kbd:`Shift-Enter` key combination.
 
 .. note::
     Depending on the Kernel execution state, sometimes you may need to run all previous cells before running the current one.
@@ -52,6 +52,24 @@ click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 
 .. image:: /_static/imgs/user/get_started/run_lab_3a.png
     :width: 600
+
+To open a terminal for running commands:
+
+#) Click on the *New Launcher* icon in *File Browser* or click on the menu item: *File* → *New Launcher*.
+
+    .. image:: /_static/imgs/user/lab/btn_new_launcher.png
+
+#) Click on the *Terminal* icon in the *Launcher* tab.
+
+    .. image:: /_static/imgs/user/lab/open_terminal_1.png
+        :width: 600
+
+#) A Linux terminal will open. You could type and run shell commands now.
+
+    .. image:: /_static/imgs/user/lab/open_terminal_2.png
+        :width: 600
+
+Jupyter also supports adding, deleting, and renaming files in its *File Browser* on the left.
 
 .. note::
     Refer to `JupyterLab Documentation <https://jupyterlab.readthedocs.io/en/stable/index.html>`_ for more usage information.
@@ -79,6 +97,12 @@ To attach or detach a dataset:
 #) Click on the *OK* button. The lab will be restarted to apply the new configuration.
 
     .. image:: /_static/imgs/user/lab/set_dataset_attachments_2.png
+        :width: 300
+
+.. note::
+    The dataset path is available by hovering over the dataset or by clicking on the *copy* icon in the end.
+
+    .. image:: /_static/imgs/user/lab/view_dataset_path.png
         :width: 300
 
 Monitor Resource Consumption in a Lab
@@ -115,8 +139,8 @@ Hardware resources displayed:
 
 .. _delete-lab:
 
-Delete a Lab
-============
+Stop or Delete a Lab
+====================
 
 To delete a lab:
 

@@ -59,7 +59,7 @@ To create a database:
 
     .. note::
         Using a mounted dataset is essentially accessing a remote network folder.
-        There is no requirements for the internal folder or file structure of a remote network folder to mount.
+        There are no requirements for the internal folder or file structure of a remote network folder to mount.
         Changes to such a dataset will be written to the remote space.
 
 #) Click on the *CREATE* or the *IMPORT* button.
