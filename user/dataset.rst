@@ -5,7 +5,7 @@ Dataset
 A dataset is a collection of data organized in files and directories.
 Dataset files could be used in labs for model training and validation.
 
-There are system datasets and project-scoped datasets.
+There are *system datasets* and *project-scoped datasets*.
 The datasets page lists all projects visible to the user,
 where the system datasets are displayed in the dataset name,
 and the project-scoped datasets are displayed in the owner project's ID followed by the dataset name.
@@ -58,10 +58,11 @@ To create a database:
             :width: 300
 
     .. note::
-        A remotely accessible NFS/CIFS shared directory could be mounted as a dataset.
+        Using a mounted dataset is essentially accessing a remote network folder.
+        There is no requirements for the internal folder or file structure of a remote network folder to mount.
+        Changes to such a dataset will be written to the remote space.
 
 #) Click on the *CREATE* or the *IMPORT* button.
-    Changes to the dataset will be written to the remote space.
 
 More operations on a dataset are available in the dataset page.
 
@@ -163,11 +164,49 @@ To delete a dataset:
 #) Click on the *OK* button.
 
 .. note::
-    Deleting a mounted dataset does not delete the dataset contents;
-    it only removes the linkage to the remote space.
+    #) Deleting a mounted dataset does not delete the dataset contents;
+       it only removes the linkage to the remote space.
+    #) Deleting a dataset does not affect its cloned dataset(s).
 
 Preview Bounding Box Images in a Dataset
 ========================================
+
+To preview the bounding box images in a labelled dataset:
+
+#) Select the folder that contains the labelled images.
+#) Click on the *VISUALIZE* button.
+#) Select the label format *yolo*.
+
+    .. image:: /_static/imgs/user/dataset/view_labelled_dataset_1.png
+        :width: 600
+
+#) Fill in the fields:
+
+    * class_file: file specifying the label index names
+    * label_path: directory for label files
+    * predict_path: (optional) model prediction results
+
+    .. image:: /_static/imgs/user/dataset/view_labelled_dataset_2.png
+        :width: 300
+
+    .. note::
+        A path could be:
+        
+        * *Relative path*: starting from the current displayed directory
+        * *Absolute path*: prefixed by ``/``, starting from the root directory of the dataset
+
+#) Click on the *SUBMIT* button.
+
+The related files and directories will then be added the *yolo* tags.
+Bounding boxes and the index names are displayed in the preview area.
+
+.. image:: /_static/imgs/user/dataset/view_labelled_dataset_3.png
+    :width: 600
+
+*Yolo* tags could also be removed by clicking on the *cross* button in the end of tag.
+
+.. image:: /_static/imgs/user/dataset/del_dataset_tag.png
+    :width: 300
 
 .. _snapshot-dataset:
 
