@@ -52,6 +52,7 @@ To delete a user:
 
 #) Select the user to delete.
 #) Click on the *DELETE* button.
+#) Click on the *OK* button.
 
 .. warning::
     On deleting a user:
@@ -60,12 +61,65 @@ To delete a user:
     #) All projects owned by that user will be deleted.
 
 Set Plan for Resource Limitation
---------------------------------
+================================
+
+The *Plan* tab lists the resource limitation plans for users.
+
+* Name: plan name
+* GPU limit: GPU number limit
+* CPU limit: CPU core limit
+* Memory limit: memory limit in MB
+* CPU lab limit: TODO:
+* Preserved: whether the resources are allocated for the user in advance
+
+.. image:: /_static/imgs/administration/account/view_plans.png
+    :width: 600
+
+To create a resource limitation plan:
+
+#) Click on the *CREATE* button.
+#) Fill in the plan settings:
+
+    * Plan name: plan name
+    * GPU number: GPU number limit
+    * CPU cores: CPU core limit
+    * CPU only labs: TODO:
+    * Memory: memory limit in MB
+    * Preserved: whether the resources are allocated for the user in advance
+
+    .. note::
+        Set ``-1`` to disable a limitation
+
+#) Click on the *CREATE* button.
+
+    .. image:: /_static/imgs/administration/account/add_plan_1.png
+        :width: 300
+
+To edit a resource limitation plan:
+
+#) Select the plan to edit.
+#) Click on the *EDIT* button.
+#) Change the plan settings.
+#) Click on the *UPDATE* button.
+
+.. warning::
+    The updated resource limitation will take effect on creating new labs.
+
+To delete a resource limitation plan:
+
+#) Select the plan to delete.
+#) Click on the *DELETE* button.
+#) Click on the *OK* button.
+
+.. warning::
+    TODO: delete
 
 Integrate LDAP/AD
 =================
 
-To enable remote user authentication schemes, set up an LDAP or AD server here.
+The *SSO* tab manages integration of remote authentication.
+
+To enable remote user authentication, set up an LDAP or AD server here.
 
 .. image:: /_static/imgs/administration/account/init_ldap_ad.png
     :width: 600
@@ -85,4 +139,13 @@ TODO: AD
 
 .. note::
     #) You could set up either *LDAP* or *AD* (but not both) for remote authentication.
-    #) A remote authenticated user is listed in the *User* tab only after it had logged in MLSteam.
+    #) A remotely authenticated user is initially given the *Developer* role and the *Standard* resource plan.
+    #) A remotely authenticated user is listed in the *User* tab only after it had logged in MLSteam.
+
+To delete remote authentication:
+
+#) Click on the *DELETE* button.
+#) Click on the *OK* button.
+
+.. warning::
+    TODO: delete remote authentication
