@@ -57,8 +57,8 @@ To delete a user:
 .. warning::
     On deleting a user:
     
-    #) That user's access to all projects will be removed.
-    #) All projects owned by that user will be deleted.
+    #) Its access to the MLSteam system and to the projects will be removed.
+    #) All artifacts (such as projects, labs, and pipelines) owned by that user will be deleted.
 
 Set Plan for Resource Limitation
 ================================
@@ -69,8 +69,11 @@ The *Plan* tab lists the resource limitation plans for users.
 * GPU limit: GPU number limit
 * CPU limit: CPU core limit
 * Memory limit: memory limit in MB
-* CPU lab limit: TODO:
+* CPU lab limit: CPU-only lab number limit
 * Preserved: whether the resources are allocated for the user in advance
+
+.. note::
+    A *CPU-only lab* is a lab runs without GPUs.
 
 .. image:: /_static/imgs/administration/account/view_plans.png
     :width: 600
@@ -83,7 +86,7 @@ To create a resource limitation plan:
     * Plan name: plan name
     * GPU number: GPU number limit
     * CPU cores: CPU core limit
-    * CPU only labs: TODO:
+    * CPU only labs: CPU-only lab number limit
     * Memory: memory limit in MB
     * Preserved: whether the resources are allocated for the user in advance
 
@@ -102,7 +105,7 @@ To edit a resource limitation plan:
 #) Change the plan settings.
 #) Click on the *UPDATE* button.
 
-.. warning::
+.. note::
     The updated resource limitation will take effect on creating new labs.
 
 To delete a resource limitation plan:
@@ -111,8 +114,8 @@ To delete a resource limitation plan:
 #) Click on the *DELETE* button.
 #) Click on the *OK* button.
 
-.. warning::
-    TODO: delete
+.. note::
+    A resource limitation plan could be deleted only when no user uses that plan.
 
 Integrate LDAP/AD
 =================
@@ -148,4 +151,7 @@ To delete remote authentication:
 #) Click on the *OK* button.
 
 .. warning::
-    TODO: delete remote authentication
+    On deleting a remotely authenticated user:
+
+    #) Its access to the MLSteam system and to the projects will be removed.
+    #) All the artifacts (such as projects, labs, and pipelines) owned by that users will be deleted.
