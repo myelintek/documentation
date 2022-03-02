@@ -53,6 +53,8 @@ click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 .. image:: /_static/imgs/user/get_started/run_lab_3a.png
     :width: 600
 
+.. _open-web-terminal:
+
 To open a terminal for running commands:
 
 #) Click on the *New Launcher* icon in *File Browser* or click on the menu item: *File* → *New Launcher*.
@@ -154,10 +156,120 @@ To delete a lab:
     .. image:: /_static/imgs/user/lab/stop_lab_2.png
         :width: 480
 
+.. _ssh-into-lab:
+
 SSH into a Lab
 ==============
 
-TODO: VSCode
+MLSteam also support accessing a lab with SSH,
+which is handy for users to use their favorite editors or tools to accelerate ML design and experiments.
+This section will show instructions for VSCode.
+
+.. note::
+    This feature is only available in labs running in SSH-enabled containers.
+    E.g., labs created from the *Pytorch Cifar10* are SSH-enabled by default.
+
+    You may also install an SSH server to enable SSH in a Ubuntu-based container
+    by running the commands in a terminal:
+
+    .. code-block:: shell
+
+        apt-get update
+        apt-get install openssh-server
+
+VSCode
+------
+
+Preparation:
+
+#) Install `VSCode <https://code.visualstudio.com/Download>`_ on the local computer.
+#) Open VSCode, search and install the `Remote SSH <https://code.visualstudio.com/docs/remote/ssh>` extension.
+
+    .. image:: /_static/imgs/user/lab/install_vscode_remote_ssh.png
+        :width: 480
+
+To enable SSH access to a lab:
+
+#) Open the lab to access.
+#) Click on the settings button in the dataset side bar.
+
+    .. image:: /_static/imgs/common/btn_settings.png
+
+#) Create a SSH access key by clicking on the *add* button in the *SSH Key* section.
+
+    .. image:: /_static/imgs/common/btn_add.png
+
+#) Input the key expiration days.
+#) Click on the *ADD* button.
+
+    .. image:: /_static/imgs/user/lab/add_ssh_key_1.png
+        :width: 300
+
+#) Download the SSH access key by expanding the *SSH Key* section and clicking on the *download* button.
+
+    .. image:: /_static/imgs/common/btn_download.png
+
+#) Save the SSH access key to the local computer.
+
+    .. image:: /_static/imgs/user/lab/add_ssh_key_2.png
+        :width: 480
+
+#) View the SSH configuration by clicking on the *view* icon.
+
+    .. image:: /_static/imgs/user/lab/add_ssh_key_3.png
+        :width: 300
+
+#) Copy the SSH configuration text displayed.
+
+    .. image:: /_static/imgs/user/lab/add_ssh_key_4.png
+        :width: 300
+
+#) Open the SSH configuration file on the local computer.
+   Append the configuration text in the previous step. Save the file.
+
+    .. image:: /_static/imgs/user/lab/add_ssh_key_5.png
+        :width: 480
+
+    .. note::
+        #) The SSH configuration file on a Windows computer is at ``C:\Users\{USER-NAME}\.ssh\config``.
+
+           On a MacOS or Linux computer, it is at ``~/.ssh/ssh_config``.
+        #) The SSH configuration text displayed by MLSteam assumes
+           the access key is saved in the ``Downloads`` directory.
+           If the access key file is renamed or saved in another directory,
+           replace the settings of ``IdentityFile`` by the actual file location.
+
+Now, we are ready to access the lab with VSCode.
+
+#) In VSCode, open the *Remote Explorer* panel on the left.
+   The SSH host we just configured will be displayed in the *SSH TARGETS* section.
+
+    .. image:: /_static/imgs/user/lab/open_ssh_vscode_1.png
+        :width: 300
+    
+    .. note::
+        If the SSH host has not been displayed, refresh the list by clicking on the *refresh* button.
+
+#) Connect to the SSH host by clicking on the *connection* button. This will open a new VSCode window.
+
+    .. image:: /_static/imgs/user/lab/open_ssh_vscode_2.png
+        :width: 480
+
+#) Answer the questions from VSCode on opening the remote host:
+
+    #) Select platform of the remote host: ``Linux``
+    #) Are you sure you want to continue? ``Continue``
+
+    .. image:: /_static/imgs/user/lab/open_ssh_vscode_3.png
+        :width: 600
+
+#) Wait while VSCode is initializing the remote host.
+#) Finally, open the terminal by clicking on the menu item:
+   *Terminal* → *New Terminal*
+#) Now, you could run commands in the lab through the terminal.
+
+    .. image:: /_static/imgs/user/lab/open_ssh_vscode_4.png
+        :width: 600
 
 Hyperparameter Tuning
 =====================
@@ -169,5 +281,15 @@ Save a Lab as a Template
 
 Troubleshooting & FAQs
 ======================
+
+Q: Could I run Linux commands in a Lab?
+---------------------------------------
+
+Yes, two methods are available:
+
+#) :ref:`Open a Web terminal <open-web-terminal>` and run commands in MLSteam.
+#) :ref:`Set up SSH access <ssh-into-lab>` to the lab
+   and run commands with your favorite tools on the local computer,
+   such as an SSH client or *VSCode*.
 
 TODO: Run with web terminal, change flavor, proxy, configuration
