@@ -183,7 +183,7 @@ VSCode
 Preparation:
 
 #) Install `VSCode <https://code.visualstudio.com/Download>`_ on the local computer.
-#) Open VSCode, search and install the `Remote SSH <https://code.visualstudio.com/docs/remote/ssh>` extension.
+#) Open VSCode, search and install the `Remote SSH <https://code.visualstudio.com/docs/remote/ssh>`_ extension.
 
     .. image:: /_static/imgs/user/lab/install_vscode_remote_ssh.png
         :width: 480
@@ -291,5 +291,66 @@ Yes, two methods are available:
 #) :ref:`Set up SSH access <ssh-into-lab>` to the lab
    and run commands with your favorite tools on the local computer,
    such as an SSH client or *VSCode*.
+
+Q: Could I view the ML program and run the experiments on the local computer?
+-----------------------------------------------------------------------------
+
+MLSteam includes a powerful Jupyter-based interface for
+viewing, editing, and running the ML programs.
+
+However, if you preferr using a handy tool on the local computer.
+You could do so by :ref:`setting up SSH access <ssh-into-lab>` to the lab.
+The lab files are under the ``/mlsteam`` directory.
+
+The instructions below are for *VSCode*.
+
+To view and edit files in the lab:
+
+#) Open the *Explorer* panel on the left.
+#) Click on the *Open Folder* button.
+
+    .. image:: /_static/imgs/user/lab/view_remote_files_vscode_1.png
+        :width: 600
+
+#) Go to the ``/mlsteam`` directory and click on the *OK* button.
+
+    .. image:: /_static/imgs/user/lab/view_remote_files_vscode_2.png
+        :width: 480
+
+#) Click on the *Trust Folder & Continue* button.
+
+    .. image:: /_static/imgs/user/lab/view_remote_files_vscode_3.png
+        :width: 300
+
+#) Then, you could view and edit the files in usual way.
+
+    .. image:: /_static/imgs/user/lab/view_remote_files_vscode_4.png
+        :width: 600
+
+    .. note::
+        #) *VSCode* access the files *remotely*. The files are still saved in the MLSteam system.
+        #) You may install *Python extionsion for Visual Studio Code* to use the advanced features for Python files.
+
+To view, edit, and run a *Jupyter Notebook program*:
+
+#) Open the *Jupyter Notebook* program file in the *Explorer* panel on the left.
+
+    .. image:: /_static/imgs/user/lab/view_remote_notebooks_vscode_1.png
+        :width: 600
+    
+#) It is possible to run the program by clicking on the *run* button.
+
+    .. note::
+        #) Python 3.7 or higher is needed for this feature.
+           You may install a supported Python version in a lab by running the commands in a terminal:
+
+           .. code-block:: shell
+
+               apt-get update
+               apt-get install software-properties-common
+               add-apt-repository ppa:deadsnakes/ppa
+               apt-get install python3.8
+        
+        #) You may need to install exensions or change the Python version used when it is prompted by *VSCode*.
 
 TODO: Run with web terminal, change flavor, proxy, configuration
