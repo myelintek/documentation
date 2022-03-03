@@ -298,7 +298,7 @@ Q: Could I view the ML program and run the experiments on the local computer?
 MLSteam includes a powerful Jupyter-based interface for
 viewing, editing, and running the ML programs.
 
-However, if you preferr using a handy tool on the local computer.
+However, if you prefer using a handy tool on the local computer.
 You could do so by :ref:`setting up SSH access <ssh-into-lab>` to the lab.
 The lab files are under the ``/mlsteam`` directory.
 
@@ -329,7 +329,7 @@ To view and edit files in the lab:
 
     .. note::
         #) *VSCode* access the files *remotely*. The files are still saved in the MLSteam system.
-        #) You may install *Python extionsion for Visual Studio Code* to use the advanced features for Python files.
+        #) You may install *Python extension for Visual Studio Code* to use the advanced features for Python files.
 
 To view, edit, and run a *Jupyter Notebook program*:
 
@@ -341,6 +341,9 @@ To view, edit, and run a *Jupyter Notebook program*:
 #) It is possible to run the program by clicking on the *run* button.
 
     .. note::
+        #) This *VSCode* feature is currently unstable.
+           It is suggested turning back to the MLSteam's Jupyter interface
+           if you have some problems running the experiments remotely through *VSCode*.
         #) Python 3.7 or higher is needed for this feature.
            You may install a supported Python version in a lab by running the commands in a terminal:
 
@@ -351,6 +354,6 @@ To view, edit, and run a *Jupyter Notebook program*:
                add-apt-repository ppa:deadsnakes/ppa
                apt-get install python3.8
         
-        #) You may need to install exensions or change the Python version used when it is prompted by *VSCode*.
+        #) You may need to install extensions or change the Python version used when it is prompted by *VSCode*.
 
 TODO: Run with web terminal, change flavor, proxy, configuration
