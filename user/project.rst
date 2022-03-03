@@ -37,16 +37,11 @@ To set the members in a project:
     .. image:: /_static/imgs/user/project/set_project_member_2.png
         :width: 480
 
-#) Fill in the fields:
-
-    * User: user to add
-    * Permission: could be `Writer` or `Reader`
-      TODO: writer / reader?
-
+#) Select the user to add.
 #) Click on the `CREATE` button.
 
     .. image:: /_static/imgs/user/project/set_project_member_3.png
-        :width: 600
+        :width: 300
 
 Delete a Project
 ================
