@@ -36,9 +36,15 @@ A lab is created from a pre-defined template.
 Run a Lab
 =========
 
-Program code in a *Jupyter Notebook* is organized in *cells*. 
-A Jupyter Notebook file has a name ended with ``.ipynb`` and could be opened by double clicking on the entry in the *File Browser* on the left.
-In Jupyter Notebook, code is run in a process called the Kernel.
+After a lab is created, the lab development environment, *JupyterLab*,
+could be accessed by clicking on the *Jupyter* button.
+
+.. image:: /_static/imgs/user/lab/goto_jupyter.png
+    :width: 480
+
+Program code in a *JupyterLab Notebook* is organized in *cells*. 
+A JupyterLab Notebook file has a name ended with ``.ipynb`` and could be opened by double clicking on the entry in the *File Browser* on the left.
+In JupyterLab Notebook, code is run in a process called the Kernel.
 
 To run (evaluate) the program code in a single cell,
 click on the menu item: *Run* → *Run Selected Cells* or press the :kbd:`Shift-Enter` key combination.
@@ -331,9 +337,9 @@ To view and edit files in the lab:
         #) *VSCode* access the files *remotely*. The files are still saved in the MLSteam system.
         #) You may install *Python extension for Visual Studio Code* to use the advanced features for Python files.
 
-To view, edit, and run a *Jupyter Notebook program*:
+To view, edit, and run a *JupyterLab Notebook program*:
 
-#) Open the *Jupyter Notebook* program file in the *Explorer* panel on the left.
+#) Open the *JupyterLab Notebook* program file in the *Explorer* panel on the left.
 
     .. image:: /_static/imgs/user/lab/view_remote_notebooks_vscode_1.png
         :width: 600
@@ -364,7 +370,7 @@ It is achieved through chainging the flavor of a lab.
 #) Ensure the flavor for the target GPU type exists.
 
    .. note:: 
-      A flavor could be :ref:`created <magagement-flavor>` in the management page.
+      A flavor could be :ref:`created <management-flavor>` in the management page.
 
 #) Open the *JupyterLab* for the lab.
 #) Open the settings side bar by clicking on the *settings* button on the top.
