@@ -9,13 +9,12 @@ To add a host:
 
 #) Click on the *ADD* button.
 
-   .. image:: /_static/imgs/administration/infrastructure/add_host_1.png
-       :width: 600
+   .. image:: /_static/imgs/common/btn_add_2.png
 
 #) Follow the instructions displayed:
 
    .. image:: /_static/imgs/administration/infrastructure/add_host_2.png
-       :width: 600
+       :width: 300
     
    #) Download the host agent installer.
    #) Copy the host agent installer to the host to add.
@@ -36,11 +35,10 @@ To add a host:
    .. note:: Refer to the end of the installer outputs for the actual `journalctl` command to run.
 
 #) The host added will be in the list. Reload the page if the list has not been updated.
+#) Click on the *AUTHORIZE* button. The status of host will be *Online*.
    
    .. image:: /_static/imgs/administration/infrastructure/add_host_3.png
-       :width: 600
-
-#) TODO: authorize
+       :width: 480
 
 Delete a Host
 -------------
@@ -49,10 +47,10 @@ To delete a host:
 
 #) Select the host.
 #) Click on the *DELETE* button.
-#) Confirm the deletion.
 
-.. image:: /_static/imgs/administration/infrastructure/del_host.png
-    :width: 600
+   .. image:: /_static/imgs/common/btn_delete.png
+
+#) Confirm the deletion.
 
 Monitor a Host
 --------------
