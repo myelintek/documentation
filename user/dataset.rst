@@ -99,7 +99,7 @@ Another method for file uploading:
 #) Click on the *UPLOAD* button.
 
 .. note::
-    To download many files efficiently:
+    To upload many files efficiently:
     
     #) Compress all files in an archive file (*.zip*, *.tar*, *.tar.gz*, or *.tgz*).
     #) Upload the archive file.
@@ -116,7 +116,7 @@ To extract the files from an archive:
 To download a file from the dataset:
 
 #) Select the file to download.
-#) Click on the *DELETE* button in the top toolbar or the *download* button in the preview area.
+#) Click on the *DOWNLOAD* button in the top toolbar or the *download* button in the preview area.
 #) Click on the *OK* button.
 
 Create a Project-Scoped Dataset by Cloning
