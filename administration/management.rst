@@ -29,6 +29,8 @@ Task management operations:
 .. note::
     A task could only be deleted when it is *stopped* (in the *Done* status)
 
+.. _management-flavor:
+
 Flavor
 ======
 

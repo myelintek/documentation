@@ -86,7 +86,7 @@ To list and manage the dataset attachments, click on the top area. A side bar wi
 
 To attach or detach a dataset:
 
-#) Click on the settings button in the dataset side bar.
+#) Click on the *settings* button in the dataset side bar.
 
     .. image:: /_static/imgs/common/btn_settings.png
 
@@ -356,4 +356,36 @@ To view, edit, and run a *Jupyter Notebook program*:
         
         #) You may need to install extensions or change the Python version used when it is prompted by *VSCode*.
 
-TODO: Run with web terminal, change flavor, proxy, configuration
+Q: How to change the type of GPU used in a lab?
+-----------------------------------------------
+
+It is achieved through chainging the flavor of a lab.
+
+#) Ensure the flavor for the target GPU type exists.
+
+   .. note:: 
+      A flavor could be :ref:`created <magagement-flavor>` in the management page.
+
+#) Open the *JupyterLab* for the lab.
+#) Open the settings side bar by clicking on the *settings* button on the top.
+
+    .. image:: /_static/imgs/common/btn_settings_3.png
+
+#) Click on the *settings* button.
+#) Expand the *Specification* section in the side bar and click on the *settings* button.
+
+    .. image:: /_static/imgs/user/lab/set_flavor_1.png
+        :width: 300
+
+#) Select the flavor with the target GPU.
+#) Click on the *UPDATE* button.
+
+    .. image:: /_static/imgs/user/lab/set_flavor_2.png
+        :width: 300
+
+#) Click on the *OK* button. The lab wil run on the selected GPU type after a restart.
+
+    .. image:: /_static/imgs/user/lab/set_flavor_3.png
+        :width: 300
+
+TODO: proxy, configuration
