@@ -73,7 +73,7 @@ The *Plan* tab lists the resource limitation plans for users.
 * Preserved: whether the resources are allocated for the user in advance
 
 .. note::
-    A *CPU-only lab* is a lab runs without GPUs.
+    A *CPU-only lab* is a lab that runs without GPUs.
 
 .. image:: /_static/imgs/administration/account/view_plans.png
     :width: 600

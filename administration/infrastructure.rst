@@ -3,7 +3,7 @@ Infrastructure
 ##############################
 
 Add a Host
-----------
+==========
 
 To add a host:
 
@@ -41,7 +41,7 @@ To add a host:
        :width: 480
 
 Delete a Host
--------------
+=============
 
 To delete a host:
 
@@ -53,12 +53,23 @@ To delete a host:
 #) Confirm the deletion.
 
 Monitor a Host
---------------
+==============
+
+The host area displays the following real-time monitoring data:
+
+* Status: host running status
+* Compute: CPU utilization
+* Memory: memory utilization
+* GPU: GPU utilization
+* Running tasks: number of running tasks
+
+.. image:: /_static/imgs/administration/infrastructure/add_host_3.png
+      :width: 480
 
 Setup Multiple Hosts
---------------------
+====================
 
 High Availability
------------------
+=================
 
 failover case - shutdown a controller
