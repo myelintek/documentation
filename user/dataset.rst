@@ -7,8 +7,8 @@ Dataset files could be used in labs for model training and validation.
 
 There are *system datasets* and *project-scoped datasets*.
 The datasets page lists all projects visible to the user,
-where the system datasets are displayed in the dataset name,
-and the project-scoped datasets are displayed in the owner project's ID followed by the dataset name.
+where the system datasets are displayed as the dataset name,
+and the project-scoped datasets are displayed as the owner project's ID followed by the dataset name.
 
 .. image:: /_static/imgs/user/dataset/view_all_datasets.png
     :width: 600
@@ -19,8 +19,8 @@ A system dataset is not accessible by a project before it is :ref:`added as a pr
 .. image:: /_static/imgs/user/dataset/view_project_datasets.png
     :width: 600
 
-A dataset could have multiple versions by creating *snapshots*.
-TODO: restoration
+A dataset could have multiple versions by creating :ref:`snapshots <snapshot-dataset>`
+and could also revert to a previous saved version.
 
 .. _create-and-manage-project-scoped-dataset:
 
@@ -119,6 +119,12 @@ To download a file from the dataset:
 #) Click on the *DOWNLOAD* button in the top toolbar or the *download* button in the preview area.
 #) Click on the *OK* button.
 
+To delete one or multiple files from the dataset:
+
+#) Select the file(s) to delete.
+#) Click on the *DELETE* button.
+#) Click on the *OK* button.
+
 Create a Project-Scoped Dataset by Cloning
 ==========================================
 
@@ -212,3 +218,23 @@ Bounding boxes and the index names are displayed in the preview area.
 
 Snapshot a Dataset
 ==================
+
+To save the current dataset version (snapshot):
+
+#) In the dataset page, click on the *VERSIONING* button.
+
+    .. image:: /_static/imgs/common/btn_versioning.png
+
+#) Fill in the versio name.
+#) Click on the *add* button.
+
+    .. image:: /_static/imgs/user/dataset/add_dataset_version_1.png
+        :width: 480
+
+To restore the dataset to a saved version:
+
+#) In the dataset page, click on the *VERSIONING* button.
+#) Click on the *Restore* button for the version.
+
+    .. image:: /_static/imgs/user/dataset/restore_dataset_version_1.png
+        :width: 480
