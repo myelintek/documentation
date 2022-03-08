@@ -13,7 +13,7 @@ in a user-provided image.
 Create a WebApp
 ===============
 
-To reate a WebApp:
+To create a WebApp:
 
 #) In the WebApp page, click on the *NEW* button.
 #) Select the WebApp template.
@@ -23,7 +23,7 @@ To reate a WebApp:
         
         The settings vary with the selected template.
 
-        For example, the *YOLOv5 Inference* template has seetings for
+        For example, the *YOLOv5 Inference* template has settings for
         the WebApp name, flavor, bind port, and WebApp protocol.
 
         .. image:: /_static/imgs/user/webapp/add_webapp_1.png

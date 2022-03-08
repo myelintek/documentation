@@ -225,7 +225,7 @@ To save the current dataset version (snapshot):
 
     .. image:: /_static/imgs/common/btn_versioning.png
 
-#) Fill in the versio name.
+#) Fill in the version name.
 #) Click on the *add* button.
 
     .. image:: /_static/imgs/user/dataset/add_dataset_version_1.png
