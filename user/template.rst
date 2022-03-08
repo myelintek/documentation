@@ -18,8 +18,8 @@ create a :doc:`lab <lab>` or :doc:`pipeline action <pipeline>` for common ML tas
 
 A template may have tags denoting its attributes.
 
-* *type:lab*: a lab template
-* *type:action*: a pipeline action template
+* ``type:lab``: a lab template
+* ``type:action``: a pipeline action template
 
 
 Create a Template
