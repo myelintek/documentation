@@ -24,16 +24,18 @@ Pipeline
     and finally deploys the ML application to an experimental or production site.
 
 Track
-    TODO: track
+    A :doc:`WebApp <webapp>` enables deployment of a Web-based ML applications in a simple way.
 
 Model
     TODO: model
 
 WebApp
-    TODO: WebApp
+    A :doc:`WebApp <webapp>` enables deployment of a Web-based ML applications in a simple way.
 
 Template
-    A template is an example of a lab with a specific type of DNN model with an already preloaded dataset connected to it. Serves as an example or template for users.
+    A :doc:`template <template>` is a creator of a
+    :doc:`lab <lab>`, :doc:`pipeline action <pipeline>`, or :doc:`WebApp <webapp>`
+    with predefined programs, datasets, models, or other settings.
 
 Flavor
     A flovor is the hardware settings for a Lab or a Job, describes how much resources (CPUs, GPUs) are allocated.
