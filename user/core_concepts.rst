@@ -24,7 +24,9 @@ Pipeline
     and finally deploys the ML application to an experimental or production site.
 
 Track
-    A :doc:`WebApp <webapp>` enables deployment of a Web-based ML applications in a simple way.
+    A :doc:`track <track>` keeps various results of ML training or experiments,
+    including the parameters, metrics, console logs, and any logged files or data.
+    It also enable visualization of the results with *TensorBoard*.
 
 Model
     TODO: model
