@@ -26,7 +26,7 @@ Pipeline
 Track
     A :doc:`track <track>` keeps various results of ML training or experiments,
     including the parameters, metrics, console logs, and any logged files or data.
-    It also enable visualization of the results with *TensorBoard*.
+    It also enables visualization of the results with *TensorBoard*.
 
 Model
     TODO: model

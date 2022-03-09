@@ -4,7 +4,7 @@ Track
 
 A track keeps various results of ML training or experiments,
 including the parameters, metrics, console logs, and any logged files or data.
-It also enable visualization of the results with *TensorBoard*.
+It also enables visualization of the results with *TensorBoard*.
 
 Create a Track
 ==============
@@ -51,7 +51,7 @@ TODO: view logged data
 Visualize Data with TensorBoard
 ===============================
 
-To view multi-dimensional data displayed in Tensorboard:
+To view multi-dimensional data displayed in TensorBoard:
 
 #) Click the *SWITCH TO TENSORBOARD* button in the top-left corner.
 
