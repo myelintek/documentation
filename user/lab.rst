@@ -280,7 +280,49 @@ Now, we are ready to access the lab with VSCode.
 Hyperparameter Tuning
 =====================
 
-TODO: Submit a training job, Multiple
+To run ML experiments with a set a hyperparameters:
+
+#) In the lab page, click on the *hyperparameter* icon in the top area.
+#) Fill in the parameters to use in the sidebar.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_1.png
+        :width: 600
+
+    .. note:: 
+        You could provide multiple parameter values deliminated by commas.
+
+#) Click on the *Submit* menuitem to submit the experiments as *jobs*.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_2.png
+        :width: 600
+
+#) Click on the *SUBMIT* button.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_3.png
+        :width: 480
+
+#) A new browser will open, which shows the submitted *jobs* as :doc:`tracks <track>`.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_4.png
+        :width: 600
+
+    .. note:: 
+        Each combinitation of the parameter values is used to the ML experiment with a track.
+
+        In the above example,
+        ``batch_size`` is given 2 values (*16* and *32*),
+        ``epochs`` given 3 values (*3*, *5*, and *10*),
+        and ``optimizer`` given 1 value (*SGD*),
+        so there are *6* (= 2 * 3 * 1) tracks in total.
+
+#) The parameter values used and other logged data could be observed by clicking into a track.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_5.png
+        :width: 480
+
+    .. note:: 
+        Refer to the :doc:`track <track>` documentation for the concepts of track.
+
 
 Save a Lab as a Template
 ========================
