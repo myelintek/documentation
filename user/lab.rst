@@ -326,9 +326,6 @@ To run ML experiments with a set a hyperparameters:
         Refer to the :doc:`track <track>` documentation for the concepts of track.
 
 
-Save a Lab as a Template
-========================
-
 Troubleshooting & FAQs
 ======================
 
@@ -438,4 +435,33 @@ It is achieved through chainging the flavor of a lab.
     .. image:: /_static/imgs/user/lab/set_flavor_3.png
         :width: 300
 
-TODO: proxy, configuration
+Q: How to access other Web services running in a lab?
+-----------------------------------------------------
+
+To access the services in a lab, export the corresponding port(s) with *proxy*:
+
+#) Click on the *settings* button.
+#) Expand the *Proxy* section in the side bar and click on the *add* button.
+
+    .. image:: /_static/imgs/user/lab/add_proxy_1.png
+        :width: 600
+
+#) Fill in the port the service is running on.
+#) Click on the *ADD* button.
+
+    .. image:: /_static/imgs/user/lab/add_proxy_2.png
+        :width: 300
+
+    .. note:: 
+        Repeat the port adding steps for each port needed in accessing the service.
+
+#) The mapping between service ports and exposed ports are displayed.
+   You could now access the service with URL ``{MLSteam address}:{Exposed port}``.
+
+    .. image:: /_static/imgs/user/lab/add_proxy_3.png
+        :width: 300
+
+    .. image:: /_static/imgs/user/lab/add_proxy_4.png
+        :width: 480
+
+TODO: configuration
