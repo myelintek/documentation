@@ -277,6 +277,8 @@ Now, we are ready to access the lab with VSCode.
     .. image:: /_static/imgs/user/lab/open_ssh_vscode_4.png
         :width: 600
 
+.. _lab-hyperparameter-tuning:
+
 Hyperparameter Tuning
 =====================
 
@@ -301,7 +303,7 @@ To run ML experiments with a set a hyperparameters:
     .. image:: /_static/imgs/user/lab/tune_parms_3.png
         :width: 480
 
-#) A new browser will open, which shows the submitted *jobs* as :doc:`tracks <track>`.
+#) A new browser window will open, which shows the submitted *jobs* as :doc:`tracks <track>`.
 
     .. image:: /_static/imgs/user/lab/tune_parms_4.png
         :width: 600

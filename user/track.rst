@@ -13,7 +13,21 @@ A track could be created from a lab job or from a pipeline run.
 
 To create a track from a lab:
 
-TODO: create track from lab
+#) In the lab page, click on the *Submit* menu item.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_2.png
+        :width: 600
+
+#) Click on the *SUBMIT* button.
+
+    .. image:: /_static/imgs/user/lab/tune_parms_3.png
+        :width: 480
+
+#) A new browser window will open, which shows the submitted *jobs* as tracks.
+
+    .. note:: 
+        One or more tracks will be created
+        depending on the :ref:`hyperparameter settings <lab-hyperparameter-tuning>`.
 
 To create a track from a pipeline run:
 
@@ -34,7 +48,7 @@ View Logged Data
 
 TODO: view logged data
 
-Visualize Data with Tensorboard
+Visualize Data with TensorBoard
 ===============================
 
 To view multi-dimensional data displayed in Tensorboard:
