@@ -289,9 +289,9 @@ To run ML experiments with a set a hyperparameters:
         :width: 600
 
     .. note:: 
-        You could provide multiple parameter values deliminated by commas.
+        You could provide multiple parameter values delimited by commas.
 
-#) Click on the *Submit* menuitem to submit the experiments as *jobs*.
+#) Click on the *Submit* menu item to submit the experiments as *jobs*.
 
     .. image:: /_static/imgs/user/lab/tune_parms_2.png
         :width: 600
@@ -307,7 +307,7 @@ To run ML experiments with a set a hyperparameters:
         :width: 600
 
     .. note:: 
-        Each combinitation of the parameter values is used to the ML experiment with a track.
+        Each combination of the parameter values is used to the ML experiment with a track.
 
         In the above example,
         ``batch_size`` is given 2 values (*16* and *32*),
