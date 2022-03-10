@@ -131,7 +131,6 @@ The image tab lists the Docker images in the system.
 * Project: project in the image registry
 * Layer: image layer numbers
 * Size: image size
-* Local: *true* if the image has been download in the system
 * Create time: image creation time
 
 .. image:: /_static/imgs/administration/management/view_images.png
