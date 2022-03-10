@@ -329,7 +329,12 @@ To run ML experiments with a set a hyperparameters:
 Troubleshooting & FAQs
 ======================
 
-Q: Could I run Linux commands in a Lab?
+.. contents:: Contents
+    :depth: 1
+    :local:
+    :backlinks: none
+
+Q: How to run Linux commands in a Lab?
 ---------------------------------------
 
 Yes, two methods are available:
@@ -339,7 +344,7 @@ Yes, two methods are available:
    and run commands with your favorite tools on the local computer,
    such as an SSH client or *VSCode*.
 
-Q: Could I view the ML program and run the experiments on the local computer?
+Q: How to view the ML program and run the experiments on the local computer?
 -----------------------------------------------------------------------------
 
 MLSteam includes a powerful Jupyter-based interface for
@@ -406,7 +411,7 @@ To view, edit, and run a *JupyterLab Notebook program*:
 Q: How to change the type of GPU used in a lab?
 -----------------------------------------------
 
-It is achieved through chainging the flavor of a lab.
+It is achieved through changing the flavor of a lab.
 
 #) Ensure the flavor for the target GPU type exists.
 
@@ -430,7 +435,7 @@ It is achieved through chainging the flavor of a lab.
     .. image:: /_static/imgs/user/lab/set_flavor_2.png
         :width: 300
 
-#) Click on the *OK* button. The lab wil run on the selected GPU type after a restart.
+#) Click on the *OK* button. The lab will run on the selected GPU type after a restart.
 
     .. image:: /_static/imgs/user/lab/set_flavor_3.png
         :width: 300
@@ -467,7 +472,7 @@ To access the services in a lab, export the corresponding port(s) with *proxy*:
 Q: How to avoid other programs from sharing the GPU card(s) used in my lab?
 ---------------------------------------------------------------------------
 
-By default, a GPU card may be shard among running of programs,
+By default, a GPU card may be shared among running of programs,
 which is possible in situations where multiple running programs are using GPUs in the lab,
 or where other programs on the host machine (not managed by MLSteam) are using the same GPUs.
 Sharing a GPU card would enhance the GPU utilization
@@ -497,7 +502,7 @@ Q: How to increase the shared memory size in the lab?
 -----------------------------------------------------
 
 Some programs require more shared memory,
-especially those that communite heavily between processes with shared memory buffer,
+especially those that communicate heavily between processes with shared memory buffer,
 or those that use many GPU cores and consume lots of data.
 
 To increase (or decrease) the shared memory size in a lab:
