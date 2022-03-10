@@ -464,4 +464,51 @@ To access the services in a lab, export the corresponding port(s) with *proxy*:
     .. image:: /_static/imgs/user/lab/add_proxy_4.png
         :width: 480
 
-TODO: configuration
+Q: How to avoid other programs from sharing the GPU card(s) used in my lab?
+---------------------------------------------------------------------------
+
+By default, a GPU card may be shard among running of programs,
+which is possible in situations where multiple running programs are using GPUs in the lab,
+or where other programs on the host machine (not managed by MLSteam) are using the same GPUs.
+Sharing a GPU card would enhance the GPU utilization
+but may also affect the amount of GPU resources (such as GPU computation cores or GPU memory)
+available for a single running program.
+
+It is possible to restrict how a GPU device is used by setting the *accelerator compute mode*.
+
+#) Click on the *settings* button.
+#) Expand the *Configuration* section in the side bar and open the *Accelerator Mode* menu.
+
+    .. image:: /_static/imgs/user/lab/set_accelerator_mode_1.png
+        :width: 300
+
+#) Select the *accelerator compute mode*. Available modes:
+
+        * *default*: multiple processes can use the GPU device at the same time
+        * *exclusive_process*: only one process can use the GPU device at the same time
+        * *prohibited*: no processes can use the GPU device
+
+        .. note:: 
+            A *process* could be roughly thought of as a running program.
+            Each running program has a process;
+            sometimes a running program may have multiple processes, though.
+
+Q: How to increase the shared memory size in the lab?
+-----------------------------------------------------
+
+Some programs require more shared memory,
+especially those that communite heavily between processes with shared memory buffer,
+or those that use many GPU cores and consume lots of data.
+
+To increase (or decrease) the shared memory size in a lab:
+
+#) Click on the *settings* button.
+#) Expand the *Configuration* section in the side bar and fill in the *Shared Memory* field.
+
+    .. image:: /_static/imgs/user/lab/set_shared_memory_1.png
+        :width: 300
+
+    .. note:: 
+        The shared memory size is in ``GB`` and should be a positive integer.
+
+#) The lab will be restarted with the new setting.
