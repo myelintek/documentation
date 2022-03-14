@@ -66,6 +66,13 @@ The host area displays the following real-time monitoring data:
 .. image:: /_static/imgs/administration/infrastructure/add_host_3.png
       :width: 480
 
+A detailed real-time `Netdata <https://www.netdata.cloud/>`_ monitoring dashboard
+are available by clicking on the links of host names.
+A new browser window will be opened with the updated metrics for CPUs, memeory, storage, and networking.
+
+.. image:: /_static/imgs/administration/infrastructure/view_host_netdata_1.png
+   :width: 600
+
 Setup Multiple Hosts
 ====================
 
