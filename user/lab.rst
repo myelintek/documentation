@@ -337,9 +337,17 @@ Troubleshooting & FAQs
 Q: How to run Linux commands in a Lab?
 ---------------------------------------
 
-Yes, two methods are available:
+Yes, three methods are available:
 
-#) :ref:`Open a Web terminal <open-web-terminal>` and run commands in MLSteam.
+#) :ref:`Open a *JupyterLab Web terminal* <open-web-terminal>` and run commands in MLSteam.
+#) Open an independent Web terminal by clicking on the *terminal* button for the lab.
+
+    .. image:: /_static/imgs/user/lab/open_independent_terminal_1.png
+        :width: 480
+
+    .. image:: /_static/imgs/user/lab/open_independent_terminal_2.png
+        :width: 600
+
 #) :ref:`Set up SSH access <ssh-into-lab>` to the lab
    and run commands with your favorite tools on the local computer,
    such as an SSH client or *VSCode*.
