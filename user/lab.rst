@@ -339,7 +339,7 @@ Q: How to run Linux commands in a Lab?
 
 Yes, three methods are available:
 
-#) :ref:`Open a *JupyterLab Web terminal* <open-web-terminal>` and run commands in MLSteam.
+#) :ref:`Open a JupyterLab Web terminal <open-web-terminal>` and run commands in MLSteam.
 #) Open an independent Web terminal by clicking on the *terminal* button for the lab.
 
     .. image:: /_static/imgs/user/lab/open_independent_terminal_1.png
@@ -390,31 +390,10 @@ To view and edit files in the lab:
     .. note::
         #) *VSCode* access the files *remotely*. The files are still saved in the MLSteam system.
         #) You may install *Python extension for Visual Studio Code* to use the advanced features for Python files.
-
-To view, edit, and run a *JupyterLab Notebook program*:
-
-#) Open the *JupyterLab Notebook* program file in the *Explorer* panel on the left.
-
-    .. image:: /_static/imgs/user/lab/view_remote_notebooks_vscode_1.png
-        :width: 600
-    
-#) It is possible to run the program by clicking on the *run* button.
-
-    .. note::
-        #) This *VSCode* feature is currently unstable.
-           It is suggested turning back to the MLSteam's Jupyter interface
-           if you have some problems running the experiments remotely through *VSCode*.
-        #) Python 3.7 or higher is needed for this feature.
-           You may install a supported Python version in a lab by running the commands in a terminal:
-
-           .. code-block:: shell
-
-               apt-get update
-               apt-get install software-properties-common
-               add-apt-repository ppa:deadsnakes/ppa
-               apt-get install python3.8
-        
-        #) You may need to install extensions or change the Python version used when it is prompted by *VSCode*.
+        #) It is possible to view, edit, and run a *JupyterLab Notebook program* in *VSCode*
+           when the relevant extensions are installed.
+           However, such a feature, provided by the  *VSCode* community, is currently unstable.
+           It is suggested using the MLSteam's *JupyterLab* Web interface to deal with *JupyterLab Notebook programs* directly.
 
 Q: How to change the type of GPU used in a lab?
 -----------------------------------------------
