@@ -19,8 +19,14 @@ Change Password
 ===============
 
 #) On the user profile's settings page, click on the *CHANGE* button.
+#) Input the new password.
+#) Click on the *check* button.
 
-TODO: change password
+    .. image:: /_static/imgs/user/user_profile/set_password.png
+        :width: 600
+
+    .. note:: 
+        Use the new password at the next login.
 
 Change Language
 ===============
