@@ -43,6 +43,13 @@ To create a track from a pipeline run:
     .. image:: /_static/imgs/user/track/add_track_2_1.png
         :width: 600
 
+.. note:: 
+    There is a quick way to stop the underlying active *lab job* or *pipeline run* associated with the track.
+    Simply click on the *stop* button in the track page.
+
+    .. image:: /_static/imgs/user/track/stop_track_1.png
+        :width: 300
+
 View Logged Data
 ================
 
@@ -64,7 +71,7 @@ To view logged data:
     .. image:: /_static/imgs/common/btn_settings.png
 
    and then enabling the *Reload data* checkbox. The reload period is in seconds.
-   
+
     .. image:: /_static/imgs/user/track/view_track_3.png
         :width: 300
 
