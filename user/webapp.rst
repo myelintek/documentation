@@ -3,6 +3,7 @@ WebApp
 #########
 
 A WebApp enables deployment of a Web-based ML applications in a simple way.
+Services for project users may also be provided as a WebApp.
 
 For example, the *YOLOv5 Inference* WebApp detects the objects and their boundaries
 in a user-provided image.

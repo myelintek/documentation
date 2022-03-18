@@ -33,6 +33,7 @@ Model
 
 WebApp
     A :doc:`WebApp <webapp>` enables deployment of a Web-based ML applications in a simple way.
+    Services for project users may also be provided as a WebApp.
 
 Template
     A :doc:`template <template>` is a creator of a
