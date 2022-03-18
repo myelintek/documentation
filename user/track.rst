@@ -46,7 +46,30 @@ To create a track from a pipeline run:
 View Logged Data
 ================
 
-TODO: view logged data
+To view logged data:
+
+#) Go to the track page by clicking on the track item.
+
+    .. image:: /_static/imgs/user/track/view_track_1.png
+        :width: 600
+
+#) All kinds of the logged data (such as parameters, metrics, console logs, and normal files) are organized in directories.
+   You could view them in a unified way.
+
+    .. image:: /_static/imgs/user/track/view_track_2.png
+        :width: 600
+
+#) You may also keep the view updated periodically by clicking on the *settings* button on the top-right corner
+
+    .. image:: /_static/imgs/common/btn_settings.png
+
+   and then enabling the *Reload data* checkbox. The reload period is in seconds.
+   
+    .. image:: /_static/imgs/user/track/view_track_3.png
+        :width: 300
+
+    .. image:: /_static/imgs/user/track/view_track_4.png
+        :width: 600
 
 Visualize Data with TensorBoard
 ===============================
