@@ -33,10 +33,12 @@ Make sure there is a project for you to run a lab. Otherwise, create a new proje
     .. image:: /_static/imgs/user/get_started/add_project_3.png
         :width: 600
 
-Create a CIFAR-10 Lab
+Create a YOLOv5 Lab
 =====================
 
-We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a built-in image classification model for CIFAR-10, which saves lots of efforts. Simply create a lab from template.
+We will start a lab to train a YOLOv5 ML model.
+MLSteam has built-in image object detection models for YOLO, which saves lots of efforts.
+Simply create a lab from template.
 
 #) Go to the project page by clicking on the project card.
 
@@ -50,17 +52,17 @@ We will start a lab to train a ML model for the CIFAR-10 dataset. MLSteam has a 
 
 #) Click on the *NEW* button.
 
-    .. image:: /_static/imgs/user/get_started/btn_new.png
+    .. image:: /_static/imgs/common/btn_new.png
 
-#) Click on the *Pytorch Cifar10* template.
+#) Click on the *YOLOv5 Trainer* template.
 
     .. image:: /_static/imgs/user/get_started/add_lab_1.png
         :width: 600
 
 #) In the new lab dialog, input the following fields:
 
-    * name: `my-cifar10`
-    * flavor: `small`
+    * name: ``my-yolov5-lab``
+    * flavor: ``small``
 
 #) Click on the *CREATE* button.
 
