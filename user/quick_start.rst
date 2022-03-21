@@ -4,8 +4,9 @@ Quick Start: Machine Learning Lab
 
 This tutorial will show you how to:
 
-* Start a machine learning lab for classifying `CIFAR-10 <https://www.cs.toronto.edu/~kriz/cifar.html>`_ image data.
+* Start a machine learning lab for `YOLOv5 <https://github.com/ultralytics/yolov5>`_ object detection.
 * Train the model and monitor the resource consumption.
+* View the model training performance.
 
 Preparation
 ===========
@@ -19,9 +20,9 @@ Make sure there is a project for you to run a lab. Otherwise, create a new proje
 
 #) Click on the *NEW* button.
 
-    .. image:: /_static/imgs/user/get_started/btn_new.png
+    .. image:: /_static/imgs/common/btn_new.png
 
-#) In the new project dialog, input the project name as `my-proj`.
+#) In the new project dialog, input the project name as ``my-proj``.
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/user/get_started/add_project_2.png
