@@ -79,12 +79,12 @@ Train the Model
 
 We will then train the model in the lab.
 
-#) Go to the lab page by clicking on the lab item. The lab interactive environment will be opened.
+#) Go to the lab page by clicking on the *JupyterLab* icon. The lab interactive environment will be opened.
 
     .. image:: /_static/imgs/user/get_started/run_lab_1.png
-        :width: 600
+        :width: 480
 
-#) Open the model training notebook by double clicking on the *entry.ipynb* file on the left.
+#) Open the model training notebook by double clicking on the *tutorial.ipynb* file on the left.
 
     .. image:: /_static/imgs/user/get_started/run_lab_2.png
         :width: 600
@@ -97,7 +97,7 @@ We will then train the model in the lab.
     Alternatively, click on the toolbar icon.
 
     .. image:: /_static/imgs/user/get_started/run_lab_3b.png
-        :width: 600
+        :width: 480
 
 #) Click on the *Restart* button.
 
