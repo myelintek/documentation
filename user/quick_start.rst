@@ -77,31 +77,72 @@ Simply create a lab from template.
 Train the Model
 ===============
 
-We will then train the model in the lab.
+We will then train the model in the lab by creating a Python notebook.
 
 #) Go to the lab page by clicking on the *JupyterLab* icon. The lab interactive environment will be opened.
 
     .. image:: /_static/imgs/user/get_started/run_lab_1.png
         :width: 480
 
-#) Open the model training notebook by double clicking on the *tutorial.ipynb* file on the left.
+#) Create the model training notebook by clicking on the *Python 3 (ipkernel)* launcher under the *Notebook* section.
 
     .. image:: /_static/imgs/user/get_started/run_lab_2.png
         :width: 600
 
-#) Train the model by clicking on the menu item: *Run* → *Restart Kernel and Run All Cells*.
+#) Copy the lines below into the first cell in the notebook.
+
+    .. code-block:: 
+
+        # Setup
+        !git clone https://github.com/ultralytics/yolov5  # clone
+        %cd yolov5
+        %pip install -qr requirements.txt  # install
+
+        import torch
+        from yolov5 import utils
+        display = utils.notebook_init()  # checks
 
     .. image:: /_static/imgs/user/get_started/run_lab_3a.png
         :width: 600
 
-    Alternatively, click on the toolbar icon.
+#) Click on the *insert* button to insert a second cell.
 
     .. image:: /_static/imgs/user/get_started/run_lab_3b.png
-        :width: 480
+        :width: 300
+
+#) Copy the lines below into the second cell.
+
+    .. code-block:: 
+
+        # Inference
+        !python detect.py --weights yolov5s.pt --img 640 --conf 0.25 --source data/images
+        display.Image(filename='runs/detect/exp/zidane.jpg', width=600)
+
+#) Insert the third cell. Copy the lines below into this cell.
+
+    .. code-block:: 
+
+        # Train YOLOv5s on COCO128 for 3 epochs
+        !python train.py --img 640 --batch 16 --epochs 3 --data coco128.yaml --weights yolov5s.pt --cache
+
+    The notebook should now look like this:
+
+    .. image:: /_static/imgs/user/get_started/run_lab_3c.png
+        :width: 600
+
+#) Train the model by clicking on the menu item: *Run* → *Restart Kernel and Run All Cells*.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_4a.png
+        :width: 600
+
+    Alternatively, click on the toolbar icon.
+
+    .. image:: /_static/imgs/user/get_started/run_lab_4b.png
+        :width: 300
 
 #) Click on the *Restart* button.
 
-    .. image:: /_static/imgs/user/get_started/run_lab_4.png
+    .. image:: /_static/imgs/user/get_started/run_lab_4c.png
         :width: 300
 
 #) The training program will start running cell by cell.
