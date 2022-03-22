@@ -6,7 +6,7 @@ This tutorial will show you how to:
 
 * Start a machine learning lab for `YOLOv5 <https://github.com/ultralytics/yolov5>`_ object detection.
 * Train the model and monitor the resource consumption.
-* View the model training performance.
+* Visualize the model training results.
 
 Preparation
 ===========
@@ -74,15 +74,28 @@ Simply create a lab from template.
     .. image:: /_static/imgs/user/get_started/add_lab_3.png
         :width: 600
 
-Train the Model
-===============
-
-We will then train the model in the lab by creating a Python notebook.
+Before training the model, we need to enlarge the shared memory size to 8 GB for the lab:
 
 #) Go to the lab page by clicking on the *JupyterLab* icon. The lab interactive environment will be opened.
 
     .. image:: /_static/imgs/user/get_started/run_lab_1.png
         :width: 480
+
+#) Click on the *settings* button.
+#) Expand the *Configuration* section in the side bar and set ``8`` in the *Shared Memory* field.
+
+    .. image:: /_static/imgs/user/get_started/set_shm_1.png
+        :width: 600
+
+    .. image:: /_static/imgs/user/get_started/set_shm_2.png
+        :width: 300
+
+#) The lab will be restarted with the new setting.
+
+Train the Model
+===============
+
+We will then train the model in the lab by creating a Python notebook.
 
 #) Create the model training notebook by clicking on the *Python 3 (ipkernel)* launcher under the *Notebook* section.
 
@@ -155,4 +168,37 @@ We will then train the model in the lab by creating a Python notebook.
     .. image:: /_static/imgs/user/get_started/run_lab_6.png
         :width: 600
 
-TODO: submit as a track for visualization
+Visualize the Model Training Results
+====================================
+
+After the previous model training experiment,
+here we will submit a training job and then view the training reults:
+
+#) Click on the *more* button.
+#) Click on the *Submit* menu item.
+
+    .. image:: /_static/imgs/user/get_started/submit_job_1.png
+        :width: 600
+
+#) Click on the *SUBMIT* button.
+
+    .. image:: /_static/imgs/user/get_started/submit_job_2.png
+        :width: 480
+
+#) A new browser window will be opened, listing the :doc:`track <track>` for the submitted job.
+#) Go to the track page by clicking on the link of the track.
+
+    .. image:: /_static/imgs/user/get_started/view_job_track_1.png
+        :width: 600
+
+#) Wait for one minute while the training results are accumulated.
+#) Click on the *SWITCH TO TENSORBOARD* button.
+
+    .. image:: /_static/imgs/user/get_started/view_job_track_2.png
+        :width: 600
+
+#) Congratulations! The YOLOv5 model training results are displayed in the TensorBoard page.
+   You may adjust the settings to view the results in different ways.
+
+    .. image:: /_static/imgs/user/get_started/view_job_track_3.png
+        :width: 600
