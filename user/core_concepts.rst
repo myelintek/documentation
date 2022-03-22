@@ -3,16 +3,29 @@ Core Concepts
 ###################
 
 Project
-    A :doc:`project <project>` is a collection of all works when you develop DNN models. You can launch either a Jupyter lab (we call them labs) or launch experiments and training iterations (we call them jobs) will be kept and organized.
+    A :doc:`project <project>` is a collection of all artificats in developing ML models.
+    A project consists of :ref:`datasets <core-concept-dataset>`,
+    :ref:`labs <core-concept-lab>`,
+    :ref:`pipelines <core-concept-pipeline>`,
+    :ref:`tracks <core-concept-track>`,
+    :ref:`models <core-concept-model>`,
+    :ref:`WebApps <core-concept-webapp>`,
+    :ref:`templates <core-concept-template>`, and
+    :ref:`images <core-concept-image>`.
+
+.. _core-concept-dataset:
 
 Dataset
     A :doc:`dataset <dataset>` is a collection of data organized in files and directories.
     Dataset files could be used in labs for model training and validation.
 
+.. _core-concept-lab:
+
 Lab
     A :doc:`lab <lab>` is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_ with MLSteam's add-on functionalities) that organizes files and datasets.
     You may design ML models and make experiments in a lab.
-    When the development is done, you may convert a lab into a :doc:`template <template>` for reuse in other labs, :ref:`pipelines <core-concept-pipeline>` or deployment.
+    When the development is done, you may convert a lab into a :doc:`template <template>`
+    for reuse in other labs, :ref:`pipelines <core-concept-pipeline>` or deployment.
 
 .. _core-concept-pipeline:
 
@@ -23,25 +36,37 @@ Pipeline
     retrains and evaluates the model for new model designs or dataset
     and finally deploys the ML application to an experimental or production site.
 
+.. _core-concept-track:
+
 Track
     A :doc:`track <track>` keeps various results of ML training or experiments,
     including the parameters, metrics, console logs, and any logged files or data.
     It also enables visualization of the results with *TensorBoard*.
 
+.. _core-concept-model:
+
 Model
     A :doc:`model <model>` is a collection of files that record a trained ML model.
+
+.. _core-concept-webapp:
 
 WebApp
     A :doc:`WebApp <webapp>` enables deployment of a Web-based ML applications in a simple way.
     Services for project users may also be provided as a WebApp.
+
+.. _core-concept-template:
 
 Template
     A :doc:`template <template>` is a creator of a
     :doc:`lab <lab>`, :doc:`pipeline action <pipeline>`, or :doc:`WebApp <webapp>`
     with predefined programs, datasets, models, or other settings.
 
-Flavor
-    A flovor is the hardware settings for a Lab or a Job, describes how much resources (CPUs, GPUs) are allocated.
+.. _core-concept-image:
 
 Image
-    Docker image management with portus.
+    An image (Docker image) is used to create a :ref:`template <core-concept-template>`.
+    In MLSteam, an image could be obtained from a user uploaded Docker image file,
+    a remote registry, or an MLSteam-managed registry.
+
+Flavor
+    A flavor describes how many hardware resources (such as CPUs, GPUs, and memory) are to be allocated.

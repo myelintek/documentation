@@ -2,6 +2,16 @@
 Project
 ##########
 
+A project is a collection of all artificats in developing ML models.
+A project consists of :ref:`datasets <core-concept-dataset>`,
+:ref:`labs <core-concept-lab>`,
+:ref:`pipelines <core-concept-pipeline>`,
+:ref:`tracks <core-concept-track>`,
+:ref:`models <core-concept-model>`,
+:ref:`WebApps <core-concept-webapp>`,
+:ref:`templates <core-concept-template>`, and
+:ref:`images <core-concept-image>`.
+
 Create a Project
 ================
 

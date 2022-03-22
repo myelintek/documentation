@@ -48,7 +48,7 @@ To create a template from a template file:
 #) After the template creation finishes,
    reload the template page and the new template will be displayed.
 
-.. note:: 
+.. note::
     An MLSteam template file encapsulates a Docker image and the relevant template settings.
 
 To create a template from a Docker image:
@@ -93,7 +93,7 @@ To create a template from a Docker image:
         * Parameters
         * Resource requirements: minimum resource requirements for CPU cores, memory size, and GPU cards
 
-    .. note:: 
+    .. note::
         Resource requirements are referential.
         They do not stop users from creating a lab with a flavor not satisfying the resource requirements;
         only a warning message is displayed.
@@ -112,7 +112,7 @@ To delete a template:
 
 #) Click on the *OK* button.
 
-.. note:: 
+.. note::
     A built-in template could not be deleted in the template page.
 
 Export a Template
@@ -156,7 +156,7 @@ To upload a local Docker container or image through registry:
    The exported image file will be in the *tar* format.
 #) Push the exported image file to a Docker image registry accessible by MLSteam.
 
-    .. note:: 
+    .. note::
         If your MLSteam installation has a Docker image registry,
         you may push the exported image by running the commands provided by MLSteam.
         To get the commands, click on the *NEW* button and click on the *Push* menu item.

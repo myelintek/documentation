@@ -4,7 +4,8 @@ Lab
 
 A lab is a Web IDE (based on `JupyterLab <https://jupyter.org/>`_ with MLSteam's add-on functionalities) that organizes files and datasets.
 You may design ML models and make experiments in a lab.
-When the development is done, you may convert a lab into a :doc:`template <template>` for reuse in other labs, pipelines or deployment.
+When the development is done, you may convert a lab into a :doc:`template <template>`
+for reuse in other labs, pipelines or deployment.
 
 Create a Lab
 ============
@@ -42,8 +43,9 @@ could be accessed by clicking on the *Jupyter* button.
 .. image:: /_static/imgs/user/lab/goto_jupyter.png
     :width: 480
 
-Program code in a *JupyterLab Notebook* is organized in *cells*. 
-A JupyterLab Notebook file has a name ended with ``.ipynb`` and could be opened by double clicking on the entry in the *File Browser* on the left.
+Program code in a *JupyterLab Notebook* is organized in *cells*.
+A JupyterLab Notebook file has a name ended with ``.ipynb``
+and could be opened by double clicking on the entry in the *File Browser* on the left.
 In JupyterLab Notebook, code is run in a process called the Kernel.
 
 To run (evaluate) the program code in a single cell,
@@ -252,7 +254,7 @@ Now, we are ready to access the lab with VSCode.
 
     .. image:: /_static/imgs/user/lab/open_ssh_vscode_1.png
         :width: 300
-    
+
     .. note::
         If the SSH host has not been displayed, refresh the list by clicking on the *refresh* button.
 
@@ -290,7 +292,7 @@ To run ML experiments with a set a hyperparameters:
     .. image:: /_static/imgs/user/lab/tune_parms_1.png
         :width: 600
 
-    .. note:: 
+    .. note::
         You could provide multiple parameter values delimited by commas.
 
 #) Click on the *Submit* menu item to submit the experiments as *jobs*.
@@ -308,7 +310,7 @@ To run ML experiments with a set a hyperparameters:
     .. image:: /_static/imgs/user/lab/tune_parms_4.png
         :width: 600
 
-    .. note:: 
+    .. note::
         Each combination of the parameter values is used to the ML experiment with a track.
 
         In the above example,
@@ -322,7 +324,7 @@ To run ML experiments with a set a hyperparameters:
     .. image:: /_static/imgs/user/lab/tune_parms_5.png
         :width: 480
 
-    .. note:: 
+    .. note::
         Refer to the :doc:`track <track>` documentation for the concepts of track.
 
 
@@ -402,7 +404,7 @@ It is achieved through changing the flavor of a lab.
 
 #) Ensure the flavor for the target GPU type exists.
 
-   .. note:: 
+   .. note::
       A flavor could be :ref:`created <management-flavor>` in the management page.
 
 #) Open the *JupyterLab* for the lab.
@@ -444,7 +446,7 @@ To access the services in a lab, export the corresponding port(s) with *proxy*:
     .. image:: /_static/imgs/user/lab/add_proxy_2.png
         :width: 300
 
-    .. note:: 
+    .. note::
         Repeat the port adding steps for each port needed in accessing the service.
 
 #) The mapping between service ports and exposed ports are displayed.
@@ -480,7 +482,7 @@ It is possible to restrict how a GPU device is used by setting the *accelerator 
         * *exclusive_process*: only one process can use the GPU device at the same time
         * *prohibited*: no processes can use the GPU device
 
-        .. note:: 
+        .. note::
             A *process* could be roughly thought of as a running program.
             Each running program has a process;
             sometimes a running program may have multiple processes, though.
@@ -500,7 +502,7 @@ To increase (or decrease) the shared memory size in a lab:
     .. image:: /_static/imgs/user/lab/set_shared_memory_1.png
         :width: 300
 
-    .. note:: 
+    .. note::
         The shared memory size is in ``GB`` and should be a positive integer.
 
 #) The lab will be restarted with the new setting.
