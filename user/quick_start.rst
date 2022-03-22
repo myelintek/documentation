@@ -172,7 +172,7 @@ Visualize the Model Training Results
 ====================================
 
 After the previous model training experiment,
-here we will submit a training job and then view the training reults:
+here we will submit a training job and then view the training results:
 
 #) Click on the *more* button.
 #) Click on the *Submit* menu item.
