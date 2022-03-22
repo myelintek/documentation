@@ -67,7 +67,7 @@ To create a template from a Docker image:
     * Template tags (separated by commas, semicolons, or pipes)
 
 #) Under the *Template type* section,
-   choose one of the template type and fill in the corresponding fields:
+   choose one of the template types and fill in the corresponding fields:
 
     #) Lab
 
@@ -98,12 +98,14 @@ To create a template from a Docker image:
         They do not stop users from creating a lab with a flavor not satisfying the resource requirements;
         only a warning message is displayed.
 
+    #) Click on the *CREATE* button.
+
 Delete a Template
 =================
 
 To delete a template:
 
-#) Go to template page, and click on the *delete* button at the selected version.
+#) Go to template page and click on the *delete* button at the selected version.
 
     .. image:: /_static/imgs/user/template/del_template_1.png
         :width: 480
@@ -121,12 +123,12 @@ To export a template:
 
 #) :ref:`Create a project-scoped dataset <create-and-manage-project-scoped-dataset>`
    which serves as the export destination if it has not existed.
-#) Go to template page, and click on the *EXPORT* button at the selected version.
+#) Go to template page and click on the *EXPORT* button at the selected version.
 
     .. image:: /_static/imgs/user/template/export_template_1.png
         :width: 600
 
-#) Select the distination dataset and the path within the dataset to save the exported template file.
+#) Select the destination dataset and the path within the dataset to save the exported template file.
 #) Click on the *EXPORT* button.
 
     .. image:: /_static/imgs/user/template/export_template_2.png

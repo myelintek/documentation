@@ -29,7 +29,7 @@ Track
     It also enables visualization of the results with *TensorBoard*.
 
 Model
-    TODO: model
+    A :doc:`model <model>` is a collection of files that record a trained ML model.
 
 WebApp
     A :doc:`WebApp <webapp>` enables deployment of a Web-based ML applications in a simple way.
