@@ -22,19 +22,17 @@ Some useful services could be installed in marketplace.
 GitLab
 ======
 
-TODO: default settings, such as username and password for administrator
-
 Basic settings:
 
 * FQDN: fully qualified domain name, or IP address (along with port number)
-* Port: TODO: desc
+* Port: port number for the GitLab vservice
 * Web port: port number for the Web server
 
 .. _gitlab-ldap-settings:
 
 LDAP settings:
 
-* FQDN: URL for accessing the LDAP server with the `ldap` or `ldaps` protocol
+* FQDN: URL for accessing the LDAP server with the *ldap* or *ldaps* protocol
 * Port: port number for the LDAP server
 * Base DN: distinguished name (DN) for search base
 * Bind DN: distinguished name (DN) for the user making queries
@@ -48,7 +46,7 @@ HedgeDoc
 Basic settings:
 
 * FQDN: fully qualified domain name, or IP address (along with port number)
-* Port: TODO: desc
+* Port: port number for the HedgeDoc service
 * Web port: port number for the Web server
 
 Refer to the GitLab section for :ref:`LDAP settings <gitlab-ldap-settings>`.
@@ -59,7 +57,7 @@ OpenLDAP
 Basic settings:
 
 * FQDN: fully qualified domain name, or IP address (along with port number)
-* Port: TODO: desc
+* Port: port number for the OpenLDAP service
 * Web port: port number for the Web server
 * Account: distinguished name (DN) for the administrator
 * Password: password for the administrator
