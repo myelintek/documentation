@@ -15,7 +15,7 @@ To add a host:
 
    .. image:: /_static/imgs/administration/infrastructure/add_host_2.png
        :width: 300
-    
+
    #) Download the host agent installer.
    #) Copy the host agent installer to the host to add.
    #) Run the host agent installer on the host to add.
@@ -23,7 +23,7 @@ To add a host:
       .. code-block:: shell
 
          sudo bash mlsteam_agent_installer.sh
-   
+
       .. note:: Replace the installer's file name with the actual one.
 
 #) (Optional) After the installation is finished, you may check the logged messages.
@@ -36,7 +36,9 @@ To add a host:
 
 #) The host added will be in the list. Reload the page if the list has not been updated.
 #) Click on the *AUTHORIZE* button. The status of host will be *Online*.
-   
+
+   .. image:: /_static/imgs/common/btn_authorize.png
+
    .. image:: /_static/imgs/administration/infrastructure/add_host_3.png
        :width: 480
 
@@ -76,7 +78,9 @@ A new browser window will be opened with the updated metrics for CPUs, memory, s
 Setup Multiple Hosts
 ====================
 
-High Availability
-=================
+..
+   TODO: HA
+   High Availability
+   =================
 
-failover case - shutdown a controller
+   failover case - shutdown a controller

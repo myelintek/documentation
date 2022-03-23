@@ -13,7 +13,7 @@ The task tab lists the tasks in the system.
 * Status: task running status, could be *Done* (stopped and not occupying resources) or *Running*
 * Owner: task owner
 * Type: task type, could be *LAB* or *JOB*
-* Spec: flavor for the task
+* Specification: flavor for the task
 * Create time: task creation time
 * Host: host where the task runs
 
@@ -40,7 +40,7 @@ The flavor tab lists the flavors in the system.
 * Summary: flavor settings summary
 * CPU: CPU cores to allocate
 * Memory: memory to allocate in MB
-* GPU: GPU cards to allocate. *0* means no GPUs will be allocated.
+* GPU: GPU cards to allocate. ``0`` means no GPUs will be allocated.
 * GPU type: GPU type used. *Any* means no restrictions to GPU types.
 
 .. image:: /_static/imgs/administration/management/view_flavors.png
@@ -57,7 +57,9 @@ Dataset
 
 The dataset tab lists the datasets in the system.
 
-* Name: project name
+* Name: project name.
+  A public built-in dataset is displayed by the dataset's name.
+  A private project-scoped dataset is displayed by the project's identifier followed by the dataset's name.
 * UUID: project identifier
 * Project: owner project, empty for built-in datasets
 * Permission: dataset access permission
@@ -67,8 +69,6 @@ The dataset tab lists the datasets in the system.
 
 .. image:: /_static/imgs/administration/management/view_datasets.png
     :width: 600
-
-TODO: Owner → Creator (description & image)
 
 Dataset management operations:
 

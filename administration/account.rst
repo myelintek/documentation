@@ -56,7 +56,7 @@ To delete a user:
 
 .. warning::
     On deleting a user:
-
+    
     #) Its access to the MLSteam system and to the projects will be removed.
     #) All artifacts (such as projects, labs, and pipelines) owned by that user will be deleted.
 
@@ -155,4 +155,4 @@ To delete remote authentication:
     On deleting a remotely authenticated user:
 
     #) Its access to the MLSteam system and to the projects will be removed.
-    #) All the artifacts (such as projects, labs, and pipelines) owned by that users will be deleted.
+    #) All the artifacts (such as projects, labs, and pipelines) owned by that user will be deleted.
