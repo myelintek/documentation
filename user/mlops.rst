@@ -29,7 +29,7 @@ We will start a pipeline to train and run a YOLOv5 model.
 
 #) Click on the *NEW* button.
 
-    .. image:: /_static/imgs/user/get_started/btn_new.png
+    .. image:: /_static/imgs/common/btn_new.png
 
 #) In the new project dialog, input the following fields:
 
