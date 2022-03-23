@@ -25,7 +25,7 @@ Change Password
     .. image:: /_static/imgs/user/user_profile/set_password.png
         :width: 600
 
-    .. note:: 
+    .. note::
         Use the new password at the next login.
 
 Change Language
