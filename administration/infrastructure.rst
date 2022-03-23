@@ -75,8 +75,10 @@ A new browser window will be opened with the updated metrics for CPUs, memory, s
 .. image:: /_static/imgs/administration/infrastructure/view_host_netdata_1.png
    :width: 600
 
-Setup Multiple Hosts
-====================
+..
+   TODO: multiple hosts
+   Setup Multiple Hosts
+   ====================
 
 ..
    TODO: HA
