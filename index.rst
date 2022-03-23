@@ -42,4 +42,3 @@ Welcome to MLSteam!
    administration/marketplace
    administration/license
    administration/event
-   administration/maintenance
