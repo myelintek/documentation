@@ -9,8 +9,8 @@ The *Auditlog* tab lists the logged events. An event includes the following info
 
 #) Time stamp: event reporting time
 #) Level: logging level
-#) User: username (for a user event) or `SYSTEM` (for a system event)
-#) Type: event type, could be `User` (user event) or `System` (system event)
+#) User: username (for a user event) or *SYSTEM* (for a system event)
+#) Type: event type, could be *User* (user event) or *System* (system event)
 #) Message: event message
 
 The events could be filtered by entering the search terms.
@@ -21,7 +21,8 @@ The events could be filtered by entering the search terms.
 Add a Webhook
 -------------
 
-The *Notification* tab lists the notifications receivers (Webhooks). A Webhook is triggered on the occurrences of the following events:
+The *Notification* tab lists the notifications receivers (Webhooks).
+A Webhook is triggered on the occurrences of the following events:
 
 #) Lab start, stop, restart, or deletion
 #) Pipeline start, stop, restart, or deletion
@@ -34,42 +35,33 @@ A generic Webapp sends a POST request to the specified URL with the data in the 
 
 .. code-block:: text
 
-  {
-    "username": "admin", 
-    "timestamp": "2021-02-01 06:54:11.375141",
-    "action": "lab_start", 
-    "uuid": "u52ca065", 
-    "flavor": "{
-                  'id': 2, 
-                  'name': 'micro', 
-                  'cpu': 2, 
-                  'gpu': 0, 
-                  'gpu_type': 'Any', 
-                  'memory': 2048, 
-                  'cpu_lab': True, 
-                  'info': '(vCPUs: 2, RAM: 2GB, GPU: 0)'
-                }"
-  }
-
-FIXME: update the post data (with the correct JSON format)
+    {
+        "username": "peter",
+        "timestamp": "2022-03-23T06:05:45Z",
+        "action": "start",
+        "task": {
+            "type": "lab",
+            "uuid": "u28b9760"
+        },
+        "flavor": "{'id': 1, 'order': 3, 'name': 'small', 'cpu': 2, 'gpu': 1, 'gpu_type': 'Any', 'categories': [], 'memory': 4096, 'cpu_lab': False, 'info': '(vCPUs: 2, RAM: 4GB, GPU: 1)'}",
+        "result": "success"
+    }
 
 To add a generic Webhook for receiving notifications:
 
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/administration/event/add_notification_1.png
-        :width: 600
 
-#) Input the Webhook's name and URL. Click on the *CREATE* button.
+#) Input the Webhook's name and URL.
+#) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/administration/event/add_notification_2.png
-        :width: 600
+        :width: 480
 
 #) The Webhook added will be in the list. Reload the page if the list has not been updated.
 
-    .. image:: /_static/imgs/administration/event/add_notification_3.png
-        :width: 600
+..
+    To add a Slack channel Webhook:
 
-To add a Slack channel Webhook:
-
-TODO: TBD
+    TODO: TBD
