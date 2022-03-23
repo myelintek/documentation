@@ -9,10 +9,10 @@ The *User* tab lists the registered MLSteam users.
 
 * Name: displayed name
 * Account: login account
-* Password: login password
-* Role: user role. Could be *Admin* (system maintainer) or *Developer* (deep learning developer)
+* Role: user role. Could be *Admin* (system maintainer) or *Developer* (ML developer)
 * Plan: resource limitation plan for running the user's owning labs
-* From: account type. Could be *MLSteam* (managed by MLSteam), *LDAP* (managed by LDAP), or *AD* (managed by AD)
+* Authentication: authentication type.
+  Could be *MLSteam* (managed by MLSteam), *LDAP* (managed by LDAP), or *AD* (managed by AD)
 
 .. image:: /_static/imgs/administration/account/view_users.png
     :width: 600
@@ -35,7 +35,7 @@ To create a user:
 
         .. note::
             Set ``0`` to disable storage usage limitation
-        
+
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/administration/account/add_user_1.png
@@ -56,7 +56,7 @@ To delete a user:
 
 .. warning::
     On deleting a user:
-    
+
     #) Its access to the MLSteam system and to the projects will be removed.
     #) All artifacts (such as projects, labs, and pipelines) owned by that user will be deleted.
 
@@ -120,7 +120,7 @@ To delete a resource limitation plan:
 Integrate LDAP/AD
 =================
 
-The *SSO* tab manages integration of remote authentication.
+The *LDAP* tab manages integration of remote authentication.
 
 To enable remote user authentication, set up an LDAP or AD server here.
 
@@ -136,9 +136,10 @@ To set up LDAP authentication:
     .. image:: /_static/imgs/administration/account/setup_ldap_1.png
         :width: 600
 
-To set up AD authentication:
+..
+    To set up AD authentication:
 
-TODO: AD
+    TODO: AD
 
 .. note::
     #) You could set up either *LDAP* or *AD* (but not both) for remote authentication.
