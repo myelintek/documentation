@@ -43,14 +43,3 @@ Welcome to MLSteam!
    administration/license
    administration/event
    administration/maintenance
-
-.. raw:: latex
-
-   \part{Old UI}   
-
-.. toctree::
-   :caption: Old UI
-   :hidden:
-   :maxdepth: 2
-
-   content_old/index
