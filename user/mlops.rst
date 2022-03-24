@@ -48,16 +48,21 @@ We will start a pipeline to train and run a YOLOv5 model.
 Define the Pipeline Procedure
 =============================
 
-We will define an MLOps pipeline consisting of two actions: (1) to download the latest YOLOv5 code, and (2) to train the YOLOv5 model.
+We will define an MLOps pipeline consisting of two actions:
+\(1) to download the latest YOLOv5 code, and (2) to train the YOLOv5 model.
 
-#) Click on the *Add Action* button.
+#) Go to the actions page by clicking on the *Action Page* button.
 
-    .. image:: /_static/imgs/user/get_started/btn_add_action.png
-        
+    .. image:: /_static/imgs/common/btn_action_page.png
+
+#) Click on the *NEW* button.
+
+    .. image:: /_static/imgs/common/btn_new.png
+
 #) In the new action dialog, click on the *Git Pull* action.
 
     .. image:: /_static/imgs/user/get_started/add_pipeline_action_1_1.png
-        :width: 600
+        :width: 480
 
 #) In the action settings dialog, input the following field in the *Git* section:
 
@@ -75,7 +80,8 @@ We will define an MLOps pipeline consisting of two actions: (1) to download the 
     .. image:: /_static/imgs/user/get_started/add_pipeline_action_1_3.png
         :width: 480
 
-#) Define the model-training action. Click on the *New* button, select the *Docker Run* action template, and fill in the following fields:
+#) Define the model-training action.
+   Click on the *NEW* button, select the *Docker Run* action template, and fill in the following fields:
 
     * In the *command* section:
 
@@ -121,7 +127,7 @@ Run the Pipeline
 
 To run the Pipeline:
 
-#) Click on the *RUN PIPELINE* button in the top-right corner.
+#) Click on the *RUN PIPELINE* button on the top.
 
     .. image:: /_static/imgs/common/btn_run_pipeline.png
 
@@ -130,7 +136,7 @@ To run the Pipeline:
 
     .. image:: /_static/imgs/user/get_started/run_pipeline_1_1.png
         :width: 300
-    
+
     .. note::
         A pipeline run may be delayed for a while
         if the system is busy on processing other labs or pipeline runs.
@@ -154,7 +160,7 @@ Press :kbd:`Esc` to exit the full screen mode.
 The model validation results could be found in the last part of the outputs, something like::
 
     Validating /working/train/exp/weights/best.pt...
-    Fusing layers... 
+    Fusing layers...
     Model Summary: 213 layers, 7225885 parameters, 0 gradients, 16.5 GFLOPs
 
                 Class     Images     Labels          P          R     mAP@.5 mAP@.5:.95:   0%|          | 0/4 [00:00<?, ?it/s]
@@ -182,9 +188,10 @@ Visualize the YOLOv5 Results
 
 Increase the training epochs:
 
-#) Back to the run list by clicking on the link in the top-left corner.
+#) Back to the run list by clicking on the link on the top.
 
-    .. image:: /_static/imgs/common/link_back_to_run_list.png
+    .. image:: /_static/imgs/user/get_started/goto_runs.png
+        :width: 600
 
 #) Go to the action list by clicking on the *ACTIONS* button.
 
@@ -231,7 +238,7 @@ Let's see our training results:
 
     .. image:: /_static/imgs/user/get_started/goto_track.png
         :width: 600
-    
+
     .. note::
         A track is named by the initial part of the project name, followed by the run number.
 
