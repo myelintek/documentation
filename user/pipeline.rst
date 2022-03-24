@@ -78,7 +78,7 @@ To delete a pipeline action:
 To re-order the pipeline actions:
 
 #) Hover over the left side of action.
-#) Click on the *upward* or *downward* button to adjustion the action order.
+#) Click on the *upward* or *downward* button to adjust the action order.
 
     .. image:: /_static/imgs/user/pipeline/reorder_action_1.png
         :width: 300

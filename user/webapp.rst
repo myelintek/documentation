@@ -21,11 +21,13 @@ To create a WebApp:
 #) Fill in the settings.
 
     .. note::
-        
+
         The settings vary with the selected template.
 
         For example, the *YOLOv5 Inference* template has settings for
-        the WebApp name, flavor, bind port, and WebApp protocol.
+        the WebApp name, flavor, bind port, WebApp protocol, and model.
+        *YOLOv5 Inference* requires a model containing a weights file
+        named *yolov5.pt* in the model's root directory.
 
         .. image:: /_static/imgs/user/webapp/add_webapp_1.png
             :width: 480
