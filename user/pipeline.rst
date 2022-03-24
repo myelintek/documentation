@@ -77,13 +77,11 @@ To delete a pipeline action:
 
 To re-order the pipeline actions:
 
-#) Press on the *re-order* label. Hold the mouse button.
-#) Drag the action onward or downward to the new location.
+#) Hover over the left side of action.
+#) Click on the *upward* or *downward* button to adjustion the action order.
 
     .. image:: /_static/imgs/user/pipeline/reorder_action_1.png
         :width: 300
-
-#) Release the mouse button.
 
 Run a Pipeline
 ==============
@@ -96,7 +94,7 @@ To run the Pipeline:
 
     .. image:: /_static/imgs/user/get_started/run_pipeline_1_1.png
         :width: 300
-    
+
     .. note::
         A pipeline run may be delayed for a while
         if the system is busy on processing other labs or pipeline runs.
