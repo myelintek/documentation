@@ -161,6 +161,10 @@ To upload a local Docker container or image through registry:
         you may push the exported image by running the commands provided by MLSteam.
         To get the commands, click on the *NEW* button and click on the *Push* menu item.
 
+        If this is the first time you push the Docker image,
+        :ref:`set up the Docker image registry <setup-insecure-docker-image-registry>`
+        before you run the push commands.
+
 #) Follow the :ref:`steps <upload-image-from-registry>` to upload an image from a Docker image registry.
 
 .. _upload-image-from-file:
@@ -179,3 +183,53 @@ To upload a local Docker container or image without registry:
    The exported image file will be in the *tar* format.
 #) Upload the exported image file to a project-scoped dataset.
 #) Follow the :ref:`steps <upload-image-from-file>` to upload an image from dataset.
+
+.. _setup-insecure-docker-image-registry:
+
+Setup a Docker Image Registry Running on Http
+---------------------------------------------
+
+To enable access to a Docker image registry running on the http protocol,
+such as MLSteam's built-in registry,
+you need to setup an `insecure registry <https://docs.docker.com/registry/insecure/>`_ record for Docker.
+
+#) Edit the Docker configuration file.
+
+    * For *Docker Desktop for Windows*,
+      click on the *Docker* icon, select *Settings*, and then select *Docker Engine*.
+    * For *Docker Desktop for Mac*,
+      click on the *Docker* icon, select *Preferences*, and then select *Docker Engine*.
+    * For *Windows Server*,
+      the default location is ``C:\ProgramData\docker\config\daemon.json``.
+    * For *Linux*,
+      the default location is ``/etc/docker/daemon.json``.
+      The actual location may vary in different Linux distributions.
+
+#) Add the following settings into the file:
+
+    .. code-block::
+
+        {
+            "insecure-registries" : ["<domain.sample.com>:<port>"]
+            ,"runtimes": {
+                "nvidia": {
+                    "path": "nvidia-container-runtime",
+                    "runtimeArgs": []
+                }
+            }
+        }
+
+    Replace ``<domain.sample.com>`` and ``<port>`` by the actual registry address.
+
+    .. note::
+
+        For the MLSteam built-in registry, its address is avaiable at the *Image* tab:
+        click on the *NEW* button and click on the *Push* menu item.
+
+#) Restart the Docker to put the changes into effect.
+
+    * For *Linux* with *systemd*, run the command:
+
+      .. code-block:: bash
+
+          sudo systemctl restart docker
