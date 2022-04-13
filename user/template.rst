@@ -210,7 +210,7 @@ you need to setup an `insecure registry <https://docs.docker.com/registry/insecu
     .. code-block::
 
         {
-            "insecure-registries" : ["<domain.sample.com>:<port>"]
+            "insecure-registries": ["<domain.sample.com>:<port>"]
             ,"runtimes": {
                 "nvidia": {
                     "path": "nvidia-container-runtime",
@@ -223,7 +223,7 @@ you need to setup an `insecure registry <https://docs.docker.com/registry/insecu
 
     .. note::
 
-        For the MLSteam built-in registry, its address is avaiable at the *Image* tab:
+        For the MLSteam built-in registry, its address is available at the *Image* tab:
         click on the *NEW* button and click on the *Push* menu item.
 
 #) Restart the Docker to put the changes into effect.

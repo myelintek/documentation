@@ -58,3 +58,120 @@ To delete a WebApp:
 
     .. image:: /_static/imgs/user/webapp/del_webapp.png
         :width: 480
+
+Setup Label Studio
+==================
+
+`Label Studio <https://labelstud.io/>`_ is a data annotation tool,
+available as a WebApp in MLSteam. To setup Label Studio:
+
+#) :ref:`Create a project-scoped dataset <create-and-manage-project-scoped-dataset>`
+   and add an output directory in the dataset.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_1.png
+        :width: 600
+
+#) Create a Label Studio WebApp with. TODO: dataset (IMG 2)
+
+    * Flavor: ``micro``
+    * Mount dataset: the project-scoped dataset created in the previous step
+    * Mount container path: ``/data``
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_2.png
+        :width: 480
+
+#) Open the Label Studio WebApp.
+#) Create a new account with your email address and a new password.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_3.png
+        :width: 480
+
+#) Click on the *Create Project* button.
+#) In the dialog, fill in the following fields, and click on the *Save* button:
+
+    * Project name tab:
+
+        * Project name: the project name
+        * Description: a brief description (optional)
+
+        .. image:: /_static/imgs/user/webapp/setup_labelstudio_4.png
+            :width: 480
+
+    * Labeling setup tab:
+
+        * Select *Object Detection with Bounding Boxes*.
+        * Define the labels.
+
+        .. image:: /_static/imgs/user/webapp/setup_labelstudio_5.png
+            :width: 480
+
+        .. image:: /_static/imgs/user/webapp/setup_labelstudio_6.png
+            :width: 480
+
+#) In the project page, click on the *Settings* button.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_7.png
+        :width: 600
+
+#) In the *Cloud Storage* section, click on the *Add Source Storage* button.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_8.png
+        :width: 600
+
+#) In the dialog, fill in the following fields, and click on the *Add Storage* button.
+
+    * Storage type: ``Local files``
+    * Storage title: a storage title (optional)
+    * Absolute path: path to the images to label
+      (for the *yolo-sample* dataset, this would be ``/data/training_data/yolo/images``)
+    * File filter regex: image file filter in regular expressions (optional)
+      (for the *yolo-sample* dataset, this would be ``.*jpg``)
+    * Treat every bucket object as a source file: ``enabled``
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_9.png
+        :width: 480
+
+#) Back to the project settings page; click on the *Sync Storage* button.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_10.png
+        :width: 600
+
+#) Back to the project main page by clicking on the top navbar.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_11.png
+        :width: 480
+
+#) Select an image to label, add the bounding boxes for the corresponding classes,
+   and click on the *Submit* button.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_12.png
+        :width: 600
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_13.png
+        :width: 600
+
+#) Repeat the previous step until all the images are labelled.
+#) Back to the project settings page; click on the *Add Target Storage* button.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_14.png
+        :width: 600
+
+#) In the dialog, fill in the following fields, and click on the *Add Storage* button.
+
+    * Storage type: ``Local files``
+    * Storage title: a storage title (optional)
+    * Absolute local path: the output path created in the mounted project-scoped dataset
+      (For example, ``/data/output``)
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_15.png
+        :width: 480
+
+#) Back to the project settings page; click on the *Sync Storage* button.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_16.png
+        :width: 600
+
+#) Back to the dataset page; the labelling data will be saved in the output directory.
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_17.png
+        :width: 600
