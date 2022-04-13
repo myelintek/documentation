@@ -131,7 +131,7 @@ available as a WebApp in MLSteam. To setup Label Studio:
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_9.png
         :width: 480
 
-#) Back to the project settings page; click on the *Sync Storage* button.
+#) Back to the project settings page, click on the *Sync Storage* button.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_10.png
         :width: 600
@@ -151,7 +151,7 @@ available as a WebApp in MLSteam. To setup Label Studio:
         :width: 600
 
 #) Repeat the previous step until all the images are labelled.
-#) Back to the project settings page; click on the *Add Target Storage* button.
+#) Back to the project settings page, click on the *Add Target Storage* button.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_14.png
         :width: 600
@@ -166,12 +166,12 @@ available as a WebApp in MLSteam. To setup Label Studio:
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_15.png
         :width: 480
 
-#) Back to the project settings page; click on the *Sync Storage* button.
+#) Back to the project settings page, click on the *Sync Storage* button.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_16.png
         :width: 600
 
-#) Back to the dataset page; the labelling data will be saved in the output directory.
+#) Back to the dataset page, the labelling data will be saved in the output directory.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_17.png
         :width: 600
