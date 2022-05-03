@@ -90,8 +90,6 @@ Bugfix
 * Popup warning when clicking SSH keygen button if the Lab has no sshd service (#2212)
 * Fix webhooks send the Lab stop events twice issue (#2208)
 * Fix 'server_path' error when deleting a user account (#2204)
-* Add default log rotation for CVAT service (#2211)
-* Fix permission check for dataset file extraction API (#2200)
 * Fix Lab cannot start issue when the disk quota full (#2199)
 * Improve API query speed (#2197)
 * Fix project image list cannot loading issue triggered by image builder naming (#2196,#2184)
@@ -133,7 +131,6 @@ Bugfix
 * Fix running labs cannot been connected after system upgraded (#2104)
 * Fix resources not reclaim during stress testing (#2090)
 * Fix building Dockerfile shows image_tag undefined (#2109)
-* Fix Labs stuck at INIT due to CVAT services issue (#2086)
 
 
 v3.8.15
@@ -197,7 +194,6 @@ Feature
 * Add GPU alias in admin panel. (#1966)
 * Add lab proxy for Rest API service (#1968)
 * Support MIG config in mlsteam_agent.ini (#1982)
-* Dataset support Samba/cifs as external storage (#1984)
 * Change Lab dataset attach path from 'mlsteam/input' to 'mlsteam/data' (#1944)
 * User login to home page for poject list instead of current project page (#1989)
 * Add Lab/Project/Image naming rules in each create dialog (#1991)
@@ -217,11 +213,6 @@ Bugfix
 v3.8.8
 ======
 
-
-Features
-++++++++
-
-* Upgrade CVAT to 1.1.0
 
 BugFixes
 ++++++++
@@ -255,7 +246,6 @@ BugFixes
 ++++++++
 
 * Fix terminal lab cannot update flavor issue
-* Fix CVAT can not restart issue
 
 
 v3.8.5
@@ -350,7 +340,6 @@ BugFixes
 .. ++++++++
 
 .. * Refactor dataset page
-.. * Make lab ssh, dockerfile build and CVAT configurable in admin page
 .. * Add home page for project
 
 .. BugFixes
@@ -441,7 +430,6 @@ BugFixes
 
 .. * Fix entry.ipynb not found issue
 .. * Fix MLSteam service startup failed issue (wtforms upgrade)
-.. * Fix public dataset permission error for normal users issue
 .. * Fix error when mlsteam.yml missing param_definition field
 .. * Fix restart Lab looks like hanging issue
 
@@ -507,7 +495,6 @@ BugFixes
 .. * Image management per project  
 .. * Save Labs environment when stop/restart a lab
 .. * Self hosted image repository (optional)
-.. * User groups management
 .. * Adjust project page layout
 .. * Add admin API for list projects and tasks
 .. * Auto restart lab when attaching dataset

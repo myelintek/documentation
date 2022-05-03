@@ -43,7 +43,6 @@ Click "Create" button.
 .. image:: ../_static/admin/create_user.png
 
 Fill username and password. Select single role from drop down list. Choose what plan this user will utilize. Limit storage space.
-Manage group if user needs.
 
 .. image:: ../_static/admin/create_user_modal.png
   :width: 400
@@ -72,30 +71,6 @@ Confirm.
 .. image:: ../_static/admin/delete_user_confirmation.png
   :width: 400
 
-Group
------
-
-You can create and delete groups in this tab.
-
-Create
-++++++
-
-Click "Create" button.
-
-.. image:: ../_static/admin/create_group.png
-
-Fill group name and confirm.
-
-.. image:: ../_static/admin/create_group_modal.png
-  :width: 400
-
-Delete
-++++++
-
-Select group that needs to be deleted, click "Delete" button. Confirm.
-
-.. image:: ../_static/admin/delete_group.png
-  :width: 600  
 
 Dashboard
 =========
