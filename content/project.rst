@@ -34,25 +34,6 @@ From this dashboard, you can access your Labs as well as settings of your chosen
 
 .. image:: ../_static/project/browse_project_dashboard.jpg
 
-Add member
-==========
-
-In your projects' dashboard click the setting button at the upper right of screen and choose the "Member" option from teh drop-down list.
-
-.. image:: ../_static/project/member_project.jpg
-
-In the page you've been redirected, you can see all members of a given *Project*, yourself included. You can add other members to your project by clicking the "Add Member" button.
-
-.. image:: ../_static/project/member_project_add.jpg
-
-Write the name of the member to add and set their permission. *Writer* can modify your project, while *Reader* can only look at the code.
-
-.. image:: ../_static/project/member_project_save.jpg
-
-You can edit permissions by clicking "Edit" or remove an unwanted member from your project with a "Delete" button next to that users' name.
-
-.. image:: ../_static/project/edit_delete_member.jpg
-
 Delete project
 ==============
 
