@@ -16,7 +16,6 @@ Bugfix
 * Fix auditlog show multiple stop while stopping labs (#2338)
 * Fix agent installation error (#2339)
 * Fix scheduler didn't recalculate resources after restart issue (#2340)
-* Fix https certificate upgrade issue (#2343)
 * Fix dataset upload file token timeout issue (#2345, #2349)
 * Fix file extraction timeout issue (#2349)
 
@@ -186,7 +185,6 @@ v3.8.10
 
 Feature
 +++++++
-* Add GPU alias in admin panel. (#1966)
 * Add lab proxy for Rest API service (#1968)
 * Support MIG config in mlsteam_agent.ini (#1982)
 * Change Lab dataset attach path from 'mlsteam/input' to 'mlsteam/data' (#1944)
@@ -301,7 +299,6 @@ BugFixes
 * Fix disk quota full Labs can not stop and start issue
 * Fix create lab should display 'Out of GPU resource,...' when GPUs are unavailable
 * Fix dataset extract zip file with unknown character sets
-* Fix certificates backup and restore issue
 * Fix disable buttons when uploading files are selected
 
 
@@ -320,7 +317,6 @@ BugFixes
 ++++++++
 
 * Fix dataset button has to toolip issue
-* Fix certificate files not backup issue
 * Fix https redirect to http issue
 * Fix labs may occupy double resources when users click start and stop buttons quickly
 * Fix dataset create with invalid characters issue
@@ -394,7 +390,6 @@ BugFixes
 .. * Fix cookie timeout not redirect to logout page issue
 .. * Fix auditlog timezone incorrect issue
 .. * Fix lab attach dataset may error issue
-.. * Fix certificate doesn't backup issue
 
 
 .. v3.4.2
@@ -412,7 +407,6 @@ BugFixes
 .. * Fix frequently login system cause instability issue
 .. * Add saving state in Lab when stopping, fix stop/restart timeout issue
 .. * Add repository create timeout issue
-.. * Fix https certificate won't automatically renew issue
 
 
 .. v3.4.1
@@ -475,7 +469,6 @@ BugFixes
 .. Bugfixes
 .. ++++++++
 
-.. * fix certificate expire date
 .. * fix nfs delete files issue when using NFSv4
 
 
@@ -521,11 +514,6 @@ BugFixes
 
 .. v3.2.1
 .. ======
-
-.. Features
-.. ++++++++
-
-.. * Add certificate setting page in admin page
 
 .. Bugfixes
 .. ++++++++

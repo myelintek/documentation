@@ -33,7 +33,7 @@ User managment tab allows creating, editing and deleting users.
 Create
 ++++++
 
-Click "Users" button.
+Click "Account" button.
 
 .. image:: ../_static/admin/popup_users.png
   :width: 400
@@ -182,33 +182,6 @@ Select needed host and click "Delete" button. Confirm.
 
 .. image:: ../_static/admin/delete_host_modal.png
   :width: 400
-  
-Certificate
------------
-
-Shows list of certificates in the system.
-
-.. image:: ../_static/admin/list_certificate.png
-
-Create
-++++++
-
-Click create button.
-
-.. image:: ../_static/admin/create_certificate.png
-
-Input certificate name and doamin name, click "Test and Create". (Optional, email) 
-
-.. image:: ../_static/admin/create_certificate_modal.png
-  :width: 600
-
-Delete
-++++++
-
-Select needed host and click "Delete" button. Confirm.
-
-.. image:: ../_static/admin/delete_certificate.png
-
 
 Flavor
 ------
