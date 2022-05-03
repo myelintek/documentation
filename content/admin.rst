@@ -149,23 +149,6 @@ Fill project name and annotation, click "Create".
 .. image:: ../_static/admin/create_project_modal.png
   :width: 400
 
-Members
-+++++++
-
-To edit project members click "Members" button next to the project name.
-
-.. image:: ../_static/admin/members_project.png
-
-To add user to the project click "Add member", then type their name, select permissions and click "Save", then click "Done".
-
-.. image:: ../_static/admin/members_project_modal.png
-  :width: 400
-
-To delete user from project click "Delete" next to the username, then click "Done".
-
-.. image:: ../_static/admin/delete_members_project.png
-  :width: 400
-
 Delete
 ++++++
 

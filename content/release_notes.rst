@@ -146,7 +146,6 @@ Feature
 
 * Fix webhooks message format
 * Add version in license file
-* Add force GPU option in plan to force users to use the CPU lab along with GPU labs (#2081)
 * Optimize CPU training performance by CPU affinity (#2087)
 
 Bugfix
@@ -470,7 +469,6 @@ BugFixes
 
 .. * Fix device info doesn't show issue
 .. * Fix project table overlap issue
-.. * Fix background color in project member setting dropdown list
 
 
 .. v3.3.2
