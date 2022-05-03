@@ -17,7 +17,6 @@ Here we list all terminology used in MLSteam web.
 * :ref:`project_term`
 * :ref:`dataset_term`
 * :ref:`lab_term`
-* :ref:`template_term`
 
 .. _project_term:
 
@@ -46,16 +45,6 @@ A lab is a web IDE (based on JupyterLab) organized in container basis.
 You can develop DNN models in a lab and start training.
 
 
-.. _template_term:
-
-Template
-========
-
-A template is an example of a lab with specific type of DNN model with already preloaded dataset connected to it. 
-Serves as an example or template for users.
-
-
-
 .. toctree::
    :hidden:
    :maxdepth: 2
@@ -65,7 +54,6 @@ Serves as an example or template for users.
    content/project
    content/lab
    content/image
-   content/template
    content/remote_access
    content/admin
    content/guide

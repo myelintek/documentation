@@ -24,11 +24,6 @@ Flavor
 
 Is the hardware setting for a Lab, describes how much resources (CPUs, GPUs) are allocated
 
-Template
-********
-
-Is an example project of a specific type with a preloaded dataset already connected to it. Serves as a reference project for users.
-
 Image
 *****
 

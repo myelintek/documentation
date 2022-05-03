@@ -42,7 +42,6 @@ BugFix
 * Fix vulnerability cve-2020-11022, cve-2020-11023 by upgrading jQuery from v3.4.1 to v3.6.0 (#2297)
 * Fix ssh key auto download when page refresh issue (#2297)
 * Fix vulnerability CVE-2016-10540, CVE-2019-10744, CVE-2020-8203, CVE-2018-16487, CVE-2019-10744, CVE-2020-1971, CVE-2021-3449, CVE-2021-28092 (#2301)
-* Fix failed to manually create template from env.yml issue (#2307)
 * Change API project delete and user delete to asynchronous, prevent API timeout and performance issue (#2292)
 * Remove cuda dependency on MLSteam container (#2305)
 * Fix error message no popup issue (#2318)
@@ -50,7 +49,6 @@ BugFix
 * Fix dataset delay in slowing directories issue (#2322)
 * Fix users can see flavors event beyond their resource plan in terminal Lab page (#2321)
 * Fix dataset file disappear issue (#2332)
-* Refactor Dockerfile, separate build and install into two stages; Fetch templates from Internet (#2333)
 
 
 v3.9.20
@@ -161,7 +159,6 @@ v3.8.13
 Feature
 +++++++
 
-* Add YOLOv4 template
 * Add squash warning and cleaning if the Lab image layers exceed 110 layers
 * Change default image to python-gpu:16.01, add machine-learning-tutorials code
 
@@ -170,8 +167,6 @@ Bugfix
 
 * change system out of resource and user reached limits warning messages
 * Fix web page loading fonts issue and icons moving issue
-* Remove deprecated templates, data-augmentation, cross validation templates.
-* Update code in templates for YOLOv3, pytorch-cifar10 and classification
 * Fix cluster init error (#2031)
 * Fix Nginx config issue (#2026)
 * Fix agent may disconnect with master issue
@@ -457,7 +452,6 @@ BugFixes
 .. Features
 .. ++++++++
 
-.. * Add augmentation template
 .. * Add dockerfile build page in project
 .. * Add system restart button for administration
 .. * Add fullscreen button in labs
@@ -515,8 +509,6 @@ BugFixes
 .. * Self hosted image repository (optional)
 .. * User groups management
 .. * Adjust project page layout
-.. * [Classification template]: move tfrecord generation to training stage
-.. * Add Iris Flower template
 .. * Add admin API for list projects and tasks
 .. * Auto restart lab when attaching dataset
 

@@ -24,11 +24,6 @@ Lab
 
 Jupyter notebook environment that can connect to datasets.
 
-Template
-********
-
-Is an example of project of specific type with a dataset connected to it. Serves as an example or template for users.
-
 Image
 *****
 
