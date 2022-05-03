@@ -42,7 +42,7 @@ Click "Create" button.
 
 .. image:: ../_static/admin/create_user.png
 
-Fill username and password. Select single role from drop down list. Choose what plan this user will utilize. Limit storage space.
+Fill username and password. Select single role from drop down list.
 
 .. image:: ../_static/admin/create_user_modal.png
   :width: 400
@@ -209,51 +209,6 @@ Select needed host and click "Delete" button. Confirm.
 
 .. image:: ../_static/admin/delete_certificate.png
 
-Repository
-----------
-
-Create
-++++++
-
-Plan
-----
-Setup different plans for different kinds of users
-
-Create
-++++++
-
-Click "Create"
-
-.. image:: ../_static/admin/create_plan.png
-
-Come up with a name, GPU number, GPU type, number of CPU cores & labs, available memory, and whether your new plan is preserved.
-
-.. image:: ../_static/admin/create_plan_modal.png
-  :width: 600
-
-Edit
-++++
-
-To change preciously created plan you need to first select the plan you want to alter and click "Edit".
-
-.. image:: ../_static/admin/edit_plan.png
-
-Choose what you want to change, we'll adjust the number of GPUs available to subscribers of this plan.
-
-.. image:: ../_static/admin/edit_plan_modal.png
-  :width: 600
-
-Delete
-++++++
-
-To remove a plan, select it and click "Delete"
-
-.. image:: ../_static/admin/delete_plan.png
-
-Confirm your choice and proceed. 
-
-.. image:: ../_static/admin/delete_plan_modal.png
-  :width: 400
 
 Flavor
 ------
@@ -267,7 +222,7 @@ To add a new flavor, click "Create"
 
 .. image:: ../_static/admin/create_flavor.png
 
-Similar to a plan, choose the name, number of GPUs, their type, number of CPU cores, and memory for your new flavor, then click "Create".
+Choose the name, number of GPUs, their type, number of CPU cores, and memory for your new flavor, then click "Create".
 
 .. image:: ../_static/admin/create_flavor_modal.png
   :width: 600
@@ -295,22 +250,6 @@ Confirm your choice and proceed.
 
 .. image:: ../_static/admin/delete_flavor_modal.png
   :width: 400
-
-LDAP
-----
-
-To enable LDAP authentification go to LDAP tab. Press "Create" to create new configuration.
-
-.. image:: ../_static/admin/create_ldap.png
-
-Fill all the fields according to your LDAP server settings, then press apply. Default ports are 389 for ldap or 636 for ldaps.  
-
-.. image:: ../_static/admin/create_ldap_modal.png
-
-If the operation is successfull you will see ldap info. 
-To delete ldap press "Delete" button.
-
-.. image:: ../_static/admin/delete_ldap.png
 
 
 Webhook

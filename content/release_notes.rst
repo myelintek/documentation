@@ -47,7 +47,6 @@ BugFix
 * Fix error message no popup issue (#2318)
 * Fix timeout issue for importing large docker image (#2320)
 * Fix dataset delay in slowing directories issue (#2322)
-* Fix users can see flavors event beyond their resource plan in terminal Lab page (#2321)
 * Fix dataset file disappear issue (#2332)
 
 
@@ -82,7 +81,6 @@ Feature
 +++++++
 
 * Add user notification page for standard version of MLSteam (#2206)
-* Add stop GPU Lab warning for non-reserved plan users if there are CPU Labs running (#2198)
 
 Bugfix
 ++++++
@@ -95,7 +93,6 @@ Bugfix
 * Fix project image list cannot loading issue triggered by image builder naming (#2196,#2184)
 * Fix stress testing failed to start lab if vcpu larger than 2 (#2192)
 * Fix Lab dataset dynamic update during collaboration (#2193,#2186)
-* Remove change password for user authenticated from LDAP (#2191,#2187)
 
 
 v3.8.18
@@ -146,7 +143,6 @@ Feature
 Bugfix
 ++++++
 
-* Fix LDAP login disconnect from server issue (#2083)
 * Improve project page performance (#2096)
 
 
@@ -184,7 +180,6 @@ Bugfix
 * fix warning message wording
 * fix naming rules wording
 * fix mount cifs/nfs issue
-* add uid in LDAP setting (#2020)
 
 v3.8.10
 =======
@@ -219,7 +214,6 @@ BugFixes
 
 * Fix theme change issue
 * Solve problem that EXEC process left in container (#1917)
-* Fix Flavor check fail when user with preserved plan want to change flavor for lab
 
 
 v3.8.7
@@ -317,7 +311,6 @@ v3.8.1
 Features
 ++++++++
 
-* Add flavor and plan for tasks and users resource allocations
 * Add user account and billing URLs in mlsteam.ini config options
 * Add Lab create with terminal option
 * Add port forward option in terminal labs

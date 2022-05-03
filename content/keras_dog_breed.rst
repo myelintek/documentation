@@ -132,7 +132,7 @@ Dataset Preprocessing
 The dog breed dataset contains different breeds of dogs images.
 The folder structure should be like this:
 
-.. code-block:: plant
+.. code-block::
 
     input -|
            |- test - 
