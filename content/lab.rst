@@ -228,37 +228,6 @@ To stop expossing port and delete the proxy press "Delete".
 
 .. image:: ../_static/lab/expose_port_delete.png
 
-Use Tensorboard
-===============
-Users can open tensorboard for current lab. First, use classification template to open a lab. Then, type following command in console to generate checkpoint files.
-
-.. code-block:: console
-
-  python2 trainer.py --num_gpus=1 --batch_size=32 --network=lenet.py --data_dir=../input/mnist --train_dir=backup
-
-Checkpoint files will be located in the backup folder. Now, click tensorboard -> start button on top-right corner of lab page.
-    
-.. image:: ../_static/lab/start_lab_tensorboard.jpg
-  :width: 400
-
-Click tensorboard button again, the dropdown list will show OPEN button. Click open button to open tensorboard in a new tab.
-
-.. image:: ../_static/lab/open_lab_tensorboard.jpg
-  :width: 400
-
-The tensorboard will read current lab folder and display content accordingly.
-
-.. note::
-
-  If the new tab page shows 502, please reload page again.
-
-To close tensorboard, click tensorboard -> stop button to terminate tensorboard process.
-
-.. note::
-
-  Tensorboard will been terminated when the associated lab is deleted.
-
-
 .. _commit_lab:
 
 Commit lab

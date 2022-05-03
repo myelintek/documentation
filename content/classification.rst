@@ -260,39 +260,3 @@ Final validation accuracy is only slightly higher for resnet50 (0.9854 vs. 0.980
 .. image:: ../_static/template/parameters_res_graphs.png
 
 .. image:: ../_static/template/parameters_res_acc.png
-
-How to use TensorBoard
-----------------------
-
-TensorBoard provides the visualization and tooling needed for machine learning experimentation:
-
-* Tracking and visualizing metrics such as loss and accuracy
-* Visualizing the model graph (ops and layers)
-* Viewing histograms of weights, biases, or other tensors as they change over time
-* Projecting embeddings to a lower dimensional space
-* Displaying images, text, and audio data
-* Profiling TensorFlow programs
-* And much more
-
-.. tip::
-   TensorBoard working with TensorFlow-based code.
-
-.. image:: ../_static/template/template_tensorflow.png
-
-Starting TensorBoard
-^^^^^^^^^^^^^^^^^^^^
-
-Summit a job in the first, and wait for the job finished.
-
-Then specify the file path of training result in logdir and click start. (The default directory is /mlsteam/output)
-
-.. figure:: ../_static/template/tensorboard_example1.png
-  :width: 400
-  
-
-Click the url for starting TensorBoard.
-
-.. figure:: ../_static/template/tensorboard_example2.png
-  :width: 400
-
-For more details, please see the link https://www.tensorflow.org/tensorboard/get_started.
