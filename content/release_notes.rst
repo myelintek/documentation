@@ -69,10 +69,8 @@ Features
 Bugfix
 ++++++
 
-* Fix tensorboard cannot start issue (#2242)
 * Fix unable to mount no password CIFS issue (#2239)
 * Remove image information from Lab page on QC theme (#2233)
-* Fix job images not deleted issue (#2236)
 * UI change for QC theme (#2235)
 * Fix fail to mount purestorage NFS issue (#2230)
 * Auto install nvidia driver if kernel upgraded (#2224)
@@ -148,7 +146,6 @@ Feature
 
 * Fix webhooks message format
 * Add version in license file
-* Show parent lab name in the project jobs list page (#2071)
 * Add force GPU option in plan to force users to use the CPU lab along with GPU labs (#2081)
 * Optimize CPU training performance by CPU affinity (#2087)
 
@@ -157,7 +154,6 @@ Bugfix
 
 * Fix LDAP login disconnect from server issue (#2083)
 * Improve project page performance (#2096)
-* Fix Job elapse time always zero issue (#2068)
 
 
 v3.8.13
@@ -178,7 +174,6 @@ Bugfix
 * Remove deprecated templates, data-augmentation, cross validation templates.
 * Update code in templates for YOLOv3, pytorch-cifar10 and classification
 * Fix cluster init error (#2031)
-* Fix job submit failed issue (#2028)
 * Fix Nginx config issue (#2026)
 * Fix agent may disconnect with master issue
 
@@ -205,7 +200,6 @@ v3.8.10
 
 Feature
 +++++++
-* Launch job from templates (#1962)
 * Add GPU alias in admin panel. (#1966)
 * Add lab proxy for Rest API service (#1968)
 * Support MIG config in mlsteam_agent.ini (#1982)
@@ -325,11 +319,9 @@ BugFixes
 ++++++++
 
 * Fix stop lab response success but actually failed issue
-* Fix submit job modal view issue
 * Fix error message 'Imagename' to 'Image name'
 * Fix disk quota full Labs can not stop and start issue
 * Fix create lab should display 'Out of GPU resource,...' when GPUs are unavailable
-* Fix some Flavors filtering based on users plan at Labs setting and job submit pages
 * Fix dataset extract zip file with unknown character sets
 * Fix certificates backup and restore issue
 * Fix disable buttons when uploading files are selected
@@ -370,7 +362,6 @@ BugFixes
 .. BugFixes
 .. ++++++++
 
-.. * Fix tensorboard buttons not automatically update
 .. * Close commit & run menu when click 'start'
 .. * Fix image list page sometime shows 404 error
 .. * Fix i18n translations
@@ -418,8 +409,6 @@ BugFixes
 .. Features
 .. ++++++++
 
-.. * Add lab/job disk space limitation
-.. * Add lab/job cpu, memory and max-openfile to 65535 limitation
 .. * Show available disk space in dataset page
 .. * Simplified lab page
 
@@ -429,7 +418,6 @@ BugFixes
 .. * Fix cookie timeout not redirect to logout page issue
 .. * Fix auditlog timezone incorrect issue
 .. * Fix lab attach dataset may error issue
-.. * Fix job can't delete while in waiting state
 .. * Fix certificate doesn't backup issue
 
 
@@ -462,8 +450,6 @@ BugFixes
 .. * Fix public dataset permission error for normal users issue
 .. * Fix error when mlsteam.yml missing param_definition field
 .. * Fix restart Lab looks like hanging issue
-.. * Fix auditlog shows duplicate stop lab/job messages
-.. * Fix delete job with tensorboard opening cause system crash issue
 
 
 .. v3.4.0
@@ -473,7 +459,6 @@ BugFixes
 .. ++++++++
 
 .. * Add augmentation template
-.. * Refactor template yaml format, yaml file will sync with right panels parameters
 .. * Add dockerfile build page in project
 .. * Add system restart button for administration
 .. * Add fullscreen button in labs
@@ -531,20 +516,16 @@ BugFixes
 .. * Save Labs environment when stop/restart a lab
 .. * Self hosted image repository (optional)
 .. * User groups management
-.. * Confirm parameters when committing a job
-.. * Parameter settings in a lab changed from YAML to Form
 .. * Adjust project page layout
 .. * [Classification template]: move tfrecord generation to training stage
 .. * Add Iris Flower template
 .. * Add admin API for list projects and tasks
-.. * Custom log path for tensorboard
 .. * Auto restart lab when attaching dataset
 
 .. Bugfixes
 .. ++++++++
 
 
-.. * Fix Job output missing print messages issue
 .. * Fix cancel uploading datasets issue
 .. * Fix labs crash if yaml file format incorrect issue
 .. * Fix blank when loading lab page issue
@@ -566,9 +547,6 @@ BugFixes
 
 
 .. * Fix unclick gpu limit check not working issue.
-.. * Fix jobs elapse time incorrect issue.
-.. * Fix jobs gpu limit incorrect issue.
-.. * Fix jobs disappear issue
 .. * Fix can't find hostid for licensing issue
 
 .. v3.2.1
@@ -584,7 +562,6 @@ BugFixes
 
 .. * Show clear NFS mount error message
 .. * Fix create user without roles defined error
-.. * Fix run job from default lab becoming error state
 .. * Minor bugfixs
 
 .. v3.2.0
@@ -593,7 +570,6 @@ BugFixes
 .. Features
 .. ++++++++
 
-.. * Auto stop Lab or Job while GPU in high temperature (90 celsius)
 .. * Refactor top-right menu
 .. * Admin role and developer role become exclusive. Admin role users can do same things as developer role.
 
@@ -619,8 +595,6 @@ BugFixes
 .. Features
 .. ++++++++
 
-.. * Display elapsed and estimated time in job page
-.. * Add tensorboard in job and lab pages
 .. * Add example code for default jupyterlab page
 
 .. Bugfixes
@@ -628,7 +602,6 @@ BugFixes
 
 
 .. * Fix NFS mount affects fstab issue
-.. * Fix can't stop lab/job issue
 .. * Fix upload large amount of files hang issue
 .. * Minor bugs fix
 
@@ -636,9 +609,7 @@ BugFixes
 .. ======
 
 .. * Python3 version, refactor code.
-.. * Introduce Lab, Job and templates.
 .. * Fix dataset yolo annotations file works in relative path
-.. * Add log_parser.py support for job metrics
 .. * Add lab params syntax check
 .. * In production mode
 .. * Fix nfs not unmount when delete nfs dataset.

@@ -30,7 +30,7 @@ Click the "View" button to see your project status and the dashboard.
 
 .. image:: ../_static/project/browse_project.jpg
 
-From this dashboard, you can access your Labs, Jobs, as well as settings of your chosen project.
+From this dashboard, you can access your Labs as well as settings of your chosen project.
 
 .. image:: ../_static/project/browse_project_dashboard.jpg
 
@@ -45,7 +45,7 @@ In the page you've been redirected, you can see all members of a given *Project*
 
 .. image:: ../_static/project/member_project_add.jpg
 
-Write the name of the member to add and set their permission. *Writer* can modify your project, while *Reader* can only look at the code and run *Jobs*.
+Write the name of the member to add and set their permission. *Writer* can modify your project, while *Reader* can only look at the code.
 
 .. image:: ../_static/project/member_project_save.jpg
 

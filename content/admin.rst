@@ -108,7 +108,7 @@ Check various statistics about the system
 Task
 ----
 
-Shows a list of currently running instances of labs and jobs.
+Shows a list of currently running instances of labs.
 
 .. image:: ../_static/admin/list_task.png
 
@@ -300,7 +300,7 @@ Confirm your choice and proceed.
 Flavor
 ------
 
-Users can choose a flavor for their Labs/Jobs, which corresponds to designating hardware resources
+Users can choose a flavor for their Labs, which corresponds to designating hardware resources
 
 Create
 ++++++
@@ -358,7 +358,7 @@ To delete ldap press "Delete" button.
 Webhook
 -------
 
-Webhook is designed to help calculate system usage data. Webhook is triggered at the next events: lab stop/start/restart/delete, job start/stop/delete.
+Webhook is designed to help calculate system usage data. Webhook is triggered at the next events: lab stop/start/restart/delete.
 Webhook sends POST request to the specified url containing data in the next format:
 
 .. code-block:: python

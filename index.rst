@@ -9,10 +9,6 @@ Welcome to MLSteam!
 
 Here is the complete guide to training and developing your deep learning application with our platform MLSteam.
 
-To have a quick tutorial for using our system is to use :ref:`quick_start`. You will create a lab in a project on MLSteam with same code in the lab.
-
-
-***********
 Terminology
 ***********
 Here we list all terminology used in MLSteam web.
@@ -21,7 +17,6 @@ Here we list all terminology used in MLSteam web.
 * :ref:`project_term`
 * :ref:`dataset_term`
 * :ref:`lab_term`
-* :ref:`job_term`
 * :ref:`template_term`
 
 .. _project_term:
@@ -30,8 +25,7 @@ Project
 =======
 
 The project is a collection of all works when you developing a DNN models. 
-You can launch a either a jupyterlab (we call them labs) or launch experiments 
-and training iterations (we call them jobs) will be kept and organized.
+You can launch a jupyterlab (we call them labs) within a project to perform experiments.
 
 
 .. _dataset_term:
@@ -49,14 +43,7 @@ Lab
 ====
 
 A lab is a web IDE (based on JupyterLab) organized in container basis.
-You can develop DNN models in a lab and start training in the same lab or create another training containers (we call jobs) for keeping records.
-
-.. _job_term:
-
-Job
-===
-
-A job is a run of specific code, can be connected to dataset.
+You can develop DNN models in a lab and start training.
 
 
 .. _template_term:
@@ -77,7 +64,6 @@ Serves as an example or template for users.
    content/dataset
    content/project
    content/lab
-   content/job
    content/image
    content/template
    content/remote_access

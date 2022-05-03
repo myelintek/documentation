@@ -7,7 +7,7 @@ Terminology
 Project
 *******
 
-Is a group of jobs and labs with the dataset connected to it.
+Is a group of labs with the dataset connected to it.
 
 Dataset
 *******
@@ -17,17 +17,12 @@ Is any collection of data.
 Lab
 ***
 
-Jupyter notebook environment that then can be run as job and can be connected to a dataset.
-
-Job
-***
-
-Is an instance of running specific code from a Lab, can be connected to dataset.
+Jupyter notebook environment that can connect to datasets.
 
 Flavor
 ******
 
-Is the hardware setting for a Lab or a Job, describes how much resources (CPUs, GPUs) are allocated
+Is the hardware setting for a Lab, describes how much resources (CPUs, GPUs) are allocated
 
 Template
 ********

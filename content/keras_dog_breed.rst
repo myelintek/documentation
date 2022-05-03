@@ -485,35 +485,3 @@ The output should be like this:
 .. figure:: ../_static/tutorial/dog_breed_prediction_20_output.png
 
   prediction results with trained model
-
-
-Submit a training job
-=====================
-
-For advanced users who want to tune hyper-parameters, we suggest to run each training as a job for better organization. 
-
-You can download the above training code `here <https://github.com/myelintek/documentation/blob/master/_static/tutorial/dog_breed.ipynb>`_ file which includes above code.
-
-Open mlsteam.yml in lab folder, specify the training job command 'ipython3 dog_breed.ipynb'.
-
-.. figure:: ../_static/tutorial/edit_yml_dog_breed.png
-  :width: 500
-  
-  specify 'command' for training job
-
-Click the 'Submit Job' button on top right of the lab and confirm the training parameters.
-
-.. figure:: ../_static/tutorial/dog_breed_job_commit_confirm.png
-  :width: 400
-
-  click commit to submit a training job
-
-.. note:: 
-
-    choose a "small" flavor to use 1 GPU
-
-You can click the new created training job for monitoring.
-
-.. figure:: ../_static/tutorial/dog_breed_job_window.png
-
-  content of a training job page.

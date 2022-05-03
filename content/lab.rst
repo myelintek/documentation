@@ -9,9 +9,6 @@ A lab is a web IDE (based on JupyterLab). Here we listed all available operation
 * :ref:`stop_lab`
 * :ref:`start_lab`
 * :ref:`attach_dataset_lab`
-* :ref:`pass parameters`
-* :ref:`lab_tensorboard`
-* :ref:`commit_lab`
 * :ref:`delete_lab`
 
 
@@ -40,7 +37,7 @@ Finalize your choice by clicking *Create* button and your lab should be ready in
 
 .. caution::
 
-  GPU number is exclusive for each lab and job. Be cautious that system may run out of GPU resources and labs won't be launched unless GPU resources are released.
+  GPU number is exclusive for each lab. Be cautious that system may run out of GPU resources and labs won't be launched unless GPU resources are released.
 
 .. tip::
 
@@ -163,47 +160,6 @@ Launch the terminal and unzip the file.
 
 .. image:: ../_static/lab/unzipfile.png
 
-.. _pass parameters:
-
-Pass parameters
-===============
-
-Users can update parameters (hypter-parameters) of a model by defining parameters on web page. Parameters supports YAML format definition and also supports multiple values per key value. System will automatically create multiple jobs for all combinations and run created jobs in parallel on different GPUs.
-
-In your model source code. Please import mlsteam function
-
-.. code-block:: python
-
-  from mlsteam import stparams
-
-Replace code as below to enable parameter update from web page. In this example, we define 'train_bs' keyword.
-
-.. code-block:: python
-
-  -      default=128,
-  +      default=stparams.get_value('train_bs', 128),
-
-All parameters will be show on the right hyperparameter section.
-
-.. image:: ../_static/lab/list_params.jpg
-  :width: 400
-
-Use comma separator to pass multiple values, or select multiple values from a list to create multiple jobs.
-
-.. image:: ../_static/lab/custom_params.jpg
-  :width: 400
-
-Now you can define default keyword value in mlsteam.yml of a lab.
-
-If you want to make a dropdown and selector, use "-" to perform it in a list.
-
-If you want to make a text editor, use type *String* or type *Int*.
-
-.. image:: ../_static/lab/default_params.jpg
-  :width: 400
-
-
-.. _lab_tensorboard:
 
 Generate ssh key (if enabled)
 =============================
@@ -227,30 +183,6 @@ Use the shown link to access specified port.
 To stop expossing port and delete the proxy press "Delete".
 
 .. image:: ../_static/lab/expose_port_delete.png
-
-.. _commit_lab:
-
-Commit lab
-==========
-
-First attach dataset to the lab.
-
-Click "Submit Job".
-
-.. image:: ../_static/lab/commit_run.jpg
-
-Check parameters to be correct.
-
-.. image:: ../_static/lab/check_params.jpg
-  :width: 400
-
-This will create a job from the code that lab contains.
-
-Browse job to see output. In our case, output is the content of folder `/mlsteam/input`.
-
-.. figure:: ../_static/lab/run_output.jpg
-
-  a training job with output display
 
 
 .. _delete_lab:
