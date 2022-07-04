@@ -175,3 +175,34 @@ available as a WebApp in MLSteam. To setup Label Studio:
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_17.png
         :width: 600
+
+Setup CVAT
+==========
+
+`CVAT <https://cvat.org/>`_ is a data annotation tool,
+available as a WebApp in MLSteam. To setup CVAT:
+
+#) :ref:`Create a project-scoped dataset <create-and-manage-project-scoped-dataset>`
+
+#) Create a CVAT WebApp from template.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_1.png
+        :width: 600
+
+#) Input name and select desired dataset from the dropdown, then press "Create". Notice default credentials.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_2.png
+        :width: 600
+
+#) When the webapp is running press "External link" button to open CVAT.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_3.png
+        :width: 600
+
+#) In the CVAT tab input default credentials ``admin/cvat@mlsteam``
+#) Press "Create new task" button
+#) Fill the task creation form fields. To use project dataset for annotation click "Connected file share" expand directory tree and sellect needed files.
+
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_3.png
+        :width: 600
