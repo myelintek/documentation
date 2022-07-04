@@ -204,5 +204,5 @@ available as a WebApp in MLSteam. To setup CVAT:
 #) Fill the task creation form fields. To use project dataset for annotation click "Connected file share" expand directory tree and sellect needed files.
 
 
-    .. image:: /_static/imgs/user/webapp/setup_cvat_3.png
+    .. image:: /_static/imgs/user/webapp/setup_cvat_4.png
         :width: 600
