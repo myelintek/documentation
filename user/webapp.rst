@@ -198,6 +198,10 @@ available as a WebApp in MLSteam. To setup CVAT:
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_3.png
         :width: 600
+    
+    .. note::
+        While CVAT status is running it might take few minutes for system to fully setup and create accaunt.
+
 
 #) In the CVAT tab input default credentials ``admin/cvat@mlsteam``
 #) Press "Create new task" button
@@ -205,4 +209,24 @@ available as a WebApp in MLSteam. To setup CVAT:
 
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_4.png
+        :width: 600
+
+    .. warning::
+        Don't include ``.cvat`` directory. It will result in error.
+
+#) Open task 
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_5.png
+        :width: 600
+
+#) Open job
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_6.png
+        :width: 600
+
+#) Do the labeling (labeling process is not covered here)
+
+#) To use annotations, download them first then unzip and upload annotation file to MLSteam dataset. To download unnotations press "Menu"->"Dump annotations" then select desired format.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_7.png
         :width: 600
