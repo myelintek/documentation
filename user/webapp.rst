@@ -201,6 +201,13 @@ available as a WebApp in MLSteam. To setup CVAT:
     
     .. note::
         While CVAT status is running it might take few minutes for system to fully setup and create accaunt.
+        You can check start up progress by checking the logs
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_9.png
+        :width: 600
+    
+    .. image:: /_static/imgs/user/webapp/setup_cvat_8.png
+        :width: 600
 
 
 #) In the CVAT tab input default credentials ``admin/cvat@mlsteam``
