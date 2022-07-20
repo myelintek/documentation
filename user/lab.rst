@@ -288,6 +288,7 @@ To run ML experiments with a set a hyperparameters:
 
 #) Create/modify `mlsteam.yml` file in `/mlsteam/lab` directory. 
 #) `command` field is required. Define `params` fields to serve as hyperparameters to be appended to the command (values can be adjusted later).
+
     .. image:: /_static/imgs/user/lab/tune_parms_mlsteam_yml.png
         :width: 600
 
