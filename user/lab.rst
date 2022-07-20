@@ -281,10 +281,15 @@ Now, we are ready to access the lab with VSCode.
 
 .. _lab-hyperparameter-tuning:
 
-Hyperparameter Tuning
-=====================
+Hyperparameter Tuning by Submitting Tracks
+==========================================
 
 To run ML experiments with a set a hyperparameters:
+
+#) Create/modify `mlsteam.yml` file in `/mlsteam/lab` directory. 
+#) `command` field is required. Define `params` fields to serve as hyperparameters to be appended to the command (values can be adjusted later).
+    .. image:: /_static/imgs/user/lab/tune_parms_mlsteam_yml.png
+        :width: 600
 
 #) In the lab page, click on the *hyperparameter* icon in the top area.
 #) Fill in the parameters to use in the sidebar.
