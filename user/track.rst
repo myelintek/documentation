@@ -156,11 +156,11 @@ To log a series for visualization:
         logging value.
 
         * To log a single series, use an integer, a float, or a string (without commas) value.
-        * To log multiple serieses together, use a comma-separated string ``'s1_val, s2_val, ...'`` to denote unnamed serieses,
-          or use a JSON object string ``'{"s1_name": s1_val, "s2_name": s2_val, ...}'`` to denote named serieses.
+        * To log multiple series together, use a comma-separated string ``'s1_val, s2_val, ...'`` to denote unnamed series,
+          or use a JSON object string ``'{"s1_name": s1_val, "s2_name": s2_val, ...}'`` to denote named series.
 
     .. note::
-        * Unnamed serieses will be assigned names ``y1``, ``y2``, ``y3``, etc.
+        * Unnamed series will be assigned names ``y1``, ``y2``, ``y3``, etc.
         * X-axis will be timestamps unless there is a series named ``epoch``.
 
     The following demonstrates logging for various kinds of chart display.
@@ -173,7 +173,7 @@ To log a series for visualization:
         # a line chart of series (y1, y2, and y3) with timestamp as x-axis
         track['chart_mutiple.chart'].log('123, 456, 789')
 
-        # a line chart of serieses (loss and accuracy) with timestamp as x-axis
+        # a line chart of series (loss and accuracy) with timestamp as x-axis
         track['chart_mutiple_named.chart'].log(json.dumps({'loss': 0.35, 'accuracy': 0.59}))
 
         # a line chart of series (s1 and s2) with epoch number as x-axis
