@@ -65,7 +65,7 @@ programmatically through the `MLSteam Client library <https://pypi.org/project/m
 
         pip install mlsteam-client
 
-To initialize the client:
+First, initialize the client:
 
 .. code-block::
 
@@ -74,19 +74,72 @@ To initialize the client:
 
     track = mlsteam.init()
 
+On submitting a track in :ref:`hyperparameter tuning <lab-hyperparameter-tuning>`,
+MLSteam writes the combination of hyperparameter values in the `mlsteam.yml` file,
+which could be read by the client.
+
 To fetch hyperparameter values:
 
     .. code-block::
 
         stparams.get_value(parm_name, parm_default_val)
 
-    For example, to set the default argument in a training program:
+    parm_name (str)
+        parameter name
+    parm_default_val (Any)
+        default value when the parameter is undefined
+
+    The following sets the default argument in a training program.
 
     .. code-block::
 
         parser = ArgumentParser()
         parser.add_argument('--batch', type=int, default=stparams.get_value('batch', 128))
 
+To log a single value (aka. scalar):
+
+    .. code-block::
+
+        track[log_name] = log_value
+
+    log_name (str)
+        logging location.
+        You could optionally use slashes `/` to organize the parameters in folders.
+    log_value (int, float, or str)
+        logging value
+
+    The following logs the language model building settings.
+
+    .. code-block::
+
+        track['model/name'] = 'small_bert'
+        track['model/layer'] = 4
+        track['model/hidden'] = 256
+
+To log a series:
+
+    .. code-block::
+
+        track[log_name].log(log_value)
+
+    log_name (str)
+        logging location.
+        You could optionally use slashes `/` to organize the parameters in folders.
+    log_value (int, float, or str)
+        logging value
+
+    MLSteam timestamps each series logging in the format of `timestamp,log_value`.
+
+    The following logs the model training metrics for each epoch with PyTorch Lightning.
+
+    .. code-block::
+
+        class MyCallback(Callback):
+            def on_train_epoch_end(self, trainer, pl_module, result):
+                logs = trainer.logged_metrics
+                # ['loss/val', 'acc/val', 'epoch', 'loss/train', 'acc/train']
+                for key, value in logs.items():
+                    track[key].log(value)
 
 View Logged Data
 ================
