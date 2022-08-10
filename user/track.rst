@@ -25,7 +25,7 @@ To create a track from a lab:
 
 #) A new browser window will open, which shows the submitted *jobs* as tracks.
 
-    .. note:: 
+    .. note::
         One or more tracks will be created
         depending on the :ref:`hyperparameter settings <lab-hyperparameter-tuning>`.
 
@@ -43,12 +43,50 @@ To create a track from a pipeline run:
     .. image:: /_static/imgs/user/track/add_track_2_1.png
         :width: 600
 
-.. note:: 
+.. note::
     There is a quick way to stop the underlying active *lab job* or *pipeline run* associated with the track.
     Simply click on the *stop* button in the track page.
 
     .. image:: /_static/imgs/user/track/stop_track_1.png
         :width: 300
+
+Track Your Training
+===================
+
+Hyperparameter values and console logs are logged by default in a track.
+You could also fetch the hyperparameters and log more information (such as training and testing metrics)
+programmatically through the `MLSteam Client library <https://pypi.org/project/mlsteam-client/>`_.
+
+.. note::
+    The *MLSteam Client library* is available in most of the built-in lab templates.
+    To install the library in customized environments:
+
+    .. code-block::
+
+        pip install mlsteam-client
+
+To initialize the client:
+
+.. code-block::
+
+    import mlsteam
+    from mlsteam import stparams  # optional, for hyperparameter fetching
+
+    track = mlsteam.init()
+
+To fetch hyperparameter values:
+
+    .. code-block::
+
+        stparams.get_value(parm_name, parm_default_val)
+
+    For example, to set the default argument in a training program:
+
+    .. code-block::
+
+        parser = ArgumentParser()
+        parser.add_argument('--batch', type=int, default=stparams.get_value('batch', 128))
+
 
 View Logged Data
 ================
