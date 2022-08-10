@@ -104,7 +104,7 @@ To log a single value (aka. scalar):
 
     log_name (str)
         logging location.
-        You could optionally use slashes `/` to organize the parameters in folders.
+        You could optionally use slashes ``/`` to organize the parameters in folders.
     log_value (int, float, or str)
         logging value
 
@@ -124,11 +124,11 @@ To log a series:
 
     log_name (str)
         logging location.
-        You could optionally use slashes `/` to organize the parameters in folders.
+        You could optionally use slashes ``/`` to organize the parameters in folders.
     log_value (int, float, or str)
         logging value
 
-    MLSteam timestamps each series logging in the format of `timestamp,log_value`.
+    MLSteam timestamps each series logging in the format of ``timestamp,log_value``.
 
     The following logs the model training metrics for each epoch with PyTorch Lightning.
 
@@ -140,6 +140,42 @@ To log a series:
                 # ['loss/val', 'acc/val', 'epoch', 'loss/train', 'acc/train']
                 for key, value in logs.items():
                     track[key].log(value)
+
+To log a series for visualization:
+
+    .. code-block::
+
+        track[log_name].log(log_value)
+
+    log_name (str)
+        logging location ended with ``.chart``.
+        You could optionally use slashes ``/`` to organize the parameters in folders.
+    log_value (int, float, str)
+        logging value.
+
+        * To log a single series, use an integer, a float, or a string (without commas) value.
+        * To log multiple serieses together, use a comma-separated string ``'s1_val, s2_val, ...'`` to denote unnamed serieses,
+          or use a JSON object string ``'{"s1_name": s1_val, "s2_name": s2_val, ...}'`` to denote named serieses.
+
+    .. note::
+        * Unnamed serieses will be assigned names ``y-1``, ``y-2``, ``y-3``, etc.
+        * X-axis will be timestamps unless there is a series named ``epoch``.
+
+    The following demonstrates logging for various kinds of chart display.
+
+    .. code-block::
+
+        # a line chart of series (y-1) with timestamp as x-axis
+        track['chart_single.chart'].log(123)
+
+        # a line chart of series (y-1, y-2, and y-3) with timestamp as x-axis
+        track['chart_mutiple.chart'].log('123, 456, 789')
+
+        # a line chart of serieses (loss and accuracy) with timestamp as x-axis
+        track['chart_mutiple.chart'].log(json.dumps({'loss': 123, 'accuracy': 456}))
+
+        # a line chart of series (s1 and s2) with epoch number as x-axis
+        track['chart_mutiple_epoch.chart'].log(json.dumps({'epoch':1, 's1': 123, 's2': 456}))
 
 View Logged Data
 ================
