@@ -78,9 +78,12 @@ To create a template from a Docker image:
     #) WebApp
 
         * Command to launch the app
-        * Bind port
-        * Bind protocol
-        * Dataset mounts
+        * Port map: app ports to export
+        * URL: webapp access URL; the default setting is ``http://${IP}:${PORT}``.
+          Set this field to customize the URL scheme or path, such as ``https://${IP}:${PORT}/path/to/homepage``.
+          Note that only the exact matches of ``${IP}`` and ``${PORT}``
+          will be replaced by the actual assigned values for the corresponding running Webapp.
+        * Filesystem mounts: dataset mounts
         * Parameters
         * Resource requirements: minimum resource requirements for CPU cores, memory size, and GPU cards
 
