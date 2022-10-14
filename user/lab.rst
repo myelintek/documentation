@@ -222,6 +222,14 @@ To enable SSH access to a lab:
     .. image:: /_static/imgs/user/lab/add_ssh_key_2.png
         :width: 480
 
+    .. note::
+        For the *Linux* operating systems, change the file permission to `600`.
+
+        .. code-block:: shell
+
+            chmod 600 /path/to/access/key/file
+            # for example, chmod 600 ~/Downloads/u4dfe34c_sshkey
+
 #) View the SSH configuration by clicking on the *view* icon.
 
     .. image:: /_static/imgs/user/lab/add_ssh_key_3.png
@@ -286,8 +294,9 @@ Hyperparameter Tuning by Submitting Tracks
 
 To run ML experiments with a set a hyperparameters:
 
-#) Create/modify `mlsteam.yml` file in `/mlsteam/lab` directory. 
-#) `command` field is required. Define `params` fields to serve as hyperparameters to be appended to the command (values can be adjusted later).
+#) Create/modify ``mlsteam.yml`` file in the ``/mlsteam/lab`` directory.
+#) ``command`` field is required. Define ``params`` fields to serve as hyperparameters
+   to be appended to the command (values can be adjusted later).
 
     .. image:: /_static/imgs/user/lab/tune_parms_mlsteam_yml.png
         :width: 600
@@ -546,3 +555,66 @@ To increase (or decrease) the shared memory size in a lab:
         The shared memory size is in ``GB`` and should be a positive integer.
 
 #) The lab will be restarted with the new setting.
+
+Q: How to access Linux GUI (X Window System) applications installed in the lab?
+-------------------------------------------------------------------------------
+
+To run a Linux GUI application and access it at the local desktop environment:
+
+#) Set up the *SSH service* in the lab.
+
+    #) Install the SSH server.
+
+        .. code-block:: shell
+
+            apt-get install openssh-server
+
+    #) Ensure the ``/etc/ssh/sshd_config`` file has the following settings:
+
+        .. code-block::
+
+            X11Forwarding yes
+            X11UseLocalhost no
+
+    #) Start the SSH service.
+
+        .. code-block:: shell
+
+            /etc/init.d/ssh start
+
+#) :ref:`Set up SSH access <ssh-into-lab>` to the lab.
+
+    #) Add an SSH access key in the lab if none exists.
+    #) Download the SSH access key and save it at client side.
+    #) Copy the SSH configuration to the client side,
+       and **add an additional line** ``ForwardX11 yes``.
+
+        For example,
+
+        .. image:: /_static/imgs/user/lab/set_x_forward_1.png
+          :width: 300
+
+#) Set up the *X Window Server* at client side (*Windows* only).
+
+    #) Install and start the `Xming X Server for Windows <https://sourceforge.net/projects/xming/>`_.
+
+#) Connect to the lab.
+
+    #) Connect to the lab and check the ``$DISPLAY`` variable is set.
+
+        .. code-block:: shell
+
+            ssh SSH_Connection_Name
+            # for example, ssh uab12345
+            echo $DISPLAY
+            # output example, "4703aa1613fd:10.0"
+
+        .. note::
+            Windows users may also use `PuTTY <https://www.putty.org/>`_ to make SSH connection.
+            Ensure that ``X11 forwarding`` is enabled.
+
+            .. image:: /_static/imgs/user/lab/set_x_forward_2.png
+                :width: 480
+
+#) Now, you may run the desired Linux GUI application in the lab,
+   and the window will be displayed at client side.
