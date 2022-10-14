@@ -403,6 +403,44 @@ To view and edit files in the lab:
            However, such a feature, provided by the  *VSCode* community, is currently unstable.
            It is suggested using the MLSteam's *JupyterLab* Web interface to deal with *JupyterLab Notebook programs* directly.
 
+Q: How to add Jupyter support in a lab?
+---------------------------------------
+
+To add Jupyter support in a lab:
+
+#) Ensure JupyterLab is installed.
+
+    In the lab's terminal, run the following command:
+
+    .. code-block:: shell
+
+        jupyter lab --version
+
+    If the command fails, install the latest version of JupyterLab by
+
+    .. code-block:: shell
+
+        pip3 install jupyterlab
+
+#) Change the lab's start type.
+
+    #) In the lab's page, open the settings side bar by clicking on *settings* button on the top.
+
+        .. image:: /_static/imgs/common/btn_settings_3.png
+
+    #) Expand the *Start Type* section in the side bar and click on the *settings* button.
+
+        .. image:: /_static/imgs/user/lab/set_start_type_1.png
+            :width: 300
+
+    #) In the popped up dialog, select the start type option *Jupyter + Terminal*, and click on the *Update* button.
+       The lab will be restarted with the new start type settings. You could then access Jupyter.
+
+       .. note::
+        If the lab fails to start after you update the settings, repeat the above steps and change the start type
+        back to *Terminal*, and it should be able to start again. You may check the JupyterLab installation through
+        the lab's terminal.
+
 Q: How to change the type of GPU used in a lab?
 -----------------------------------------------
 
@@ -418,7 +456,6 @@ It is achieved through changing the flavor of a lab.
 
     .. image:: /_static/imgs/common/btn_settings_3.png
 
-#) Click on the *settings* button.
 #) Expand the *Specification* section in the side bar and click on the *settings* button.
 
     .. image:: /_static/imgs/user/lab/set_flavor_1.png
@@ -431,9 +468,6 @@ It is achieved through changing the flavor of a lab.
         :width: 300
 
 #) Click on the *OK* button. The lab will run on the selected GPU type after a restart.
-
-    .. image:: /_static/imgs/user/lab/set_flavor_3.png
-        :width: 300
 
 Q: How to access other Web services running in a lab?
 -----------------------------------------------------
