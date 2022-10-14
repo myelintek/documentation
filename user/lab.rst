@@ -254,6 +254,8 @@ To enable SSH access to a lab:
            the access key is saved in the ``Downloads`` directory.
            If the access key file is renamed or saved in another directory,
            replace the settings of ``IdentityFile`` by the actual file location.
+        #) If the access key file is saved with additional file name extension (such as ``.txt``),
+           append the actual file extension in the ``IdentityFile`` setting.
 
 Now, we are ready to access the lab with VSCode.
 
@@ -567,6 +569,7 @@ To run a Linux GUI application and access it at the local desktop environment:
 
         .. code-block:: shell
 
+            apt-get update
             apt-get install openssh-server
 
     #) Ensure the ``/etc/ssh/sshd_config`` file has the following settings:
@@ -616,5 +619,5 @@ To run a Linux GUI application and access it at the local desktop environment:
             .. image:: /_static/imgs/user/lab/set_x_forward_2.png
                 :width: 480
 
-#) Now, you may run the desired Linux GUI application in the lab,
+#) Now, you may run the desired Linux GUI application through the SSH connection at client side,
    and the window will be displayed at client side.
