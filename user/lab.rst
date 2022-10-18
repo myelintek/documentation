@@ -169,41 +169,19 @@ To delete a lab:
 SSH into a Lab
 ==============
 
-MLSteam also support accessing a lab with SSH,
-which is handy for users to use their favorite editors or tools to accelerate ML design and experiments.
-This section will show instructions for VSCode.
+MLSteam also supports accessing a lab with SSH,
+which is handy for developers to use their favorite editors or tools to accelerate ML design and experiments.
 
-.. note::
-    This feature is only available in labs running in SSH-enabled containers.
-    E.g., labs created from the *Pytorch Cifar10* are SSH-enabled by default.
+Preparation
+-----------
 
-    You may also install an SSH server to enable SSH in a Ubuntu-based container
-    by running the commands in a terminal:
+Enable SSH access to a lab.
 
-    .. code-block:: shell
+#) In the lab's page, open the settings side bar by clicking on *settings* button on the top.
 
-        apt-get update
-        apt-get install openssh-server
+    .. image:: /_static/imgs/common/btn_settings_3.png
 
-VSCode
-------
-
-Preparation:
-
-#) Install `VSCode <https://code.visualstudio.com/Download>`_ on the local computer.
-#) Open VSCode, search and install the `Remote SSH <https://code.visualstudio.com/docs/remote/ssh>`_ extension.
-
-    .. image:: /_static/imgs/user/lab/install_vscode_remote_ssh.png
-        :width: 480
-
-To enable SSH access to a lab:
-
-#) Open the lab to access.
-#) Click on the settings button in the dataset side bar.
-
-    .. image:: /_static/imgs/common/btn_settings.png
-
-#) Create a SSH access key by clicking on the *add* button in the *SSH Key* section.
+#) Create a SSH access key if none exists by clicking on the *add* button in the *SSH Key* section.
 
     .. image:: /_static/imgs/common/btn_add.png
 
@@ -222,38 +200,93 @@ To enable SSH access to a lab:
     .. image:: /_static/imgs/user/lab/add_ssh_key_2.png
         :width: 480
 
-#) View the SSH configuration by clicking on the *view* icon.
+    .. note::
+        For the *Linux* operating systems, change the file permission to `600`.
+
+        .. code-block:: shell
+
+            chmod 600 /path/to/access/key/file
+            # for example, chmod 600 ~/Downloads/u7fda28d_sshkey.pub
+
+   .. _ssh-info:
+
+#) View the SSH information by clicking on the *view* icon.
 
     .. image:: /_static/imgs/user/lab/add_ssh_key_3.png
         :width: 300
 
-#) Copy the SSH configuration text displayed.
-
     .. image:: /_static/imgs/user/lab/add_ssh_key_4.png
         :width: 300
 
-#) Open the SSH configuration file on the local computer.
-   Append the configuration text in the previous step. Save the file.
+#) Now, you could access the lab using an SSH client tool,
+   such as :ref:`command-line <ssh-commandline>`, :ref:`VSCode <ssh-vscode>`,
+   or :ref:`MobaXterm <ssh-mobaxterm>`.
+
+.. _ssh-commandline:
+
+Command Line
+------------
+
+#) Open a command-line console.
+#) Copy the command from the :ref:`SSH command line <ssh-info>` displayed in the lab page,
+   and run it in the console.
+
+    .. note::
+        Change ``SSH_ACCESS_KEY_FILE`` to the actual SSH key file location.
+
+        .. code-block:: shell
+
+            ssh -X -p SSH_PORT -i SSH_ACCESS_KEY_FILE USER@SSH_HOST
+            # for example, ssh -X -p 49191 -i ~/Downloads/u7fda28d_sshkey.pub root@192.168.0.1
+
+        You may receive a warning message ``The authenticity of host ... can't be established.``
+        for the first time you make an SSH connection to the lab. Enter ``yes`` to continue connecting.
+
+.. _ssh-vscode:
+
+VSCode
+------
+
+#) Install `VSCode <https://code.visualstudio.com/Download>`_ on the local computer.
+#) Open VSCode, search and install the `Remote SSH <https://code.visualstudio.com/docs/remote/ssh>`_ extension.
+
+    .. image:: /_static/imgs/user/lab/install_vscode_remote_ssh.png
+        :width: 480
+
+#) Edit the SSH configuration file and add the configuration
+   according to the :ref:`SSH command line <ssh-info>` displayed in the lab page.
 
     .. image:: /_static/imgs/user/lab/add_ssh_key_5.png
         :width: 480
 
     .. note::
-        #) The SSH configuration file on a Windows computer is at ``C:\Users\{USER-NAME}\.ssh\config``.
+        The SSH configuration file on a Windows computer is at ``C:\Users\{USER-NAME}\.ssh\config``.
+        On a MacOS or Linux computer, it is at ``~/.ssh/ssh_config``.
 
-           On a MacOS or Linux computer, it is at ``~/.ssh/ssh_config``.
-        #) The SSH configuration text displayed by MLSteam assumes
-           the access key is saved in the ``Downloads`` directory.
-           If the access key file is renamed or saved in another directory,
-           replace the settings of ``IdentityFile`` by the actual file location.
+        SSH configuration format:
 
-Now, we are ready to access the lab with VSCode.
+        .. code-block::
+
+            Host UNIQUE_SSH_CONNECTION_NAME
+                HostName SSH_HOST_IP_OR_DOMAIN_NAME
+                User USERNAME
+                Port SSH_PORT
+                IdentityFile SSH_ACCESS_KEY_FILE
+
+        For example,
+
+        .. code-block::
+
+            Host mylab
+                HostName 192.168.0.1
+                User root
+                Port 49191
+                IdentityFile C:\Users\geoyb\temp\u7fda28d_sshkey.pub
 
 #) In VSCode, open the *Remote Explorer* panel on the left.
-   The SSH host we just configured will be displayed in the *SSH TARGETS* section.
 
     .. image:: /_static/imgs/user/lab/open_ssh_vscode_1.png
-        :width: 300
+        :width: 480
 
     .. note::
         If the SSH host has not been displayed, refresh the list by clicking on the *refresh* button.
@@ -269,7 +302,7 @@ Now, we are ready to access the lab with VSCode.
     #) Are you sure you want to continue? ``Continue``
 
     .. image:: /_static/imgs/user/lab/open_ssh_vscode_3.png
-        :width: 600
+        :width: 480
 
 #) Wait while VSCode is initializing the remote host.
 #) Finally, open the terminal by clicking on the menu item:
@@ -277,7 +310,22 @@ Now, we are ready to access the lab with VSCode.
 #) Now, you could run commands in the lab through the terminal.
 
     .. image:: /_static/imgs/user/lab/open_ssh_vscode_4.png
-        :width: 600
+        :width: 480
+
+.. _ssh-mobaxterm:
+
+MobaXterm
+---------
+
+Windows users may also use `MobaXterm <https://mobaxterm.mobatek.net/download.html>`_
+to make SSH connection.
+
+.. note::
+    In session settings, specify ``SSH_HOST``, ``USERNAME``, ``SSH_PORT``, ``X11 forwarding``,
+    and ``SSH_ACCESS_KEY`` according to the :ref:`SSH command line <ssh-info>` displayed in the lab page.
+
+    .. image:: /_static/imgs/user/lab/set_x_forward_1.png
+        :width: 480
 
 .. _lab-hyperparameter-tuning:
 
@@ -286,8 +334,9 @@ Hyperparameter Tuning by Submitting Tracks
 
 To run ML experiments with a set a hyperparameters:
 
-#) Create/modify `mlsteam.yml` file in `/mlsteam/lab` directory. 
-#) `command` field is required. Define `params` fields to serve as hyperparameters to be appended to the command (values can be adjusted later).
+#) Create/modify ``mlsteam.yml`` file in the ``/mlsteam/lab`` directory.
+#) ``command`` field is required. Define ``params`` fields to serve as hyperparameters
+   to be appended to the command (values can be adjusted later).
 
     .. image:: /_static/imgs/user/lab/tune_parms_mlsteam_yml.png
         :width: 600
@@ -403,6 +452,44 @@ To view and edit files in the lab:
            However, such a feature, provided by the  *VSCode* community, is currently unstable.
            It is suggested using the MLSteam's *JupyterLab* Web interface to deal with *JupyterLab Notebook programs* directly.
 
+Q: How to add Jupyter support in a lab?
+---------------------------------------
+
+To add Jupyter support in a lab:
+
+#) Ensure JupyterLab is installed.
+
+    In the lab's terminal, run the following command:
+
+    .. code-block:: shell
+
+        jupyter lab --version
+
+    If the command fails, install the latest version of JupyterLab by
+
+    .. code-block:: shell
+
+        pip3 install jupyterlab
+
+#) Change the lab's start type.
+
+    #) In the lab's page, open the settings side bar by clicking on *settings* button on the top.
+
+        .. image:: /_static/imgs/common/btn_settings_3.png
+
+    #) Expand the *Start Type* section in the side bar and click on the *settings* button.
+
+        .. image:: /_static/imgs/user/lab/set_start_type_1.png
+            :width: 300
+
+    #) In the popped up dialog, select the start type option *Jupyter + Terminal*, and click on the *Update* button.
+       The lab will be restarted with the new start type settings. You could then access Jupyter.
+
+       .. note::
+        If the lab fails to start after you update the settings, repeat the above steps and change the start type
+        back to *Terminal*, and it should be able to start again. You may check the JupyterLab installation through
+        the lab's terminal.
+
 Q: How to change the type of GPU used in a lab?
 -----------------------------------------------
 
@@ -418,7 +505,6 @@ It is achieved through changing the flavor of a lab.
 
     .. image:: /_static/imgs/common/btn_settings_3.png
 
-#) Click on the *settings* button.
 #) Expand the *Specification* section in the side bar and click on the *settings* button.
 
     .. image:: /_static/imgs/user/lab/set_flavor_1.png
@@ -431,9 +517,6 @@ It is achieved through changing the flavor of a lab.
         :width: 300
 
 #) Click on the *OK* button. The lab will run on the selected GPU type after a restart.
-
-    .. image:: /_static/imgs/user/lab/set_flavor_3.png
-        :width: 300
 
 Q: How to access other Web services running in a lab?
 -----------------------------------------------------
@@ -512,3 +595,26 @@ To increase (or decrease) the shared memory size in a lab:
         The shared memory size is in ``GB`` and should be a positive integer.
 
 #) The lab will be restarted with the new setting.
+
+Q: How to access Linux Graphics User Interface (X Window System) applications installed in the lab?
+---------------------------------------------------------------------------------------------------
+
+To run a Linux application and access it at the local desktop environment:
+
+#) :ref:`Set up SSH access <ssh-into-lab>` to the lab.
+
+    #) Add an SSH access key in the lab if none exists.
+    #) Download the SSH access key and save it at client side.
+    #) (Linux or macOS users) Change the file permission mode for the SSH access key.
+    #) Copy the SSH access command.
+
+#) Connect to the lab from the client side.
+
+    Run the SSH access command (copied from the previous step) in a :ref:`commandline console <ssh-commandline>`,
+    or with a user-friendly software such as :ref:`MobaXterm <ssh-mobaxterm>`.
+
+#) Now, you may run the desired Linux application through the SSH connection at client side,
+   and the window will be displayed at client side.
+
+    .. image:: /_static/imgs/user/lab/set_x_forward_2.png
+        :width: 480
