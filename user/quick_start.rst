@@ -177,12 +177,12 @@ here we will submit a training job and then view the training results:
 #) Click on the *more* button.
 #) Click on the *Submit* menu item.
 
-    .. image:: /_static/imgs/user/get_started/submit_job_1.png
+    .. image:: /_static/imgs/user/get_started/submit_job_1U.png
         :width: 600
 
 #) Click on the *SUBMIT* button.
 
-    .. image:: /_static/imgs/user/get_started/submit_job_2.png
+    .. image:: /_static/imgs/user/get_started/submit_job_2U.png
         :width: 480
 
 #) A new browser window will be opened, listing the :doc:`track <track>` for the submitted job.
