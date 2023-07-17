@@ -188,13 +188,13 @@ here we will submit a training job and then view the training results:
 #) A new browser window will be opened, listing the :doc:`track <track>` for the submitted job.
 #) Go to the track page by clicking on the link of the track.
 
-    .. image:: /_static/imgs/user/get_started/view_job_track_1.png
+    .. image:: /_static/imgs/user/get_started/view_job_track_1U.png
         :width: 600
 
 #) Wait for one minute while the training results are accumulated.
 #) Click on the *SWITCH TO TENSORBOARD* button.
 
-    .. image:: /_static/imgs/user/get_started/view_job_track_2.png
+    .. image:: /_static/imgs/user/get_started/view_job_track_2U.png
         :width: 600
 
 #) Congratulations! The YOLOv5 model training results are displayed in the TensorBoard page.
