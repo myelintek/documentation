@@ -175,7 +175,7 @@ After the previous model training experiment,
 here we will submit a training job and then view the training results:
 
 #) Click on the *more* button.
-#) Click on the *Submit* menu item.
+#) Click on the *Submit track* menu item.
 
     .. image:: /_static/imgs/user/get_started/submit_job_1U.png
         :width: 600
