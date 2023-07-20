@@ -4,7 +4,7 @@ Core Concepts
 
 Project
     A :doc:`project <project>` is a collection of all artificats in developing ML models.
-    A project consists of :ref:`datasets <core-concept-dataset>`,
+    A project consists of :ref:`folder <core-concept-folder>`,
     :ref:`labs <core-concept-lab>`,
     :ref:`pipelines <core-concept-pipeline>`,
     :ref:`tracks <core-concept-track>`,
@@ -13,11 +13,11 @@ Project
     :ref:`templates <core-concept-template>`, and
     :ref:`images <core-concept-image>`.
 
-.. _core-concept-dataset:
+.. _core-concept-folder:
 
-Dataset
-    A :doc:`dataset <dataset>` is a collection of data organized in files and directories.
-    Dataset files could be used in labs for model training and validation.
+Folder
+    A :doc:`folder <folder>` is a collection of data organized in files and directories.
+    Files in folder, like dateset, could be used in labs for model training and validation.
 
 .. _core-concept-lab:
 

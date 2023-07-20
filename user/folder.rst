@@ -1,9 +1,9 @@
 ############
-Dataset
+Folder
 ############
 
-A dataset is a collection of data organized in files and directories.
-Dataset files could be used in labs for model training and validation.
+A Folder is a collection of data organized in files and directories.
+Files in folder, like dateset, could be used in labs for model training and validation.
 
 There are *system datasets* and *project-scoped datasets*.
 The datasets page lists all projects visible to the user,

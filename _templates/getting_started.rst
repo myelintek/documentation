@@ -14,7 +14,7 @@ Project
 
 Is a group of jobs with the dataset connected to it.
 
-Dataset
+Folder
 *******
 
 Is any collection of data.

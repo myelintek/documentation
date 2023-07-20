@@ -6,7 +6,7 @@ User
 
    get_started
    project
-   dataset
+   folder
    lab
    pipeline
    track
