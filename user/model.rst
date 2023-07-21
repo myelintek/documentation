@@ -25,9 +25,13 @@ To create a model:
         :width: 600
 
 #) Click on the *NEW VERSION* button.
+
+    .. image:: /_static/imgs/user/model/new_version.png
+        :width: 600
+
 #) Fill in the model version and select the model files.
    The model files could be selected from a :doc:`track <track>`
-   or from a :doc:`dataset <dataset>`.
+   or from a :doc:`folder <folder>`.
 
     .. note::
         To select the model files, choose the data source (a track or a dataset),
