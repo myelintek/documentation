@@ -16,7 +16,16 @@ Welcome to MLSteam!
    :hidden:
    :maxdepth: 2
 
-   user/index
+   user/get_started
+   user/project
+   user/folder
+   user/lab
+   user/pipeline
+   user/track
+   user/model
+   user/webapp
+   user/template
+   user/user_profile
 
 .. raw:: latex
 
