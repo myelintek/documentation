@@ -19,38 +19,38 @@ A system dataset is not accessible by a project before it is :ref:`added as a pr
 .. image:: /_static/imgs/user/dataset/view_project_datasets.png
     :width: 600
 
-A dataset could have multiple versions by creating :ref:`snapshots <snapshot-dataset>`
+A dataset could have multiple versions by creating :ref:`snapshots <snapshot-folder>`
 and could also revert to a previous saved version.
 
 .. _create-and-manage-project-scoped-dataset:
 
-Create and Manage a Project-Scoped Dataset
+Create and Manage a Project-Scoped Folder
 ==========================================
 
-To create a database:
+To create a folder:
 
-#) Click on the *ADD* button in the dataset page.
-#) Select the dataset type and fill in the fields:
+#) Click on the *ADD* button in the folder page.
+#) Select the folder type and fill in the fields:
 
-    #) *Empty Dataset* (create an empty dataset stored in the MLSteam system space):
+    #) *Empty Folder* (create an empty folder stored in the MLSteam system space):
 
-        * Dataset name: dataset name
+        * Folder name: folder name
 
         .. image:: /_static/imgs/user/dataset/add_dataset_empty.png
             :width: 300
 
-    #) *Mount NFS* (mount an existing dataset stored in a remote NFS space):
+    #) *Mount NFS* (mount an existing folder stored in a remote NFS space):
 
-        * Name: dataset name
-        * NFS server path: NFS share path. E.g., ``192.168.0.1:/nfs/dataset-1``
+        * Name: folder name
+        * NFS server path: NFS share path. E.g., ``192.168.0.1:/nfs/folder-1``
 
         .. image:: /_static/imgs/user/dataset/add_dataset_nfs.png
             :width: 300
 
-    #) *Mount CIFS* (mount an existing dataset stored in a remote CIFS/SMB space):
+    #) *Mount CIFS* (mount an existing folder stored in a remote CIFS/SMB space):
 
-        * Name: dataset name
-        * CIFS server path: CIFS share path. E.g., ``//192.168.0.1/share/dataset-x``
+        * Name: folder name
+        * CIFS server path: CIFS share path. E.g., ``//192.168.0.1/share/folder-x``
         * User: CIFS username
         * Password: CIFS password
 
@@ -58,37 +58,41 @@ To create a database:
             :width: 300
 
     .. note::
-        Using a mounted dataset is essentially accessing a remote network folder.
+        Using a mounted folder is essentially accessing a remote network folder.
         There are no requirements for the internal folder or file structure of a remote network folder to mount.
-        Changes to such a dataset will be written to the remote space.
+        Changes to such a folder will be written to the remote space.
 
 #) Click on the *CREATE* or the *IMPORT* button.
 
-More operations on a dataset are available in the dataset page.
+More operations on a folder are available in the folder page.
 
 .. image:: /_static/imgs/user/dataset/view_dataset.png
     :width: 600
 
-To create a folder in a dataset:
+To create a folder in a folder:
 
-#) In the dataset page, click on the *NEW FOLDER* button.
+#) In the folder page, click on the *NEW FOLDER* button.
 #) Input the folder name.
 #) Click on the *OK* button.
 
-To upload files to a dataset, drag and drop the files into the files area.
+To upload files to a  folder, drag and drop the files into the files area.
 
 .. image:: /_static/imgs/user/dataset/add_file_1_1.png
     :width: 600
 
 Another method for file uploading:
 
-#) In the dataset page, click on the *ADD DATA* button.
-#) To add files from the local machine, click on the *BROWSE* button in the *LOCAL* tab and select a file. Repeat this step to add more files.
+#) In the folder page, click on the *New* button, and select *File From Disk* or *File From URL*
+
+    .. image:: /_static/imgs/user/dataset/add_file_from_disk.png
+        :width: 600
+
+#) To add files from disk, click on the *BROWSE* button and select a local file to upload. Repeat this step to add more files.
 
     .. image:: /_static/imgs/user/dataset/add_file_2_1a.png
         :width: 300
 
-#) Alternatively, to add files from a Web source, input the remote link in the *URL* tab. Repeat this step to add more URLs.
+#) To add files from URL, input the remote link of web source data. Repeat this step to add more URLs.
 
     .. image:: /_static/imgs/user/dataset/add_file_2_1b.png
         :width: 300
@@ -113,41 +117,32 @@ To extract the files from an archive:
 #) Click on the *EXTRACT* button.
 #) Click on the *OK* button.
 
-To download a file from the dataset:
+To download a file from the folder:
 
 #) Select the file to download.
-#) Click on the *DOWNLOAD* button in the top toolbar or the *download* button in the preview area.
-#) Click on the *OK* button.
+#) Click on the *Action* button in the top toolbar or simply right-click, then select *download* in function list.
 
-To delete one or multiple files from the dataset:
+To delete one or multiple files from the folder:
 
 #) Select the file(s) to delete.
-#) Click on the *DELETE* button.
-#) Click on the *OK* button.
+#) Click on the *Action* button in the top toolbar or simply right-click, then select *delete* in function list.
 
-Create a Project-Scoped Dataset by Cloning
+Create a Project-Scoped Folder by Cloning
 ==========================================
 
-In situations where modifications to a read-only dataset (such as a built-in dataset) is needed,
-or to leverage a dataset that belongs to another project,
-one could clone the dataset of interest and use the clone instead.
+In situations where modifications to a read-only folder (such as a built-in folder) is needed,
+or to leverage a folder that belongs to another project,
+one could clone the folder of interest and use the clone instead.
 
-To clone a dataset:
+To clone a folder:
 
-#) Click on the *ADD* button in the dataset page.
-#) Select *Import Database* from the menu.
-#) Select the dataset to clone.
+#) Click on the *ADD* button in the folder page.
+#) Select *Import folder* from the menu.
+#) Select the folder to clone.
 
     .. note::
-        Datasets belonging to the current project are not listed here.
-        To modify such a dataset and to preserve its current data, :ref:`snapshot the dataset <snapshot-dataset>` instead.
-
-#) For cloning a mounted remote dataset, select the import method:
-
-    * *Mount*: mount the remote dataset directly.
-      Changes to the dataset will be written to the remote space and viewable by all other projects that mount the same dataset.
-    * *Clone*: copy the data from the dataset.
-      Data are stored in the MLSteam system space. Changes to the cloned dataset will not affect the original one.
+        folder belonging to the current project are not listed here.
+        To modify such a folder and to preserve its current data, :ref:`snapshot the folder <snapshot-folder>` instead.
 
 #) Click on the *IMPORT* button.
 
@@ -155,12 +150,12 @@ To clone a dataset:
         :width: 300
 
 .. note::
-    The cloned dataset will belong to the current project and be accessible by the labs and pipeline in the same project.
+    The cloned folder will belong to the current project and be accessible by the labs and pipeline in the same project.
 
-Delete a Dataset
+Delete a Folder
 ================
 
-To delete a dataset:
+To delete a folder:
 
 #) Clock on the *delete* button.
 
@@ -170,14 +165,14 @@ To delete a dataset:
 #) Click on the *OK* button.
 
 .. note::
-    #) Deleting a mounted dataset does not delete the dataset contents;
+    #) Deleting a mounted folder does not delete the folder contents;
        it only removes the linkage to the remote space.
-    #) Deleting a dataset does not affect its cloned dataset(s).
+    #) Deleting a folder does not affect its cloned folder(s).
 
-Preview Bounding Box Images in a Dataset
+Preview Bounding Box Images in a folder
 ========================================
 
-To preview the bounding box images in a labelled dataset:
+To preview the bounding box images in a labelled folder:
 
 #) Select the folder that contains the labelled images.
 #) Click on the *VISUALIZE* button.
@@ -214,14 +209,14 @@ Bounding boxes and the index names are displayed in the preview area.
 .. image:: /_static/imgs/user/dataset/del_dataset_tag.png
     :width: 300
 
-.. _snapshot-dataset:
+.. _snapshot-folder:
 
-Snapshot a Dataset
+Snapshot a Folder
 ==================
 
-To save the current dataset version (snapshot):
+To save the current folder version (snapshot):
 
-#) In the dataset page, click on the *VERSIONING* button.
+#) In the folder page, click on the *VERSIONING* button.
 
     .. image:: /_static/imgs/common/btn_versioning.png
 
@@ -231,9 +226,9 @@ To save the current dataset version (snapshot):
     .. image:: /_static/imgs/user/dataset/add_dataset_version_1.png
         :width: 480
 
-To restore the dataset to a saved version:
+To restore the folder to a saved version:
 
-#) In the dataset page, click on the *VERSIONING* button.
+#) In the folder page, click on the *VERSIONING* button.
 #) Click on the *Restore* button for the version.
 
     .. image:: /_static/imgs/user/dataset/restore_dataset_version_1.png
