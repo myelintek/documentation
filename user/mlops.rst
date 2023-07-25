@@ -245,7 +245,7 @@ Let's see our training results:
 #) In the track details page, click the *TENSORBOARD* button in the top-left corner.
    TensorBoard will show up in a few seconds.
 
-    .. image:: /_static/imgs/user/get_started/btn_switch_to_tensorboard_U.png
+    .. image:: /_static/imgs/user/get_started/btn_switch_to_tensorboard.png
 
 Now, we could see various logged data displayed in various figures.
 
