@@ -5,24 +5,16 @@ Folder
 A Folder is a collection of data organized in files and directories.
 Files in folder, like dateset, could be used in labs for model training and validation.
 
-There are *system datasets* and *project-scoped datasets*.
-The datasets page lists all projects visible to the user,
-where the system datasets are displayed as the dataset name,
-and the project-scoped datasets are displayed as the owner project's ID followed by the dataset name.
-
-.. image:: /_static/imgs/user/dataset/view_all_datasets.png
-    :width: 600
-
-The project datasets page lists all project-scoped datasets for the current project.
-A system dataset is not accessible by a project before it is :ref:`added as a project-scoped dataset <create-and-manage-project-scoped-dataset>`.
+The project folder page lists all project-scoped folders for the current project.
+A system folder is not accessible by a project before it is :ref:`added as a project-scoped folder <create-and-manage-project-scoped-folder>`.
 
 .. image:: /_static/imgs/user/dataset/view_project_datasets.png
     :width: 600
 
-A dataset could have multiple versions by creating :ref:`snapshots <snapshot-folder>`
-and could also revert to a previous saved version.
+A folder could have multiple versions by creating :ref:`snapshots <snapshot-folder>`
+and could also revert to a previous saved version. (snapshot only support btrfs filesystem)
 
-.. _create-and-manage-project-scoped-dataset:
+.. _create-and-manage-project-scoped-folder:
 
 Create and Manage a Project-Scoped Folder
 ==========================================
@@ -211,8 +203,8 @@ Bounding boxes and the index names are displayed in the preview area.
 
 .. _snapshot-folder:
 
-Snapshot a Folder
-==================
+Snapshot a Folder (only support btrfs filesystem)
+===================================================
 
 To save the current folder version (snapshot):
 
