@@ -33,11 +33,6 @@ available in MLSteam. To setup Label Studio:
     .. image:: /_static/imgs/user/annotation/launch_label_studio.png
         :width: 480
 
-#) Create a new account with your email address and a new password.
-
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_3.png
-        :width: 480
-
 #) Click on the *Create Project* button.
 #) In the dialog, fill in the following fields, and click on the *Save* button:
 
