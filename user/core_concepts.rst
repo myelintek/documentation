@@ -23,8 +23,7 @@ Folder
 .. _core-concept-annotation:
 
 Annotation
-    A :doc:`Annotation <annotation>` is a collection of data organized in files and directories.
-    Files in folder, like dateset, could be used in labs for model training and validation.
+    :doc:`Annotation <annotation>` provides mainstreaming annotation tools and well integrated to MLSteam..
 
 .. _core-concept-lab:
 

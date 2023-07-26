@@ -2,7 +2,7 @@
 Annotation
 ##########
 
-Annotation provides mainstreaming tool and well integrated to MLStem.
+Annotation provides mainstreaming annotation tools and well integrated to MLSteam.
 
 Setup Label Studio
 ==================
@@ -112,7 +112,7 @@ available in MLSteam. To setup Label Studio:
 
     * Storage type: ``Local files``
     * Storage title: a storage title (optional)
-    * Absolute local path: the output path created in the mounted project-scoped dataset
+    * Absolute local path: the output path created in the mounted project-scoped folder
       (For example, ``/data/output``)
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_15.png
@@ -123,7 +123,7 @@ available in MLSteam. To setup Label Studio:
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_16.png
         :width: 600
 
-#) Back to the dataset page, the labelling data will be saved in the output directory.
+#) Back to the folder page, the labelling data will be saved in the output directory.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_17.png
         :width: 600
