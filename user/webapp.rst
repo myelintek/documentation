@@ -65,17 +65,15 @@ Setup Label Studio
 `Label Studio <https://labelstud.io/>`_ is a data annotation tool,
 available as a WebApp in MLSteam. To setup Label Studio:
 
-#) :ref:`Create a project-scoped dataset <create-and-manage-project-scoped-dataset>`
-   and add an output directory in the dataset.
+#) :ref:`Create a project-scoped folder <create-and-manage-project-scoped-folder>`,
+   ``yolo-sample`` as example here, and add an ``output`` directory in the folder.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_1.png
         :width: 600
 
-#) Create a Label Studio WebApp with. TODO: dataset (IMG 2)
+#) Create a Label Studio WebApp with folder ``yolo-sample``
 
-    * Flavor: ``micro``
-    * Mount dataset: the project-scoped dataset created in the previous step
-    * Mount container path: ``/data``
+    * Mount folder: ``yolo-sample``
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_2.png
         :width: 480
@@ -123,7 +121,7 @@ available as a WebApp in MLSteam. To setup Label Studio:
     * Storage type: ``Local files``
     * Storage title: a storage title (optional)
     * Absolute path: path to the images to label
-      (for the *yolo-sample* dataset, this would be ``/data/training_data/yolo/images``)
+      (for the *yolo-sample* dataset, this would be ``/data/ds1/training_data/yolo/images``)
     * File filter regex: image file filter in regular expressions (optional)
       (for the *yolo-sample* dataset, this would be ``.*jpg``)
     * Treat every bucket object as a source file: ``enabled``
@@ -182,14 +180,14 @@ Setup CVAT
 `CVAT <https://cvat.org/>`_ is a data annotation tool,
 available as a WebApp in MLSteam. To setup CVAT:
 
-#) :ref:`Create a project-scoped dataset <create-and-manage-project-scoped-dataset>`
+#) :ref:`Create a project-scoped folder <create-and-manage-project-scoped-folder>`
 
 #) Create a CVAT WebApp from template.
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_1.png
         :width: 600
 
-#) Input name and select desired dataset from the dropdown, then press "Create". Notice default credentials.
+#) Input name and select desired folder from the dropdown, then press "Create". Notice default credentials.
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_2.png
         :width: 600
@@ -221,7 +219,7 @@ available as a WebApp in MLSteam. To setup CVAT:
     .. warning::
         Don't include ``.cvat`` directory. It will result in error.
 
-#) Open task 
+#) Open task after submit
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_5.png
         :width: 600
