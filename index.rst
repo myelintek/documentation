@@ -18,7 +18,8 @@ Welcome to MLSteam!
 
    user/get_started
    user/project
-   user/dataset
+   user/folder
+   user/annotation
    user/lab
    user/pipeline
    user/track

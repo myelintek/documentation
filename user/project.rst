@@ -3,7 +3,7 @@ Project
 ##########
 
 A project is a collection of all artificats in developing ML models.
-A project consists of :ref:`datasets <core-concept-dataset>`,
+A project consists of :ref:`folder <core-concept-folder>`,
 :ref:`labs <core-concept-lab>`,
 :ref:`pipelines <core-concept-pipeline>`,
 :ref:`tracks <core-concept-track>`,
@@ -48,7 +48,7 @@ To set the members in a project:
         :width: 480
 
 #) Select the user to add.
-#) Click on the `CREATE` button.
+#) Click on the `ADD` button.
 
     .. image:: /_static/imgs/user/project/set_project_member_3.png
         :width: 300

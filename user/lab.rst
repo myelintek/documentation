@@ -19,14 +19,16 @@ A lab is created from a pre-defined template.
 
 #) Select a template.
 
-    .. image:: /_static/imgs/user/get_started/add_lab_1.png
+    .. image:: /_static/imgs/user/lab/add_lab_1.png
         :width: 600
 
 #) Fill in the fields in the dialog, and then click on the *CREATE* button.
 
     * Name: lab name
     * Flavor: the resources allocated for the lab
-    * Dataset mount paths (optional): pre-defined by the template. You may add or delete the mount paths.
+            
+        .. image:: /_static/imgs/user/lab/add_lab_2.png
+            :width: 300
 
     .. note::
         #) Some labs require one or more GPUs to run. Make sure you select a flavor that meets the lab's requirements.
@@ -58,7 +60,7 @@ click on the menu item: *Run* → *Run Selected Cells* or press the :kbd:`Shift-
 To run all the program code from a clean Kernel execution state,
 click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 
-.. image:: /_static/imgs/user/get_started/run_lab_3a.png
+.. image:: /_static/imgs/user/lab/jupyter_cell.png
     :width: 600
 
 .. _open-web-terminal:
@@ -84,10 +86,10 @@ Jupyter also supports adding, deleting, and renaming files in its *File Browser*
 .. note::
     Refer to `JupyterLab Documentation <https://jupyterlab.readthedocs.io/en/stable/index.html>`_ for more usage information.
 
-Attach or Detach a Dataset
+Attach or Detach a Folder
 ==========================
 
-To list and manage the dataset attachments, click on the top area. A side bar will be opened.
+To list and manage the folder attachments, click on the top area. A side bar will be opened.
 
 .. image:: /_static/imgs/user/lab/view_attached_datasets.png
     :width: 600
@@ -178,12 +180,10 @@ Preparation
 Enable SSH access to a lab.
 
 #) In the lab's page, open the settings side bar by clicking on *settings* button on the top.
-
-    .. image:: /_static/imgs/common/btn_settings_3.png
-
 #) Create a SSH access key if none exists by clicking on the *add* button in the *SSH Key* section.
 
-    .. image:: /_static/imgs/common/btn_add.png
+    .. image:: /_static/imgs/user/lab/add_ssh_key_0.png
+        :width: 600
 
 #) Input the key expiration days.
 #) Click on the *ADD* button.
@@ -350,7 +350,7 @@ To run ML experiments with a set a hyperparameters:
     .. note::
         You could provide multiple parameter values delimited by commas.
 
-#) Click on the *Submit* menu item to submit the experiments as *jobs*.
+#) Click on the *Submit track* menu item to submit the experiments as *track*.
 
     .. image:: /_static/imgs/user/lab/tune_parms_2.png
         :width: 600
@@ -360,7 +360,7 @@ To run ML experiments with a set a hyperparameters:
     .. image:: /_static/imgs/user/lab/tune_parms_3.png
         :width: 480
 
-#) A new browser window will open, which shows the submitted *jobs* as :doc:`tracks <track>`.
+#) A new browser window will open, which shows the submitted :doc:`tracks <track>`.
 
     .. image:: /_static/imgs/user/lab/tune_parms_4.png
         :width: 600

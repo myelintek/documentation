@@ -68,7 +68,7 @@ We will define an MLOps pipeline consisting of two actions:
 
     * Git URL: `<https://github.com/myelintek/yolov5.git>`_
 
-    .. image:: /_static/imgs/user/get_started/add_pipeline_action_1_2.png
+    .. image:: /_static/imgs/user/get_started/add_pipeline_action_1_2U.png
         :width: 480
 
 #) Input the following field in the *Settings* section:
@@ -99,10 +99,10 @@ We will define an MLOps pipeline consisting of two actions:
 
     * In the *environment* section:
 
-        * Container: ``pytorch:21.06-py3``
+        * Container: ``myelintek/pytorch-gpu:20.06.01``
         * Flavor: ``small``
 
-        .. image:: /_static/imgs/user/get_started/add_pipeline_action_2_2.png
+        .. image:: /_static/imgs/user/get_started/add_pipeline_action_2_2U.png
             :width: 480
 
         .. note::
@@ -207,7 +207,7 @@ Increase the training epochs:
         pip install -qr requirements.txt
         python train.py --img 640 --batch 16 --epochs 20 --data coco128.yaml --weights yolov5s.pt --cache
 
-#) Click on the *SAVE* button.
+#) Click on the *UPDATE* button.
 
 Then, we run the pipeline again. But at this time, we enable *track* to keep and visualize the results.
 
@@ -242,14 +242,14 @@ Let's see our training results:
     .. note::
         A track is named by the initial part of the project name, followed by the run number.
 
-#) In the track details page, click the *SWITCH TO TENSORBOARD* button in the top-left corner.
+#) In the track details page, click the *TENSORBOARD* button in the top-left corner.
    TensorBoard will show up in a few seconds.
 
-    .. image:: /_static/imgs/common/btn_switch_to_tensorboard.png
+    .. image:: /_static/imgs/user/get_started/btn_switch_to_tensorboard.png
 
 Now, we could see various logged data displayed in various figures.
 
-.. image:: /_static/imgs/user/get_started/view_tensorboard.png
+.. image:: /_static/imgs/user/get_started/view_tensorboard_U.png
     :width: 600
 
 .. note::

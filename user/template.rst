@@ -33,13 +33,13 @@ A template could be created from an exported template file or from a raw Docker 
 
 To create a template from a template file:
 
-#) Save the source template file in a project-scoped dataset.
+#) Save the source template file in a project-scoped folder.
 #) In the template page, click on the *NEW* button.
 
     .. image:: /_static/imgs/common/btn_new.png
 
-#) Click on the *From file* menu item.
-#) In the template creation dialog, select the dataset and the source template file.
+#) Click on the *From folder* menu item.
+#) In the template creation dialog, select the folder and the source template file.
 #) Click on the *IMPORT* button.
 
     .. image:: /_static/imgs/user/template/new_template_from_file_1.png
@@ -83,7 +83,7 @@ To create a template from a Docker image:
           Set this field to customize the URL scheme or path, such as ``https://${IP}:${PORT}/path/to/homepage``.
           Note that only the exact matches of ``${IP}`` and ``${PORT}``
           will be replaced by the actual assigned values for the corresponding running Webapp.
-        * Filesystem mounts: dataset mounts
+        * Mount filesystem: folder mounts
         * Parameters
         * Resource requirements: minimum resource requirements for CPU cores, memory size, and GPU cards
 
@@ -92,7 +92,7 @@ To create a template from a Docker image:
         * Command to run the pipeline
         * Command visibility: whether the command is ``readonly``, ``editable``, or ``hidden``
           in the pipeline action dialog
-        * Dataset mounts
+        * Mount filesystem
         * Parameters
         * Resource requirements: minimum resource requirements for CPU cores, memory size, and GPU cards
 
@@ -131,7 +131,7 @@ To export a template:
     .. image:: /_static/imgs/user/template/export_template_1.png
         :width: 600
 
-#) Select the destination dataset and the path within the dataset to save the exported template file.
+#) Select the destination folder and the path within the folder to save the exported template file.
 #) Click on the *EXPORT* button.
 
     .. image:: /_static/imgs/user/template/export_template_2.png
@@ -146,11 +146,11 @@ This section describes several ways to upload a Docker image for creating a temp
 
 .. _upload-image-from-registry:
 
-To upload an image from a Docker image registry:
+To upload an image from a Docker image:
 
 #) In the *Image* tab, click on the *NEW* button.
-#) Click on the *Pull* menu item.
-#) Fill in the registry link and the image name in the dialog.
+#) Click on the *Internet Pull* menu item.
+#) Fill in the image link and the image name in the dialog.
 #) Click on the *PULL* button.
 
 To upload a local Docker container or image through registry:
