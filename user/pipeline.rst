@@ -205,6 +205,7 @@ To run a Pipeline automatically on GitLab events:
     and the pipeline comments have the event information.
 
     .. image:: /_static/imgs/user/pipeline/add_gitlab_pipeline_trigger_2.png
+        :width: 480
 
 .. note::
     #) By default, GitLab does not allow setting up webhooks with URLs on local machine.
