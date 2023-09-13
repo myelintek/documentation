@@ -192,7 +192,9 @@ To run a Pipeline automatically on GitLab events:
 
     * Push events
 
-        .. note:: Use *Wildcard pattern* or *Regular expression* to restrict the source branches.
+        .. note::
+            If you want to manage pushes to varied branches in different ways,
+            use *Wildcard pattern* or *Regular expression* to restrict the source branches.
 
     * Merge request events
 
@@ -204,12 +206,9 @@ To run a Pipeline automatically on GitLab events:
 
     .. image:: /_static/imgs/user/pipeline/add_gitlab_pipeline_trigger_2.png
 
-
-    .. note::
-        GitLab may resend events one some situations. The repeated events will be skipped
-        so that it runs only once on each distinct event.
-
 .. note::
-    By default, GitLab does not allow setting up webhooks with URLs on local machine.
-    Please contact the administrator to `allow requests to the local network <https://docs.gitlab.com/ee/security/webhooks.html>`_
-    if there is such an error ``Url is blocked: Requests to the local network are not allowed``.
+    #) By default, GitLab does not allow setting up webhooks with URLs on local machine.
+       Please contact the administrator to `allow requests to the local network <https://docs.gitlab.com/ee/security/webhooks.html>`_
+       if there is such an error ``Url is blocked: Requests to the local network are not allowed``.
+    #) GitLab may resend events one some situations. The repeated events will be skipped
+       so that it runs only once on each distinct event.
