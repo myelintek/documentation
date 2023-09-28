@@ -81,7 +81,7 @@ Defaults
 --------
 
 The top-level ``defaults`` property specifies the workflow default settings.
-It is a dict defining:
+It is a dictionary defining:
 
 * **Image**:
   ``image`` specifies the default image to run a container.
@@ -105,14 +105,120 @@ It is an array of steps with each item defining:
   ``name`` specifies a case-insensitive unique step name, which will be shown in the execution page.
 * **Type** (*required*):
   ``type`` specifies the step type, which should be one of:
+
   * ``checkout`` for `checkout steps <vc-workflow-spec-step-checkout>`_
   * ``docker_run`` for `docker-run steps <vc-workflow-spec-step-docker-run>`_
   * ``template_run`` for `template-run steps <vc-workflow-spec-step-template-run>`_
+
+* **Needs** (*required*):
+  ``needs`` specifies the depedent steps.
+  A step is considered ready to run if all the dependent steps are completed.
+  It is defined in either way below
+
+  * **Null**:
+    A ``null`` value specifies no dependent steps.
+    Such a step will be the first one to execute in a workflow.
+    A workflow should contain **exactly one** step with null dependency.
+  * **Previous step**:
+    A ``pre`` value species the dependency of the preceding step in the list.
+  * **Dependent steps**:
+    An array of all dependent steps specified by the step names (case-insensitive).
+    All mentioned steps should be defined before this step in the list.
+
+  .. note::
+    Requiring all dependencies should be pre-defined not only simplifies the parser
+    but also ensures the steps to have a chronological order and thus they form a
+    `directed acyclic graph <https://en.wikipedia.org/wiki/Directed_acyclic_graph>`_ (DAG).
+
+* Step-specific properties
+
+.. note::
+  To simplifiy the demonstration, the examples in the following step elements will
+  only contain step-specific properties and a subset of other step properties.
+  **Complete step specification** is required in writing a workflow file.
 
 .. _vc-workflow-spec-step-checkout:
 
 Checkout Step
 ~~~~~~~~~~~~~
+
+A checkout step (with type ``checkout``) checkouts contents from version control services.
+It is a dictionary defining:
+
+* **Git**:
+  ``git`` specifies checking out from a git repository.
+  By default, it check outs from
+  
+  * the same git ref (a branch, tag, or commit) specified in checking out the VC workflow file
+  * the git repository associated with the current VC project.
+
+  It is defined in either way below
+
+  * **Git ref only**:
+    A string value specifies the git ref (a branch, tag, or commit)
+    from the git repository associated with the current VC project.
+  * **Full git settings**:
+    A dictionary defining:
+
+    * **Git repo** (*required*):
+      ``repo`` specifies the git repository url.
+      Currently, only public git repositories are supported.
+    * **Git ref**:
+      ``ref`` specifies the git ref to checkout.
+      By default, it checkous the ``main`` (or falls back to ``master``) branch.
+
+* **DVC**:
+  ``dvc`` species checking out from the DVC remote.
+  It is defined in either way below
+
+  * **Enable DVC only**:
+    A string value specifies whether to checkout from the DVC remote.
+    Its value should be one of
+
+    * ``auto`` (*default*):
+      It specifies checking out from the DVC remote iff it's under a VC project.
+    * ``yes``:
+      It specifies always checking out from the DVC remote.
+    * ``no``:
+      It specifies never checking out from the DVC remote.
+      This option is useful when you only need the source code
+      but don't want to download lots of data from the DVC remote.
+
+  * **Full DVC settings**:
+    A dictionary defining
+
+    * **Enable DVC**:
+      ``enable`` specifies whether to checkout from the DVC remote.
+      Refer to the previous section for the valid values.
+    * **DVC targets** (*required*):
+      ``targets`` specifies an array of DVC checkout targets.
+      By default, all tracked data from DVC will be targeted during DVC checkout.
+      This option is to narrow down the DVC targets to checkout and only meaningful when DVC checkout happens.
+      A DVC target could be a *path to a file* or a *directory within workspace*.
+      When a directory is provided, all included files or directories will be recursively checked out.
+
+* **Location**:
+  ``location`` species the checkout location, a path relative to workspace directory.
+  By default, it is the workspace directory itself.
+
+This simplest form checks out files from the same git ref in the associated git repository
+and from all the tracked files from the DVC remote.
+
+.. code-block:: yaml
+
+  type: checkout
+
+This checks out files from the git ``release`` branch
+and from the tracked files under the ``data`` directory from the DVC remote.
+The files are saved under the ``$WORKSPACE/src`` directory.
+
+.. code-block:: yaml
+
+  type: checkout
+  git: release
+  dvc:
+    targets: ["data"]
+  location: src
 
 .. _vc-workflow-spec-step-docker-run:
 
