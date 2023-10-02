@@ -25,6 +25,12 @@ The VC workflow file is a `YAML <http://yaml.org/>`_ file defining:
 * `Defaults <vc-workflow-spec-defaults>`_
 * `Steps <vc-workflow-spec-steps>`_ (*required*)
 
+.. note::
+  A VC workflow file example could be downloaded `here </_static/downloads/mlsteam-ci-min.yaml>`_.
+  It's for showing what a workflow file may look like.
+  You need the relevant resources (such as *files in git repository*, *flavors*, and *images*)
+  to run such a pipeline defined by this workflow file.
+
 .. _vc-workflow-spec-format:
 
 Format
@@ -230,7 +236,7 @@ It is a dictionary defining:
 
 * **Image**: 
   ``image`` specifies the docker image tag to run container.
-  It is ommitable if ``defaults.image`` is provided.
+  It is omittable if ``defaults.image`` is provided.
 
   .. note::
 
@@ -242,7 +248,7 @@ It is a dictionary defining:
 
 * **Flavor** (*no variable substitution*):
   ``flavor`` specifies the MLSteam flavor (case-insensitive) to run container.
-  It is ommitable if ``defaults.flavor`` is provided. Flavors do not support variable.
+  It is omittable if ``defaults.flavor`` is provided. Flavors do not support variable.
 
   .. _vc-workflow-spec-property-flavor:
 
@@ -251,16 +257,16 @@ It is a dictionary defining:
   It is an array of folders with each item defined in either way below
 
   * **Folder name only**:
-    ``<folder_name>`` specifies mounting a folder beloning to the current project
+    ``<folder_name>`` specifies mounting a folder belonging to the current project
     at ``/mlsteam/data/<folder_name>``.
   * **Full folder settings**:
-    ``<folder_name>:<mount_path>`` specifies mounting a folder beloning to the current project
+    ``<folder_name>:<mount_path>`` specifies mounting a folder belonging to the current project
     at the specified mount path.
 
 * **Run** (*required*):
   ``run`` specifies the commands to run. POSIX shell (*/bin/sh*) is used to run the commands.
 
-This prepares data for model training, assuming the requirments file
+This prepares data for model training, assuming the requirements file
 and the preprocessing script are available through a previous checkout step.
 
 .. code-block:: yaml
@@ -274,7 +280,7 @@ and the preprocessing script are available through a previous checkout step.
     python3 preproc.py "/mlsteam/data/my-coco128"
 
 This retrains a model with an image in MLSteam-managed image registry, assuming the
-relavant files are available through a previous checkout step.
+relevant files are available through a previous checkout step.
 
 .. code-block:: yaml
 
@@ -329,7 +335,7 @@ It is a dictionary defining:
 
 * **Flavor** (*no variable substitution*):
   ``flavor`` specifies the MLSteam flavor (case-insensitive) to run the task.
-  It is ommitable if ``defaults.flavor`` is provided. Flavors do not support variable.
+  It is omittable if ``defaults.flavor`` is provided. Flavors do not support variable.
 * **Ports** (*no variable substitution*):
   ``ports`` specify the network ports to access the task.
   It is an array of ports with each item defined in either way below
@@ -337,10 +343,10 @@ It is a dictionary defining:
   * **Internal port only**:
     ``<internal_port_number>`` specifies a system-assigned public port associated with a specific internal port.
   * **Full port settings**:
-    ``<internal_port_number>:<public_port_number>`` specifies a user-assigned public port associated with a apecific internal port.
+    ``<internal_port_number>:<public_port_number>`` specifies a user-assigned public port associated with a specific internal port.
 
   .. note::
-    Specifiying an internal port not covered in template may be skipped in some templates.
+    Specifying an internal port not covered in template may be skipped in some templates.
 
 * **Folders**:
   ``folders`` specify the :ref:`MLSteam folders <core-concept-folder>` to mount.
@@ -380,7 +386,7 @@ Substitution rules
    or the ones defined by `special substitution <vc-workflow-special-substitution>`_.
 2. **Literal substitution**:
    Substitution is done before step execution.
-   During step execution, only the substitions are seen rather than the variable names.
+   During step execution, only the substitutions are seen rather than the variable names.
 
    .. _vc-workflow-special-substitution:
 
@@ -389,11 +395,11 @@ Substitution rules
    * Only supported in brace substitution form ``${SUBSTITUTION_IDENTIFIER}``.
    * For a user-defined pipeline variable ``VAR_X`` of **folder type**:
 
-     * ``${VAR_X}`` will be subsituted for the folder name.
-     * ``${VAR_X.NAME}`` will be subsituted for the folder name (same as ``${VAR_X}``).
+     * ``${VAR_X}`` will be substituted for the folder name.
+     * ``${VAR_X.NAME}`` will be substituted for the folder name (same as ``${VAR_X}``).
 
-   * For a user-defined pipeline variable ``VAR_X`` of model_version type:
+   * For a user-defined pipeline variable ``VAR_X`` of model-version type:
 
-     * ``${VAR_X}`` will be subsituted for ``<model_name>:<model_version_name>``.
-     * ``${VAR_X.MODEL_NAME}`` will be subsituted for the model name.
-     * ``${VAR_X.VERSION_NAME}`` will be subsituted for the model version name.
+     * ``${VAR_X}`` will be substituted for ``<model_name>:<model_version_name>``.
+     * ``${VAR_X.MODEL_NAME}`` will be substituted for the model name.
+     * ``${VAR_X.VERSION_NAME}`` will be substituted for the model version name.
