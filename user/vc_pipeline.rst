@@ -25,11 +25,7 @@ The VC workflow file is a `YAML <http://yaml.org/>`_ file defining:
 * `Defaults <vc-workflow-spec-defaults>`_
 * `Steps <vc-workflow-spec-steps>`_ (*required*)
 
-.. note::
-  A VC workflow file example could be downloaded `here </_static/downloads/mlsteam-ci-min.yaml>`_.
-  It's for showing what a workflow file may look like.
-  You need the relevant resources (such as *files in git repository*, *flavors*, and *images*)
-  to run such a pipeline defined by this workflow file.
+A VC workflow file example is `here <vc-workflow-file-example>`_.
 
 .. _vc-workflow-spec-format:
 
@@ -351,6 +347,48 @@ It is a dictionary defining:
 * **Folders**:
   ``folders`` specify the :ref:`MLSteam folders <core-concept-folder>` to mount.
   Refer to `folders <vc-workflow-spec-property-flavor>`_ in docker-run step for more detail.
+
+.. _vc-workflow-file-example:
+
+Example
+-------
+
+This VC workfile example is for showing what a workflow file may look like.
+You need the relevant resources (such as *files in git repository*, *flavors*, and *images*)
+to run such a pipeline defined by this workflow file.
+
+.. code-block:: yaml
+
+  format: v0.1
+  name: PoC workflow
+  defaults:
+    flavor: micro
+  steps:
+    - name: checkout code
+      type: checkout
+      needs: null
+    - name: preproc
+      type: docker_run
+      needs: pre
+      image: ubuntu:20.04
+      flavor: small
+      run: |
+        pip3 install -r requirements.txt
+        python3 preproc.py
+    - name: build img
+      type: docker_build
+      needs: pre
+      tags: ["my_chatbot:ci"]
+    - name: run model endpoint
+      type: template_run
+      needs:
+        - preproc
+        - build img
+      template:
+        name: my_chatbot
+        type: webapp
+      ports:
+        - 80
 
 Variable Substitution
 ---------------------

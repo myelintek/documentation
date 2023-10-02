@@ -14,7 +14,7 @@ Welcome to MLSteam!
 .. toctree::
    :caption: User Guide
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 3
 
    user/get_started
    user/project
@@ -36,7 +36,7 @@ Welcome to MLSteam!
 .. toctree::
    :caption: Administration Guide
    :hidden:
-   :maxdepth: 2
+   :maxdepth: 3
 
    administration/account
    administration/infrastructure
