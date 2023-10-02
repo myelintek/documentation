@@ -19,13 +19,13 @@ VC Workflow File
 
 The VC workflow file is a `YAML <http://yaml.org/>`_ file defining:
 
-* `Format <vc-workflow-spec-format>`_ (*required*)
-* `Name <vc-workflow-spec-name>`_ (*required*)
-* `Variables <vc-workflow-spec-vars>`_
-* `Defaults <vc-workflow-spec-defaults>`_
-* `Steps <vc-workflow-spec-steps>`_ (*required*)
+* :ref:`Format <vc-workflow-spec-format>` (*required*)
+* :ref:`Name <vc-workflow-spec-name>` (*required*)
+* :ref:`Variables <vc-workflow-spec-vars>`
+* :ref:`Defaults <vc-workflow-spec-defaults>`
+* :ref:`Steps <vc-workflow-spec-steps>` (*required*)
 
-A VC workflow file example is `here <vc-workflow-file-example>`_.
+A VC workflow file example is :ref:`here <vc-workflow-file-example>`.
 
 .. _vc-workflow-spec-format:
 
@@ -48,10 +48,10 @@ Variables
 ---------
 
 The top-level ``vars`` property specifies the workflow variables to use in steps.
-It is an array of variable with each item defining:
+It is an array of variables with each item defining:
 
 * **Name** (*required*):
-  ``name`` specifies the variable name, used as variable substitution identifier (case-sensitive).
+  ``name`` specifies the variable name, used as :ref:`variable substitution <vc-workflow-variable-substitution>` identifier (case-sensitive).
 * **Type** (*required*):
   ``type`` specifies the variable type, should be one of ``string``, ``folder``, or ``model_version``.
 * **Label**:
@@ -108,9 +108,9 @@ It is an array of steps with each item defining:
 * **Type** (*required*):
   ``type`` specifies the step type, which should be one of:
 
-  * ``checkout`` for `checkout steps <vc-workflow-spec-step-checkout>`_
-  * ``docker_run`` for `docker-run steps <vc-workflow-spec-step-docker-run>`_
-  * ``template_run`` for `template-run steps <vc-workflow-spec-step-template-run>`_
+  * ``checkout`` for :ref:`checkout steps <vc-workflow-spec-step-checkout>`
+  * ``docker_run`` for :ref:`docker-run steps <vc-workflow-spec-step-docker-run>`
+  * ``template_run`` for :ref:`template-run steps <vc-workflow-spec-step-template-run>`
 
 * **Needs** (*required*):
   ``needs`` specify the dependent steps.
@@ -239,7 +239,7 @@ It is a dictionary defining:
     * If :ref:`MLSteam-managed image registry <core-concept-image>` is enabled,
       the image should exist in the registry and specified with the registry prefix,
       such as ``${MLSTEAM_IMAGE_REGISTRY}/namespace/image:tag``
-      (see `built-in pipeline variables <vc-workflow-builtin-vars>`_).
+      (see :ref:`built-in pipeline variables <vc-workflow-builtin-vars>`).
     * Otherwise, the image could be any valid image tag accessible in project.
 
 * **Flavor** (*no variable substitution*):
@@ -297,9 +297,9 @@ It is a dictionary defining:
 * **Task name**:
   ``task_name`` specifies the task name.
   By default, the name is derived from the pipeline name and step name,
-  which is stable among pipeline executions if the pipeline settings remain unchanged.
+  which does not change among pipeline executions if the pipeline settings remain unchanged.
 * **Force remove** (*no variable substitution*):
-  ``force_remove`` is a boolean value specifying removing existing task(s) with the same task name.
+  ``force_remove`` is a boolean value specifying removing existing tasks with the same task name.
   By default, it is ``true``.
 * **Template** (*required*):
   ``template`` specifies the template to run. It is a dictionary defining:
@@ -346,7 +346,20 @@ It is a dictionary defining:
 
 * **Folders**:
   ``folders`` specify the :ref:`MLSteam folders <core-concept-folder>` to mount.
-  Refer to `folders <vc-workflow-spec-property-flavor>`_ in docker-run step for more detail.
+  Refer to :ref:`folders <vc-workflow-spec-property-flavor>` in docker-run step for more detail.
+
+This runs a classification webapp that listens at port 80 internally.
+All webapps with the same name will be removed during pipeline execution.
+
+.. code-block:: yaml
+
+  - type: template_run
+    force_remove: true
+    template:
+      name: Classification Demo
+      type: webapp
+    ports: ["80"]
+    flavor: micro
 
 .. _vc-workflow-file-example:
 
@@ -390,6 +403,8 @@ to run such a pipeline defined by this workflow file.
       ports:
         - 80
 
+.. _vc-workflow-variable-substitution:
+
 Variable Substitution
 ---------------------
 
@@ -421,7 +436,7 @@ Substitution rules
 
 1. Substitution is specified by ``$SUBSTITUTION_IDENTIFIER`` or ``${SUBSTITUTION_IDENTIFIER}``.
    A substitution-identifier is a variable name (case-sensitive)
-   or the ones defined by `special substitution <vc-workflow-special-substitution>`_.
+   or the ones defined by :ref:`special substitution <vc-workflow-special-substitution>`.
 2. **Literal substitution**:
    Substitution is done before step execution.
    During step execution, only the substitutions are seen rather than the variable names.
