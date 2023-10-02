@@ -78,7 +78,7 @@ Template
 .. _core-concept-image:
 
 Image
-    An image (Docker image) is used to create a :ref:`template <core-concept-template>`.
+    An image (Docker image) is used to create a :ref:`template <core-concept-template>` or to run a container.
     In MLSteam, an image could be obtained from a user uploaded Docker image file,
     a remote registry, or an MLSteam-managed registry.
 
