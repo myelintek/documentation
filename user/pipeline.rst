@@ -8,6 +8,12 @@ You may even define an end-to-end pipeline to fulfill `MLOps <https://en.wikiped
 retrains and evaluates the model for new model designs or dataset
 and finally deploys the ML application to an experimental or production site.
 
+.. note::
+    This section is about the pipeline feature
+    accessible in :ref:`basic projects <core-concept-project>`.
+    Refer to the :doc:`VC Pipeline <vc_pipeline>` section for the advanced pipeline feature
+    in :ref:`VC projects <core-concept-vc-project>`.
+
 Create a Pipeline
 =================
 

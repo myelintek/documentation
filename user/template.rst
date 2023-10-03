@@ -124,7 +124,7 @@ Export a Template
 A template could be exported and imported between MLSteam systems.
 To export a template:
 
-#) :ref:`Create a project-scoped dataset <create-and-manage-project-scoped-dataset>`
+#) :ref:`Create a project-scoped folder <create-and-manage-project-scoped-folder>`
    which serves as the export destination if it has not existed.
 #) Go to template page and click on the *EXPORT* button at the selected version.
 

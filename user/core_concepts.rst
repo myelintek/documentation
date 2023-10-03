@@ -2,6 +2,8 @@
 Core Concepts
 ###################
 
+.. _core-concept-project:
+
 Project
     A :doc:`project <project>` is a collection of all artificats in developing ML models.
     A project consists of :ref:`folder <core-concept-folder>`,
@@ -13,6 +15,12 @@ Project
     :ref:`WebApps <core-concept-webapp>`,
     :ref:`templates <core-concept-template>`, and
     :ref:`images <core-concept-image>`.
+
+.. _core-concept-vc-project:
+
+VC Project
+    A VC project is a type of :ref:`project <core-concept-project>` that incorporates version control functions
+    for source code and data.
 
 .. _core-concept-folder:
 
@@ -70,7 +78,7 @@ Template
 .. _core-concept-image:
 
 Image
-    An image (Docker image) is used to create a :ref:`template <core-concept-template>`.
+    An image (Docker image) is used to create a :ref:`template <core-concept-template>` or to run a container.
     In MLSteam, an image could be obtained from a user uploaded Docker image file,
     a remote registry, or an MLSteam-managed registry.
 
