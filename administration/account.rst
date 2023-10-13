@@ -1,9 +1,11 @@
-###############
+############################################
 Account
-###############
+############################################
 
-Create and Manage a User
-========================
+User
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Create and Manage a User**
 
 The *User* tab lists the registered MLSteam users.
 
@@ -60,8 +62,11 @@ To delete a user:
     #) Its access to the MLSteam system and to the projects will be removed.
     #) All artifacts (such as projects, labs, and pipelines) owned by that user will be deleted.
 
-Set Plan for Resource Limitation
-================================
+
+Plan
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Set Plan for Resource Limitation**
 
 The *Plan* tab lists the resource limitation plans for users.
 
@@ -117,8 +122,11 @@ To delete a resource limitation plan:
 .. note::
     A resource limitation plan could be deleted only when no user uses that plan.
 
-Integrate LDAP/AD
-=================
+Authorization
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Integrate LDAP/AD**
+
 
 The *LDAP* tab manages integration of remote authentication.
 

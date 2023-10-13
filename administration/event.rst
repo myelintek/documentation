@@ -1,9 +1,11 @@
-#####
+############################################
 Event
-#####
+############################################
 
-View Auditlog
+Activity
 -------------
+
+**View Auditlog**
 
 The *Auditlog* tab lists the logged events. An event includes the following information:
 
@@ -18,8 +20,10 @@ The events could be filtered by entering the search terms.
 .. image:: /_static/imgs/administration/event/view_auditlog.png
     :width: 600
 
-Add a Webhook
+Notification
 -------------
+
+**Add a Webhook**
 
 The *Notification* tab lists the notifications receivers (Webhooks).
 A Webhook is triggered on the occurrences of the following events:
