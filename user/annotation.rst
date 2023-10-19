@@ -26,7 +26,7 @@ available in MLSteam. To setup Label Studio:
     .. image:: /_static/imgs/user/annotation/add_label_studio.png
         :width: 600
 
-#) Launch the Label Studio annotation.
+#) Enter Label Studio.
 
     .. image:: /_static/imgs/user/annotation/launch_label_studio.png
         :width: 480
@@ -148,7 +148,7 @@ Export Label Studio Annotations to any Project Folder
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_1.png
         :width: 600
 
-#) In the dialog, fill in the following fields.
+#) In the dialog, fill in the following fields, and then click on the *Select* button.
 
     * Source: the Label Studio view to export.
 
@@ -161,7 +161,7 @@ Export Label Studio Annotations to any Project Folder
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_2.png
         :width: 600
 
-#) Click on the *Select* button, select the output folder and directory, and then click on the *OK* button.
+#) Select the output folder and directory, and then click on the *OK* button.
 
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_3.png
         :width: 480
@@ -174,4 +174,84 @@ Export Label Studio Annotations to any Project Folder
 #) Wait for a while, and the exported file will be saved in the output folder.
 
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_5.png
+        :width: 600
+
+
+Setup CVAT
+==========
+
+`CVAT <https://cvat.org/>`_ is a data annotation tool,
+available in MLSteam. To setup CVAT:
+
+#) :ref:`Create a project-scoped folder <create-and-manage-project-scoped-folder>` as image source.
+   
+    We use ``yolo-sample`` as an example here.
+
+#) In Annotation page, create a new annotation.
+    .. image:: /_static/imgs/user/annotation/create_annotation.png
+        :width: 600 
+
+#) Create a CVAT environment.
+
+    * Annotation environment: select ``CVAT``
+    * Folders: ``yolo-sample``
+
+    .. image:: /_static/imgs/user/annotation/add_cvat.png
+        :width: 480
+
+#) Enter CVAT.
+#) Click on the *Create new task* button.
+#) Fill the task creation form fields.
+
+    * To create annotation tasks from an attached project folder, click on *Connected file share*,
+      expand directory tree, and sellect the needed files.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_4.png
+        :width: 600
+
+    .. warning::
+        Don't include ``.cvat`` directory. It will result in error.
+
+#) Open the task after submit.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_5.png
+        :width: 600
+
+#) Open the job.
+
+    .. image:: /_static/imgs/user/webapp/setup_cvat_6.png
+        :width: 600
+
+#) Do the labeling (labeling process is not covered here).
+
+Export CVAT Annotations to any Project Folder
+=============================================
+
+#) Make sure the destination MLSteam folder has been created in the project and has an output directory.
+#) Click on the *Export Annotation* item in the top menu.
+
+    .. image:: /_static/imgs/user/annotation/export_cvat_annotation_1.png
+        :width: 600
+
+#) In the dialog, fill in the following fields, and then click on the *Select* button.
+
+    * Source: the CVAT task to export.
+    * Format: the export format.
+
+    .. image:: /_static/imgs/user/annotation/export_cvat_annotation_2.png
+        :width: 600
+
+#) Select the output folder and directory, and then click on the *OK* button.
+
+    .. image:: /_static/imgs/user/annotation/export_cvat_annotation_3.png
+        :width: 480
+
+#) Click on the *Export* button to start annotation export.
+
+    .. image:: /_static/imgs/user/annotation/export_cvat_annotation_4.png
+        :width: 480
+
+#) Wait for a while, and the exported file will be saved in the output folder.
+
+    .. image:: /_static/imgs/user/annotation/export_cvat_annotation_5.png
         :width: 600
