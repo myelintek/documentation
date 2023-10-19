@@ -10,11 +10,9 @@ Setup Label Studio
 `Label Studio <https://labelstud.io/>`_ is a data annotation tool,
 available in MLSteam. To setup Label Studio:
 
-#) :ref:`Create a project-scoped folder <create-and-manage-project-scoped-folder>`,
-   ``yolo-sample`` as example here, and add an ``output`` directory in the folder.
-
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_1.png
-        :width: 600
+#) :ref:`Create a project-scoped folder <create-and-manage-project-scoped-folder>` as image source.
+   
+    We use ``yolo-sample`` as an example here.
 
 #) In Annotation page, create a new annotation
     .. image:: /_static/imgs/user/annotation/create_annotation.png
@@ -70,17 +68,25 @@ available in MLSteam. To setup Label Studio:
     * Storage type: ``Local files``
     * Storage title: a storage title (optional)
     * Absolute path: path to the images to label
-      (for the *yolo-sample* dataset, this would be ``/data/ds1/training_data/yolo/images``)
+      (for the *yolo-sample* dataset, this would be ``/data/yolo-sample/training_data/yolo/images``)
     * File filter regex: image file filter in regular expressions (optional)
       (for the *yolo-sample* dataset, this would be ``.*jpg``)
     * Treat every bucket object as a source file: ``enabled``
 
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_9.png
+    .. image:: /_static/imgs/user/annotation/setup_labelstudio_9.png
         :width: 480
+
+    .. note::
+        #) The root of storage path could be copied from the folder sidebar.
+
+            .. image:: /_static/imgs/user/annotation/setup_labelstudio_9b.png
+                :width: 600
+
+        #) You may click on the *Check Connection* button to test the existence of storage path.
 
 #) Back to the project settings page, click on the *Sync Storage* button.
 
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_10.png
+    .. image:: /_static/imgs/user/annotation/setup_labelstudio_10.png
         :width: 600
 
 #) Back to the project main page by clicking on the top navbar.
@@ -98,9 +104,19 @@ available in MLSteam. To setup Label Studio:
         :width: 600
 
 #) Repeat the previous step until all the images are labelled.
-#) Back to the project settings page, click on the *Add Target Storage* button.
 
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_14.png
+Export Label Studio Annotations to an Attached Folder
+=====================================================
+
+#) Make sure the destination MLSteam folder has been attached to Label Studio
+   and has an output directory (E.g., ``output``).
+
+    .. image:: /_static/imgs/user/webapp/setup_labelstudio_1.png
+        :width: 480
+
+#) Go to the project settings page, click on the *Add Target Storage* button.
+
+    .. image:: /_static/imgs/user/annotation/setup_labelstudio_14.png
         :width: 600
 
 #) In the dialog, fill in the following fields, and click on the *Add Storage* button.
@@ -108,14 +124,14 @@ available in MLSteam. To setup Label Studio:
     * Storage type: ``Local files``
     * Storage title: a storage title (optional)
     * Absolute local path: the output path created in the mounted project-scoped folder
-      (For example, ``/data/output``)
+      (For example, ``/data/yolo-sample/output``)
 
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_15.png
+    .. image:: /_static/imgs/user/annotation/setup_labelstudio_15.png
         :width: 480
 
 #) Back to the project settings page, click on the *Sync Storage* button.
 
-    .. image:: /_static/imgs/user/webapp/setup_labelstudio_16.png
+    .. image:: /_static/imgs/user/annotation/setup_labelstudio_16.png
         :width: 600
 
 #) Back to the folder page, the labelling data will be saved in the output directory.
@@ -123,3 +139,39 @@ available in MLSteam. To setup Label Studio:
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_17.png
         :width: 600
 
+Export Label Studio Annotations to any Project Folder
+=====================================================
+
+#) Make sure the destination MLSteam folder has been created in the project and has an output directory.
+#) Click on the *Export Annotation* item in the top menu.
+
+    .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_1.png
+        :width: 600
+
+#) In the dialog, fill in the following fields.
+
+    * Source: the Label Studio view to export.
+
+        .. note::
+            Label Studio uses views (a tab within a project) to filter the annotation tasks.
+            In this example, the project name is ``New Project #1`` and the tab name is ``Default``.
+
+    * Format: the export format.
+
+    .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_2.png
+        :width: 600
+
+#) Click on the *Select* button, select the output folder and directory, and then click on the *OK* button.
+
+    .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_3.png
+        :width: 480
+
+#) Click on the *Export* button to start annotation export.
+
+    .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_4.png
+        :width: 480
+
+#) Wait for a while, and the exported file will be saved in the output folder.
+
+    .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_5.png
+        :width: 600
