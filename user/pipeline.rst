@@ -759,7 +759,7 @@ Substitution rules
      * ``${VAR_X}`` will be substituted for the folder name.
      * ``${VAR_X.NAME}`` will be substituted for the folder name (same as ``${VAR_X}``).
 
-   * For a user-defined pipeline variable ``VAR_X`` of model-version type:
+   * For a user-defined pipeline variable ``VAR_X`` of **model-version type**:
 
      * ``${VAR_X}`` will be substituted for ``<model_name>:<model_version_name>``.
      * ``${VAR_X.MODEL_NAME}`` will be substituted for the model name.
