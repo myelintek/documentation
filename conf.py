@@ -40,7 +40,8 @@ release = u''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinx_rtd_theme",
+    'sphinx_copybutton',
+    'sphinx_rtd_theme',
     'sphinx.ext.intersphinx',
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
@@ -94,7 +95,7 @@ html_theme_options = {
     'display_version': True,
     'prev_next_buttons_location': 'both',
     'sticky_navigation': False,
-    'navigation_depth': 2,
+    'navigation_depth': 3,
     'includehidden': True,
     'titles_only': False,
 }

@@ -22,7 +22,6 @@ Welcome to MLSteam!
    user/annotation
    user/lab
    user/pipeline
-   user/vc_pipeline
    user/track
    user/model
    user/webapp
