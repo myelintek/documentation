@@ -310,7 +310,7 @@ The VC workflow file is a `YAML <http://yaml.org/>`_ file defining:
 * :ref:`Defaults <vc-workflow-spec-defaults>`
 * :ref:`Steps <vc-workflow-spec-steps>` (*required*)
 
-A VC workflow file example is :ref:`here <vc-workflow-file-example>`.
+VC workflow file examples could be found :ref:`here <vc-workflow-file-example>`.
 
 .. _vc-workflow-spec-format:
 
@@ -648,8 +648,8 @@ All webapps with the same name will be removed during pipeline execution.
 
 .. _vc-workflow-file-example:
 
-Example
--------
+Examples
+--------
 
 The examples here are for showing what a workflow file may look like.
 You need the relevant resources (such as *files in git repository*, *flavors*, and *images*)

@@ -25,8 +25,14 @@ VC Project
 .. _core-concept-folder:
 
 Folder
-    A :doc:`folder <folder>` is a collection of data organized in files and directories.
+    A :doc:`folder <folder>` (also shown as *Data* in MLSteam) is a collection of data organized in files and directories.
     Files in folder, like dateset, could be used in labs for model training and validation.
+
+.. _core-concept-workspace:
+
+Workspace
+    A :doc:`workspace <workspace>` is a special kind of :ref:`folder <core-concept-folder>` accessible in :ref:`VC projects <core-concept-vc-project>`
+    that is version controlled and is mounted automatically in VC :ref:`labs <core-concept-lab>`.
 
 .. _core-concept-annotation:
 
