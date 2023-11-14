@@ -1,0 +1,4 @@
+# matplotlib>=3.5.2
+# mlsteam-client==0.4.6  # it installs a "tests" package, which pollutes testing environment
+scikit-learn  # developed on 1.0.2, dropped constraints for Python 3.6 support
+tensorflow>=2.6.0  # developed on 2.10.0, loose constraints for Python 3.6 support

@@ -6,18 +6,22 @@ A track keeps various results of ML training or experiments,
 including the parameters, metrics, console logs, and any logged files or data.
 It also enables visualization of the results with *TensorBoard*.
 
-Create a Track
-==============
+Create Track Directories
+========================
 
-A track could be created from a lab job or from a pipeline run.
+Track Directory is a filesystem path for storing artifacts from model training.
+A track directory will be attached to a lab submitted track or a pipeline run.
 
 Create a track from a lab
 -------------------------
 
+.. note::
+    VC Project does not support track from a lab
+
 #) In the lab page, click on the *Submit* menu item.
 
     .. image:: /_static/imgs/user/lab/tune_parms_2.png
-        :width: 600
+        :width: 700
 
 #) Click on the *SUBMIT* button.
 
@@ -33,6 +37,9 @@ Create a track from a lab
 Create a track from a pipeline run
 ----------------------------------
 
+.. note::
+    VC Project does not support track from a pipeline run
+
 #) In the pipeline page, click on the *RUN PIPELINE* button.
 #) Toggle on *Use Track*.
 #) Click on the *RUN NOW* button.
@@ -43,7 +50,7 @@ Create a track from a pipeline run
 #) A button that opens the track will be displayed.
 
     .. image:: /_static/imgs/user/track/add_track_2_1.png
-        :width: 600
+        :width: 700
 
 .. note::
     There is a quick way to stop the underlying active *lab job* or *pipeline run* associated with the track.
@@ -52,8 +59,66 @@ Create a track from a pipeline run
     .. image:: /_static/imgs/user/track/stop_track_1.png
         :width: 300
 
-Track Your Training
-===================
+View Logged Data
+----------------
+
+To view logged data:
+
+#) Go to the track page by clicking on the track item.
+
+    .. image:: /_static/imgs/user/track/view_track_1.png
+        :width: 700
+
+#) All kinds of the logged data (such as parameters, metrics, console logs, and normal files) are organized in directories.
+   You could view them in a unified way.
+
+    .. image:: /_static/imgs/user/track/view_track_2.png
+        :width: 700
+
+    Visualization for series logged with MLSteam client:
+
+    .. image:: /_static/imgs/user/track/view_track_5.png
+        :width: 700
+
+#) You may also keep the view updated periodically by clicking on the *settings* button on the top-right corner
+
+    .. image:: /_static/imgs/common/btn_settings.png
+
+   and then enabling the *Reload data* checkbox. The reload period is in seconds.
+
+    .. image:: /_static/imgs/user/track/view_track_3.png
+        :width: 300
+
+    .. image:: /_static/imgs/user/track/view_track_4.png
+        :width: 700
+
+Visualize Data with TensorBoard
+-------------------------------
+
+To view multi-dimensional data displayed in TensorBoard:
+
+#) Click the *SWITCH TO TENSORBOARD* button in the top-left corner.
+
+    .. image:: /_static/imgs/common/btn_switch_to_tensorboard.png
+
+#) TensorBoard will show up in a few seconds.
+
+    .. image:: /_static/imgs/user/get_started/view_tensorboard.png
+        :width: 700
+
+.. note::
+    Refer to the `TensorBoard <https://www.tensorflow.org/tensorboard>`_ Website for visualization operations.
+
+
+Create Track Metrics Charts
+============================
+
+Tracking your experiments with Track server and SDK, no directory will be attached to
+your training container. You can use mlsteam-client SDK or MLFlow SDK for tracking
+training expierments.
+
+Track via mlsteam-client SDK
+-----------------------------------------
 
 Hyperparameter values and console logs are logged by default in a track.
 You could also fetch the hyperparameters and log more information (such as training and testing metrics)
@@ -179,55 +244,33 @@ To log a series for visualization:
         # a line chart of series (s1 and s2) with epoch number as x-axis
         track['chart_mutiple_epoch.chart'].log(json.dumps({'epoch': 1, 's1': 123, 's2': 456}))
 
-View Logged Data
-================
 
-To view logged data:
+Track via MLFlow SDK
+---------------------------------
 
-#) Go to the track page by clicking on the track item.
+First, enable MLFlow server by clicking the *Run MLFlow* button on
+top of the Track page.
 
-    .. image:: /_static/imgs/user/track/view_track_1.png
-        :width: 600
 
-#) All kinds of the logged data (such as parameters, metrics, console logs, and normal files) are organized in directories.
-   You could view them in a unified way.
+    .. image:: /_static/imgs/user/track/view_mlflow.png
+        :width: 700
 
-    .. image:: /_static/imgs/user/track/view_track_2.png
-        :width: 600
+Launch a Lab from *Pytorch basic* Template and open a *notebook* to execute following mlflow example.
 
-    Visualization for series logged with MLSteam client:
+ .. code-block::
 
-    .. image:: /_static/imgs/user/track/view_track_5.png
-        :width: 600
+    !pip install mlflow
+    import mlflow
+    with mlflow.start_run():
+        mlflow.log_metric('accuracy', 0.91, 1)
+        mlflow.log_metric('accuracy', 0.95, 2)
+        mlflow.log_metric('accuracy', 0.99, 3)
 
-#) You may also keep the view updated periodically by clicking on the *settings* button on the top-right corner
+After successfuly execute above example code, open Track page to view track experiments chart.
 
-    .. image:: /_static/imgs/common/btn_settings.png
+.. image:: /_static/imgs/user/track/view_mlflow_2.png
+    :width: 700
 
-   and then enabling the *Reload data* checkbox. The reload period is in seconds.
-
-    .. image:: /_static/imgs/user/track/view_track_3.png
-        :width: 300
-
-    .. image:: /_static/imgs/user/track/view_track_4.png
-        :width: 600
-
-Visualize Data with TensorBoard
-===============================
-
-To view multi-dimensional data displayed in TensorBoard:
-
-#) Click the *SWITCH TO TENSORBOARD* button in the top-left corner.
-
-    .. image:: /_static/imgs/common/btn_switch_to_tensorboard.png
-
-#) TensorBoard will show up in a few seconds.
-
-    .. image:: /_static/imgs/user/get_started/view_tensorboard.png
-        :width: 600
-
-.. note::
-    Refer to the `TensorBoard <https://www.tensorflow.org/tensorboard>`_ Website for visualization operations.
 
 Delete a Track
 ==============

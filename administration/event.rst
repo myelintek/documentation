@@ -1,27 +1,32 @@
 ############################################
-Event
+Log
 ############################################
 
-Activity
--------------
+Activities
+==========
 
-**View Auditlog**
+The *Activities* tab lists the logged auditlog record. A record includes the following information:
 
-The *Auditlog* tab lists the logged events. An event includes the following information:
-
-#) Time stamp: event reporting time
+#) Time stamp: log create time
 #) Level: logging level
-#) User: username (for a user event) or *SYSTEM* (for a system event)
-#) Type: event type, could be *User* (user event) or *System* (system event)
-#) Message: event message
+#) User: username (for a user log) or *SYSTEM* (for a system log)
+#) Type: log type, could be *User* (user log) or *System* (system log)
+#) Message: log message
 
-The events could be filtered by entering the search terms.
+The log could be filtered by entering the search terms, log level and log user.
+How many log records were show per page can be configured by a dropdown list on the right.
 
 .. image:: /_static/imgs/administration/event/view_auditlog.png
-    :width: 600
+    :width: 700
+
+To download all log files, click on the *Diagnosis* button on the top right corner.
+A *diagnosis.zip* file will be downloaded.
+
+.. image:: /_static/imgs/administration/event/auditlog_download.png
+    :width: 700
 
 Notification
--------------
+============
 
 **Add a Webhook**
 
@@ -33,7 +38,7 @@ A Webhook is triggered on the occurrences of the following events:
 #) Webapp start, stop, restart, or deletion
 
 .. image:: /_static/imgs/administration/event/view_notification.png
-    :width: 600
+    :width: 700
 
 A generic Webapp sends a POST request to the specified URL with the data in the format below.
 

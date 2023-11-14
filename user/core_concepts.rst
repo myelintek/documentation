@@ -24,9 +24,9 @@ VC Project
 
 .. _core-concept-folder:
 
-Folder
-    A :doc:`folder <folder>` (also shown as *Data* in MLSteam) is a collection of data organized in files and directories.
-    Files in folder, like dateset, could be used in labs for model training and validation.
+Data
+    A :doc:`data <folder>` (also shown as *Data* in MLSteam) is a collection of files organized in directories.
+    Files in a Data, like dateset, could be used in labs for model training and validation.
 
 .. _core-concept-workspace:
 
@@ -67,6 +67,29 @@ Track
 
 Model
     A :doc:`model <model>` is a collection of files that record a trained ML model.
+    There are three types of models:
+
+    #) *Plaintext models* save all files in plaintext. All files could be accessed directly.
+       Model publishers should define a way to load and use the models on their own.
+    #) *Packaged-plaintext models* wrap a model in :ref:`model packages <core-concept-model-package>`.
+    #) *Packaged-encrypted models* wrap a model in :ref:`model packages <core-concept-model-package>`
+       with strong encryption to protect sensitive model data.
+
+.. _core-concept-model-package:
+
+Model Package
+    A model package is defined by the following parts:
+
+    #) *Model files* contain all the essential model files to protect.
+       For example, a pickled Scickit-learn object, a TensorFlow saved-model, or a PyTorch state-dict.
+    #) *Hook files* should contain at least two Python scripts, load and predict,
+       which are called indirectly at model run time.
+       Other referenced script files could also be added here.
+    #) *Manifest* defines the important attributes of the package,
+       such as its name, version, framework, inputs, and outputs.
+
+    More information and examples of model packages and encryption could be found at
+    `MLSteam Model SDK documentation <https://mlsteam-model-sdk-doc.readthedocs.io/en/latest/model_developer/index.html>`_.
 
 .. _core-concept-webapp:
 

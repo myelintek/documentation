@@ -17,7 +17,7 @@ MLSteam has built-in templates for common ML tasks, such as:
 * Speech recognition
 
 .. image:: /_static/imgs/user/template/view_templates.png
-    :width: 600
+    :width: 700
 
 A template may have tags denoting its attributes.
 
@@ -129,13 +129,35 @@ To export a template:
 #) Go to template page and click on the *EXPORT* button at the selected version.
 
     .. image:: /_static/imgs/user/template/export_template_1.png
-        :width: 600
+        :width: 700
 
 #) Select the destination folder and the path within the folder to save the exported template file.
 #) Click on the *EXPORT* button.
 
     .. image:: /_static/imgs/user/template/export_template_2.png
         :width: 480
+
+
+Import a Template
+=================
+
+To import a template:
+
+#) Click "*New*" and then "*From folder*" button in template page.
+
+    .. image:: /_static/imgs/user/template/import_template_1.png
+        :width: 700
+
+#) Choose a folder with exported files, and click the file with ".mtpl" file extension.
+#) Click the "*IMPORT*" button.
+
+    .. image:: /_static/imgs/user/template/import_template_2.png
+        :width: 700
+
+#) The import procedure starts running.
+
+    .. image:: /_static/imgs/user/template/import_template_3.png
+        :width: 700
 
 .. _upload-image:
 
@@ -236,3 +258,34 @@ you need to setup an `insecure registry <https://docs.docker.com/registry/insecu
       .. code-block:: bash
 
           sudo systemctl restart docker
+
+Build Dockerfile
+================
+
+#) Upload a Dockerfile to a Data Folder. 
+
+    .. code-block::
+        
+        FROM nvidia/cuda:11.6.2-cudnn8-runtime-ubuntu20.04 as base-container
+        ENV LANG=C.UTF-8
+        ENV LC_ALL=C.UTF-8
+        ENV PYTHONIOENCODING=UTF-8
+        ENV PYTHONUNBUFFERED=1
+        USER root
+        ENV DEBIAN_FRONTEND=noninteractive
+
+
+#) Righ click the Dockerfile and select *Build Dockerfile*
+
+    .. image:: /_static/imgs/user/template/template_dockerfile_build.png
+        :width: 700
+
+#) Given the *Name* of the docker image and Dockerfile path if in subdirectories
+
+    .. image:: /_static/imgs/user/template/template_dockerfile_build_2.png
+        :width: 700
+
+#) Once the build finished, the built image will show up in the image list
+
+    .. image:: /_static/imgs/user/template/template_dockerfile_build_3.png
+        :width: 700

@@ -22,12 +22,12 @@ To create w workspace:
 #) Click on the *Create Workspace* button in the workspace page.
 
     .. image:: /_static/imgs/user/workspace/create_workspace_1.png
-        :width: 600
+        :width: 700
 
 #) Click on the *Create* button in the confirmation dialog and wait for checking out data.
 
     .. image:: /_static/imgs/user/workspace/create_workspace_2.png
-        :width: 600
+        :width: 700
 
 Pull Changes from Upstream
 ==========================
@@ -50,7 +50,7 @@ To synchronize changes to upstream services:
 #) Check the changes and fill in the commit message.
 
     .. image:: /_static/imgs/user/workspace/push_upstream_2.png
-        :width: 600
+        :width: 700
 
 #) Click on the *OK* button.
 

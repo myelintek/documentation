@@ -20,7 +20,7 @@ A lab is created from a pre-defined template.
 #) Select a template.
 
     .. image:: /_static/imgs/user/lab/add_lab_1.png
-        :width: 600
+        :width: 700
 
 #) Fill in the fields in the dialog, and then click on the *CREATE* button.
 
@@ -61,7 +61,7 @@ To run all the program code from a clean Kernel execution state,
 click on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 
 .. image:: /_static/imgs/user/lab/jupyter_cell.png
-    :width: 600
+    :width: 700
 
 .. _open-web-terminal:
 
@@ -74,12 +74,12 @@ To open a terminal for running commands:
 #) Click on the *Terminal* icon in the *Launcher* tab.
 
     .. image:: /_static/imgs/user/lab/open_terminal_1.png
-        :width: 600
+        :width: 700
 
 #) A Linux terminal will open. You could type and run shell commands now.
 
     .. image:: /_static/imgs/user/lab/open_terminal_2.png
-        :width: 600
+        :width: 700
 
 Jupyter also supports adding, deleting, and renaming files in its *File Browser* on the left.
 
@@ -92,7 +92,7 @@ Attach or Detach a Folder
 To list and manage the folder attachments, click on the top area. A side bar will be opened.
 
 .. image:: /_static/imgs/user/lab/view_attached_datasets.png
-    :width: 600
+    :width: 700
 
 To attach or detach a dataset:
 
@@ -117,13 +117,13 @@ To attach or detach a dataset:
     .. image:: /_static/imgs/user/lab/view_dataset_path.png
         :width: 300
 
-Monitor Resource Consumption in a Lab
+Monitor Resource Consumption
 =====================================
 
 To monitor the real-time resource consumption, click on the top area. A watch window will be opened.
 
 .. image:: /_static/imgs/user/get_started/run_lab_6.png
-    :width: 600
+    :width: 700
 
 Hardware resources displayed:
 
@@ -154,6 +154,10 @@ Hardware resources displayed:
 Stop or Delete a Lab
 ====================
 
+.. note::
+
+    Stopping a Lab in a Basic Project, the whole Lab container files will be saved into a docker image automatically
+
 To delete a lab:
 
 #) If the lab is in the *running* state, stop the lab by clicking on the *stop* button.
@@ -183,7 +187,7 @@ Enable SSH access to a lab.
 #) Create a SSH access key if none exists by clicking on the *add* button in the *SSH Key* section.
 
     .. image:: /_static/imgs/user/lab/add_ssh_key_0.png
-        :width: 600
+        :width: 700
 
 #) Input the key expiration days.
 #) Click on the *ADD* button.
@@ -339,13 +343,13 @@ To run ML experiments with a set a hyperparameters:
    to be appended to the command (values can be adjusted later).
 
     .. image:: /_static/imgs/user/lab/tune_parms_mlsteam_yml.png
-        :width: 600
+        :width: 700
 
 #) In the lab page, click on the *hyperparameter* icon in the top area.
 #) Fill in the parameters to use in the sidebar.
 
     .. image:: /_static/imgs/user/lab/tune_parms_1.png
-        :width: 600
+        :width: 700
 
     .. note::
         You could provide multiple parameter values delimited by commas.
@@ -353,7 +357,7 @@ To run ML experiments with a set a hyperparameters:
 #) Click on the *Submit track* menu item to submit the experiments as *track*.
 
     .. image:: /_static/imgs/user/lab/tune_parms_2.png
-        :width: 600
+        :width: 700
 
 #) Click on the *SUBMIT* button.
 
@@ -363,7 +367,7 @@ To run ML experiments with a set a hyperparameters:
 #) A new browser window will open, which shows the submitted :doc:`tracks <track>`.
 
     .. image:: /_static/imgs/user/lab/tune_parms_4.png
-        :width: 600
+        :width: 700
 
     .. note::
         Each combination of the parameter values is used to the ML experiment with a track.
@@ -381,6 +385,54 @@ To run ML experiments with a set a hyperparameters:
 
     .. note::
         Refer to the :doc:`track <track>` documentation for the concepts of track.
+
+View Log
+========
+
+Once the lab is running, you will notice several buttons in the upper right corner:
+
+#) Click on the *Text-Symbol* button (hover over it to reveal *more*) to access additional functions.
+
+    .. image:: /_static/imgs/user/lab/labframe_hover_more.png
+        :width: 350
+
+#) Press the *Display logs* button.
+
+    .. image:: /_static/imgs/user/lab/labframe_more.png
+        :width: 250
+
+#) The logs screen will appear instantly.
+
+    .. image:: /_static/imgs/user/lab/labframe_log.png
+        :width: 700
+
+ 
+Flavor Settings
+=================
+
+In *Flavor Settings*, flavor type, shared memory size, and GPU compute mode can be modified.
+
+#) Click the *Settings* button. (hover over it to reveal *Settings*) 
+
+    .. image:: /_static/imgs/user/lab/labframe_hover_settings.png
+        :width: 300
+
+#) Press the *Flavor* button to expand the item.
+#) Click  the *pen* icon or the grayed area to make modifications.
+
+    .. image:: /_static/imgs/user/lab/labframe_setting_flavor.png
+        :width: 270
+
+#) Update them if necessary.
+
+    .. image:: /_static/imgs/user/lab/labframe_flavor_SML.png.png
+        :height: 150
+
+    .. image:: /_static/imgs/user/lab/labframe_flavor_GPU.png.png
+        :height: 150
+
+    .. note:: 
+        Refer to the :ref:`Plan <plandoc>` documentation for adjust the `shared memory limit`.
 
 
 Troubleshooting & FAQs
@@ -403,7 +455,7 @@ Yes, three methods are available:
         :width: 480
 
     .. image:: /_static/imgs/user/lab/open_independent_terminal_2.png
-        :width: 600
+        :width: 700
 
 #) :ref:`Set up SSH access <ssh-into-lab>` to the lab
    and run commands with your favorite tools on the local computer,
@@ -427,7 +479,7 @@ To view and edit files in the lab:
 #) Click on the *Open Folder* button.
 
     .. image:: /_static/imgs/user/lab/view_remote_files_vscode_1.png
-        :width: 600
+        :width: 700
 
 #) Go to the ``/mlsteam`` directory and click on the *OK* button.
 
@@ -442,7 +494,7 @@ To view and edit files in the lab:
 #) Then, you could view and edit the files in usual way.
 
     .. image:: /_static/imgs/user/lab/view_remote_files_vscode_4.png
-        :width: 600
+        :width: 700
 
     .. note::
         #) *VSCode* access the files *remotely*. The files are still saved in the MLSteam system.
@@ -527,7 +579,7 @@ To access the services in a lab, export the corresponding port(s) with *proxy*:
 #) Expand the *Proxy* section in the side bar and click on the *add* button.
 
     .. image:: /_static/imgs/user/lab/add_proxy_1.png
-        :width: 600
+        :width: 700
 
 #) Fill in the port the service is running on.
 #) Click on the *ADD* button.

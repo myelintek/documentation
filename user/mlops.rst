@@ -1,6 +1,6 @@
-##################
-Quick Start: MLOps
-##################
+####################################
+Tutorial: Yolov5 Training Pipeline
+####################################
 
 This tutorial will show you how to:
 
@@ -20,12 +20,12 @@ We will start a pipeline to train and run a YOLOv5 model.
 #) Go to the project page by clicking on the project card.
 
     .. image:: /_static/imgs/user/get_started/goto_project.png
-        :width: 600
+        :width: 700
 
 #) Click on the *Pipeline*  item in the left menu.
 
     .. image:: /_static/imgs/user/get_started/goto_pipeline.png
-        :width: 600
+        :width: 700
 
 #) Click on the *NEW* button.
 
@@ -38,12 +38,12 @@ We will start a pipeline to train and run a YOLOv5 model.
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/user/get_started/add_pipeline_1.png
-        :width: 600
+        :width: 700
 
 #) The newly created pipeline is now displayed with status *Not Run Yet*.
 
     .. image:: /_static/imgs/user/get_started/add_pipeline_2.png
-        :width: 600
+        :width: 700
 
 Define the Pipeline Procedure
 =============================
@@ -120,7 +120,7 @@ We will define an MLOps pipeline consisting of two actions:
 Now, we have defined all the actions and are ready to run the pipeline.
 
 .. image:: /_static/imgs/user/get_started/add_pipeline_action_3.png
-    :width: 600
+    :width: 700
 
 Run the Pipeline
 ================
@@ -144,18 +144,18 @@ To run the Pipeline:
 We could see the overall pipeline run information and the status in the pipeline run page.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_2.png
-    :width: 600
+    :width: 700
 
 The immediate outputs of a pipeline action could be observed by clicking on the *LOG* button.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_3.png
-    :width: 600
+    :width: 700
 
 We could also view the outputs in full screen by clicking on the *fullscreen* button.
 Press :kbd:`Esc` to exit the full screen mode.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_4.png
-    :width: 600
+    :width: 700
 
 The model validation results could be found in the last part of the outputs, something like::
 
@@ -191,7 +191,7 @@ Increase the training epochs:
 #) Back to the run list by clicking on the link on the top.
 
     .. image:: /_static/imgs/user/get_started/goto_runs.png
-        :width: 600
+        :width: 700
 
 #) Go to the action list by clicking on the *ACTIONS* button.
 
@@ -232,12 +232,12 @@ Let's see our training results:
 #) Go to the track listing page by clicking on the *Track* item in the left menu.
 
     .. image:: /_static/imgs/user/get_started/goto_tracks.png
-        :width: 600
+        :width: 700
 
 #) Go to the track details page by clicking on the corresponding track link in the list.
 
     .. image:: /_static/imgs/user/get_started/goto_track.png
-        :width: 600
+        :width: 700
 
     .. note::
         A track is named by the initial part of the project name, followed by the run number.
@@ -250,7 +250,7 @@ Let's see our training results:
 Now, we could see various logged data displayed in various figures.
 
 .. image:: /_static/imgs/user/get_started/view_tensorboard_U.png
-    :width: 600
+    :width: 700
 
 .. note::
     Refer to the `TensorBoard <https://www.tensorflow.org/tensorboard>`_ Website for visualization operations.

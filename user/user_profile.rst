@@ -8,12 +8,12 @@ To view or change the user profile's settings:
 #) Click on the settings icon.
 
     .. image:: /_static/imgs/user/user_profile/enter_user_profile_settings.png
-        :width: 600
+        :width: 700
 
 #) The user profile's page is displayed.
 
     .. image:: /_static/imgs/user/user_profile/view_user_profile_settings.png
-        :width: 600
+        :width: 700
 
 Change Password
 ===============
@@ -23,7 +23,7 @@ Change Password
 #) Click on the *check* button.
 
     .. image:: /_static/imgs/user/user_profile/set_password.png
-        :width: 600
+        :width: 700
 
     .. note::
         Use the new password at the next login.
@@ -35,4 +35,4 @@ Change Language
 #) Select the language to display.
 
     .. image:: /_static/imgs/user/user_profile/set_language.png
-        :width: 600
+        :width: 700
