@@ -27,7 +27,7 @@ To create a pipeline:
 #) In the project page, click on the *Pipeline*  item in the left menu.
 
     .. image:: /_static/imgs/user/get_started/goto_pipeline.png
-        :width: 600
+        :width: 700
 
     .. note::
         A :doc:`project <project>` should be created first before we could create or use a pipeline.
@@ -37,7 +37,7 @@ To create a pipeline:
 #) Click on the *Create* button.
 
     .. image:: /_static/imgs/user/get_started/add_pipeline_1.png
-        :width: 600
+        :width: 700
 
 Manage Pipeline Actions
 =======================
@@ -116,7 +116,7 @@ Run Status
 The overall pipeline run information and the status are displayed.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_2.png
-    :width: 600
+    :width: 700
 
 .. note::
     Pipeline runs are numbered among all pipelines in the system.
@@ -125,13 +125,13 @@ The overall pipeline run information and the status are displayed.
 The immediate outputs of a pipeline action could be observed by clicking on the *LOG* button.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_3.png
-    :width: 600
+    :width: 700
 
 We could also view the outputs in full screen by clicking on the *fullscreen* button.
 Press :kbd:`Esc` to exit the full screen mode.
 
 .. image:: /_static/imgs/user/get_started/run_pipeline_1_4.png
-    :width: 600
+    :width: 700
 
 File Storage
 ------------
@@ -143,7 +143,7 @@ and changes to *FILESYSTEM* will overwrite the contents saved in previous runs f
 To view the current contents in *FILESYSTEM*, click on the *FILESYSTEM* button.
 
 .. image:: /_static/imgs/user/pipeline/view_filesystem.png
-    :width: 600
+    :width: 700
 
 To preserve the file contents in a pipeline run, toggle on *Use Track* on starting a run.
 The files in that pipeline run will be saved in a :doc:`track <track>`
@@ -161,7 +161,7 @@ To view the contents in a track for a pipeline run,
     * Alternatively, click on the corresponding track in the track listing page.
 
         .. image:: /_static/imgs/user/get_started/goto_track.png
-            :width: 600
+            :width: 700
 
         .. note::
             A track is named by the initial part of the project name, followed by the run number.
@@ -183,47 +183,10 @@ To delete a pipeline:
 #) Click on the *DELETE* button.
 
     .. image:: /_static/imgs/user/pipeline/del_pipeline_1.png
-        :width: 600
+        :width: 700
 
 #) Click on the *OK* button.
 
-Create a Pipeline Trigger
-=========================
-
-To run a Pipeline automatically on GitLab events:
-
-#) Go to the settings page and copy *Integration* > *GitLab* > *Webhook URL*.
-
-    .. image:: /_static/imgs/user/pipeline/add_gitlab_pipeline_trigger_1.png
-        :width: 600
-
-#) Open the GitLab web page, go to *Project* > *Settings* > *Webhooks*.
-#) Paste the copied value into *URL*.
-#) Select one or multiple desired trigger(s). Supported triggers:
-
-    * Push events
-
-        .. note::
-            If you want to manage pushes to varied branches in different ways,
-            use *Wildcard pattern* or *Regular expression* to restrict the source branches.
-
-    * Merge request events
-
-#) Deselect *SSL verification* > *Enable SSL verification*.
-#) Click on the *Add webhook* button.
-
-    Now, the selected events will trigger the pipeline,
-    and the pipeline comments have the event information.
-
-    .. image:: /_static/imgs/user/pipeline/add_gitlab_pipeline_trigger_2.png
-        :width: 480
-
-.. note::
-    #) By default, GitLab does not allow setting up webhooks with URLs on local machine.
-       Please contact the administrator to `allow requests to the local network <https://docs.gitlab.com/ee/security/webhooks.html>`_
-       if there is such an error ``Url is blocked: Requests to the local network are not allowed``.
-    #) GitLab may resend events one some situations. The repeated events will be skipped
-       so that it runs only once on each distinct event.
 
 .. _vc-pipeline-section:
 
@@ -262,12 +225,12 @@ To create a pipeline:
 Pipeline listing page shows the new pipeline.
 
 .. image:: /_static/imgs/user/pipeline/create_vc_pipeline_2.png
-    :width: 600
+    :width: 700
 
 Pipeline actions page shows the pipeline structure.
 
 .. image:: /_static/imgs/user/pipeline/create_vc_pipeline_3.png
-    :width: 600
+    :width: 700
 
 Run a Pipeline
 ==============
@@ -279,12 +242,12 @@ To run a pipeline:
     * The *Run Pipeline* button in the pipeline listing page
 
     .. image:: /_static/imgs/user/pipeline/run_vc_pipeline_1.png
-        :width: 600
+        :width: 700
 
     * The *Run* button in the pipeline page
 
     .. image:: /_static/imgs/user/pipeline/run_vc_pipeline_2.png
-        :width: 600
+        :width: 700
 
 #) Write a comment to denote this run or leave it blank.
 #) Click on the *Run* button.
@@ -292,12 +255,12 @@ To run a pipeline:
 Pipeline runs page shows the current running status.
 
 .. image:: /_static/imgs/user/pipeline/run_vc_pipeline_3.png
-  :width: 600
+  :width: 700
 
 Clicking on a pipeline step bar shows the running log for the step.
 
 .. image:: /_static/imgs/user/pipeline/run_vc_pipeline_4.png
-  :width: 600
+  :width: 700
 
 VC Workflow File
 ================
@@ -764,3 +727,43 @@ Substitution rules
      * ``${VAR_X}`` will be substituted for ``<model_name>:<model_version_name>``.
      * ``${VAR_X.MODEL_NAME}`` will be substituted for the model name.
      * ``${VAR_X.VERSION_NAME}`` will be substituted for the model version name.
+
+
+Create a Pipeline Trigger
+*************************
+
+To run a Pipeline automatically on GitLab events:
+
+#) Go to the settings page and copy *Integration* > *GitLab* > *Webhook URL*.
+
+    .. image:: /_static/imgs/user/pipeline/add_gitlab_pipeline_trigger_1.png
+        :width: 700
+
+#) Open the GitLab web page, go to *Project* > *Settings* > *Webhooks*.
+#) Paste the copied value into *URL*.
+#) Select one or multiple desired trigger(s). Supported triggers:
+
+    * Push events
+
+        .. note::
+            If you want to manage pushes to varied branches in different ways,
+            use *Wildcard pattern* or *Regular expression* to restrict the source branches.
+
+    * Merge request events
+
+#) Deselect *SSL verification* > *Enable SSL verification*.
+#) Click on the *Add webhook* button.
+
+    Now, the selected events will trigger the pipeline,
+    and the pipeline comments have the event information.
+
+    .. image:: /_static/imgs/user/pipeline/add_gitlab_pipeline_trigger_2.png
+        :width: 480
+
+.. note::
+    #) By default, GitLab does not allow setting up webhooks with URLs on local machine.
+       Please contact the administrator to `allow requests to the local network <https://docs.gitlab.com/ee/security/webhooks.html>`_
+       if there is such an error ``Url is blocked: Requests to the local network are not allowed``.
+    #) GitLab may resend events one some situations. The repeated events will be skipped
+       so that it runs only once on each distinct event.
+

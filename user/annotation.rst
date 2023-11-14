@@ -14,17 +14,15 @@ available in MLSteam. To setup Label Studio:
    
     We use ``yolo-sample`` as an example here.
 
-#) In Annotation page, create a new annotation
-    .. image:: /_static/imgs/user/annotation/create_annotation.png
-        :width: 600 
+#) In Annotation page, click on the *new* button
 
 #) Create a Label Studio environment
 
     * Annotation environment: select ``Label Studio``
     * Folders: ``yolo-sample``
 
-    .. image:: /_static/imgs/user/annotation/add_label_studio.png
-        :width: 600
+    .. image:: /_static/imgs/user/annotation/create_annotation.png
+        :width: 700
 
 #) Enter Label Studio.
 
@@ -56,12 +54,12 @@ available in MLSteam. To setup Label Studio:
 #) In the project page, click on the *Settings* button.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_7.png
-        :width: 600
+        :width: 700
 
 #) In the *Cloud Storage* section, click on the *Add Source Storage* button.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_8.png
-        :width: 600
+        :width: 700
 
 #) In the dialog, fill in the following fields, and click on the *Add Storage* button.
 
@@ -80,14 +78,14 @@ available in MLSteam. To setup Label Studio:
         #) The root of storage path could be copied from the folder sidebar.
 
             .. image:: /_static/imgs/user/annotation/setup_labelstudio_9b.png
-                :width: 600
+                :width: 700
 
         #) You may click on the *Check Connection* button to test the existence of storage path.
 
 #) Back to the project settings page, click on the *Sync Storage* button.
 
     .. image:: /_static/imgs/user/annotation/setup_labelstudio_10.png
-        :width: 600
+        :width: 700
 
 #) Back to the project main page by clicking on the top navbar.
 
@@ -98,10 +96,10 @@ available in MLSteam. To setup Label Studio:
    and click on the *Submit* button.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_12.png
-        :width: 600
+        :width: 700
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_13.png
-        :width: 600
+        :width: 700
 
 #) Repeat the previous step until all the images are labelled.
 
@@ -117,7 +115,7 @@ Export Label Studio Annotations to an Attached Folder
 #) Go to the project settings page, click on the *Add Target Storage* button.
 
     .. image:: /_static/imgs/user/annotation/setup_labelstudio_14.png
-        :width: 600
+        :width: 700
 
 #) In the dialog, fill in the following fields, and click on the *Add Storage* button.
 
@@ -132,12 +130,12 @@ Export Label Studio Annotations to an Attached Folder
 #) Back to the project settings page, click on the *Sync Storage* button.
 
     .. image:: /_static/imgs/user/annotation/setup_labelstudio_16.png
-        :width: 600
+        :width: 700
 
 #) Back to the folder page, the labelling data will be saved in the output directory.
 
     .. image:: /_static/imgs/user/webapp/setup_labelstudio_17.png
-        :width: 600
+        :width: 700
 
 Export Label Studio Annotations to any Project Folder
 =====================================================
@@ -146,7 +144,7 @@ Export Label Studio Annotations to any Project Folder
 #) Click on the *Export Annotation* item in the top menu.
 
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_1.png
-        :width: 600
+        :width: 700
 
 #) In the dialog, fill in the following fields, and then click on the *Select* button.
 
@@ -159,7 +157,7 @@ Export Label Studio Annotations to any Project Folder
     * Format: the export format.
 
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_2.png
-        :width: 600
+        :width: 700
 
 #) Select the output folder and directory, and then click on the *OK* button.
 
@@ -174,7 +172,7 @@ Export Label Studio Annotations to any Project Folder
 #) Wait for a while, and the exported file will be saved in the output folder.
 
     .. image:: /_static/imgs/user/annotation/export_labelstudio_annotation_5.png
-        :width: 600
+        :width: 700
 
 
 Setup CVAT
@@ -187,9 +185,7 @@ available in MLSteam. To setup CVAT:
    
     We use ``yolo-sample`` as an example here.
 
-#) In Annotation page, create a new annotation.
-    .. image:: /_static/imgs/user/annotation/create_annotation.png
-        :width: 600 
+#) In Annotation page, click on the *new* button
 
 #) Create a CVAT environment.
 
@@ -207,7 +203,7 @@ available in MLSteam. To setup CVAT:
       expand directory tree, and sellect the needed files.
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_4.png
-        :width: 600
+        :width: 700
 
     .. warning::
         Don't include ``.cvat`` directory. It will result in error.
@@ -215,12 +211,12 @@ available in MLSteam. To setup CVAT:
 #) Open the task after submit.
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_5.png
-        :width: 600
+        :width: 700
 
 #) Open the job.
 
     .. image:: /_static/imgs/user/webapp/setup_cvat_6.png
-        :width: 600
+        :width: 700
 
 #) Do the labeling (labeling process is not covered here).
 
@@ -231,7 +227,7 @@ Export CVAT Annotations to any Project Folder
 #) Click on the *Export Annotation* item in the top menu.
 
     .. image:: /_static/imgs/user/annotation/export_cvat_annotation_1.png
-        :width: 600
+        :width: 700
 
 #) In the dialog, fill in the following fields, and then click on the *Select* button.
 
@@ -239,7 +235,7 @@ Export CVAT Annotations to any Project Folder
     * Format: the export format.
 
     .. image:: /_static/imgs/user/annotation/export_cvat_annotation_2.png
-        :width: 600
+        :width: 700
 
 #) Select the output folder and directory, and then click on the *OK* button.
 
@@ -254,4 +250,4 @@ Export CVAT Annotations to any Project Folder
 #) Wait for a while, and the exported file will be saved in the output folder.
 
     .. image:: /_static/imgs/user/annotation/export_cvat_annotation_5.png
-        :width: 600
+        :width: 700

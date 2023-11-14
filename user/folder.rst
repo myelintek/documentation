@@ -1,28 +1,28 @@
 ############
-Folder
+Data
 ############
 
-A Folder is a collection of data organized in files and directories.
-Files in folder, like dateset, could be used in labs for model training and validation.
+A Data is a collection of files organized in directories.
+Files in a Data, like dateset, could be used in labs for model training and validation.
 
-The project folder page lists all project-scoped folders for the current project.
-A system folder is not accessible by a project before it is :ref:`added as a project-scoped folder <create-and-manage-project-scoped-folder>`.
+The project Data page lists all project-scoped Data for the current project.
+A system Data is not accessible by a project before it is :ref:`added as a project-scoped folder <create-and-manage-project-scoped-folder>`.
 
 .. image:: /_static/imgs/user/dataset/view_project_datasets.png
-    :width: 600
+    :width: 700
 
-A folder could have multiple versions by creating :ref:`snapshots <snapshot-folder>`
+A Data could have multiple versions by creating :ref:`snapshots <snapshot-folder>`
 and could also revert to a previous saved version. (snapshot only support btrfs filesystem)
 
 .. _create-and-manage-project-scoped-folder:
 
-Create and Manage a Project-Scoped Folder
+Create and Manage a Data Folder
 ==========================================
 
-To create a folder:
+To create a Data folder:
 
-#) Click on the *ADD* button in the folder page.
-#) Select the folder type and fill in the fields:
+#) Click on the *ADD* button in the Data page.
+#) Select the Data type and fill in the fields:
 
     #) *Empty Folder* (create an empty folder stored in the MLSteam system space):
 
@@ -59,7 +59,7 @@ To create a folder:
 More operations on a folder are available in the folder page.
 
 .. image:: /_static/imgs/user/dataset/view_dataset.png
-    :width: 600
+    :width: 700
 
 To create a folder in a folder:
 
@@ -70,14 +70,14 @@ To create a folder in a folder:
 To upload files to a  folder, drag and drop the files into the files area.
 
 .. image:: /_static/imgs/user/dataset/add_file_1_1.png
-    :width: 600
+    :width: 700
 
 Another method for file uploading:
 
 #) In the folder page, click on the *New* button, and select *File From Disk* or *File From URL*
 
     .. image:: /_static/imgs/user/dataset/add_file_from_disk.png
-        :width: 600
+        :width: 700
 
 #) To add files from disk, click on the *BROWSE* button and select a local file to upload. Repeat this step to add more files.
 
@@ -119,7 +119,8 @@ To delete one or multiple files from the folder:
 #) Select the file(s) to delete.
 #) Click on the *Action* button in the top toolbar or simply right-click, then select *delete* in function list.
 
-Create a Project-Scoped Folder by Cloning
+
+Create a Data Folder by Cloning
 ==========================================
 
 In situations where modifications to a read-only folder (such as a built-in folder) is needed,
@@ -144,8 +145,8 @@ To clone a folder:
 .. note::
     The cloned folder will belong to the current project and be accessible by the labs and pipeline in the same project.
 
-Delete a Folder
-================
+Delete a Data Folder
+====================
 
 To delete a folder:
 
@@ -161,8 +162,8 @@ To delete a folder:
        it only removes the linkage to the remote space.
     #) Deleting a folder does not affect its cloned folder(s).
 
-Preview Bounding Box Images in a folder
-========================================
+Preview Bounding Box Images
+===========================
 
 To preview the bounding box images in a labelled folder:
 
@@ -171,7 +172,7 @@ To preview the bounding box images in a labelled folder:
 #) Select the label format *yolo*.
 
     .. image:: /_static/imgs/user/dataset/view_labelled_dataset_1.png
-        :width: 600
+        :width: 700
 
 #) Fill in the fields:
 
@@ -194,7 +195,7 @@ The related files and directories will then be added the *yolo* tags.
 Bounding boxes and the index names are displayed in the preview area.
 
 .. image:: /_static/imgs/user/dataset/view_labelled_dataset_3.png
-    :width: 600
+    :width: 700
 
 *Yolo* tags could also be removed by clicking on the *cross* button in the end of tag.
 
@@ -203,8 +204,11 @@ Bounding boxes and the index names are displayed in the preview area.
 
 .. _snapshot-folder:
 
-Snapshot a Folder (only support btrfs filesystem)
+Snapshot a Data Folder (btrfs filesystem)
 ===================================================
+
+.. warning:: 
+    Snapshot only support if the datastore is btrfs!
 
 To save the current folder version (snapshot):
 
@@ -225,3 +229,61 @@ To restore the folder to a saved version:
 
     .. image:: /_static/imgs/user/dataset/restore_dataset_version_1.png
         :width: 480
+
+DVC Integration
+===============
+
+DVC is for data version control. The DVC tool required git repo as a backend.
+To enable DVC in a Data folder, click enable DVC on top of the file brwoser.
+
+.. warning::
+    Enable DVC will create a local git repository and a local DVC cache.
+
+DVC Add
+-------
+
+To Add a directory to be managed by DVC. Select a directory and click *DVC* Button and *Add* Button.
+The *dvc* badge will show up on the DVC managed files or directories
+
+.. image:: /_static/imgs/user/project/project_data_dvc_1.png
+    :width: 700
+
+DVC Remove
+----------
+
+To Remove a directory from DVC management. Select a '.dvc' file of the target directory and click *DVC* Button and *Remove* Button.
+
+.. image:: /_static/imgs/user/project/project_data_dvc_2.png
+    :width: 700
+
+
+DVC Checkout
+------------
+
+If the DVC managed directory is modified, the '!dvc' badge will show up. 
+To Restore a DVC managed directory, select the directory and click *DVC* button and *Checkout* button
+to restore the original DVC managed version.
+
+.. image:: /_static/imgs/user/project/project_data_dvc_3.png
+    :width: 700
+
+
+Read-only Setting
+==================
+
+To make a Data folder readonly, click on *Setting* Icon in a Data folder.
+Click the *Readonly* checkbox to enable readonly
+
+.. image:: /_static/imgs/user/project/project_data_setting.png
+    :width: 700
+
+Publish Data Folder
+===================
+
+To publish a Data folder for cloning a copy folder for sharing across projects,
+Click on *Setting* Icon in a Data folder.
+Click the *PUBLISH* button and give a name of the publish Data, click *Publish*.
+
+.. image:: /_static/imgs/user/project/project_data_publish.png
+    :width: 700
+

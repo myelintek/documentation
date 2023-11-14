@@ -17,17 +17,18 @@ Welcome to MLSteam!
    :maxdepth: 3
 
    user/get_started
+   user/user_profile
    user/project
    user/folder
-   user/workspace
-   user/annotation
+   user/model
    user/lab
    user/pipeline
    user/track
-   user/model
-   user/webapp
    user/template
-   user/user_profile
+   user/webapp
+   user/annotation
+   user/workspace
+
 
 .. raw:: latex
 

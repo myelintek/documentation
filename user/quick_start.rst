@@ -1,5 +1,5 @@
 #################################
-Quick Start: Machine Learning Lab
+Tutorial: Machine Learning Lab
 #################################
 
 This tutorial will show you how to:
@@ -16,7 +16,7 @@ Make sure there is a project for you to run a lab. Otherwise, create a new proje
 #) Go to the projects page by clicking on the *Projects* item in the left menu.
 
     .. image:: /_static/imgs/user/get_started/goto_projects.png
-        :width: 600
+        :width: 700
 
 #) Click on the *NEW* button.
 
@@ -26,12 +26,12 @@ Make sure there is a project for you to run a lab. Otherwise, create a new proje
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/user/get_started/add_project_2.png
-        :width: 600
+        :width: 700
 
 #) The new project will be displayed.
 
     .. image:: /_static/imgs/user/get_started/add_project_3.png
-        :width: 600
+        :width: 700
 
 Create a YOLOv5 Lab
 =====================
@@ -43,12 +43,12 @@ Simply create a lab from template.
 #) Go to the project page by clicking on the project card.
 
     .. image:: /_static/imgs/user/get_started/goto_project.png
-        :width: 600
+        :width: 700
 
 #) Click on the *Lab*  item in the left menu.
 
     .. image:: /_static/imgs/user/get_started/goto_lab.png
-        :width: 600
+        :width: 700
 
 #) Click on the *NEW* button.
 
@@ -57,7 +57,7 @@ Simply create a lab from template.
 #) Click on the *YOLOv5 Trainer* template.
 
     .. image:: /_static/imgs/user/get_started/add_lab_1.png
-        :width: 600
+        :width: 700
 
 #) In the new lab dialog, input the following fields:
 
@@ -67,12 +67,12 @@ Simply create a lab from template.
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/user/get_started/add_lab_2.png
-        :width: 600
+        :width: 700
 
 #) The newly created lab is now displayed with status *running*.
 
     .. image:: /_static/imgs/user/get_started/add_lab_3.png
-        :width: 600
+        :width: 700
 
 Before training the model, we need to enlarge the shared memory size to 8 GB for the lab:
 
@@ -85,7 +85,7 @@ Before training the model, we need to enlarge the shared memory size to 8 GB for
 #) Expand the *Configuration* section in the side bar and set ``8`` in the *Shared Memory* field.
 
     .. image:: /_static/imgs/user/get_started/set_shm_1.png
-        :width: 600
+        :width: 700
 
     .. image:: /_static/imgs/user/get_started/set_shm_2.png
         :width: 300
@@ -100,7 +100,7 @@ We will then train the model in the lab by creating a Python notebook.
 #) Create the model training notebook by clicking on the *Python 3 (ipkernel)* launcher under the *Notebook* section.
 
     .. image:: /_static/imgs/user/get_started/run_lab_2.png
-        :width: 600
+        :width: 700
 
 #) Copy the lines below into the first cell in the notebook.
 
@@ -116,7 +116,7 @@ We will then train the model in the lab by creating a Python notebook.
         display = utils.notebook_init()  # checks
 
     .. image:: /_static/imgs/user/get_started/run_lab_3a.png
-        :width: 600
+        :width: 700
 
 #) Click on the *insert* button to insert a second cell.
 
@@ -141,12 +141,12 @@ We will then train the model in the lab by creating a Python notebook.
     The notebook should now look like this:
 
     .. image:: /_static/imgs/user/get_started/run_lab_3c.png
-        :width: 600
+        :width: 700
 
 #) Train the model by clicking on the menu item: *Run* → *Restart Kernel and Run All Cells*.
 
     .. image:: /_static/imgs/user/get_started/run_lab_4a.png
-        :width: 600
+        :width: 700
 
     Alternatively, click on the toolbar icon.
 
@@ -161,12 +161,12 @@ We will then train the model in the lab by creating a Python notebook.
 #) The training program will start running cell by cell.
 
     .. image:: /_static/imgs/user/get_started/run_lab_5.png
-        :width: 600
+        :width: 700
 
 #) You could also monitor the real-time resource utilization by clicking on the top area. A watch window will be opened.
 
     .. image:: /_static/imgs/user/get_started/run_lab_6.png
-        :width: 600
+        :width: 700
 
 Visualize the Model Training Results
 ====================================
@@ -178,7 +178,7 @@ here we will submit a training job and then view the training results:
 #) Click on the *Submit track* menu item.
 
     .. image:: /_static/imgs/user/get_started/submit_job_1U.png
-        :width: 600
+        :width: 700
 
 #) Click on the *SUBMIT* button.
 
@@ -189,16 +189,16 @@ here we will submit a training job and then view the training results:
 #) Go to the track page by clicking on the link of the track.
 
     .. image:: /_static/imgs/user/get_started/view_job_track_1U.png
-        :width: 600
+        :width: 700
 
 #) Wait for one minute while the training results are accumulated.
 #) Click on the *SWITCH TO TENSORBOARD* button.
 
     .. image:: /_static/imgs/user/get_started/view_job_track_2U.png
-        :width: 600
+        :width: 700
 
 #) Congratulations! The YOLOv5 model training results are displayed in the TensorBoard page.
    You may adjust the settings to view the results in different ways.
 
     .. image:: /_static/imgs/user/get_started/view_job_track_3.png
-        :width: 600
+        :width: 700

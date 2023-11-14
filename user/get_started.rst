@@ -8,3 +8,4 @@ Get Started
    core_concepts
    quick_start
    mlops
+   vc_pipeline

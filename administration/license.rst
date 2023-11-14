@@ -5,7 +5,7 @@ License
 License information is available in the license page.
 
 .. image:: /_static/imgs/administration/license/view_license.png
-    :width: 600
+    :width: 700
 
 To update license:
 

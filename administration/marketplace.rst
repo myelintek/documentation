@@ -2,43 +2,63 @@
 Marketplace
 ###########
 
-Some useful services could be installed in marketplace.
+Some useful plugins could be installed in marketplace. A plugin provides additional 3rd party 
+software(s) to enrich MLSteam features.
 
 .. image:: /_static/imgs/administration/marketplace/view_marketplace.png
-    :width: 600
+    :width: 700
 
-* To install a service, click on the *INSTALL* button for the service.
+Install and Uninstall
+=====================
 
-    .. image:: /_static/imgs/administration/marketplace/add_service_1.png
-        :width: 300
+* To install a service, click on the **Install** button for the service.
+* To view or update a service, click on the **View** button for the service.
+* To uninstall a service, click on the **Remove** button for the service.
 
-* To customize a service, click on the *VIEW* button for the service.
+    .. image:: /_static/imgs/administration/marketplace/view_marketplace_2.png
+        :width: 700
 
-    .. image:: /_static/imgs/administration/marketplace/set_service_1.png
-        :width: 300
+VC Project
+==========
 
-* To delete a service, click on the *REMOVE* button for the service.
+This plugins includes **GitLab** and **SeaweedFS** services. Both services
+has to be installed together to enable *Version Control* (VC) Project features
 
 GitLab
-======
+------
 
 Basic settings:
 
-* FQDN: fully qualified domain name, or IP address (along with port number)
-* Port: port number for the GitLab vservice
-* Web port: port number for the Web server
+* HOST_FQDN: fully qualified domain name, or IP address (along with port number)
+* SSH_PORT: port number for the GitLab ssh service
+* HTTP_PORT: port number for the Web server
 
 .. _gitlab-ldap-settings:
 
-LDAP settings:
+LDAP settings (optional):
 
-* FQDN: URL for accessing the LDAP server with the *ldap* or *ldaps* protocol
-* Port: port number for the LDAP server
-* Base DN: distinguished name (DN) for search base
-* Bind DN: distinguished name (DN) for the user making queries
-* Password: password for the user making queries
-* Filter: query filter
-* UID: locating the user record given the username
+* LDAP_FQDN: URL for accessing the LDAP server with the *ldap* or *ldaps* protocol
+* LDAP_PORT: port number for the LDAP server
+* LDAP_BASE: distinguished name (DN) for search base
+* LDAP_BIND_DN: distinguished name (DN) for the user making queries
+* LDAP_PASSWORD: password for the user making queries
+* LDAP_FILTER: query filter
+* LDAP_UID: locating the user record given the username
+
+SeaweedFS
+---------
+
+Basic settings:
+
+* FQDN: URL for accessing the SeaweedFS interface
+* Host Data Dir: directory for storing object files
+* Master Http Port: port number for the web port
+* Master GRPC Port: port number for the GRPC port
+* Volume Size Limit (MB): limitation for a single volume size in SeaweedFS
+* S3 Http Port: port number for s3-compatible API interface
+* S3 Admin User: account name for s3 authentication
+* S3 Admin Secret: secret for s3 authentication
+
 
 HedgeDoc
 ========
@@ -82,19 +102,19 @@ To make the installation of these packages feasible in an offline environment, o
 2. **Package Organization:** For Python packages (PyPI), you can add packages in the form of `.whl` files. These files should be placed in the `/whl` folder. If the folder doesn't exist, you can create it.
 
     .. image:: /_static/imgs/administration/marketplace/browse_pypi.png
-        :width: 600
+        :width: 700
 
 3. **Support for Ubuntu Versions:** DEB packages are organized based on different Ubuntu version numbers. Currently, our plugin supports four Ubuntu versions: "xenial" "bionic" "focal" and "jammy". If the folder doesn't exist, you can create it.
 
     .. image:: /_static/imgs/administration/marketplace/browse_deb_pool.png
-        :width: 600
+        :width: 700
 
     .. image:: /_static/imgs/administration/marketplace/browse_deb_focal.png
-        :width: 600
+        :width: 700
 
 4. **Package Metadata Update:** After adding additional packages to the respective folders, you can click the "Scan and Update" button. This action updates the package mirror metadata, ensuring that your offline environment stays up to date with the latest packages.
 
 By using our plugin, you can seamlessly manage and install Python and DEB packages in offline environments, streamlining your development and deployment processes.
 
     .. image:: /_static/imgs/administration/marketplace/scan_and_update.png
-        :width: 600
+        :width: 700

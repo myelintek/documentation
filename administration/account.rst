@@ -3,9 +3,10 @@ Account
 ############################################
 
 User
-^^^^^^^^^^^^^^^^^^^^^^^^
+=====
 
-**Create and Manage a User**
+Create and Manage a User
+--------------------------
 
 The *User* tab lists the registered MLSteam users.
 
@@ -17,7 +18,7 @@ The *User* tab lists the registered MLSteam users.
   Could be *MLSteam* (managed by MLSteam), *LDAP* (managed by LDAP), or *AD* (managed by AD)
 
 .. image:: /_static/imgs/administration/account/view_users.png
-    :width: 600
+    :width: 700
 
 To create a user:
 
@@ -43,12 +44,18 @@ To create a user:
     .. image:: /_static/imgs/administration/account/add_user_1.png
         :width: 300
 
+Edit a User
+-----------
+
 To edit a user:
 
 #) Select the user to edit.
 #) Click on the *EDIT* button.
 #) Change the user settings.
 #) Click on the *SAVE* button.
+
+Delete a User
+--------------
 
 To delete a user:
 
@@ -62,9 +69,10 @@ To delete a user:
     #) Its access to the MLSteam system and to the projects will be removed.
     #) All artifacts (such as projects, labs, and pipelines) owned by that user will be deleted.
 
+.. _plandoc:
 
 Plan
-^^^^^^^^^^^^^^^^^^^^^^^^
+====
 
 **Set Plan for Resource Limitation**
 
@@ -81,7 +89,10 @@ The *Plan* tab lists the resource limitation plans for users.
     A *CPU-only lab* is a lab that runs without GPUs.
 
 .. image:: /_static/imgs/administration/account/view_plans.png
-    :width: 600
+    :width: 700
+
+Create a Plan
+-------------
 
 To create a resource limitation plan:
 
@@ -103,6 +114,9 @@ To create a resource limitation plan:
     .. image:: /_static/imgs/administration/account/add_plan_1.png
         :width: 300
 
+Edit a Plan
+-----------
+
 To edit a resource limitation plan:
 
 #) Select the plan to edit.
@@ -113,6 +127,9 @@ To edit a resource limitation plan:
 .. note::
     The updated resource limitation will take effect on creating new labs.
 
+Delete a Plan
+-------------
+
 To delete a resource limitation plan:
 
 #) Select the plan to delete.
@@ -122,8 +139,8 @@ To delete a resource limitation plan:
 .. note::
     A resource limitation plan could be deleted only when no user uses that plan.
 
-Authorization
-^^^^^^^^^^^^^^^^^^^^^^^^
+Authentication
+==============
 
 **Integrate LDAP/AD**
 
@@ -133,16 +150,16 @@ The *LDAP* tab manages integration of remote authentication.
 To enable remote user authentication, set up an LDAP or AD server here.
 
 .. image:: /_static/imgs/administration/account/init_ldap_ad.png
-    :width: 600
+    :width: 700
 
 To set up LDAP authentication:
 
 #) Click on the *LDAP* button.
-#) Fill in the settings fields.
+#) Fill in the configuration fields.
 #) Click on the *SUBMIT* button.
 
     .. image:: /_static/imgs/administration/account/setup_ldap_1.png
-        :width: 600
+        :width: 700
 
 ..
     To set up AD authentication:

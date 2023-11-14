@@ -12,13 +12,13 @@ The task tab lists the tasks in the system.
 * Project ID: project identifier
 * Status: task running status, could be *Done* (stopped and not occupying resources) or *Running*
 * Owner: task owner
-* Type: task type, could be *LAB* or *JOB*
+* Type: task type, could be *LAB*, *Webapp* and others
 * Specification: flavor for the task
 * Create time: task creation time
 * Host: host where the task runs
 
 .. image:: /_static/imgs/administration/management/view_tasks.png
-    :width: 600
+    :width: 700
 
 Task management operations:
 
@@ -37,6 +37,7 @@ Flavor
 The flavor tab lists the flavors in the system.
 
 * Name: flavor name
+* Tag: tags to select hosts
 * Summary: flavor settings summary
 * CPU: CPU cores to allocate
 * Memory: memory to allocate in MB
@@ -44,13 +45,14 @@ The flavor tab lists the flavors in the system.
 * GPU type: GPU type used. *Any* means no restrictions to GPU types.
 
 .. image:: /_static/imgs/administration/management/view_flavors.png
-    :width: 600
+    :width: 700
 
 Flavor management operations:
 
-#) Create
-#) Edit
-#) Delete
+#) Create: add a new flavor
+#) Edit: modify an existing flavor
+#) Delete: remove a flavor
+#) Up/Down: change the order of showing available flavors in a dropdown list
 
 Dataset
 =======
@@ -68,7 +70,7 @@ The dataset tab lists the datasets in the system.
 * Create time: dataset creation time
 
 .. image:: /_static/imgs/administration/management/view_datasets.png
-    :width: 600
+    :width: 700
 
 Dataset management operations:
 
@@ -89,7 +91,7 @@ The project tab lists the projects in the system.
 * Create time: project creation time
 
 .. image:: /_static/imgs/administration/management/view_projects.png
-    :width: 600
+    :width: 700
 
 Project management operations:
 
@@ -97,6 +99,34 @@ Project management operations:
 
 .. note::
     A project could be created or edited only through the normal user interface.
+
+Export a Project
+----------------
+
+Select a project and click on the *Export* button. Select backup items and click *Export*.
+The export project task will be running in the background. Please wait for complete.
+
+.. image:: /_static/imgs/administration/management/project_export.png
+    :width: 700
+
+The project will be exported to the backup folder of MLSteam. Administrators can
+login to server via ssh and find the exported project directory, the directory name
+will be the project uuid plus exported date time.
+
+.. image:: /_static/imgs/administration/management/project_export_2.png
+    :width: 700
+
+
+Import a Project
+----------------
+
+Import a project by clicking the *Import* button in project page. Select the target project
+and click *Import*. Once the import complete, the imported project will show up on the project list.
+
+.. image:: /_static/imgs/administration/management/project_import_1.png
+    :width: 700
+.. image:: /_static/imgs/administration/management/project_import_2.png
+    :width: 700
 
 Template
 ========
@@ -111,7 +141,7 @@ The template tab lists the templates in the system.
 * Create time: template creation time
 
 .. image:: /_static/imgs/administration/management/view_templates.png
-    :width: 600
+    :width: 700
 
 Template management operations:
 
@@ -134,7 +164,7 @@ The image tab lists the Docker images in the system.
 * Create time: image creation time
 
 .. image:: /_static/imgs/administration/management/view_images.png
-    :width: 600
+    :width: 700
 
 Image management operations:
 
@@ -153,12 +183,12 @@ The setting page lists the global system settings.
 * shm_size: shared memory size in GB for a container
 * storage_limit: storage size in GB for a container
 
-.. image:: /_static/imgs/administration/management/view_setting.png
-    :width: 600
+.. image:: /_static/imgs/administration/management/view_settings.png
+    :width: 700
 
 The setting management operations:
 
 #) Edit: by clicking on the value
 
     .. image:: /_static/imgs/administration/management/edit_setting_1.png
-        :width: 600
+        :width: 700
