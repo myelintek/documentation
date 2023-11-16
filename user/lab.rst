@@ -98,7 +98,9 @@ To attach or detach a dataset:
 
 #) Click on the *settings* button in the dataset side bar.
 
-    .. image:: /_static/imgs/common/btn_settings.png
+    .. image:: /_static/imgs/user/lab/labframe_folder_settings.png
+        :width: 480
+
 
 #) Toggle on a dataset to attach or toggle off a dataset to detach.
 
@@ -189,15 +191,15 @@ Enable SSH access to a lab.
     .. image:: /_static/imgs/user/lab/add_ssh_key_0.png
         :width: 700
 
-#) Input the key expiration days.
-#) Click on the *ADD* button.
+#) Click on the *Generate* button.
 
     .. image:: /_static/imgs/user/lab/add_ssh_key_1.png
-        :width: 300
+        :width: 380
 
 #) Download the SSH access key by expanding the *SSH Key* section and clicking on the *download* button.
 
-    .. image:: /_static/imgs/common/btn_download.png
+    .. image:: /_static/imgs/user/lab/labframe_settings_download.png
+        :width: 260
 
 #) Save the SSH access key to the local computer.
 
@@ -216,11 +218,11 @@ Enable SSH access to a lab.
 
 #) View the SSH information by clicking on the *view* icon.
 
-    .. image:: /_static/imgs/user/lab/add_ssh_key_3.png
-        :width: 300
+    .. image:: /_static/imgs/user/lab/labframe_settings_eye.png
+        :width: 260
 
     .. image:: /_static/imgs/user/lab/add_ssh_key_4.png
-        :width: 300
+        :width: 350
 
 #) Now, you could access the lab using an SSH client tool,
    such as :ref:`command-line <ssh-commandline>`, :ref:`VSCode <ssh-vscode>`,
@@ -399,7 +401,7 @@ Once the lab is running, you will notice several buttons in the upper right corn
 #) Press the *Display logs* button.
 
     .. image:: /_static/imgs/user/lab/labframe_more.png
-        :width: 250
+        :width: 200
 
 #) The logs screen will appear instantly.
 
@@ -421,7 +423,7 @@ In *Flavor Settings*, flavor type, shared memory size, and GPU compute mode can 
 #) Click  the *pen* icon or the grayed area to make modifications.
 
     .. image:: /_static/imgs/user/lab/labframe_setting_flavor.png
-        :width: 270
+        :width: 230
 
 #) Update them if necessary.
 
@@ -432,7 +434,11 @@ In *Flavor Settings*, flavor type, shared memory size, and GPU compute mode can 
         :height: 150
 
     .. note:: 
-        Refer to the :ref:`Plan <plandoc>` documentation for adjust the `shared memory limit`.
+        #) Refer to the :ref:`Plan <plandoc>` documentation for adjust the `shared memory limit`.
+        #) Refer to advanced settings for more details：
+        
+           - :ref:`Q:How to avoid other programs from sharing the GPU card(s) used in my lab? <gputypedoc>`
+           - :ref:`Q:How to increase the shared memory size in the lab? <shmdoc>`
 
 
 Troubleshooting & FAQs
@@ -525,14 +531,16 @@ To add Jupyter support in a lab:
 
 #) Change the lab's start type.
 
-    #) In the lab's page, open the settings side bar by clicking on *settings* button on the top.
+    #) Click the *Settings* button. (hover over it to reveal *Settings*) 
 
-        .. image:: /_static/imgs/common/btn_settings_3.png
+        .. image:: /_static/imgs/user/lab/labframe_hover_settings.png
+            :width: 300
 
-    #) Expand the *Start Type* section in the side bar and click on the *settings* button.
+    #) Expand the *Start Type* section in the side bar.
+    #) Click the *pen* icon or the grayed area to make modifications.
 
         .. image:: /_static/imgs/user/lab/set_start_type_1.png
-            :width: 300
+            :width: 200
 
     #) In the popped up dialog, select the start type option *Jupyter + Terminal*, and click on the *Update* button.
        The lab will be restarted with the new start type settings. You could then access Jupyter.
@@ -553,14 +561,16 @@ It is achieved through changing the flavor of a lab.
       A flavor could be :ref:`created <management-flavor>` in the management page.
 
 #) Open the *JupyterLab* for the lab.
-#) Open the settings side bar by clicking on the *settings* button on the top.
+#) Click the *Settings* button. (hover over it to reveal *Settings*) 
 
-    .. image:: /_static/imgs/common/btn_settings_3.png
-
-#) Expand the *Specification* section in the side bar and click on the *settings* button.
-
-    .. image:: /_static/imgs/user/lab/set_flavor_1.png
+    .. image:: /_static/imgs/user/lab/labframe_hover_settings.png
         :width: 300
+
+#) Expand the *Flavor* section in the side bar.
+#) Click the *pen* icon or the grayed area to make modifications.
+
+    .. image:: /_static/imgs/user/lab/labframe_setting_flavor.png
+        :width: 230
 
 #) Select the flavor with the target GPU.
 #) Click on the *UPDATE* button.
@@ -585,7 +595,7 @@ To access the services in a lab, export the corresponding port(s) with *proxy*:
 #) Click on the *ADD* button.
 
     .. image:: /_static/imgs/user/lab/add_proxy_2.png
-        :width: 300
+        :width: 440
 
     .. note::
         Repeat the port adding steps for each port needed in accessing the service.
@@ -594,10 +604,12 @@ To access the services in a lab, export the corresponding port(s) with *proxy*:
    You could now access the service with URL ``{MLSteam address}:{Exposed port}``.
 
     .. image:: /_static/imgs/user/lab/add_proxy_3.png
-        :width: 300
+        :width: 200
 
     .. image:: /_static/imgs/user/lab/add_proxy_4.png
         :width: 480
+
+.. _gputypedoc:
 
 Q: How to avoid other programs from sharing the GPU card(s) used in my lab?
 ---------------------------------------------------------------------------
@@ -611,13 +623,18 @@ available for a single running program.
 
 It is possible to restrict how a GPU device is used by setting the *accelerator compute mode*.
 
-#) Click on the *settings* button.
-#) Expand the *Configuration* section in the side bar and open the *Accelerator Mode* menu.
+#) Click on the *settings* button and expand the *Flavor* section in the side bar.
+#) Click the *pen* icon or the grayed area.
 
-    .. image:: /_static/imgs/user/lab/set_accelerator_mode_1.png
-        :width: 300
+    .. image:: /_static/imgs/user/lab/set_gpu_mode_1.png
+        :width: 240
 
-#) Select the *accelerator compute mode*. Available modes:
+#) open the *Update GPU Mode* menu.
+
+    .. image:: /_static/imgs/user/lab/set_gpu_mode_2.png
+        :width: 360
+
+#) Select the *GPU mode*. Available modes:
 
         * *default*: multiple processes can use the GPU device at the same time
         * *exclusive_process*: only one process can use the GPU device at the same time
@@ -628,6 +645,8 @@ It is possible to restrict how a GPU device is used by setting the *accelerator 
             Each running program has a process;
             sometimes a running program may have multiple processes, though.
 
+.. _shmdoc:
+
 Q: How to increase the shared memory size in the lab?
 -----------------------------------------------------
 
@@ -637,11 +656,16 @@ or those that use many GPU cores and consume lots of data.
 
 To increase (or decrease) the shared memory size in a lab:
 
-#) Click on the *settings* button.
-#) Expand the *Configuration* section in the side bar and fill in the *Shared Memory* field.
+#) Click on the *settings* button and expand the *Flavor* section in the side bar.
+#) Click the *pen* icon or the grayed area.
 
     .. image:: /_static/imgs/user/lab/set_shared_memory_1.png
-        :width: 300
+        :width: 240
+
+#) Fill in the *Shared Memory* field.
+
+    .. image:: /_static/imgs/user/lab/set_shared_memory_2.png
+        :width: 360
 
     .. note::
         The shared memory size is in ``GB`` and should be a positive integer.

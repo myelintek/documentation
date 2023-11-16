@@ -140,7 +140,7 @@ To clone a folder:
 #) Click on the *IMPORT* button.
 
     .. image:: /_static/imgs/user/dataset/copy_dataset_1.png
-        :width: 300
+        :width: 350
 
 .. note::
     The cloned folder will belong to the current project and be accessible by the labs and pipeline in the same project.
@@ -220,7 +220,7 @@ To save the current folder version (snapshot):
 #) Click on the *add* button.
 
     .. image:: /_static/imgs/user/dataset/add_dataset_version_1.png
-        :width: 480
+        :width: 450
 
 To restore the folder to a saved version:
 
@@ -234,7 +234,7 @@ DVC Integration
 ===============
 
 DVC is for data version control. The DVC tool required git repo as a backend.
-To enable DVC in a Data folder, click enable DVC on top of the file brwoser.
+To enable DVC in a Data folder, click enable DVC on top of the file browser.
 
 .. warning::
     Enable DVC will create a local git repository and a local DVC cache.

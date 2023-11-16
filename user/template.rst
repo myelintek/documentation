@@ -34,11 +34,11 @@ A template could be created from an exported template file or from a raw Docker 
 To create a template from a template file:
 
 #) Save the source template file in a project-scoped folder.
-#) In the template page, click on the *NEW* button.
+#) In the template page, click on the *NEW* button then click the *From folder* menu item.
 
-    .. image:: /_static/imgs/common/btn_new.png
+    .. image:: /_static/imgs/user/template/new_template_btn.png
+        :width: 680
 
-#) Click on the *From folder* menu item.
 #) In the template creation dialog, select the folder and the source template file.
 #) Click on the *IMPORT* button.
 
@@ -54,11 +54,11 @@ To create a template from a template file:
 To create a template from a Docker image:
 
 #) :ref:`Upload the Docker image <upload-image>` to MLSteam if it has not existed.
-#) In the template page, click on the *NEW* button.
+#) In the template page, click on the *NEW* button and click the *From image* menu item.
 
-    .. image:: /_static/imgs/common/btn_new.png
+    .. image:: /_static/imgs/user/template/new_template_btn.png
+        :width: 680
 
-#) Click on the *From image* menu item.
 #) Under the *Template information* section, select the image and fill in the following fields:
 
     * Template name

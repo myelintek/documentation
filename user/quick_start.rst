@@ -20,7 +20,8 @@ Make sure there is a project for you to run a lab. Otherwise, create a new proje
 
 #) Click on the *NEW* button.
 
-    .. image:: /_static/imgs/common/btn_new.png
+    .. image:: /_static/imgs/user/get_started/add_project.png
+        :width: 700
 
 #) In the new project dialog, input the project name as ``my-proj``.
 #) Click on the *CREATE* button.
@@ -52,7 +53,8 @@ Simply create a lab from template.
 
 #) Click on the *NEW* button.
 
-    .. image:: /_static/imgs/common/btn_new.png
+    .. image:: /_static/imgs/user/get_started/add_lab.png
+        :width: 700
 
 #) Click on the *YOLOv5 Trainer* template.
 
@@ -81,14 +83,15 @@ Before training the model, we need to enlarge the shared memory size to 8 GB for
     .. image:: /_static/imgs/user/get_started/run_lab_1.png
         :width: 480
 
-#) Click on the *settings* button.
-#) Expand the *Configuration* section in the side bar and set ``8`` in the *Shared Memory* field.
+#) Click on the *Settings* button and expand the *Flavor* section in the side bar.
 
     .. image:: /_static/imgs/user/get_started/set_shm_1.png
         :width: 700
 
+#) Set ``8`` in the *Shared Memory* field.
+
     .. image:: /_static/imgs/user/get_started/set_shm_2.png
-        :width: 300
+        :width: 370
 
 #) The lab will be restarted with the new setting.
 

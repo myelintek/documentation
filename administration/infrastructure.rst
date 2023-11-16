@@ -91,17 +91,21 @@ To add a host:
 
 #) Click on the *ADD* button.
 
-   .. image:: /_static/imgs/common/btn_add_2.png
-      :width: 70
+   .. image:: /_static/imgs/administration/infrastructure/add_host_1.png
+      :width: 470
 
 #) Follow the instructions displayed:
 
    .. image:: /_static/imgs/administration/infrastructure/add_host_2.png
-       :width: 400
+       :width: 470
 
    #) Download the host agent installer.
-   #) Copy the host agent installer to the host to add.
-   #) Run the host agent installer on the host to add.
+
+      .. code-block:: shell
+
+         curl -o agent_installer.sh -L http://<your host>/api/v2/hosts/installer
+
+   #) Install the host agent.
 
       .. code-block:: shell
 
@@ -120,8 +124,8 @@ To add a host:
 #) The host added will be in the list. Reload the page if the list has not been updated.
 #) Click on the *AUTHORIZE* button.
 
-.. image:: /_static/imgs/common/btn_authorize.png
-   :width: 100
+.. image:: /_static/imgs/administration/infrastructure/infra_authorize_btn.png
+   :width: 700
 
 #) The status of host will be *Online*
 
@@ -136,7 +140,8 @@ To delete a host:
 #) Select the host.
 #) Click on the *DELETE* button.
 
-   .. image:: /_static/imgs/common/btn_delete.png
+.. image:: /_static/imgs/administration/infrastructure/infra_delete_btn.png
+   :width: 700
 
 #) Confirm the deletion.
 
@@ -151,7 +156,7 @@ The host area displays the following real-time monitoring data:
 * GPU: GPU utilization
 
    .. image:: /_static/imgs/administration/infrastructure/add_host_3.png
-      :width: 700
+      :width: 760
 
 A detailed real-time `Netdata <https://www.netdata.cloud/>`_ monitoring dashboard
 is available by clicking on the links of host names.

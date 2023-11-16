@@ -148,6 +148,6 @@ To delete a model version:
     #) Click on the *delete* button for the model version.
 
         .. image:: /_static/imgs/user/model/del_model_version.png
-            :width: 300
+            :width: 420
 
     #) Click on the *OK* button.
