@@ -29,7 +29,8 @@ We will start a pipeline to train and run a YOLOv5 model.
 
 #) Click on the *NEW* button.
 
-    .. image:: /_static/imgs/common/btn_new.png
+    .. image:: /_static/imgs/user/get_started/add_pipeline.png
+        :width: 700
 
 #) In the new project dialog, input the following fields:
 
@@ -38,7 +39,7 @@ We will start a pipeline to train and run a YOLOv5 model.
 #) Click on the *CREATE* button.
 
     .. image:: /_static/imgs/user/get_started/add_pipeline_1.png
-        :width: 700
+        :width: 370
 
 #) The newly created pipeline is now displayed with status *Not Run Yet*.
 
@@ -51,13 +52,10 @@ Define the Pipeline Procedure
 We will define an MLOps pipeline consisting of two actions:
 \(1) to download the latest YOLOv5 code, and (2) to train the YOLOv5 model.
 
-#) Go to the actions page by clicking on the *Action Page* button.
+#) Go to the actions page by clicking on the *Action Page* button and click the *NEW* button.
 
-    .. image:: /_static/imgs/common/btn_action_page.png
-
-#) Click on the *NEW* button.
-
-    .. image:: /_static/imgs/common/btn_new.png
+    .. image:: /_static/imgs/user/get_started/add_pipeline_action.png
+        :width: 680
 
 #) In the new action dialog, click on the *Git Pull* action.
 
@@ -129,7 +127,8 @@ To run the Pipeline:
 
 #) Click on the *RUN PIPELINE* button on the top.
 
-    .. image:: /_static/imgs/common/btn_run_pipeline.png
+    .. image:: /_static/imgs/user/get_started/btn_run_pipeline.png
+        :width: 700
 
 #) Write a comment to denote this run or leave it blank.
 #) Click on the *RUN NOW* button. The pipeline will start to run in a few seconds.
@@ -195,7 +194,8 @@ Increase the training epochs:
 
 #) Go to the action list by clicking on the *ACTIONS* button.
 
-    .. image:: /_static/imgs/common/btn_actions.png
+    .. image:: /_static/imgs/user/get_started/add_pipeline_action_btn.png
+        :width: 700
 
 #) Click on the *train model* action and increase the epoch number from 10 to 20.
    The complete commands:
@@ -216,7 +216,7 @@ Then, we run the pipeline again. But at this time, we enable *track* to keep and
 #) Click on the *RUN NOW* button.
 
     .. image:: /_static/imgs/user/get_started/run_pipeline_2_1.png
-        :width: 480
+        :width: 380
 
 .. note::
 

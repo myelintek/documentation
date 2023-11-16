@@ -178,8 +178,9 @@ To delete a pipeline:
 
 #) Go to the settings page by clicking on the *SETTINGS* button.
 
-    .. image:: /_static/imgs/common/btn_settings_2.png
-
+    .. image:: /_static/imgs/user/pipeline/pipeline_settings.png
+        :width: 700
+      
 #) Click on the *DELETE* button.
 
     .. image:: /_static/imgs/user/pipeline/del_pipeline_1.png

@@ -80,17 +80,6 @@ To view logged data:
     .. image:: /_static/imgs/user/track/view_track_5.png
         :width: 700
 
-#) You may also keep the view updated periodically by clicking on the *settings* button on the top-right corner
-
-    .. image:: /_static/imgs/common/btn_settings.png
-
-   and then enabling the *Reload data* checkbox. The reload period is in seconds.
-
-    .. image:: /_static/imgs/user/track/view_track_3.png
-        :width: 300
-
-    .. image:: /_static/imgs/user/track/view_track_4.png
-        :width: 700
 
 Visualize Data with TensorBoard
 -------------------------------

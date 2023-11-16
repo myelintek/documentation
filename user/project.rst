@@ -33,13 +33,13 @@ Create a Project
 
 To create a new project:
 
-#) On the projects page, click on the *NEW* button.
+#) On the projects page, click on the *New* button.
 #) Fill in the project name and optionally the description.
 
     .. image:: /_static/imgs/user/project/add_project_1.png
         :width: 700
 
-#) Click on the *CREATE* button.
+#) Click on the *Create* button.
 #) The new project is displayed as a card on the projects page. Project details are displayed by clicking on the project card.
 
     .. image:: /_static/imgs/user/project/add_project_2.png

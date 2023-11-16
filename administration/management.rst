@@ -24,6 +24,7 @@ Task management operations:
 
 #) Start
 #) Stop
+#) Kill
 #) Delete
 
 .. note::
