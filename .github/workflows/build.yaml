@@ -1,0 +1,21 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, ws2]
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: 'v4.0'
+
+    - name: Build html
+      run: make html
+
+    - name: Update to web
+      run: docker run --rm -v $(pwd)/_build/user/html:/src -v /mnt/web/:/dst:shared ubuntu:22.04 cp -rf /src/. /dst/
