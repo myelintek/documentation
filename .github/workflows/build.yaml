@@ -1,21 +1,20 @@
-name: Makefile CI
+name: Build html v4.0
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["v4.0"]
 
 jobs:
   build:
-
     runs-on: [self-hosted, ws2]
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-        ref: 'v4.0'
+      - uses: actions/checkout@v3
+        with:
+          ref: "v4.0"
 
-    - name: Build html
-      run: make html
+      - name: Build html
+        run: make html
 
-    - name: Update to web
-      run: docker run --rm -v $(pwd)/_build/user/html:/src -v /mnt/web/:/dst:shared ubuntu:22.04 cp -rf /src/. /dst/
+      - name: Update to web
+        run: docker run --rm -v $(pwd)/_build/user/html:/src -v /mnt/web/:/dst:shared ubuntu:22.04 cp -rf /src/. /dst/
