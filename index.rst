@@ -11,6 +11,9 @@ Here is the complete guide to training and developing your deep learning applica
 
 To have a quick tutorial for using our system is to use :ref:`quick_start`. You will create a lab in a project on MLSteam with same code in the lab.
 
+.. warning::
+    This document is being deprecated. Please visit https://cloud.myelintek.com for more updated documents. 
+
 
 ***********
 Terminology
