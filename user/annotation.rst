@@ -257,10 +257,10 @@ Automatic Annotation
 ====================
 
 Instead of using Nuclio serverless framework for automatic labeling, MLSteam provides integrated solution to replace Nuclio.
-First, launching **inference API Endpoints** as a Webapp service. The inference API server must includes following rest API endpoints.
+First, launching an *inferencing API server* as a Webapp service. The **inference API Webapp** must include the following REST API.
 
-Inference API Endpoints
-+++++++++++++++++++++++
+Inference API Webapp
++++++++++++++++++++++
 
 .. http:get:: /status
 
@@ -282,7 +282,7 @@ Inference API Endpoints
 
         :Response JSON Object:
 
-         * **state** (*string*) -- required, should be one of `starting`, `ready`, or `error`.
+         * **state** (*string*) -- required, should be one of ``starting``, ``ready``, or ``error``.
          * **msg** (*string*) -- optional, service status message.
 
 .. http:get:: /cvat_info
@@ -296,6 +296,8 @@ Inference API Endpoints
             $ curl http://<webapp ip>:<webapp port>/cvat_info
 
     **Example response**:
+
+    - For **single endpoint**, it is a dict
 
     .. sourcecode:: json
 
@@ -331,9 +333,9 @@ Inference API Endpoints
 
          * **name** (*required*) -- a unique endpoint name in this service.
          * **description** (*required*) -- a brief endpoint description.
-         * **type** (*required*) -- should be one of detector, `interactor`, `reid`, or `tracker`.
+         * **type** (*required*) -- should be one of detector, ``interactor``, ``reid``, or ``tracker``.
          * **prefix** (*optional*) -- API url prefix for invoking this endpoint, ommitable for single endpoint. For multiple endpoints, it is a list of the above dict for each endpoint.
-         * **spec** (*optional*) -- Needed for the `detector` endpoint types. A list of labels, each label is a dict:
+         * **spec** (*optional*) -- Needed for the ``detector`` endpoint types. A list of labels, each label is a dict:
 
             - id (*required*): a unique integer starting from 0
             - name (*required*): label name
@@ -351,12 +353,11 @@ Inference API Endpoints
 
                 CVAT only recognizes the attributes that exactly match the defined ones in tasks.
 
-                Reference: 
-                `CVAT XML annotation format <https://opencv.github.io/cvat/docs/manual/advanced/xml_format/>`_
-                , `face-detection-0205 serverless function <https://github.com/myelintek/cvat/blob/98616c7292d8da242b848b2de81a668976a27144/serverless/openvino/omz/intel/face-detection-0205/nuclio/function.yaml>`_
+    - For **multiple endpoints**, it is a list of the above dict for each endpoint
 
+    .. note::
 
-
+        * **prefix** (*required*) -- API url prefix for invoking this endpoint. For multiple endpoints, it is a list of the above dict for each endpoint.
 
 .. http:post:: /invoke
 
@@ -405,7 +406,7 @@ Inference API Endpoints
 CVAT Autolabel Setup
 +++++++++++++++++++++
 
-Once you started an **Inference API** Webapp, go Annotation page and click *autolabel* button
+Once you started an **Inference API Webapp**, go Annotation page and click *autolabel* button
 
     .. image:: /_static/imgs/user/annotation/autolabel_1.png
         :width: 700
@@ -415,7 +416,7 @@ Select the **Inference API Webapp** and apply.
     .. image:: /_static/imgs/user/annotation/autolabel_2.png
         :width: 700
 
-Click CVAT -> Models menu, you will see the *Endpoint* registered as a *Model*
+Click CVAT -> Models menu, you will see the *Inference API Webapp* is registered as a *Model*
 
     .. image:: /_static/imgs/user/annotation/autolabel_3.png
         :width: 700
@@ -425,7 +426,7 @@ In CVAT -> Tasks page, click **Automatoic annotation** from one of label tasks
     .. image:: /_static/imgs/user/annotation/autolabel_4.png
         :width: 700
 
-Select model and choose label mappings between the **Task** labels and **Endpoint** labels
+Select model and choose label mappings between the **Task** labels and **Inference API Webapp** labels
 
     .. image:: /_static/imgs/user/annotation/autolabel_5.png
         :width: 700
