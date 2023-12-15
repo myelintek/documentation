@@ -49,6 +49,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages',
     'sphinx.ext.napoleon',
+    'sphinxcontrib.httpdomain',
 ]
 
 # Add any paths that contain templates here, relative to this directory.

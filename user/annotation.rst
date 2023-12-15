@@ -251,3 +251,186 @@ Export CVAT Annotations to any Project Folder
 
     .. image:: /_static/imgs/user/annotation/export_cvat_annotation_5.png
         :width: 700
+
+
+Automatic Annotation
+====================
+
+Instead of using Nuclio serverless framework for automatic labeling, MLSteam provides integrated solution to replace Nuclio.
+First, launching **inference API Endpoints** as a Webapp service. The inference API server must includes following rest API endpoints.
+
+Inference API Endpoints
++++++++++++++++++++++++
+
+.. http:get:: /status
+
+    Inference service status and message
+
+    **Example request**:
+
+    .. sourcecode:: bash
+
+            $ curl http://<webapp ip>:<webapp port>/status
+
+    **Example response**:
+
+    .. sourcecode:: json
+
+            {"state":"ready","msg":""}
+
+    .. note::
+
+        :Response JSON Object:
+
+         * **state** (*string*) -- required, should be one of `starting`, `ready`, or `error`.
+         * **msg** (*string*) -- optional, service status message.
+
+.. http:get:: /cvat_info
+
+    Inference label and other specification
+
+    **Example request**:
+
+    .. sourcecode:: bash
+
+            $ curl http://<webapp ip>:<webapp port>/cvat_info
+
+    **Example response**:
+
+    .. sourcecode:: json
+
+            {
+                "name": "Lpr detector Malaysia",
+                "description": "detect Plate/Car/Motobike",
+                "type": "detector",
+                "spec": [
+                    {
+                        "id": 0,
+                        "name": "Plate",
+                        "attributes": [
+                            {
+                            "name": "Number",
+                            "input_type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1,
+                        "name": "Car"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Motobike"
+                    }
+                ]
+            }
+
+    .. note::
+
+        :Response JSON Object:
+
+         * **name** (*required*) -- a unique endpoint name in this service.
+         * **description** (*required*) -- a brief endpoint description.
+         * **type** (*required*) -- should be one of detector, `interactor`, `reid`, or `tracker`.
+         * **prefix** (*optional*) -- API url prefix for invoking this endpoint, ommitable for single endpoint. For multiple endpoints, it is a list of the above dict for each endpoint.
+         * **spec** (*optional*) -- Needed for the `detector` endpoint types. A list of labels, each label is a dict:
+
+            - id (*required*): a unique integer starting from 0
+            - name (*required*): label name
+            - attributes (*optional*): a list of attributes. Each attribute is a dict. For example:
+
+            .. sourcecode:: bash
+
+                [
+                    {"name": "plate_number", "input_type": "text"},
+                    {"name": "age", "input_type": "number", "values": ["0", "150", "1"]},
+                    {"name": "gender", "input_type": "select", "values": ["female", "male"]}
+                ]
+
+            .. note::
+
+                CVAT only recognizes the attributes that exactly match the defined ones in tasks.
+
+                Reference: 
+                `CVAT XML annotation format <https://opencv.github.io/cvat/docs/manual/advanced/xml_format/>`_
+                , `face-detection-0205 serverless function <https://github.com/myelintek/cvat/blob/98616c7292d8da242b848b2de81a668976a27144/serverless/openvino/omz/intel/face-detection-0205/nuclio/function.yaml>`_
+
+
+
+
+.. http:post:: /invoke
+
+    Inference endpoint
+
+.. http:post:: /invoke/<prefix>
+
+    Inference endpoint with *prefix*
+
+    **Example request**:
+
+        For *detector* type request
+
+    .. sourcecode:: bash
+
+            $ (echo -n '{"image": "'; base64 ~/image.jpg; echo '"}') | curl -H "Content-Type: application/json" -d @- http://<ip>:<port>/invoke
+
+    .. note::
+
+        :Request JSON Object:
+
+        * **image** (*required*) -- base64-encoded image
+
+    **Example response**:
+
+    .. sourcecode:: json
+
+        [
+            {
+                "label": "Car",
+                "points": [
+                    15,
+                    0,
+                    354,
+                    282
+                ],
+                "type": "rectangle"
+            }
+        ]
+
+    .. note::
+
+        For more response format, please refer to `CVAT SDK example <https://opencv.github.io/cvat/docs/api_sdk/sdk/auto-annotation/>`_
+
+
+CVAT Autolabel Setup
++++++++++++++++++++++
+
+Once you started an **Inference API** Webapp, go Annotation page and click *autolabel* button
+
+    .. image:: /_static/imgs/user/annotation/autolabel_1.png
+        :width: 700
+
+Select the **Inference API Webapp** and apply.
+
+    .. image:: /_static/imgs/user/annotation/autolabel_2.png
+        :width: 700
+
+Click CVAT -> Models menu, you will see the *Endpoint* registered as a *Model*
+
+    .. image:: /_static/imgs/user/annotation/autolabel_3.png
+        :width: 700
+
+In CVAT -> Tasks page, click **Automatoic annotation** from one of label tasks
+
+    .. image:: /_static/imgs/user/annotation/autolabel_4.png
+        :width: 700
+
+Select model and choose label mappings between the **Task** labels and **Endpoint** labels
+
+    .. image:: /_static/imgs/user/annotation/autolabel_5.png
+        :width: 700
+
+Start the annotation and you will see the progress bar in your task
+
+    .. image:: /_static/imgs/user/annotation/autolabel_6.png
+        :width: 700
