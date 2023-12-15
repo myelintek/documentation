@@ -395,6 +395,19 @@ Inference API Webapp
                     282
                 ],
                 "type": "rectangle"
+            },
+            {
+                "label": "Plate",
+                "points": [
+                    38,
+                    210,
+                    152,
+                    59
+                ],
+                "type": "rectangle",
+                "attributes": [
+                    {"name": "plate_number", "value": "ABC-1234"}
+                ]
             }
         ]
 
