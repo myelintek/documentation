@@ -333,7 +333,7 @@ Inference API Webapp
 
          * **name** (*required*) -- a unique endpoint name in this service.
          * **description** (*required*) -- a brief endpoint description.
-         * **type** (*required*) -- should be one of detector, ``interactor``, ``reid``, or ``tracker``.
+         * **type** (*required*) -- should be one of ``detector``, ``interactor``, ``reid``, or ``tracker``.
          * **prefix** (*optional*) -- API url prefix for invoking this endpoint, ommitable for single endpoint. For multiple endpoints, it is a list of the above dict for each endpoint.
          * **spec** (*optional*) -- Needed for the ``detector`` endpoint types. A list of labels, each label is a dict:
 
