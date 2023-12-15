@@ -334,7 +334,7 @@ Inference API Webapp
          * **name** (*required*) -- a unique endpoint name in this service.
          * **description** (*required*) -- a brief endpoint description.
          * **type** (*required*) -- should be one of ``detector``, ``interactor``, ``reid``, or ``tracker``.
-         * **prefix** (*optional*) -- API url prefix for invoking this endpoint, ommitable for single endpoint. For multiple endpoints, it is a list of the above dict for each endpoint.
+         * **prefix** (*optional*) -- API url prefix for invoking this endpoint, ommitable for single endpoint. Prefix is required for multiple endpoints to distinguish between the endpoints.
          * **spec** (*optional*) -- Needed for the ``detector`` endpoint types. A list of labels, each label is a dict:
 
             - id (*required*): a unique integer starting from 0
@@ -357,7 +357,8 @@ Inference API Webapp
 
     .. note::
 
-        * **prefix** (*required*) -- API url prefix for invoking this endpoint. For multiple endpoints, it is a list of the above dict for each endpoint.
+        API url prefix for invoking this endpoint. Prefix is required for multiple endpoints to distinguish between the endpoints.
+
 
 .. http:post:: /invoke
 
